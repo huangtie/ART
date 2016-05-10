@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6701C9421CD1F63400E0EA6A /* ARTHttpServers.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C9411CD1F63400E0EA6A /* ARTHttpServers.m */; };
+		6701C9451CD20FB700E0EA6A /* ARTNetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C9441CD20FB700E0EA6A /* ARTNetUtil.m */; };
+		6701C9511CD2122100E0EA6A /* ARTBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C9501CD2122100E0EA6A /* ARTBaseParam.m */; };
+		6701C9541CD2131500E0EA6A /* ARTLoginParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C9531CD2131500E0EA6A /* ARTLoginParam.m */; };
+		6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C95F1CD21DDC00E0EA6A /* ARTUserData.m */; };
+		677534ED1CC8B62D00B34C59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EC1CC8B62D00B34C59 /* main.m */; };
+		677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EF1CC8B62D00B34C59 /* AppDelegate.m */; };
+		677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677534F71CC8B62E00B34C59 /* Assets.xcassets */; };
+		678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */; };
+		678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */; };
+		678FFB3A1CD883710071EAF6 /* ARTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB391CD883710071EAF6 /* ARTUserManager.m */; };
+		678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB3C1CD88E070071EAF6 /* ARTForgetParam.m */; };
+		678FFB401CD893A90071EAF6 /* ARTUpsetParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB3F1CD893A90071EAF6 /* ARTUpsetParam.m */; };
+		678FFB591CD9F0330071EAF6 /* ARTBookListParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB581CD9F0330071EAF6 /* ARTBookListParam.m */; };
+		678FFB5C1CD9F1800071EAF6 /* ARTBookData.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB5B1CD9F1800071EAF6 /* ARTBookData.m */; };
+		678FFB5F1CD9F3730071EAF6 /* ARTAuthorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB5E1CD9F3730071EAF6 /* ARTAuthorData.m */; };
+		678FFB621CD9FAFA0071EAF6 /* ARTBookDownData.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB611CD9FAFA0071EAF6 /* ARTBookDownData.m */; };
+		678FFB681CD9FDD60071EAF6 /* ARTCommentSendParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB671CD9FDD60071EAF6 /* ARTCommentSendParam.m */; };
+		678FFB6B1CD9FF8F0071EAF6 /* ARTCommentListParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB6A1CD9FF8F0071EAF6 /* ARTCommentListParam.m */; };
+		678FFB6E1CDA009B0071EAF6 /* ARTCommentData.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB6D1CDA009B0071EAF6 /* ARTCommentData.m */; };
+		67B92D4D1CDB2F2B0009E5B9 /* ARTPurchasesData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D4C1CDB2F2B0009E5B9 /* ARTPurchasesData.m */; };
+		67B92D531CDB378D0009E5B9 /* ARTPurchasesLogData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D521CDB378D0009E5B9 /* ARTPurchasesLogData.m */; };
+		67B92D571CDB391F0009E5B9 /* ARTCustomParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D561CDB391F0009E5B9 /* ARTCustomParam.m */; };
+		67B92D5A1CDB3E960009E5B9 /* ARTSendTalkParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D591CDB3E960009E5B9 /* ARTSendTalkParam.m */; };
+		67B92D5C1CDB43930009E5B9 /* 2323.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67B92D5B1CDB43930009E5B9 /* 2323.jpg */; };
+		67B92D5E1CDB43990009E5B9 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B92D5D1CDB43990009E5B9 /* 11.png */; };
+		67B92D601CDB43AA0009E5B9 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B92D5F1CDB43AA0009E5B9 /* 22.png */; };
+		67B92D631CDB49E40009E5B9 /* ARTSendTalkComParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D621CDB49E40009E5B9 /* ARTSendTalkComParam.m */; };
+		67B92D661CDB58AA0009E5B9 /* ARTTalkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D651CDB58AA0009E5B9 /* ARTTalkData.m */; };
+		67B92D691CDC6F3A0009E5B9 /* ARTTalkComData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D681CDC6F3A0009E5B9 /* ARTTalkComData.m */; };
+		67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D6B1CDC81000009E5B9 /* ARTZanListParam.m */; };
+		F57062AFCB5EAE7038E51A71 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D014C614C23ACD38CF997C61 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D261E9262703290D753A3B8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		1C2AF4146FAC109AD172C630 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6701C93F1CD1F5BE00E0EA6A /* NetMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetMacros.h; sourceTree = "<group>"; };
+		6701C9401CD1F63400E0EA6A /* ARTHttpServers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTHttpServers.h; sourceTree = "<group>"; };
+		6701C9411CD1F63400E0EA6A /* ARTHttpServers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTHttpServers.m; sourceTree = "<group>"; };
+		6701C9431CD20FB700E0EA6A /* ARTNetUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTNetUtil.h; sourceTree = "<group>"; };
+		6701C9441CD20FB700E0EA6A /* ARTNetUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTNetUtil.m; sourceTree = "<group>"; };
+		6701C94F1CD2122100E0EA6A /* ARTBaseParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBaseParam.h; sourceTree = "<group>"; };
+		6701C9501CD2122100E0EA6A /* ARTBaseParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBaseParam.m; sourceTree = "<group>"; };
+		6701C9521CD2131500E0EA6A /* ARTLoginParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTLoginParam.h; sourceTree = "<group>"; };
+		6701C9531CD2131500E0EA6A /* ARTLoginParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTLoginParam.m; sourceTree = "<group>"; };
+		6701C95E1CD21DDC00E0EA6A /* ARTUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUserData.h; sourceTree = "<group>"; };
+		6701C95F1CD21DDC00E0EA6A /* ARTUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUserData.m; sourceTree = "<group>"; };
+		677534E81CC8B62D00B34C59 /* ART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ART.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		677534EC1CC8B62D00B34C59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		677534EE1CC8B62D00B34C59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		677534EF1CC8B62D00B34C59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		677534F71CC8B62E00B34C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		677534FC1CC8B62E00B34C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		678FFB321CD3471E0071EAF6 /* ARTRegisterParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRegisterParam.h; sourceTree = "<group>"; };
+		678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterParam.m; sourceTree = "<group>"; };
+		678FFB351CD846E00071EAF6 /* ARTUdidUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUdidUtil.h; sourceTree = "<group>"; };
+		678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUdidUtil.m; sourceTree = "<group>"; };
+		678FFB381CD883710071EAF6 /* ARTUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUserManager.h; sourceTree = "<group>"; };
+		678FFB391CD883710071EAF6 /* ARTUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUserManager.m; sourceTree = "<group>"; };
+		678FFB3B1CD88E070071EAF6 /* ARTForgetParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTForgetParam.h; sourceTree = "<group>"; };
+		678FFB3C1CD88E070071EAF6 /* ARTForgetParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTForgetParam.m; sourceTree = "<group>"; };
+		678FFB3E1CD893A90071EAF6 /* ARTUpsetParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUpsetParam.h; sourceTree = "<group>"; };
+		678FFB3F1CD893A90071EAF6 /* ARTUpsetParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUpsetParam.m; sourceTree = "<group>"; };
+		678FFB571CD9F0330071EAF6 /* ARTBookListParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookListParam.h; sourceTree = "<group>"; };
+		678FFB581CD9F0330071EAF6 /* ARTBookListParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookListParam.m; sourceTree = "<group>"; };
+		678FFB5A1CD9F1800071EAF6 /* ARTBookData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookData.h; sourceTree = "<group>"; };
+		678FFB5B1CD9F1800071EAF6 /* ARTBookData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookData.m; sourceTree = "<group>"; };
+		678FFB5D1CD9F3730071EAF6 /* ARTAuthorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAuthorData.h; sourceTree = "<group>"; };
+		678FFB5E1CD9F3730071EAF6 /* ARTAuthorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAuthorData.m; sourceTree = "<group>"; };
+		678FFB601CD9FAFA0071EAF6 /* ARTBookDownData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookDownData.h; sourceTree = "<group>"; };
+		678FFB611CD9FAFA0071EAF6 /* ARTBookDownData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookDownData.m; sourceTree = "<group>"; };
+		678FFB661CD9FDD60071EAF6 /* ARTCommentSendParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTCommentSendParam.h; sourceTree = "<group>"; };
+		678FFB671CD9FDD60071EAF6 /* ARTCommentSendParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTCommentSendParam.m; sourceTree = "<group>"; };
+		678FFB691CD9FF8F0071EAF6 /* ARTCommentListParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTCommentListParam.h; sourceTree = "<group>"; };
+		678FFB6A1CD9FF8F0071EAF6 /* ARTCommentListParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTCommentListParam.m; sourceTree = "<group>"; };
+		678FFB6C1CDA009B0071EAF6 /* ARTCommentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTCommentData.h; sourceTree = "<group>"; };
+		678FFB6D1CDA009B0071EAF6 /* ARTCommentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTCommentData.m; sourceTree = "<group>"; };
+		67B92D4B1CDB2F2B0009E5B9 /* ARTPurchasesData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTPurchasesData.h; sourceTree = "<group>"; };
+		67B92D4C1CDB2F2B0009E5B9 /* ARTPurchasesData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTPurchasesData.m; sourceTree = "<group>"; };
+		67B92D511CDB378D0009E5B9 /* ARTPurchasesLogData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTPurchasesLogData.h; sourceTree = "<group>"; };
+		67B92D521CDB378D0009E5B9 /* ARTPurchasesLogData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTPurchasesLogData.m; sourceTree = "<group>"; };
+		67B92D551CDB391F0009E5B9 /* ARTCustomParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTCustomParam.h; sourceTree = "<group>"; };
+		67B92D561CDB391F0009E5B9 /* ARTCustomParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTCustomParam.m; sourceTree = "<group>"; };
+		67B92D581CDB3E960009E5B9 /* ARTSendTalkParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSendTalkParam.h; sourceTree = "<group>"; };
+		67B92D591CDB3E960009E5B9 /* ARTSendTalkParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSendTalkParam.m; sourceTree = "<group>"; };
+		67B92D5B1CDB43930009E5B9 /* 2323.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2323.jpg; sourceTree = "<group>"; };
+		67B92D5D1CDB43990009E5B9 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		67B92D5F1CDB43AA0009E5B9 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
+		67B92D611CDB49E40009E5B9 /* ARTSendTalkComParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSendTalkComParam.h; sourceTree = "<group>"; };
+		67B92D621CDB49E40009E5B9 /* ARTSendTalkComParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSendTalkComParam.m; sourceTree = "<group>"; };
+		67B92D641CDB58AA0009E5B9 /* ARTTalkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkData.h; sourceTree = "<group>"; };
+		67B92D651CDB58AA0009E5B9 /* ARTTalkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkData.m; sourceTree = "<group>"; };
+		67B92D671CDC6F3A0009E5B9 /* ARTTalkComData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkComData.h; sourceTree = "<group>"; };
+		67B92D681CDC6F3A0009E5B9 /* ARTTalkComData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkComData.m; sourceTree = "<group>"; };
+		67B92D6A1CDC81000009E5B9 /* ARTZanListParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTZanListParam.h; sourceTree = "<group>"; };
+		67B92D6B1CDC81000009E5B9 /* ARTZanListParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTZanListParam.m; sourceTree = "<group>"; };
+		D014C614C23ACD38CF997C61 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		677534E51CC8B62D00B34C59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F57062AFCB5EAE7038E51A71 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A6215268389F2E1F561CD51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D014C614C23ACD38CF997C61 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3CDBA5220F03E0188CC41A48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D261E9262703290D753A3B8 /* Pods.debug.xcconfig */,
+				1C2AF4146FAC109AD172C630 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6701C9461CD211F900E0EA6A /* 参数模型 */ = {
+			isa = PBXGroup;
+			children = (
+				6701C94A1CD211F900E0EA6A /* 用户中心 */,
+				6701C9481CD211F900E0EA6A /* 图集模块 */,
+				6701C94C1CD211F900E0EA6A /* 评论模块 */,
+				6701C94E1CD211F900E0EA6A /* 购买充值 */,
+				6701C94B1CD211F900E0EA6A /* 社交模块 */,
+				6701C9471CD211F900E0EA6A /* 分类模块 */,
+				6701C9491CD211F900E0EA6A /* 拍卖模块 */,
+				6701C94D1CD211F900E0EA6A /* 账号管理 */,
+				67B92D541CDB38EA0009E5B9 /* 通用 */,
+			);
+			path = "参数模型";
+			sourceTree = "<group>";
+		};
+		6701C9471CD211F900E0EA6A /* 分类模块 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "分类模块";
+			sourceTree = "<group>";
+		};
+		6701C9481CD211F900E0EA6A /* 图集模块 */ = {
+			isa = PBXGroup;
+			children = (
+				678FFB571CD9F0330071EAF6 /* ARTBookListParam.h */,
+				678FFB581CD9F0330071EAF6 /* ARTBookListParam.m */,
+			);
+			path = "图集模块";
+			sourceTree = "<group>";
+		};
+		6701C9491CD211F900E0EA6A /* 拍卖模块 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "拍卖模块";
+			sourceTree = "<group>";
+		};
+		6701C94A1CD211F900E0EA6A /* 用户中心 */ = {
+			isa = PBXGroup;
+			children = (
+				6701C9521CD2131500E0EA6A /* ARTLoginParam.h */,
+				6701C9531CD2131500E0EA6A /* ARTLoginParam.m */,
+				678FFB321CD3471E0071EAF6 /* ARTRegisterParam.h */,
+				678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */,
+				678FFB3B1CD88E070071EAF6 /* ARTForgetParam.h */,
+				678FFB3C1CD88E070071EAF6 /* ARTForgetParam.m */,
+				678FFB3E1CD893A90071EAF6 /* ARTUpsetParam.h */,
+				678FFB3F1CD893A90071EAF6 /* ARTUpsetParam.m */,
+			);
+			path = "用户中心";
+			sourceTree = "<group>";
+		};
+		6701C94B1CD211F900E0EA6A /* 社交模块 */ = {
+			isa = PBXGroup;
+			children = (
+				67B92D581CDB3E960009E5B9 /* ARTSendTalkParam.h */,
+				67B92D591CDB3E960009E5B9 /* ARTSendTalkParam.m */,
+				67B92D611CDB49E40009E5B9 /* ARTSendTalkComParam.h */,
+				67B92D621CDB49E40009E5B9 /* ARTSendTalkComParam.m */,
+				67B92D6A1CDC81000009E5B9 /* ARTZanListParam.h */,
+				67B92D6B1CDC81000009E5B9 /* ARTZanListParam.m */,
+			);
+			path = "社交模块";
+			sourceTree = "<group>";
+		};
+		6701C94C1CD211F900E0EA6A /* 评论模块 */ = {
+			isa = PBXGroup;
+			children = (
+				678FFB661CD9FDD60071EAF6 /* ARTCommentSendParam.h */,
+				678FFB671CD9FDD60071EAF6 /* ARTCommentSendParam.m */,
+				678FFB691CD9FF8F0071EAF6 /* ARTCommentListParam.h */,
+				678FFB6A1CD9FF8F0071EAF6 /* ARTCommentListParam.m */,
+			);
+			path = "评论模块";
+			sourceTree = "<group>";
+		};
+		6701C94D1CD211F900E0EA6A /* 账号管理 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "账号管理";
+			sourceTree = "<group>";
+		};
+		6701C94E1CD211F900E0EA6A /* 购买充值 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "购买充值";
+			sourceTree = "<group>";
+		};
+		6701C9551CD21B1F00E0EA6A /* 数据模型 */ = {
+			isa = PBXGroup;
+			children = (
+				6701C9591CD21B1F00E0EA6A /* 用户中心 */,
+				6701C9571CD21B1F00E0EA6A /* 图集模块 */,
+				6701C95B1CD21B1F00E0EA6A /* 评论模块 */,
+				6701C95D1CD21B1F00E0EA6A /* 购买充值 */,
+				6701C95A1CD21B1F00E0EA6A /* 社交模块 */,
+				6701C9561CD21B1F00E0EA6A /* 分类模块 */,
+				6701C9581CD21B1F00E0EA6A /* 拍卖模块 */,
+				6701C95C1CD21B1F00E0EA6A /* 账号管理 */,
+			);
+			path = "数据模型";
+			sourceTree = "<group>";
+		};
+		6701C9561CD21B1F00E0EA6A /* 分类模块 */ = {
+			isa = PBXGroup;
+			children = (
+				678FFB5D1CD9F3730071EAF6 /* ARTAuthorData.h */,
+				678FFB5E1CD9F3730071EAF6 /* ARTAuthorData.m */,
+			);
+			path = "分类模块";
+			sourceTree = "<group>";
+		};
+		6701C9571CD21B1F00E0EA6A /* 图集模块 */ = {
+			isa = PBXGroup;
+			children = (
+				678FFB5A1CD9F1800071EAF6 /* ARTBookData.h */,
+				678FFB5B1CD9F1800071EAF6 /* ARTBookData.m */,
+				678FFB601CD9FAFA0071EAF6 /* ARTBookDownData.h */,
+				678FFB611CD9FAFA0071EAF6 /* ARTBookDownData.m */,
+			);
+			path = "图集模块";
+			sourceTree = "<group>";
+		};
+		6701C9581CD21B1F00E0EA6A /* 拍卖模块 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "拍卖模块";
+			sourceTree = "<group>";
+		};
+		6701C9591CD21B1F00E0EA6A /* 用户中心 */ = {
+			isa = PBXGroup;
+			children = (
+				6701C95E1CD21DDC00E0EA6A /* ARTUserData.h */,
+				6701C95F1CD21DDC00E0EA6A /* ARTUserData.m */,
+			);
+			path = "用户中心";
+			sourceTree = "<group>";
+		};
+		6701C95A1CD21B1F00E0EA6A /* 社交模块 */ = {
+			isa = PBXGroup;
+			children = (
+				67B92D641CDB58AA0009E5B9 /* ARTTalkData.h */,
+				67B92D651CDB58AA0009E5B9 /* ARTTalkData.m */,
+				67B92D671CDC6F3A0009E5B9 /* ARTTalkComData.h */,
+				67B92D681CDC6F3A0009E5B9 /* ARTTalkComData.m */,
+			);
+			path = "社交模块";
+			sourceTree = "<group>";
+		};
+		6701C95B1CD21B1F00E0EA6A /* 评论模块 */ = {
+			isa = PBXGroup;
+			children = (
+				678FFB6C1CDA009B0071EAF6 /* ARTCommentData.h */,
+				678FFB6D1CDA009B0071EAF6 /* ARTCommentData.m */,
+			);
+			path = "评论模块";
+			sourceTree = "<group>";
+		};
+		6701C95C1CD21B1F00E0EA6A /* 账号管理 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "账号管理";
+			sourceTree = "<group>";
+		};
+		6701C95D1CD21B1F00E0EA6A /* 购买充值 */ = {
+			isa = PBXGroup;
+			children = (
+				67B92D4B1CDB2F2B0009E5B9 /* ARTPurchasesData.h */,
+				67B92D4C1CDB2F2B0009E5B9 /* ARTPurchasesData.m */,
+				67B92D511CDB378D0009E5B9 /* ARTPurchasesLogData.h */,
+				67B92D521CDB378D0009E5B9 /* ARTPurchasesLogData.m */,
+			);
+			path = "购买充值";
+			sourceTree = "<group>";
+		};
+		677534DF1CC8B62D00B34C59 = {
+			isa = PBXGroup;
+			children = (
+				677534EA1CC8B62D00B34C59 /* ART */,
+				677534E91CC8B62D00B34C59 /* Products */,
+				3CDBA5220F03E0188CC41A48 /* Pods */,
+				2A6215268389F2E1F561CD51 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		677534E91CC8B62D00B34C59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				677534E81CC8B62D00B34C59 /* ART.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		677534EA1CC8B62D00B34C59 /* ART */ = {
+			isa = PBXGroup;
+			children = (
+				67B92D5B1CDB43930009E5B9 /* 2323.jpg */,
+				67B92D5D1CDB43990009E5B9 /* 11.png */,
+				67B92D5F1CDB43AA0009E5B9 /* 22.png */,
+				677534EE1CC8B62D00B34C59 /* AppDelegate.h */,
+				677534EF1CC8B62D00B34C59 /* AppDelegate.m */,
+				67BECF821CC8D10F0073ACEC /* 基类 */,
+				6701C9461CD211F900E0EA6A /* 参数模型 */,
+				6701C9551CD21B1F00E0EA6A /* 数据模型 */,
+				67BECF801CC8D10F0073ACEC /* 工具类 */,
+				67BECF831CC8D10F0073ACEC /* 网络层 */,
+				67BECF811CC8D10F0073ACEC /* 宏 */,
+				67BECF7F1CC8D10F0073ACEC /* 第三方 */,
+				677534EB1CC8B62D00B34C59 /* Supporting Files */,
+			);
+			path = ART;
+			sourceTree = "<group>";
+		};
+		677534EB1CC8B62D00B34C59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				677534F71CC8B62E00B34C59 /* Assets.xcassets */,
+				677534FC1CC8B62E00B34C59 /* Info.plist */,
+				677534EC1CC8B62D00B34C59 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		67B92D541CDB38EA0009E5B9 /* 通用 */ = {
+			isa = PBXGroup;
+			children = (
+				67B92D551CDB391F0009E5B9 /* ARTCustomParam.h */,
+				67B92D561CDB391F0009E5B9 /* ARTCustomParam.m */,
+			);
+			path = "通用";
+			sourceTree = "<group>";
+		};
+		67BECF7F1CC8D10F0073ACEC /* 第三方 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "第三方";
+			sourceTree = "<group>";
+		};
+		67BECF801CC8D10F0073ACEC /* 工具类 */ = {
+			isa = PBXGroup;
+			children = (
+				678FFB381CD883710071EAF6 /* ARTUserManager.h */,
+				678FFB391CD883710071EAF6 /* ARTUserManager.m */,
+				678FFB351CD846E00071EAF6 /* ARTUdidUtil.h */,
+				678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */,
+			);
+			path = "工具类";
+			sourceTree = "<group>";
+		};
+		67BECF811CC8D10F0073ACEC /* 宏 */ = {
+			isa = PBXGroup;
+			children = (
+				6701C93F1CD1F5BE00E0EA6A /* NetMacros.h */,
+			);
+			path = "宏";
+			sourceTree = "<group>";
+		};
+		67BECF821CC8D10F0073ACEC /* 基类 */ = {
+			isa = PBXGroup;
+			children = (
+				6701C94F1CD2122100E0EA6A /* ARTBaseParam.h */,
+				6701C9501CD2122100E0EA6A /* ARTBaseParam.m */,
+			);
+			path = "基类";
+			sourceTree = "<group>";
+		};
+		67BECF831CC8D10F0073ACEC /* 网络层 */ = {
+			isa = PBXGroup;
+			children = (
+				6701C9401CD1F63400E0EA6A /* ARTHttpServers.h */,
+				6701C9411CD1F63400E0EA6A /* ARTHttpServers.m */,
+				6701C9431CD20FB700E0EA6A /* ARTNetUtil.h */,
+				6701C9441CD20FB700E0EA6A /* ARTNetUtil.m */,
+			);
+			path = "网络层";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		677534E71CC8B62D00B34C59 /* ART */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 677534FF1CC8B62E00B34C59 /* Build configuration list for PBXNativeTarget "ART" */;
+			buildPhases = (
+				EC17243CD930669991BD185F /* Check Pods Manifest.lock */,
+				677534E41CC8B62D00B34C59 /* Sources */,
+				677534E51CC8B62D00B34C59 /* Frameworks */,
+				677534E61CC8B62D00B34C59 /* Resources */,
+				D1DBD9D003F73792FB927637 /* Embed Pods Frameworks */,
+				6BD8A37B66E275716F0A598A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ART;
+			productName = ARTCollect;
+			productReference = 677534E81CC8B62D00B34C59 /* ART.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		677534E01CC8B62D00B34C59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = huangtie;
+				TargetAttributes = {
+					677534E71CC8B62D00B34C59 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 677534E31CC8B62D00B34C59 /* Build configuration list for PBXProject "ART" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 677534DF1CC8B62D00B34C59;
+			productRefGroup = 677534E91CC8B62D00B34C59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				677534E71CC8B62D00B34C59 /* ART */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		677534E61CC8B62D00B34C59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */,
+				67B92D601CDB43AA0009E5B9 /* 22.png in Resources */,
+				67B92D5E1CDB43990009E5B9 /* 11.png in Resources */,
+				67B92D5C1CDB43930009E5B9 /* 2323.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BD8A37B66E275716F0A598A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1DBD9D003F73792FB927637 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC17243CD930669991BD185F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		677534E41CC8B62D00B34C59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				678FFB6E1CDA009B0071EAF6 /* ARTCommentData.m in Sources */,
+				678FFB621CD9FAFA0071EAF6 /* ARTBookDownData.m in Sources */,
+				677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */,
+				678FFB5F1CD9F3730071EAF6 /* ARTAuthorData.m in Sources */,
+				677534ED1CC8B62D00B34C59 /* main.m in Sources */,
+				678FFB681CD9FDD60071EAF6 /* ARTCommentSendParam.m in Sources */,
+				67B92D5A1CDB3E960009E5B9 /* ARTSendTalkParam.m in Sources */,
+				678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */,
+				67B92D531CDB378D0009E5B9 /* ARTPurchasesLogData.m in Sources */,
+				6701C9421CD1F63400E0EA6A /* ARTHttpServers.m in Sources */,
+				6701C9511CD2122100E0EA6A /* ARTBaseParam.m in Sources */,
+				6701C9451CD20FB700E0EA6A /* ARTNetUtil.m in Sources */,
+				678FFB5C1CD9F1800071EAF6 /* ARTBookData.m in Sources */,
+				67B92D631CDB49E40009E5B9 /* ARTSendTalkComParam.m in Sources */,
+				678FFB3A1CD883710071EAF6 /* ARTUserManager.m in Sources */,
+				67B92D4D1CDB2F2B0009E5B9 /* ARTPurchasesData.m in Sources */,
+				6701C9541CD2131500E0EA6A /* ARTLoginParam.m in Sources */,
+				678FFB591CD9F0330071EAF6 /* ARTBookListParam.m in Sources */,
+				678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */,
+				67B92D571CDB391F0009E5B9 /* ARTCustomParam.m in Sources */,
+				678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */,
+				67B92D661CDB58AA0009E5B9 /* ARTTalkData.m in Sources */,
+				6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */,
+				678FFB401CD893A90071EAF6 /* ARTUpsetParam.m in Sources */,
+				67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */,
+				678FFB6B1CD9FF8F0071EAF6 /* ARTCommentListParam.m in Sources */,
+				67B92D691CDC6F3A0009E5B9 /* ARTTalkComData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		677534FD1CC8B62E00B34C59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		677534FE1CC8B62E00B34C59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		677535001CC8B62E00B34C59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D261E9262703290D753A3B8 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = ART/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = YiShangYaCang.Ltd.ARTCollect;
+				PRODUCT_NAME = ART;
+			};
+			name = Debug;
+		};
+		677535011CC8B62E00B34C59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C2AF4146FAC109AD172C630 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = ART/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = YiShangYaCang.Ltd.ARTCollect;
+				PRODUCT_NAME = ART;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		677534E31CC8B62D00B34C59 /* Build configuration list for PBXProject "ART" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				677534FD1CC8B62E00B34C59 /* Debug */,
+				677534FE1CC8B62E00B34C59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		677534FF1CC8B62E00B34C59 /* Build configuration list for PBXNativeTarget "ART" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				677535001CC8B62E00B34C59 /* Debug */,
+				677535011CC8B62E00B34C59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 677534E01CC8B62D00B34C59 /* Project object */;
+}
