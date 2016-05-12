@@ -1,0 +1,1 @@
+../../../../ShareSDK2/ShareSDK/Connection/PrintConnection.framework/Headers/PrintConnection.h

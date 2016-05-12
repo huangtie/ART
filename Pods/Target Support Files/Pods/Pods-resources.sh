@@ -61,11 +61,21 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "JSPatch/JSPatch/JSPatch.js"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "SSKeychain/Support/en.lproj"
+  install_resource "ShareSDK2/ShareSDK/Core/Resource.bundle"
+  install_resource "ShareSDK2/ShareSDK/Core/zh-Hans.lproj"
+  install_resource "ShareSDK2/ShareSDK/Core/en.lproj"
+  install_resource "ShareSDK2/ShareSDK/Extend/QQConnectSDK/TencentOpenApi_IOS_Bundle.bundle"
+  install_resource "ShareSDK2/ShareSDK/Extend/SinaWeiboSDK/WeiboSDK.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "JSPatch/JSPatch/JSPatch.js"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "SSKeychain/Support/en.lproj"
+  install_resource "ShareSDK2/ShareSDK/Core/Resource.bundle"
+  install_resource "ShareSDK2/ShareSDK/Core/zh-Hans.lproj"
+  install_resource "ShareSDK2/ShareSDK/Core/en.lproj"
+  install_resource "ShareSDK2/ShareSDK/Extend/QQConnectSDK/TencentOpenApi_IOS_Bundle.bundle"
+  install_resource "ShareSDK2/ShareSDK/Extend/SinaWeiboSDK/WeiboSDK.bundle"
 fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

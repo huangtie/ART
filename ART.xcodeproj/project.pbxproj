@@ -41,6 +41,7 @@
 		67FD127B1CE465D100C93DFD /* ARTEasemobServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD127A1CE465D100C93DFD /* ARTEasemobServer.m */; };
 		67FD127F1CE4876300C93DFD /* ARTUMengServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD127E1CE4876300C93DFD /* ARTUMengServer.m */; };
 		67FD12821CE48AC500C93DFD /* ARTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD12811CE48AC500C93DFD /* ARTBaseViewController.m */; };
+		67FD12881CE4941B00C93DFD /* ARTShareUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD12871CE4941B00C93DFD /* ARTShareUtil.m */; };
 		F57062AFCB5EAE7038E51A71 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D014C614C23ACD38CF997C61 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +115,8 @@
 		67FD127E1CE4876300C93DFD /* ARTUMengServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUMengServer.m; sourceTree = "<group>"; };
 		67FD12801CE48AC500C93DFD /* ARTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBaseViewController.h; sourceTree = "<group>"; };
 		67FD12811CE48AC500C93DFD /* ARTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBaseViewController.m; sourceTree = "<group>"; };
+		67FD12861CE4941B00C93DFD /* ARTShareUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTShareUtil.h; sourceTree = "<group>"; };
+		67FD12871CE4941B00C93DFD /* ARTShareUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTShareUtil.m; sourceTree = "<group>"; };
 		D014C614C23ACD38CF997C61 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -398,6 +401,8 @@
 				678FFB391CD883710071EAF6 /* ARTUserManager.m */,
 				678FFB351CD846E00071EAF6 /* ARTUdidUtil.h */,
 				678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */,
+				67FD12861CE4941B00C93DFD /* ARTShareUtil.h */,
+				67FD12871CE4941B00C93DFD /* ARTShareUtil.m */,
 			);
 			path = "工具类";
 			sourceTree = "<group>";
@@ -560,6 +565,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				678FFB6E1CDA009B0071EAF6 /* ARTCommentData.m in Sources */,
+				67FD12881CE4941B00C93DFD /* ARTShareUtil.m in Sources */,
 				678FFB621CD9FAFA0071EAF6 /* ARTBookDownData.m in Sources */,
 				677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */,
 				678FFB5F1CD9F3730071EAF6 /* ARTAuthorData.m in Sources */,
