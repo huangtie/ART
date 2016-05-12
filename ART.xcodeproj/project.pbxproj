@@ -38,6 +38,7 @@
 		67B92D661CDB58AA0009E5B9 /* ARTTalkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D651CDB58AA0009E5B9 /* ARTTalkData.m */; };
 		67B92D691CDC6F3A0009E5B9 /* ARTTalkComData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D681CDC6F3A0009E5B9 /* ARTTalkComData.m */; };
 		67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D6B1CDC81000009E5B9 /* ARTZanListParam.m */; };
+		67FD127B1CE465D100C93DFD /* ARTEasemobServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD127A1CE465D100C93DFD /* ARTEasemobServer.m */; };
 		F57062AFCB5EAE7038E51A71 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D014C614C23ACD38CF997C61 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,9 @@
 		67B92D681CDC6F3A0009E5B9 /* ARTTalkComData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkComData.m; sourceTree = "<group>"; };
 		67B92D6A1CDC81000009E5B9 /* ARTZanListParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTZanListParam.h; sourceTree = "<group>"; };
 		67B92D6B1CDC81000009E5B9 /* ARTZanListParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTZanListParam.m; sourceTree = "<group>"; };
+		67FD12791CE465D100C93DFD /* ARTEasemobServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEasemobServer.h; sourceTree = "<group>"; };
+		67FD127A1CE465D100C93DFD /* ARTEasemobServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEasemobServer.m; sourceTree = "<group>"; };
+		67FD127C1CE472FF00C93DFD /* NotificationMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationMacros.h; sourceTree = "<group>"; };
 		D014C614C23ACD38CF997C61 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -396,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				6701C93F1CD1F5BE00E0EA6A /* NetMacros.h */,
+				67FD127C1CE472FF00C93DFD /* NotificationMacros.h */,
 			);
 			path = "宏";
 			sourceTree = "<group>";
@@ -416,6 +421,8 @@
 				6701C9411CD1F63400E0EA6A /* ARTHttpServers.m */,
 				6701C9431CD20FB700E0EA6A /* ARTNetUtil.h */,
 				6701C9441CD20FB700E0EA6A /* ARTNetUtil.m */,
+				67FD12791CE465D100C93DFD /* ARTEasemobServer.h */,
+				67FD127A1CE465D100C93DFD /* ARTEasemobServer.m */,
 			);
 			path = "网络层";
 			sourceTree = "<group>";
@@ -549,6 +556,7 @@
 				677534ED1CC8B62D00B34C59 /* main.m in Sources */,
 				678FFB681CD9FDD60071EAF6 /* ARTCommentSendParam.m in Sources */,
 				67B92D5A1CDB3E960009E5B9 /* ARTSendTalkParam.m in Sources */,
+				67FD127B1CE465D100C93DFD /* ARTEasemobServer.m in Sources */,
 				678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */,
 				67B92D531CDB378D0009E5B9 /* ARTPurchasesLogData.m in Sources */,
 				6701C9421CD1F63400E0EA6A /* ARTHttpServers.m in Sources */,

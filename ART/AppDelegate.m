@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ARTNetUtil.h"
 #import "ARTUserManager.h"
+#import "ARTEasemobServer.h"
 
 @interface AppDelegate ()
 
@@ -75,6 +76,10 @@
 //        
 //    }];
 
+    [[ARTEasemobServer services] loginEasemob:@"test" completion:^(EMError *error) {
+        
+    }];
+    
     self.window.rootViewController = [[UIViewController alloc] init];
     
     return YES;
