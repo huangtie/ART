@@ -10,6 +10,7 @@
 #import "ARTNetUtil.h"
 #import "ARTUserManager.h"
 #import "ARTEasemobServer.h"
+#import "ARTUMengServer.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //初始化友盟统计
+    [ARTUMengServer initUMengSDK];
+    
     
 //    ARTLoginParam *param = [[ARTLoginParam alloc] init];
 //    param.userName = @"223";
