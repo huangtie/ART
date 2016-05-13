@@ -7,12 +7,15 @@
 //
 
 #import "AppDelegate.h"
-#import "ARTNetUtil.h"
+#import "ARTRequestUtil.h"
 #import "ARTUserManager.h"
 #import "ARTEasemobServer.h"
-#import "ARTUMengServer.h"
+#import "ARTUMengUtil.h"
+#import "ARTShareUtil.h"
+#import "ARTGTPushUtil.h"
 
 @interface AppDelegate ()
+
 
 @end
 
@@ -23,8 +26,13 @@
     // Override point for customization after application launch.
     
     //初始化友盟统计
-    [ARTUMengServer initUMengSDK];
+    [ARTUMengUtil initUMengSDK];
     
+    //初始化分享
+    [ARTShareUtil initShareSDK];
+    
+    //初始化个推
+    [ARTGTPushUtil sharedInstance];
     
 //    ARTLoginParam *param = [[ARTLoginParam alloc] init];
 //    param.userName = @"223";
@@ -90,26 +98,60 @@
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url wxDelegate:nil];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url
+                 sourceApplication:sourceApplication
+                        annotation:annotation
+                        wxDelegate:nil];
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
+#ifdef DEBUG
+    NSLog(@"\n>>>[DeviceToken Success]:%@\n\n", token);
+#endif
+    
+    //向环信注册deviceToken
+    [[ARTEasemobServer services] bindDeviceToken:deviceToken];
+    
+    //向个推服务器注册deviceToken
+    [GeTuiSdk registerDeviceToken:token];
+}
+
+- (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    /// Background Fetch 恢复SDK 运行
+    [GeTuiSdk resume];
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
+
 - (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+
 }
 
 @end

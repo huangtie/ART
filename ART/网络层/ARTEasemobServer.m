@@ -44,6 +44,26 @@
     return self;
 }
 
+- (void)bindDeviceToken:(NSData *)aDeviceToken
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        EMError *error = [[EMClient sharedClient] bindDeviceToken:aDeviceToken];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (error)
+            {
+#ifdef DEBUG
+                NSLog(@"环信注册DeviceToken失败:%@",error.errorDescription);
+            }
+            else
+            {
+                NSLog(@"环信注册DeviceToken成功");
+#endif
+            }
+
+        });
+    });
+}
+
 - (void)loginEasemob:(NSString *)userID
           completion:(void (^)(EMError *error))completion
 {

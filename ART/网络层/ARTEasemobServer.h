@@ -13,6 +13,8 @@
 
 + (instancetype)services;
 
+- (void)bindDeviceToken:(NSData *)aDeviceToken;
+
 /*** 登录环信 ***/
 - (void)loginEasemob:(NSString *)userID
           completion:(void (^)(EMError *error))completion;

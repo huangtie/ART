@@ -19,6 +19,7 @@ PODS:
   - FMDB (2.6):
     - FMDB/standard (= 2.6)
   - FMDB/standard (2.6)
+  - GTSDK (1.3.2)
   - HyphenateFullSDK (3.1.2)
   - JSPatch (0.1.5):
     - JSPatch/Core (= 0.1.5)
@@ -80,6 +81,7 @@ DEPENDENCIES:
   - DZNEmptyDataSet
   - FDFullscreenPopGesture
   - FMDB
+  - GTSDK
   - HyphenateFullSDK (from `https://github.com/easemob/hyphenate-full-cocoapods.git`)
   - JSPatch
   - LBProgressHUD
@@ -118,6 +120,7 @@ SPEC CHECKSUMS:
   DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
+  GTSDK: 9ea284237331495fd76a71088bfd2da30981d510
   HyphenateFullSDK: f6ed4f5fed2b41f344eab73b451a27f1e8aa8ba2
   JSPatch: 405b5f5990643e6717dd6715ac60d6a2b582a6ba
   LBProgressHUD: d55bc6c1b966032e59fc01ed3544fddec40fd6e1

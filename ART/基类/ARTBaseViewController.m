@@ -7,7 +7,7 @@
 //
 
 #import "ARTBaseViewController.h"
-#import "ARTUMengServer.h"
+#import "ARTUMengUtil.h"
 
 @implementation ARTBaseViewController
 

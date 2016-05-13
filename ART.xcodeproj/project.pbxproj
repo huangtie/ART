@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6701C9421CD1F63400E0EA6A /* ARTHttpServers.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C9411CD1F63400E0EA6A /* ARTHttpServers.m */; };
-		6701C9451CD20FB700E0EA6A /* ARTNetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C9441CD20FB700E0EA6A /* ARTNetUtil.m */; };
 		6701C9511CD2122100E0EA6A /* ARTBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C9501CD2122100E0EA6A /* ARTBaseParam.m */; };
 		6701C9541CD2131500E0EA6A /* ARTLoginParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C9531CD2131500E0EA6A /* ARTLoginParam.m */; };
 		6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C95F1CD21DDC00E0EA6A /* ARTUserData.m */; };
@@ -31,17 +30,16 @@
 		67B92D531CDB378D0009E5B9 /* ARTPurchasesLogData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D521CDB378D0009E5B9 /* ARTPurchasesLogData.m */; };
 		67B92D571CDB391F0009E5B9 /* ARTCustomParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D561CDB391F0009E5B9 /* ARTCustomParam.m */; };
 		67B92D5A1CDB3E960009E5B9 /* ARTSendTalkParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D591CDB3E960009E5B9 /* ARTSendTalkParam.m */; };
-		67B92D5C1CDB43930009E5B9 /* 2323.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67B92D5B1CDB43930009E5B9 /* 2323.jpg */; };
-		67B92D5E1CDB43990009E5B9 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B92D5D1CDB43990009E5B9 /* 11.png */; };
-		67B92D601CDB43AA0009E5B9 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B92D5F1CDB43AA0009E5B9 /* 22.png */; };
 		67B92D631CDB49E40009E5B9 /* ARTSendTalkComParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D621CDB49E40009E5B9 /* ARTSendTalkComParam.m */; };
 		67B92D661CDB58AA0009E5B9 /* ARTTalkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D651CDB58AA0009E5B9 /* ARTTalkData.m */; };
 		67B92D691CDC6F3A0009E5B9 /* ARTTalkComData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D681CDC6F3A0009E5B9 /* ARTTalkComData.m */; };
 		67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D6B1CDC81000009E5B9 /* ARTZanListParam.m */; };
 		67FD127B1CE465D100C93DFD /* ARTEasemobServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD127A1CE465D100C93DFD /* ARTEasemobServer.m */; };
-		67FD127F1CE4876300C93DFD /* ARTUMengServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD127E1CE4876300C93DFD /* ARTUMengServer.m */; };
 		67FD12821CE48AC500C93DFD /* ARTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD12811CE48AC500C93DFD /* ARTBaseViewController.m */; };
 		67FD12881CE4941B00C93DFD /* ARTShareUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD12871CE4941B00C93DFD /* ARTShareUtil.m */; };
+		67FD128B1CE5769F00C93DFD /* ARTGTPushUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD128A1CE5769F00C93DFD /* ARTGTPushUtil.m */; };
+		67FD128E1CE57D5300C93DFD /* ARTUMengUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD128D1CE57D5300C93DFD /* ARTUMengUtil.m */; };
+		67FD12911CE57DF000C93DFD /* ARTRequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD12901CE57DF000C93DFD /* ARTRequestUtil.m */; };
 		F57062AFCB5EAE7038E51A71 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D014C614C23ACD38CF997C61 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,8 +49,6 @@
 		6701C93F1CD1F5BE00E0EA6A /* NetMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetMacros.h; sourceTree = "<group>"; };
 		6701C9401CD1F63400E0EA6A /* ARTHttpServers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTHttpServers.h; sourceTree = "<group>"; };
 		6701C9411CD1F63400E0EA6A /* ARTHttpServers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTHttpServers.m; sourceTree = "<group>"; };
-		6701C9431CD20FB700E0EA6A /* ARTNetUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTNetUtil.h; sourceTree = "<group>"; };
-		6701C9441CD20FB700E0EA6A /* ARTNetUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTNetUtil.m; sourceTree = "<group>"; };
 		6701C94F1CD2122100E0EA6A /* ARTBaseParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBaseParam.h; sourceTree = "<group>"; };
 		6701C9501CD2122100E0EA6A /* ARTBaseParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBaseParam.m; sourceTree = "<group>"; };
 		6701C9521CD2131500E0EA6A /* ARTLoginParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTLoginParam.h; sourceTree = "<group>"; };
@@ -97,9 +93,6 @@
 		67B92D561CDB391F0009E5B9 /* ARTCustomParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTCustomParam.m; sourceTree = "<group>"; };
 		67B92D581CDB3E960009E5B9 /* ARTSendTalkParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSendTalkParam.h; sourceTree = "<group>"; };
 		67B92D591CDB3E960009E5B9 /* ARTSendTalkParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSendTalkParam.m; sourceTree = "<group>"; };
-		67B92D5B1CDB43930009E5B9 /* 2323.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2323.jpg; sourceTree = "<group>"; };
-		67B92D5D1CDB43990009E5B9 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
-		67B92D5F1CDB43AA0009E5B9 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
 		67B92D611CDB49E40009E5B9 /* ARTSendTalkComParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSendTalkComParam.h; sourceTree = "<group>"; };
 		67B92D621CDB49E40009E5B9 /* ARTSendTalkComParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSendTalkComParam.m; sourceTree = "<group>"; };
 		67B92D641CDB58AA0009E5B9 /* ARTTalkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkData.h; sourceTree = "<group>"; };
@@ -111,12 +104,16 @@
 		67FD12791CE465D100C93DFD /* ARTEasemobServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEasemobServer.h; sourceTree = "<group>"; };
 		67FD127A1CE465D100C93DFD /* ARTEasemobServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEasemobServer.m; sourceTree = "<group>"; };
 		67FD127C1CE472FF00C93DFD /* NotificationMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationMacros.h; sourceTree = "<group>"; };
-		67FD127D1CE4876300C93DFD /* ARTUMengServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUMengServer.h; sourceTree = "<group>"; };
-		67FD127E1CE4876300C93DFD /* ARTUMengServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUMengServer.m; sourceTree = "<group>"; };
 		67FD12801CE48AC500C93DFD /* ARTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBaseViewController.h; sourceTree = "<group>"; };
 		67FD12811CE48AC500C93DFD /* ARTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBaseViewController.m; sourceTree = "<group>"; };
 		67FD12861CE4941B00C93DFD /* ARTShareUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTShareUtil.h; sourceTree = "<group>"; };
 		67FD12871CE4941B00C93DFD /* ARTShareUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTShareUtil.m; sourceTree = "<group>"; };
+		67FD12891CE5769F00C93DFD /* ARTGTPushUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTGTPushUtil.h; sourceTree = "<group>"; };
+		67FD128A1CE5769F00C93DFD /* ARTGTPushUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTGTPushUtil.m; sourceTree = "<group>"; };
+		67FD128C1CE57D5300C93DFD /* ARTUMengUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUMengUtil.h; sourceTree = "<group>"; };
+		67FD128D1CE57D5300C93DFD /* ARTUMengUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUMengUtil.m; sourceTree = "<group>"; };
+		67FD128F1CE57DF000C93DFD /* ARTRequestUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRequestUtil.h; sourceTree = "<group>"; };
+		67FD12901CE57DF000C93DFD /* ARTRequestUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRequestUtil.m; sourceTree = "<group>"; };
 		D014C614C23ACD38CF997C61 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -351,9 +348,6 @@
 		677534EA1CC8B62D00B34C59 /* ART */ = {
 			isa = PBXGroup;
 			children = (
-				67B92D5B1CDB43930009E5B9 /* 2323.jpg */,
-				67B92D5D1CDB43990009E5B9 /* 11.png */,
-				67B92D5F1CDB43AA0009E5B9 /* 22.png */,
 				677534EE1CC8B62D00B34C59 /* AppDelegate.h */,
 				677534EF1CC8B62D00B34C59 /* AppDelegate.m */,
 				67BECF821CC8D10F0073ACEC /* 基类 */,
@@ -399,10 +393,16 @@
 			children = (
 				678FFB381CD883710071EAF6 /* ARTUserManager.h */,
 				678FFB391CD883710071EAF6 /* ARTUserManager.m */,
+				67FD128F1CE57DF000C93DFD /* ARTRequestUtil.h */,
+				67FD12901CE57DF000C93DFD /* ARTRequestUtil.m */,
 				678FFB351CD846E00071EAF6 /* ARTUdidUtil.h */,
 				678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */,
 				67FD12861CE4941B00C93DFD /* ARTShareUtil.h */,
 				67FD12871CE4941B00C93DFD /* ARTShareUtil.m */,
+				67FD12891CE5769F00C93DFD /* ARTGTPushUtil.h */,
+				67FD128A1CE5769F00C93DFD /* ARTGTPushUtil.m */,
+				67FD128C1CE57D5300C93DFD /* ARTUMengUtil.h */,
+				67FD128D1CE57D5300C93DFD /* ARTUMengUtil.m */,
 			);
 			path = "工具类";
 			sourceTree = "<group>";
@@ -432,12 +432,8 @@
 			children = (
 				6701C9401CD1F63400E0EA6A /* ARTHttpServers.h */,
 				6701C9411CD1F63400E0EA6A /* ARTHttpServers.m */,
-				6701C9431CD20FB700E0EA6A /* ARTNetUtil.h */,
-				6701C9441CD20FB700E0EA6A /* ARTNetUtil.m */,
 				67FD12791CE465D100C93DFD /* ARTEasemobServer.h */,
 				67FD127A1CE465D100C93DFD /* ARTEasemobServer.m */,
-				67FD127D1CE4876300C93DFD /* ARTUMengServer.h */,
-				67FD127E1CE4876300C93DFD /* ARTUMengServer.m */,
 			);
 			path = "网络层";
 			sourceTree = "<group>";
@@ -476,6 +472,11 @@
 				TargetAttributes = {
 					677534E71CC8B62D00B34C59 = {
 						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -503,9 +504,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */,
-				67B92D601CDB43AA0009E5B9 /* 22.png in Resources */,
-				67B92D5E1CDB43990009E5B9 /* 11.png in Resources */,
-				67B92D5C1CDB43930009E5B9 /* 2323.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,21 +567,22 @@
 				678FFB621CD9FAFA0071EAF6 /* ARTBookDownData.m in Sources */,
 				677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */,
 				678FFB5F1CD9F3730071EAF6 /* ARTAuthorData.m in Sources */,
-				67FD127F1CE4876300C93DFD /* ARTUMengServer.m in Sources */,
 				677534ED1CC8B62D00B34C59 /* main.m in Sources */,
 				678FFB681CD9FDD60071EAF6 /* ARTCommentSendParam.m in Sources */,
+				67FD128E1CE57D5300C93DFD /* ARTUMengUtil.m in Sources */,
 				67B92D5A1CDB3E960009E5B9 /* ARTSendTalkParam.m in Sources */,
 				67FD127B1CE465D100C93DFD /* ARTEasemobServer.m in Sources */,
+				67FD128B1CE5769F00C93DFD /* ARTGTPushUtil.m in Sources */,
 				678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */,
 				67B92D531CDB378D0009E5B9 /* ARTPurchasesLogData.m in Sources */,
 				67FD12821CE48AC500C93DFD /* ARTBaseViewController.m in Sources */,
 				6701C9421CD1F63400E0EA6A /* ARTHttpServers.m in Sources */,
 				6701C9511CD2122100E0EA6A /* ARTBaseParam.m in Sources */,
-				6701C9451CD20FB700E0EA6A /* ARTNetUtil.m in Sources */,
 				678FFB5C1CD9F1800071EAF6 /* ARTBookData.m in Sources */,
 				67B92D631CDB49E40009E5B9 /* ARTSendTalkComParam.m in Sources */,
 				678FFB3A1CD883710071EAF6 /* ARTUserManager.m in Sources */,
 				67B92D4D1CDB2F2B0009E5B9 /* ARTPurchasesData.m in Sources */,
+				67FD12911CE57DF000C93DFD /* ARTRequestUtil.m in Sources */,
 				6701C9541CD2131500E0EA6A /* ARTLoginParam.m in Sources */,
 				678FFB591CD9F0330071EAF6 /* ARTBookListParam.m in Sources */,
 				678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */,
