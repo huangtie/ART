@@ -20,6 +20,8 @@ typedef enum
     SHARE_DESTINATION_ZONE = ShareTypeQQSpace,              //QQ空间
     SHARE_DESTINATION_WECHAT = ShareTypeWeixiSession,       //微信好友
     SHARE_DESTINATION_TIMELINE = ShareTypeWeixiTimeline,    //朋友圈
+    SHARE_DESTINATION_EMAIL = ShareTypeMail,                //邮件
+    SHARE_DESTINATION_SMS = ShareTypeSMS,                   //短信
 }SHARE_DESTINATION;
 
 @interface ARTShareUtil : NSObject
