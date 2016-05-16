@@ -16,7 +16,6 @@
 		677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677534F71CC8B62E00B34C59 /* Assets.xcassets */; };
 		678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */; };
 		678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */; };
-		678FFB3A1CD883710071EAF6 /* ARTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB391CD883710071EAF6 /* ARTUserManager.m */; };
 		678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB3C1CD88E070071EAF6 /* ARTForgetParam.m */; };
 		678FFB401CD893A90071EAF6 /* ARTUpsetParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB3F1CD893A90071EAF6 /* ARTUpsetParam.m */; };
 		678FFB591CD9F0330071EAF6 /* ARTBookListParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB581CD9F0330071EAF6 /* ARTBookListParam.m */; };
@@ -40,6 +39,10 @@
 		67FD128B1CE5769F00C93DFD /* ARTGTPushUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD128A1CE5769F00C93DFD /* ARTGTPushUtil.m */; };
 		67FD128E1CE57D5300C93DFD /* ARTUMengUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD128D1CE57D5300C93DFD /* ARTUMengUtil.m */; };
 		67FD12911CE57DF000C93DFD /* ARTRequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD12901CE57DF000C93DFD /* ARTRequestUtil.m */; };
+		67FD12941CE5AC4C00C93DFD /* ARTDaoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD12931CE5AC4C00C93DFD /* ARTDaoUtil.m */; };
+		67FD12A01CE9D32800C93DFD /* ARTDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD129D1CE9D32800C93DFD /* ARTDownLoadManager.m */; };
+		67FD12A11CE9D32800C93DFD /* ARTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD129F1CE9D32800C93DFD /* ARTUserManager.m */; };
+		67FD12A41CE9D7DA00C93DFD /* ARTBookLocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD12A31CE9D7DA00C93DFD /* ARTBookLocalData.m */; };
 		F57062AFCB5EAE7038E51A71 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D014C614C23ACD38CF997C61 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -65,8 +68,6 @@
 		678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterParam.m; sourceTree = "<group>"; };
 		678FFB351CD846E00071EAF6 /* ARTUdidUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUdidUtil.h; sourceTree = "<group>"; };
 		678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUdidUtil.m; sourceTree = "<group>"; };
-		678FFB381CD883710071EAF6 /* ARTUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUserManager.h; sourceTree = "<group>"; };
-		678FFB391CD883710071EAF6 /* ARTUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUserManager.m; sourceTree = "<group>"; };
 		678FFB3B1CD88E070071EAF6 /* ARTForgetParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTForgetParam.h; sourceTree = "<group>"; };
 		678FFB3C1CD88E070071EAF6 /* ARTForgetParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTForgetParam.m; sourceTree = "<group>"; };
 		678FFB3E1CD893A90071EAF6 /* ARTUpsetParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUpsetParam.h; sourceTree = "<group>"; };
@@ -114,6 +115,17 @@
 		67FD128D1CE57D5300C93DFD /* ARTUMengUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUMengUtil.m; sourceTree = "<group>"; };
 		67FD128F1CE57DF000C93DFD /* ARTRequestUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRequestUtil.h; sourceTree = "<group>"; };
 		67FD12901CE57DF000C93DFD /* ARTRequestUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRequestUtil.m; sourceTree = "<group>"; };
+		67FD12921CE5AC4C00C93DFD /* ARTDaoUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTDaoUtil.h; sourceTree = "<group>"; };
+		67FD12931CE5AC4C00C93DFD /* ARTDaoUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTDaoUtil.m; sourceTree = "<group>"; };
+		67FD12951CE5CFBE00C93DFD /* SystemMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemMacros.h; sourceTree = "<group>"; };
+		67FD12961CE5D0F700C93DFD /* MethodMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodMacros.h; sourceTree = "<group>"; };
+		67FD12971CE5D1F600C93DFD /* Macros.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.pch; sourceTree = "<group>"; };
+		67FD129C1CE9D32800C93DFD /* ARTDownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTDownLoadManager.h; sourceTree = "<group>"; };
+		67FD129D1CE9D32800C93DFD /* ARTDownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTDownLoadManager.m; sourceTree = "<group>"; };
+		67FD129E1CE9D32800C93DFD /* ARTUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUserManager.h; sourceTree = "<group>"; };
+		67FD129F1CE9D32800C93DFD /* ARTUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUserManager.m; sourceTree = "<group>"; };
+		67FD12A21CE9D7DA00C93DFD /* ARTBookLocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookLocalData.h; sourceTree = "<group>"; };
+		67FD12A31CE9D7DA00C93DFD /* ARTBookLocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookLocalData.m; sourceTree = "<group>"; };
 		D014C614C23ACD38CF997C61 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -269,6 +281,8 @@
 				678FFB5B1CD9F1800071EAF6 /* ARTBookData.m */,
 				678FFB601CD9FAFA0071EAF6 /* ARTBookDownData.h */,
 				678FFB611CD9FAFA0071EAF6 /* ARTBookDownData.m */,
+				67FD12A21CE9D7DA00C93DFD /* ARTBookLocalData.h */,
+				67FD12A31CE9D7DA00C93DFD /* ARTBookLocalData.m */,
 			);
 			path = "图集模块";
 			sourceTree = "<group>";
@@ -353,6 +367,7 @@
 				67BECF821CC8D10F0073ACEC /* 基类 */,
 				6701C9461CD211F900E0EA6A /* 参数模型 */,
 				6701C9551CD21B1F00E0EA6A /* 数据模型 */,
+				67FD129B1CE9D32800C93DFD /* 管理 */,
 				67BECF801CC8D10F0073ACEC /* 工具类 */,
 				67BECF831CC8D10F0073ACEC /* 网络层 */,
 				67BECF811CC8D10F0073ACEC /* 宏 */,
@@ -391,10 +406,10 @@
 		67BECF801CC8D10F0073ACEC /* 工具类 */ = {
 			isa = PBXGroup;
 			children = (
-				678FFB381CD883710071EAF6 /* ARTUserManager.h */,
-				678FFB391CD883710071EAF6 /* ARTUserManager.m */,
 				67FD128F1CE57DF000C93DFD /* ARTRequestUtil.h */,
 				67FD12901CE57DF000C93DFD /* ARTRequestUtil.m */,
+				67FD12921CE5AC4C00C93DFD /* ARTDaoUtil.h */,
+				67FD12931CE5AC4C00C93DFD /* ARTDaoUtil.m */,
 				678FFB351CD846E00071EAF6 /* ARTUdidUtil.h */,
 				678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */,
 				67FD12861CE4941B00C93DFD /* ARTShareUtil.h */,
@@ -410,8 +425,11 @@
 		67BECF811CC8D10F0073ACEC /* 宏 */ = {
 			isa = PBXGroup;
 			children = (
+				67FD12971CE5D1F600C93DFD /* Macros.pch */,
 				6701C93F1CD1F5BE00E0EA6A /* NetMacros.h */,
 				67FD127C1CE472FF00C93DFD /* NotificationMacros.h */,
+				67FD12951CE5CFBE00C93DFD /* SystemMacros.h */,
+				67FD12961CE5D0F700C93DFD /* MethodMacros.h */,
 			);
 			path = "宏";
 			sourceTree = "<group>";
@@ -436,6 +454,17 @@
 				67FD127A1CE465D100C93DFD /* ARTEasemobServer.m */,
 			);
 			path = "网络层";
+			sourceTree = "<group>";
+		};
+		67FD129B1CE9D32800C93DFD /* 管理 */ = {
+			isa = PBXGroup;
+			children = (
+				67FD129E1CE9D32800C93DFD /* ARTUserManager.h */,
+				67FD129F1CE9D32800C93DFD /* ARTUserManager.m */,
+				67FD129C1CE9D32800C93DFD /* ARTDownLoadManager.h */,
+				67FD129D1CE9D32800C93DFD /* ARTDownLoadManager.m */,
+			);
+			path = "管理";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -568,6 +597,7 @@
 				677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */,
 				678FFB5F1CD9F3730071EAF6 /* ARTAuthorData.m in Sources */,
 				677534ED1CC8B62D00B34C59 /* main.m in Sources */,
+				67FD12941CE5AC4C00C93DFD /* ARTDaoUtil.m in Sources */,
 				678FFB681CD9FDD60071EAF6 /* ARTCommentSendParam.m in Sources */,
 				67FD128E1CE57D5300C93DFD /* ARTUMengUtil.m in Sources */,
 				67B92D5A1CDB3E960009E5B9 /* ARTSendTalkParam.m in Sources */,
@@ -580,8 +610,9 @@
 				6701C9511CD2122100E0EA6A /* ARTBaseParam.m in Sources */,
 				678FFB5C1CD9F1800071EAF6 /* ARTBookData.m in Sources */,
 				67B92D631CDB49E40009E5B9 /* ARTSendTalkComParam.m in Sources */,
-				678FFB3A1CD883710071EAF6 /* ARTUserManager.m in Sources */,
+				67FD12A01CE9D32800C93DFD /* ARTDownLoadManager.m in Sources */,
 				67B92D4D1CDB2F2B0009E5B9 /* ARTPurchasesData.m in Sources */,
+				67FD12A41CE9D7DA00C93DFD /* ARTBookLocalData.m in Sources */,
 				67FD12911CE57DF000C93DFD /* ARTRequestUtil.m in Sources */,
 				6701C9541CD2131500E0EA6A /* ARTLoginParam.m in Sources */,
 				678FFB591CD9F0330071EAF6 /* ARTBookListParam.m in Sources */,
@@ -589,6 +620,7 @@
 				67B92D571CDB391F0009E5B9 /* ARTCustomParam.m in Sources */,
 				678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */,
 				67B92D661CDB58AA0009E5B9 /* ARTTalkData.m in Sources */,
+				67FD12A11CE9D32800C93DFD /* ARTUserManager.m in Sources */,
 				6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */,
 				678FFB401CD893A90071EAF6 /* ARTUpsetParam.m in Sources */,
 				67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */,
@@ -689,6 +721,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "ART/宏/Macros.pch";
 				INFOPLIST_FILE = ART/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -704,6 +737,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "ART/宏/Macros.pch";
 				INFOPLIST_FILE = ART/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

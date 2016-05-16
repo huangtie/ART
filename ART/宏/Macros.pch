@@ -1,0 +1,17 @@
+//
+//  Macros.pch
+//  ART
+//
+//  Created by huangtie on 16/5/13.
+//  Copyright © 2016年 huangtie. All rights reserved.
+//
+
+#ifndef Macros_pch
+#define Macros_pch
+
+#import "NetMacros.h"
+#import "NotificationMacros.h"
+#import "SystemMacros.h"
+#import "MethodMacros.h"
+
+#endif
