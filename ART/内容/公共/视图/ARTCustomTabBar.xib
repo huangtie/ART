@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ARTCustomTabBar">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabar_line_bottom" id="Vb5-E6-pM7" userLabel="线">
+                    <rect key="frame" x="0.0" y="79" width="768" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" id="1lZ-eE-5bh" userLabel="Items">
+                    <rect key="frame" x="0.0" y="36" width="450" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="i79-ru-Mcz" userLabel="首页">
+                            <rect key="frame" x="0.0" y="0.0" width="90" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" backgroundImage="tabar_icon_home"/>
+                            <state key="selected" backgroundImage="tabar_icon_home_select"/>
+                            <connections>
+                                <action selector="itemsTouchAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="v3s-1p-2FY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vNC-Tl-E0Q" userLabel="图集">
+                            <rect key="frame" x="90" y="0.0" width="90" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" backgroundImage="tabar_icon_book"/>
+                            <state key="selected" backgroundImage="tabar_icon_book_select"/>
+                            <connections>
+                                <action selector="itemsTouchAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="KwL-bd-xLh"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BSp-Ci-uRw" userLabel="本地">
+                            <rect key="frame" x="180" y="0.0" width="90" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" backgroundImage="tabar_icon_local"/>
+                            <state key="selected" backgroundImage="tabar_icon_local_select"/>
+                            <connections>
+                                <action selector="itemsTouchAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="LsR-gg-NQE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UW9-r6-apf" userLabel="圈子">
+                            <rect key="frame" x="270" y="0.0" width="90" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" backgroundImage="tabar_icon_talk"/>
+                            <state key="selected" backgroundImage="tabar_icon_talk_select"/>
+                            <connections>
+                                <action selector="itemsTouchAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="vSu-da-WOG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kwb-0p-nM3" userLabel="拍卖">
+                            <rect key="frame" x="360" y="1" width="90" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" backgroundImage="tabar_icon_good"/>
+                            <state key="selected" backgroundImage="tabar_icon_good_select"/>
+                            <connections>
+                                <action selector="itemsTouchAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="rCO-J5-iw4"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="c4x-Ra-drO" userLabel="搜索">
+                    <rect key="frame" x="515" y="45" width="190" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="tabar_bg_search"/>
+                    <connections>
+                        <action selector="searchTouchAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="9oZ-FF-Awv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EuN-CO-bn0" userLabel="用户中心">
+                    <rect key="frame" x="718" y="33" width="40" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="tabar_icon_user"/>
+                    <connections>
+                        <action selector="userTouchAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="JYF-qA-qmY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="itemsContrl" destination="1lZ-eE-5bh" id="N3X-Wn-0ZC"/>
+            </connections>
+            <point key="canvasLocation" x="412" y="72"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tabar_bg_search" width="190" height="22"/>
+        <image name="tabar_icon_book" width="90" height="40"/>
+        <image name="tabar_icon_book_select" width="90" height="40"/>
+        <image name="tabar_icon_good" width="90" height="40"/>
+        <image name="tabar_icon_good_select" width="90" height="40"/>
+        <image name="tabar_icon_home" width="90" height="40"/>
+        <image name="tabar_icon_home_select" width="90" height="40"/>
+        <image name="tabar_icon_local" width="90" height="40"/>
+        <image name="tabar_icon_local_select" width="90" height="40"/>
+        <image name="tabar_icon_talk" width="90" height="40"/>
+        <image name="tabar_icon_talk_select" width="90" height="40"/>
+        <image name="tabar_icon_user" width="40" height="40"/>
+        <image name="tabar_line_bottom" width="768" height="1"/>
+    </resources>
+</document>

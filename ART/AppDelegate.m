@@ -13,8 +13,13 @@
 #import "ARTUMengUtil.h"
 #import "ARTShareUtil.h"
 #import "ARTGTPushUtil.h"
-#import "ARTBookLocalData.h"
-#import "ARTBookDownObject.h"
+
+#import "ARTHomeViewController.h"
+#import "ARTBookViewController.h"
+#import "ARTLocalViewController.h"
+#import "ARTSocialViewController.h"
+#import "ARTAuctionViewController.h"
+#import "ARTTabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -36,6 +41,22 @@
     
     //初始化个推
     [ARTGTPushUtil sharedInstance];
+    
+    self.window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
+    ARTHomeViewController *homeVC = [[ARTHomeViewController alloc] init];
+    UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:homeVC];
+    ARTBookViewController *bookVC = [[ARTBookViewController alloc] init];
+    UINavigationController *bookNav = [[UINavigationController alloc] initWithRootViewController:bookVC];
+    ARTLocalViewController *localVC = [[ARTLocalViewController alloc] init];
+    UINavigationController *localNav = [[UINavigationController alloc] initWithRootViewController:localVC];
+    ARTSocialViewController *socialVC = [[ARTSocialViewController alloc] init];
+    UINavigationController *socialNav = [[UINavigationController alloc] initWithRootViewController:socialVC];
+    ARTAuctionViewController *auctionVC = [[ARTAuctionViewController alloc] init];
+    UINavigationController *auctionNav = [[UINavigationController alloc] initWithRootViewController:auctionVC];
+    
+    ARTTabBarViewController *tabVC = [[ARTTabBarViewController alloc] init];
+    tabVC.viewControllers = @[homeNav,bookNav,localNav,socialNav,auctionNav];
+    self.window.rootViewController = tabVC;
     
 //    ARTLoginParam *param = [[ARTLoginParam alloc] init];
 //    param.userName = @"223";
@@ -118,11 +139,7 @@
     [[ARTEasemobServer services] loginEasemob:@"test" completion:^(EMError *error) {
         
     }];
-    
-    
-    
-    self.window.rootViewController = [[UIViewController alloc] init];
-
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

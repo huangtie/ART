@@ -16,6 +16,17 @@
 		677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677534F71CC8B62E00B34C59 /* Assets.xcassets */; };
 		677598871CEC1344002D3947 /* ARTBookDownObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598861CEC1344002D3947 /* ARTBookDownObject.m */; };
 		6775988A1CEC4875002D3947 /* Microsoft Yahei.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 677598891CEC4875002D3947 /* Microsoft Yahei.ttf */; };
+		6775988E1CEC56E3002D3947 /* 图片资源.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6775988D1CEC56E3002D3947 /* 图片资源.xcassets */; };
+		677598A41CEC5938002D3947 /* ARTTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598A31CEC5938002D3947 /* ARTTabBarViewController.m */; };
+		677598A71CEC5970002D3947 /* ARTCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598A61CEC5970002D3947 /* ARTCustomTabBar.m */; };
+		677598A91CEC5988002D3947 /* ARTCustomTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 677598A81CEC5988002D3947 /* ARTCustomTabBar.xib */; };
+		677598AC1CEC680E002D3947 /* ARTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598AB1CEC680E002D3947 /* ARTHomeViewController.m */; };
+		677598AF1CEC6851002D3947 /* ARTBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598AE1CEC6851002D3947 /* ARTBookViewController.m */; };
+		677598B21CEC6862002D3947 /* ARTLocalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598B11CEC6862002D3947 /* ARTLocalViewController.m */; };
+		677598B51CEC68A5002D3947 /* ARTSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598B41CEC68A5002D3947 /* ARTSocialViewController.m */; };
+		677598B81CEC68C6002D3947 /* ARTAuctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598B71CEC68C6002D3947 /* ARTAuctionViewController.m */; };
+		677598BB1CEC788A002D3947 /* ARTBookScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598BA1CEC788A002D3947 /* ARTBookScreen.m */; };
+		677598BD1CEC7B2D002D3947 /* ARTBookScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 677598BC1CEC7B2D002D3947 /* ARTBookScreen.xib */; };
 		678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */; };
 		678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */; };
 		678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB3C1CD88E070071EAF6 /* ARTForgetParam.m */; };
@@ -72,6 +83,25 @@
 		677598891CEC4875002D3947 /* Microsoft Yahei.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Microsoft Yahei.ttf"; sourceTree = "<group>"; };
 		6775988B1CEC48CE002D3947 /* FontMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontMacros.h; sourceTree = "<group>"; };
 		6775988C1CEC4B5C002D3947 /* ColorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorMacros.h; sourceTree = "<group>"; };
+		6775988D1CEC56E3002D3947 /* 图片资源.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "图片资源.xcassets"; sourceTree = "<group>"; };
+		677598A21CEC5938002D3947 /* ARTTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTabBarViewController.h; sourceTree = "<group>"; };
+		677598A31CEC5938002D3947 /* ARTTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTabBarViewController.m; sourceTree = "<group>"; };
+		677598A51CEC5970002D3947 /* ARTCustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTCustomTabBar.h; sourceTree = "<group>"; };
+		677598A61CEC5970002D3947 /* ARTCustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTCustomTabBar.m; sourceTree = "<group>"; };
+		677598A81CEC5988002D3947 /* ARTCustomTabBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARTCustomTabBar.xib; sourceTree = "<group>"; };
+		677598AA1CEC680E002D3947 /* ARTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTHomeViewController.h; sourceTree = "<group>"; };
+		677598AB1CEC680E002D3947 /* ARTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTHomeViewController.m; sourceTree = "<group>"; };
+		677598AD1CEC6851002D3947 /* ARTBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookViewController.h; sourceTree = "<group>"; };
+		677598AE1CEC6851002D3947 /* ARTBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookViewController.m; sourceTree = "<group>"; };
+		677598B01CEC6862002D3947 /* ARTLocalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTLocalViewController.h; sourceTree = "<group>"; };
+		677598B11CEC6862002D3947 /* ARTLocalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTLocalViewController.m; sourceTree = "<group>"; };
+		677598B31CEC68A5002D3947 /* ARTSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSocialViewController.h; sourceTree = "<group>"; };
+		677598B41CEC68A5002D3947 /* ARTSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSocialViewController.m; sourceTree = "<group>"; };
+		677598B61CEC68C6002D3947 /* ARTAuctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAuctionViewController.h; sourceTree = "<group>"; };
+		677598B71CEC68C6002D3947 /* ARTAuctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAuctionViewController.m; sourceTree = "<group>"; };
+		677598B91CEC788A002D3947 /* ARTBookScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookScreen.h; sourceTree = "<group>"; };
+		677598BA1CEC788A002D3947 /* ARTBookScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookScreen.m; sourceTree = "<group>"; };
+		677598BC1CEC7B2D002D3947 /* ARTBookScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARTBookScreen.xib; sourceTree = "<group>"; };
 		678FFB321CD3471E0071EAF6 /* ARTRegisterParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRegisterParam.h; sourceTree = "<group>"; };
 		678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterParam.m; sourceTree = "<group>"; };
 		678FFB351CD846E00071EAF6 /* ARTUdidUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUdidUtil.h; sourceTree = "<group>"; };
@@ -377,6 +407,7 @@
 			children = (
 				677534EE1CC8B62D00B34C59 /* AppDelegate.h */,
 				677534EF1CC8B62D00B34C59 /* AppDelegate.m */,
+				6775988F1CEC5890002D3947 /* 内容 */,
 				67BECF821CC8D10F0073ACEC /* 基类 */,
 				6701C9461CD211F900E0EA6A /* 参数模型 */,
 				6701C9551CD21B1F00E0EA6A /* 数据模型 */,
@@ -406,8 +437,178 @@
 			isa = PBXGroup;
 			children = (
 				677598891CEC4875002D3947 /* Microsoft Yahei.ttf */,
+				6775988D1CEC56E3002D3947 /* 图片资源.xcassets */,
 			);
 			path = "资源";
+			sourceTree = "<group>";
+		};
+		6775988F1CEC5890002D3947 /* 内容 */ = {
+			isa = PBXGroup;
+			children = (
+				677598901CEC5890002D3947 /* 公共 */,
+				6775989F1CEC5890002D3947 /* 首页 */,
+				677598931CEC5890002D3947 /* 图集 */,
+				6775989C1CEC5890002D3947 /* 本地 */,
+				677598961CEC5890002D3947 /* 圈子 */,
+				677598991CEC5890002D3947 /* 拍卖 */,
+			);
+			path = "内容";
+			sourceTree = "<group>";
+		};
+		677598901CEC5890002D3947 /* 公共 */ = {
+			isa = PBXGroup;
+			children = (
+				677598911CEC5890002D3947 /* 控制器 */,
+				677598921CEC5890002D3947 /* 视图 */,
+			);
+			path = "公共";
+			sourceTree = "<group>";
+		};
+		677598911CEC5890002D3947 /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				677598A21CEC5938002D3947 /* ARTTabBarViewController.h */,
+				677598A31CEC5938002D3947 /* ARTTabBarViewController.m */,
+			);
+			path = "控制器";
+			sourceTree = "<group>";
+		};
+		677598921CEC5890002D3947 /* 视图 */ = {
+			isa = PBXGroup;
+			children = (
+				677598A51CEC5970002D3947 /* ARTCustomTabBar.h */,
+				677598A61CEC5970002D3947 /* ARTCustomTabBar.m */,
+				677598A81CEC5988002D3947 /* ARTCustomTabBar.xib */,
+			);
+			path = "视图";
+			sourceTree = "<group>";
+		};
+		677598931CEC5890002D3947 /* 图集 */ = {
+			isa = PBXGroup;
+			children = (
+				677598941CEC5890002D3947 /* 控制器 */,
+				677598951CEC5890002D3947 /* 视图 */,
+			);
+			path = "图集";
+			sourceTree = "<group>";
+		};
+		677598941CEC5890002D3947 /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				677598AD1CEC6851002D3947 /* ARTBookViewController.h */,
+				677598AE1CEC6851002D3947 /* ARTBookViewController.m */,
+			);
+			path = "控制器";
+			sourceTree = "<group>";
+		};
+		677598951CEC5890002D3947 /* 视图 */ = {
+			isa = PBXGroup;
+			children = (
+				677598B91CEC788A002D3947 /* ARTBookScreen.h */,
+				677598BA1CEC788A002D3947 /* ARTBookScreen.m */,
+				677598BC1CEC7B2D002D3947 /* ARTBookScreen.xib */,
+			);
+			path = "视图";
+			sourceTree = "<group>";
+		};
+		677598961CEC5890002D3947 /* 圈子 */ = {
+			isa = PBXGroup;
+			children = (
+				677598971CEC5890002D3947 /* 控制器 */,
+				677598981CEC5890002D3947 /* 视图 */,
+			);
+			path = "圈子";
+			sourceTree = "<group>";
+		};
+		677598971CEC5890002D3947 /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				677598B31CEC68A5002D3947 /* ARTSocialViewController.h */,
+				677598B41CEC68A5002D3947 /* ARTSocialViewController.m */,
+			);
+			path = "控制器";
+			sourceTree = "<group>";
+		};
+		677598981CEC5890002D3947 /* 视图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "视图";
+			sourceTree = "<group>";
+		};
+		677598991CEC5890002D3947 /* 拍卖 */ = {
+			isa = PBXGroup;
+			children = (
+				6775989A1CEC5890002D3947 /* 控制器 */,
+				6775989B1CEC5890002D3947 /* 视图 */,
+			);
+			path = "拍卖";
+			sourceTree = "<group>";
+		};
+		6775989A1CEC5890002D3947 /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				677598B61CEC68C6002D3947 /* ARTAuctionViewController.h */,
+				677598B71CEC68C6002D3947 /* ARTAuctionViewController.m */,
+			);
+			path = "控制器";
+			sourceTree = "<group>";
+		};
+		6775989B1CEC5890002D3947 /* 视图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "视图";
+			sourceTree = "<group>";
+		};
+		6775989C1CEC5890002D3947 /* 本地 */ = {
+			isa = PBXGroup;
+			children = (
+				6775989D1CEC5890002D3947 /* 控制器 */,
+				6775989E1CEC5890002D3947 /* 视图 */,
+			);
+			path = "本地";
+			sourceTree = "<group>";
+		};
+		6775989D1CEC5890002D3947 /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				677598B01CEC6862002D3947 /* ARTLocalViewController.h */,
+				677598B11CEC6862002D3947 /* ARTLocalViewController.m */,
+			);
+			path = "控制器";
+			sourceTree = "<group>";
+		};
+		6775989E1CEC5890002D3947 /* 视图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "视图";
+			sourceTree = "<group>";
+		};
+		6775989F1CEC5890002D3947 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				677598A01CEC5890002D3947 /* 控制器 */,
+				677598A11CEC5890002D3947 /* 视图 */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		677598A01CEC5890002D3947 /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				677598AA1CEC680E002D3947 /* ARTHomeViewController.h */,
+				677598AB1CEC680E002D3947 /* ARTHomeViewController.m */,
+			);
+			path = "控制器";
+			sourceTree = "<group>";
+		};
+		677598A11CEC5890002D3947 /* 视图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "视图";
 			sourceTree = "<group>";
 		};
 		67B92D541CDB38EA0009E5B9 /* 通用 */ = {
@@ -567,7 +768,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6775988E1CEC56E3002D3947 /* 图片资源.xcassets in Resources */,
 				677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */,
+				677598A91CEC5988002D3947 /* ARTCustomTabBar.xib in Resources */,
+				677598BD1CEC7B2D002D3947 /* ARTBookScreen.xib in Resources */,
 				6775988A1CEC4875002D3947 /* Microsoft Yahei.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,11 +831,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677598B21CEC6862002D3947 /* ARTLocalViewController.m in Sources */,
 				678FFB6E1CDA009B0071EAF6 /* ARTCommentData.m in Sources */,
 				67FD12881CE4941B00C93DFD /* ARTShareUtil.m in Sources */,
 				678FFB621CD9FAFA0071EAF6 /* ARTBookDownData.m in Sources */,
 				677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */,
 				678FFB5F1CD9F3730071EAF6 /* ARTAuthorData.m in Sources */,
+				677598B51CEC68A5002D3947 /* ARTSocialViewController.m in Sources */,
 				677534ED1CC8B62D00B34C59 /* main.m in Sources */,
 				67FD12941CE5AC4C00C93DFD /* ARTDaoUtil.m in Sources */,
 				678FFB681CD9FDD60071EAF6 /* ARTCommentSendParam.m in Sources */,
@@ -641,7 +847,9 @@
 				67FD128B1CE5769F00C93DFD /* ARTGTPushUtil.m in Sources */,
 				678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */,
 				67B92D531CDB378D0009E5B9 /* ARTPurchasesLogData.m in Sources */,
+				677598A41CEC5938002D3947 /* ARTTabBarViewController.m in Sources */,
 				67FD12821CE48AC500C93DFD /* ARTBaseViewController.m in Sources */,
+				677598B81CEC68C6002D3947 /* ARTAuctionViewController.m in Sources */,
 				6701C9421CD1F63400E0EA6A /* ARTHttpServers.m in Sources */,
 				6701C9511CD2122100E0EA6A /* ARTBaseParam.m in Sources */,
 				678FFB5C1CD9F1800071EAF6 /* ARTBookData.m in Sources */,
@@ -654,10 +862,14 @@
 				678FFB591CD9F0330071EAF6 /* ARTBookListParam.m in Sources */,
 				678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */,
 				67B92D571CDB391F0009E5B9 /* ARTCustomParam.m in Sources */,
+				677598BB1CEC788A002D3947 /* ARTBookScreen.m in Sources */,
 				678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */,
 				67FD12AC1CEB064100C93DFD /* NSFileManager+ART.m in Sources */,
 				67B92D661CDB58AA0009E5B9 /* ARTTalkData.m in Sources */,
+				677598A71CEC5970002D3947 /* ARTCustomTabBar.m in Sources */,
 				67FD12A11CE9D32800C93DFD /* ARTUserManager.m in Sources */,
+				677598AC1CEC680E002D3947 /* ARTHomeViewController.m in Sources */,
+				677598AF1CEC6851002D3947 /* ARTBookViewController.m in Sources */,
 				6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */,
 				678FFB401CD893A90071EAF6 /* ARTUpsetParam.m in Sources */,
 				67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */,

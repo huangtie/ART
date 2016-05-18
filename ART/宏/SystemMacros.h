@@ -14,6 +14,8 @@
 #define SCREEN_WIDTH     ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT    ([UIScreen mainScreen].bounds.size.height)
 
+#define NAVIGATION_HEIGH 80
+
 #define IOS7_OR_LATER  (IOS_VERSION>= 7.0)
 
 /// 一像素的线的宽度

@@ -10,4 +10,9 @@
 
 @interface ARTBaseViewController : UIViewController
 
+/**
+ * 自定制导航条
+ */
+@property (readonly, nonatomic) UINavigationBar *navigationBar;
+
 @end
