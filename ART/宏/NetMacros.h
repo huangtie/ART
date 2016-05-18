@@ -10,7 +10,7 @@
 #define NetMacros_h
 
 #if DEBUG
-#define APPHOST(url,fmt,...) [NSString stringWithFormat:@"http://localhost:8888%@"fmt, url, ##__VA_ARGS__]
+#define APPHOST(url,fmt,...) [NSString stringWithFormat:@"http://yishangyacang.top:8888%@"fmt, url, ##__VA_ARGS__]
 #else
 #define APPHOST(url,fmt,...) [NSString stringWithFormat:@"http://yishangyacang.top:8888%@"fmt, url, ##__VA_ARGS__]
 #endif

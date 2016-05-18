@@ -13,5 +13,6 @@
 #import "NotificationMacros.h"
 #import "SystemMacros.h"
 #import "MethodMacros.h"
+#import "PathMacros.h"
 
 #endif

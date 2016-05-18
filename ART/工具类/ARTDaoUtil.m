@@ -14,8 +14,6 @@
 
 @interface ARTDaoUtil()
 
-@property (nonatomic , strong) FMDatabaseQueue *queue;
-
 @end
 
 @implementation ARTDaoUtil
@@ -26,7 +24,7 @@
     self = [super init];
     if (self)
     {
-        self.queue = [FMDatabaseQueue databaseQueueWithPath:[[self class] dbPath:dbName]];
+        self.queue = [FMDatabaseQueue databaseQueueWithPath:FILE_PATH_DB(dbName)];
         
         [self.queue inDatabase:^(FMDatabase *db) {
             for (ARTForm *form in dbForms)
@@ -41,10 +39,29 @@
     return self;
 }
 
-- (void)executeUpdate:(NSString *)SQL
+- (void)executeUpdate:(NSString *)SQL completion:(void (^)())completion
 {
     [self.queue inTransaction:^(FMDatabase *db, BOOL *rollback) {
         [db executeUpdate:SQL];
+        if (completion)
+        {
+            completion();
+        }
+    }];
+}
+
+- (void)executeUpdateAsync:(NSString *)SQL completion:(void (^)())completion
+{
+    [self.queue inDatabase:^(FMDatabase *db) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [db executeUpdate:SQL];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (completion)
+                {
+                    completion();
+                }
+            });
+        });
     }];
 }
 
@@ -59,22 +76,20 @@
     }];
 }
 
-+ (NSString *)dbPath:(NSString *)dbName
+- (void)executeQueryAsync:(NSString *)SQL completion:(void (^)(FMResultSet *resultSet))completion
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-    NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"DB"];
-    NSFileManager *manager = [[NSFileManager alloc]init];
-    if (![manager fileExistsAtPath:path])
-    {
-        NSError *error ;
-        [manager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error];
-        if (error)
-        {
-            
-        }
-    }
-    NSString* fileDirectory = [path stringByAppendingPathComponent:dbName];
-    return fileDirectory;
+    [self.queue inDatabase:^(FMDatabase *db) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            FMResultSet *set = [db executeQuery:SQL];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (completion)
+                {
+                    completion(set);
+                }
+            });
+        });
+    }];
 }
+
 
 @end

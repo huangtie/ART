@@ -13,9 +13,12 @@
 #import "ARTUMengUtil.h"
 #import "ARTShareUtil.h"
 #import "ARTGTPushUtil.h"
+#import "ARTBookLocalData.h"
+#import "ARTBookDownObject.h"
 
 @interface AppDelegate ()
 
+//@property (nonatomic , strong) ARTBookDownObject *object;
 
 @end
 
@@ -38,6 +41,29 @@
 //    param.userName = @"223";
 //    param.userPassword = @"1";
 //    param.userType = @"1";
+//    
+//    [ARTRequestUtil requestLogin:param completion:^(NSURLSessionDataTask *task, ARTUserData *data) {
+//        [ARTUserManager sharedInstance].userinfo = data;
+//        
+//        [ARTRequestUtil requestBookDetail:@"9" completion:^(NSURLSessionDataTask *task, ARTBookData *data) {
+//            [ARTRequestUtil requestBookDowns:@"9" completion:^(NSURLSessionDataTask *task, NSArray<ARTBookDownData *> *datas) {
+//                NSMutableArray *urls = [NSMutableArray array];
+//                for (ARTBookDownData *down in datas)
+//                {
+//                    [urls addObject:down.dataURL];
+//                }
+//                ARTBookDownObject *object = [[ARTBookDownObject alloc] initWithBookData:data urls:urls];
+//                
+//            } failure:^(ErrorItemd *error) {
+//                
+//            }];
+//        } failure:^(ErrorItemd *error) {
+//            
+//        }];
+//        
+//    } failure:^(ErrorItemd *error) {
+//        
+//    }];
     
 //    ARTRegisterParam *param = [[ARTRegisterParam alloc] init];
 //    param.userName = @"66666";
@@ -92,6 +118,8 @@
     [[ARTEasemobServer services] loginEasemob:@"test" completion:^(EMError *error) {
         
     }];
+    
+    
     
     self.window.rootViewController = [[UIViewController alloc] init];
 

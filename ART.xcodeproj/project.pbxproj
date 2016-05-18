@@ -14,6 +14,7 @@
 		677534ED1CC8B62D00B34C59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EC1CC8B62D00B34C59 /* main.m */; };
 		677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EF1CC8B62D00B34C59 /* AppDelegate.m */; };
 		677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677534F71CC8B62E00B34C59 /* Assets.xcassets */; };
+		677598871CEC1344002D3947 /* ARTBookDownObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598861CEC1344002D3947 /* ARTBookDownObject.m */; };
 		678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */; };
 		678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */; };
 		678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB3C1CD88E070071EAF6 /* ARTForgetParam.m */; };
@@ -43,6 +44,7 @@
 		67FD12A01CE9D32800C93DFD /* ARTDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD129D1CE9D32800C93DFD /* ARTDownLoadManager.m */; };
 		67FD12A11CE9D32800C93DFD /* ARTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD129F1CE9D32800C93DFD /* ARTUserManager.m */; };
 		67FD12A41CE9D7DA00C93DFD /* ARTBookLocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD12A31CE9D7DA00C93DFD /* ARTBookLocalData.m */; };
+		67FD12AC1CEB064100C93DFD /* NSFileManager+ART.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD12AB1CEB064100C93DFD /* NSFileManager+ART.m */; };
 		F57062AFCB5EAE7038E51A71 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D014C614C23ACD38CF997C61 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		677534EF1CC8B62D00B34C59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		677534F71CC8B62E00B34C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		677534FC1CC8B62E00B34C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		677598851CEC1344002D3947 /* ARTBookDownObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookDownObject.h; sourceTree = "<group>"; };
+		677598861CEC1344002D3947 /* ARTBookDownObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookDownObject.m; sourceTree = "<group>"; };
 		678FFB321CD3471E0071EAF6 /* ARTRegisterParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRegisterParam.h; sourceTree = "<group>"; };
 		678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterParam.m; sourceTree = "<group>"; };
 		678FFB351CD846E00071EAF6 /* ARTUdidUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUdidUtil.h; sourceTree = "<group>"; };
@@ -126,6 +130,9 @@
 		67FD129F1CE9D32800C93DFD /* ARTUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUserManager.m; sourceTree = "<group>"; };
 		67FD12A21CE9D7DA00C93DFD /* ARTBookLocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookLocalData.h; sourceTree = "<group>"; };
 		67FD12A31CE9D7DA00C93DFD /* ARTBookLocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookLocalData.m; sourceTree = "<group>"; };
+		67FD12A51CEACDB600C93DFD /* PathMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathMacros.h; sourceTree = "<group>"; };
+		67FD12AA1CEB064100C93DFD /* NSFileManager+ART.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+ART.h"; sourceTree = "<group>"; };
+		67FD12AB1CEB064100C93DFD /* NSFileManager+ART.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+ART.m"; sourceTree = "<group>"; };
 		D014C614C23ACD38CF997C61 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -283,6 +290,8 @@
 				678FFB611CD9FAFA0071EAF6 /* ARTBookDownData.m */,
 				67FD12A21CE9D7DA00C93DFD /* ARTBookLocalData.h */,
 				67FD12A31CE9D7DA00C93DFD /* ARTBookLocalData.m */,
+				677598851CEC1344002D3947 /* ARTBookDownObject.h */,
+				677598861CEC1344002D3947 /* ARTBookDownObject.m */,
 			);
 			path = "图集模块";
 			sourceTree = "<group>";
@@ -368,6 +377,7 @@
 				6701C9461CD211F900E0EA6A /* 参数模型 */,
 				6701C9551CD21B1F00E0EA6A /* 数据模型 */,
 				67FD129B1CE9D32800C93DFD /* 管理 */,
+				67FD12A91CEB060800C93DFD /* 类别 */,
 				67BECF801CC8D10F0073ACEC /* 工具类 */,
 				67BECF831CC8D10F0073ACEC /* 网络层 */,
 				67BECF811CC8D10F0073ACEC /* 宏 */,
@@ -430,6 +440,7 @@
 				67FD127C1CE472FF00C93DFD /* NotificationMacros.h */,
 				67FD12951CE5CFBE00C93DFD /* SystemMacros.h */,
 				67FD12961CE5D0F700C93DFD /* MethodMacros.h */,
+				67FD12A51CEACDB600C93DFD /* PathMacros.h */,
 			);
 			path = "宏";
 			sourceTree = "<group>";
@@ -465,6 +476,15 @@
 				67FD129D1CE9D32800C93DFD /* ARTDownLoadManager.m */,
 			);
 			path = "管理";
+			sourceTree = "<group>";
+		};
+		67FD12A91CEB060800C93DFD /* 类别 */ = {
+			isa = PBXGroup;
+			children = (
+				67FD12AA1CEB064100C93DFD /* NSFileManager+ART.h */,
+				67FD12AB1CEB064100C93DFD /* NSFileManager+ART.m */,
+			);
+			path = "类别";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -619,12 +639,14 @@
 				678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */,
 				67B92D571CDB391F0009E5B9 /* ARTCustomParam.m in Sources */,
 				678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */,
+				67FD12AC1CEB064100C93DFD /* NSFileManager+ART.m in Sources */,
 				67B92D661CDB58AA0009E5B9 /* ARTTalkData.m in Sources */,
 				67FD12A11CE9D32800C93DFD /* ARTUserManager.m in Sources */,
 				6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */,
 				678FFB401CD893A90071EAF6 /* ARTUpsetParam.m in Sources */,
 				67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */,
 				678FFB6B1CD9FF8F0071EAF6 /* ARTCommentListParam.m in Sources */,
+				677598871CEC1344002D3947 /* ARTBookDownObject.m in Sources */,
 				67B92D691CDC6F3A0009E5B9 /* ARTTalkComData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

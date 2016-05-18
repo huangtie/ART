@@ -9,32 +9,30 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface ARTLocalPicture : NSObject
+@interface ARTBookPhotoData : NSObject
 
 @property (nonatomic , copy) NSString *ID;
 
-@property (nonatomic , copy) NSString *local;
+@property (nonatomic , copy) NSString *downURL;
 
-@property (nonatomic , copy) NSString *distance;
+@property (nonatomic , copy) NSString *saveURL;
+
+@property (nonatomic , assign) NSInteger downed;
 
 @end
 
 @interface ARTBookLocalData : NSObject
 
-@property (nonatomic , copy) NSString *ID;
+@property (nonatomic , copy) NSString *bookID;
 
-//名称
 @property (nonatomic , copy) NSString *name;
 
-//简介
-@property (nonatomic , copy) NSString *remak;
+@property (nonatomic , copy) NSString *face;
 
-//封面
-@property (nonatomic , copy) NSString *cover;
+@property (nonatomic , assign) NSInteger bookAllCount;
 
-//图片集合
-@property (nonatomic , strong) NSArray <ARTLocalPicture *> *pictures;
+@property (nonatomic , assign) NSInteger bookFinishCount;
 
-- (CGFloat)downStatus;
+@property (nonatomic , strong) NSMutableArray <ARTBookPhotoData *> *photoList;
 
 @end

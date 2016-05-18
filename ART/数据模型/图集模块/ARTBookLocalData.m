@@ -7,18 +7,27 @@
 //
 
 #import "ARTBookLocalData.h"
+#import <SDWebImageOperation.h>
+#import <SDWebImageDownloader.h>
+#import "ARTDaoUtil.h"
 
-@implementation ARTLocalPicture
+@implementation ARTBookPhotoData
+
+@end
+
+@interface ARTBookLocalData()
 
 @end
 
 @implementation ARTBookLocalData
 
-- (CGFloat)downStatus
+- (NSMutableArray *)photoList
 {
-    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"local NOT nil"];
-    NSArray * downeds = [_pictures filteredArrayUsingPredicate:predicate];
-    return (CGFloat)downeds.count / (CGFloat)_pictures.count;
+    if (!_photoList)
+    {
+        _photoList = [NSMutableArray array];
+    }
+    return _photoList;
 }
 
 @end
