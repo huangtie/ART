@@ -15,6 +15,7 @@
 		677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EF1CC8B62D00B34C59 /* AppDelegate.m */; };
 		677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677534F71CC8B62E00B34C59 /* Assets.xcassets */; };
 		677598871CEC1344002D3947 /* ARTBookDownObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598861CEC1344002D3947 /* ARTBookDownObject.m */; };
+		6775988A1CEC4875002D3947 /* Microsoft Yahei.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 677598891CEC4875002D3947 /* Microsoft Yahei.ttf */; };
 		678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */; };
 		678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */; };
 		678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB3C1CD88E070071EAF6 /* ARTForgetParam.m */; };
@@ -68,6 +69,9 @@
 		677534FC1CC8B62E00B34C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		677598851CEC1344002D3947 /* ARTBookDownObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookDownObject.h; sourceTree = "<group>"; };
 		677598861CEC1344002D3947 /* ARTBookDownObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookDownObject.m; sourceTree = "<group>"; };
+		677598891CEC4875002D3947 /* Microsoft Yahei.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Microsoft Yahei.ttf"; sourceTree = "<group>"; };
+		6775988B1CEC48CE002D3947 /* FontMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontMacros.h; sourceTree = "<group>"; };
+		6775988C1CEC4B5C002D3947 /* ColorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorMacros.h; sourceTree = "<group>"; };
 		678FFB321CD3471E0071EAF6 /* ARTRegisterParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRegisterParam.h; sourceTree = "<group>"; };
 		678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterParam.m; sourceTree = "<group>"; };
 		678FFB351CD846E00071EAF6 /* ARTUdidUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUdidUtil.h; sourceTree = "<group>"; };
@@ -382,6 +386,7 @@
 				67BECF831CC8D10F0073ACEC /* 网络层 */,
 				67BECF811CC8D10F0073ACEC /* 宏 */,
 				67BECF7F1CC8D10F0073ACEC /* 第三方 */,
+				677598881CEC4807002D3947 /* 资源 */,
 				677534EB1CC8B62D00B34C59 /* Supporting Files */,
 			);
 			path = ART;
@@ -395,6 +400,14 @@
 				677534EC1CC8B62D00B34C59 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		677598881CEC4807002D3947 /* 资源 */ = {
+			isa = PBXGroup;
+			children = (
+				677598891CEC4875002D3947 /* Microsoft Yahei.ttf */,
+			);
+			path = "资源";
 			sourceTree = "<group>";
 		};
 		67B92D541CDB38EA0009E5B9 /* 通用 */ = {
@@ -441,6 +454,8 @@
 				67FD12951CE5CFBE00C93DFD /* SystemMacros.h */,
 				67FD12961CE5D0F700C93DFD /* MethodMacros.h */,
 				67FD12A51CEACDB600C93DFD /* PathMacros.h */,
+				6775988B1CEC48CE002D3947 /* FontMacros.h */,
+				6775988C1CEC4B5C002D3947 /* ColorMacros.h */,
 			);
 			path = "宏";
 			sourceTree = "<group>";
@@ -553,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */,
+				6775988A1CEC4875002D3947 /* Microsoft Yahei.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
