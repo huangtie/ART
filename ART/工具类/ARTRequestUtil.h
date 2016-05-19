@@ -19,6 +19,7 @@
 #import "ARTCommentListParam.h"
 #import "ARTSendTalkParam.h"
 #import "ARTSendTalkComParam.h"
+#import "ARTTalkListParam.h"
 
 #import "ARTUserData.h"
 #import "ARTBookData.h"
@@ -27,6 +28,7 @@
 #import "ARTPurchasesData.h"
 #import "ARTPurchasesLogData.h"
 #import "ARTTalkData.h"
+#import "ARTGroupData.h"
 
 typedef NS_ENUM(NSInteger, NET_ERROR)
 {
@@ -185,4 +187,22 @@ typedef NS_ENUM(NSInteger, NET_ERROR)
 + (NSURLSessionDataTask *)requestZanList:(ARTCustomParam *)param
                               completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTUserData *> *datas))completion
                                  failure:(void (^)(ErrorItemd *error))failure;
+
+#pragma mark 6.10 查看某条说说所有评论
++ (NSURLSessionDataTask *)requestTalkComList:(ARTCustomParam *)param
+                                  completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTTalkComData *> *datas))completion
+                                     failure:(void (^)(ErrorItemd *error))failure;
+
+#pragma mark 6.11 获取说说列表
++ (NSURLSessionDataTask *)requestTalkList:(ARTTalkListParam *)param
+                                  completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTTalkData *> *datas))completion
+                                     failure:(void (^)(ErrorItemd *error))failure;
+
+
+#pragma mark 7.1 获取图集分类列表
++ (NSURLSessionDataTask *)requestGroups:(void (^)(NSURLSessionDataTask *task, NSArray<ARTGroupData *> *datas))completion
+                                failure:(void (^)(ErrorItemd *error))failure;
+
+
+
 @end

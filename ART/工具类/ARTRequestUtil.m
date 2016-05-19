@@ -553,4 +553,72 @@
     }];
 }
 
+#pragma mark 6.10 查看某条说说所有评论
++ (NSURLSessionDataTask *)requestTalkComList:(ARTCustomParam *)param
+                                  completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTTalkComData *> *datas))completion
+                                     failure:(void (^)(ErrorItemd *error))failure
+{
+    return [ARTHttpServers requestWithPOST:URL_TALK_GETCOMMENTSTALK param:[param buildRequestParam] completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
+        if ([ARTRequestUtil isSuccessCode:result])
+        {
+            NSMutableArray *list = [NSMutableArray array];
+            for (NSDictionary *dic in [result objectForKey:@"data"])
+            {
+                ARTTalkComData *data = [ARTTalkComData mj_objectWithKeyValues:dic];
+                [list addObject:data];
+            }
+            completion(task , list);
+        }
+        else
+        {
+            failure([ARTRequestUtil tamp:error response:result]);
+        }
+    }];
+}
+
+#pragma mark 6.11 获取说说列表
++ (NSURLSessionDataTask *)requestTalkList:(ARTTalkListParam *)param
+                               completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTTalkData *> *datas))completion
+                                  failure:(void (^)(ErrorItemd *error))failure
+{
+    return [ARTHttpServers requestWithPOST:URL_TALK_GETTALKLIST param:[param buildRequestParam] completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
+        if ([ARTRequestUtil isSuccessCode:result])
+        {
+            NSMutableArray *list = [NSMutableArray array];
+            for (NSDictionary *dic in [result objectForKey:@"data"])
+            {
+                ARTTalkData *data = [ARTTalkData mj_objectWithKeyValues:dic];
+                [list addObject:data];
+            }
+            completion(task , list);
+        }
+        else
+        {
+            failure([ARTRequestUtil tamp:error response:result]);
+        }
+    }];
+}
+
+#pragma mark 7.1 获取图集分类列表
++ (NSURLSessionDataTask *)requestGroups:(void (^)(NSURLSessionDataTask *task, NSArray<ARTGroupData *> *datas))completion
+                                failure:(void (^)(ErrorItemd *error))failure
+{
+    return [ARTHttpServers requestWithPOST:URL_OT_GETGROUPLIST param:[[NSDictionary alloc] init] completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
+        if ([ARTRequestUtil isSuccessCode:result])
+        {
+            NSMutableArray *list = [NSMutableArray array];
+            for (NSDictionary *dic in [result objectForKey:@"data"])
+            {
+                ARTGroupData *data = [ARTGroupData mj_objectWithKeyValues:dic];
+                [list addObject:data];
+            }
+            completion(task , list);
+        }
+        else
+        {
+            failure([ARTRequestUtil tamp:error response:result]);
+        }
+    }];
+}
+
 @end

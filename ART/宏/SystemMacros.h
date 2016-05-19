@@ -16,6 +16,8 @@
 
 #define NAVIGATION_HEIGH 80
 
+#define ARTPAGESIZE @"10"
+
 #define IOS7_OR_LATER  (IOS_VERSION>= 7.0)
 
 /// 一像素的线的宽度

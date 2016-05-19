@@ -27,6 +27,11 @@
 		677598B81CEC68C6002D3947 /* ARTAuctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598B71CEC68C6002D3947 /* ARTAuctionViewController.m */; };
 		677598BB1CEC788A002D3947 /* ARTBookScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598BA1CEC788A002D3947 /* ARTBookScreen.m */; };
 		677598BD1CEC7B2D002D3947 /* ARTBookScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 677598BC1CEC7B2D002D3947 /* ARTBookScreen.xib */; };
+		677598C01CED681B002D3947 /* ARTTalkListParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598BF1CED681B002D3947 /* ARTTalkListParam.m */; };
+		677598C31CED691B002D3947 /* ARTGroupData.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598C21CED691B002D3947 /* ARTGroupData.m */; };
+		677598C61CED701D002D3947 /* ARTBookGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598C51CED701D002D3947 /* ARTBookGroupCell.m */; };
+		677598CA1CEDA3AF002D3947 /* ARTBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598C81CEDA3AF002D3947 /* ARTBookCell.m */; };
+		677598CB1CEDA3AF002D3947 /* ARTBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 677598C91CEDA3AF002D3947 /* ARTBookCell.xib */; };
 		678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */; };
 		678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */; };
 		678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB3C1CD88E070071EAF6 /* ARTForgetParam.m */; };
@@ -102,6 +107,15 @@
 		677598B91CEC788A002D3947 /* ARTBookScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookScreen.h; sourceTree = "<group>"; };
 		677598BA1CEC788A002D3947 /* ARTBookScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookScreen.m; sourceTree = "<group>"; };
 		677598BC1CEC7B2D002D3947 /* ARTBookScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARTBookScreen.xib; sourceTree = "<group>"; };
+		677598BE1CED681B002D3947 /* ARTTalkListParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkListParam.h; sourceTree = "<group>"; };
+		677598BF1CED681B002D3947 /* ARTTalkListParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkListParam.m; sourceTree = "<group>"; };
+		677598C11CED691B002D3947 /* ARTGroupData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTGroupData.h; sourceTree = "<group>"; };
+		677598C21CED691B002D3947 /* ARTGroupData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTGroupData.m; sourceTree = "<group>"; };
+		677598C41CED701D002D3947 /* ARTBookGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookGroupCell.h; sourceTree = "<group>"; };
+		677598C51CED701D002D3947 /* ARTBookGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookGroupCell.m; sourceTree = "<group>"; };
+		677598C71CEDA3AF002D3947 /* ARTBookCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookCell.h; sourceTree = "<group>"; };
+		677598C81CEDA3AF002D3947 /* ARTBookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookCell.m; sourceTree = "<group>"; };
+		677598C91CEDA3AF002D3947 /* ARTBookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARTBookCell.xib; sourceTree = "<group>"; };
 		678FFB321CD3471E0071EAF6 /* ARTRegisterParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRegisterParam.h; sourceTree = "<group>"; };
 		678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterParam.m; sourceTree = "<group>"; };
 		678FFB351CD846E00071EAF6 /* ARTUdidUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUdidUtil.h; sourceTree = "<group>"; };
@@ -262,6 +276,8 @@
 				67B92D621CDB49E40009E5B9 /* ARTSendTalkComParam.m */,
 				67B92D6A1CDC81000009E5B9 /* ARTZanListParam.h */,
 				67B92D6B1CDC81000009E5B9 /* ARTZanListParam.m */,
+				677598BE1CED681B002D3947 /* ARTTalkListParam.h */,
+				677598BF1CED681B002D3947 /* ARTTalkListParam.m */,
 			);
 			path = "社交模块";
 			sourceTree = "<group>";
@@ -311,6 +327,8 @@
 			children = (
 				678FFB5D1CD9F3730071EAF6 /* ARTAuthorData.h */,
 				678FFB5E1CD9F3730071EAF6 /* ARTAuthorData.m */,
+				677598C11CED691B002D3947 /* ARTGroupData.h */,
+				677598C21CED691B002D3947 /* ARTGroupData.m */,
 			);
 			path = "分类模块";
 			sourceTree = "<group>";
@@ -507,6 +525,11 @@
 				677598B91CEC788A002D3947 /* ARTBookScreen.h */,
 				677598BA1CEC788A002D3947 /* ARTBookScreen.m */,
 				677598BC1CEC7B2D002D3947 /* ARTBookScreen.xib */,
+				677598C41CED701D002D3947 /* ARTBookGroupCell.h */,
+				677598C51CED701D002D3947 /* ARTBookGroupCell.m */,
+				677598C71CEDA3AF002D3947 /* ARTBookCell.h */,
+				677598C81CEDA3AF002D3947 /* ARTBookCell.m */,
+				677598C91CEDA3AF002D3947 /* ARTBookCell.xib */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -768,6 +791,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677598CB1CEDA3AF002D3947 /* ARTBookCell.xib in Resources */,
 				6775988E1CEC56E3002D3947 /* 图片资源.xcassets in Resources */,
 				677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */,
 				677598A91CEC5988002D3947 /* ARTCustomTabBar.xib in Resources */,
@@ -843,6 +867,8 @@
 				678FFB681CD9FDD60071EAF6 /* ARTCommentSendParam.m in Sources */,
 				67FD128E1CE57D5300C93DFD /* ARTUMengUtil.m in Sources */,
 				67B92D5A1CDB3E960009E5B9 /* ARTSendTalkParam.m in Sources */,
+				677598C61CED701D002D3947 /* ARTBookGroupCell.m in Sources */,
+				677598CA1CEDA3AF002D3947 /* ARTBookCell.m in Sources */,
 				67FD127B1CE465D100C93DFD /* ARTEasemobServer.m in Sources */,
 				67FD128B1CE5769F00C93DFD /* ARTGTPushUtil.m in Sources */,
 				678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */,
@@ -852,6 +878,7 @@
 				677598B81CEC68C6002D3947 /* ARTAuctionViewController.m in Sources */,
 				6701C9421CD1F63400E0EA6A /* ARTHttpServers.m in Sources */,
 				6701C9511CD2122100E0EA6A /* ARTBaseParam.m in Sources */,
+				677598C31CED691B002D3947 /* ARTGroupData.m in Sources */,
 				678FFB5C1CD9F1800071EAF6 /* ARTBookData.m in Sources */,
 				67B92D631CDB49E40009E5B9 /* ARTSendTalkComParam.m in Sources */,
 				67FD12A01CE9D32800C93DFD /* ARTDownLoadManager.m in Sources */,
@@ -872,6 +899,7 @@
 				677598AF1CEC6851002D3947 /* ARTBookViewController.m in Sources */,
 				6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */,
 				678FFB401CD893A90071EAF6 /* ARTUpsetParam.m in Sources */,
+				677598C01CED681B002D3947 /* ARTTalkListParam.m in Sources */,
 				67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */,
 				678FFB6B1CD9FF8F0071EAF6 /* ARTCommentListParam.m in Sources */,
 				677598871CEC1344002D3947 /* ARTBookDownObject.m in Sources */,

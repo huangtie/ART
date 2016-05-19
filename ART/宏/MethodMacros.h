@@ -28,4 +28,8 @@ typedef enum
 
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
+#define STRING_FORMAT_ADC(m) [NSString stringWithFormat:@"%@",m]
+
+#define STRING_FORMAT(m,n) [NSString stringWithFormat:@"%@%@",m,n]
+
 #endif /* MethodMacros_h */

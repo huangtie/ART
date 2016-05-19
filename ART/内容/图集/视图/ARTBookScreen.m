@@ -106,11 +106,17 @@ typedef void (^ARTBookScreenListSelectBlock)(NSInteger index);
 
 - (void)buttonTouchAction
 {
+    if (self.screenList.superview)
+    {
+        [self.screenList dismiss];
+        return;
+    }
+    
     self.screenList = [[ARTBookScreenList alloc] initWithTitles:self.itemTitles index:self.selectIndex];
-    self.screenList.top = self.bottom;
-    self.screenList.centerX = self.centerX;
-    [self.superview addSubview:self.screenList];
-    self.screenList.userInteractionEnabled = YES;
+    CGRect rect = [self convertRect:self.bounds toView:self.viewController.view];
+    self.screenList.top = rect.origin.y + rect.size.height;
+    self.screenList.centerX = rect.origin.x + rect.size.width / 2;
+    [self.viewController.view addSubview:self.screenList];
     
     WS(weak)
     self.screenList.selectBlock = ^(NSInteger index)
