@@ -32,6 +32,7 @@
 		677598C61CED701D002D3947 /* ARTBookGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598C51CED701D002D3947 /* ARTBookGroupCell.m */; };
 		677598CA1CEDA3AF002D3947 /* ARTBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598C81CEDA3AF002D3947 /* ARTBookCell.m */; };
 		677598CB1CEDA3AF002D3947 /* ARTBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 677598C91CEDA3AF002D3947 /* ARTBookCell.xib */; };
+		6775992B1CF5AE70002D3947 /* UIScrollView+ART.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775992A1CF5AE70002D3947 /* UIScrollView+ART.m */; };
 		678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */; };
 		678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */; };
 		678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB3C1CD88E070071EAF6 /* ARTForgetParam.m */; };
@@ -116,6 +117,8 @@
 		677598C71CEDA3AF002D3947 /* ARTBookCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookCell.h; sourceTree = "<group>"; };
 		677598C81CEDA3AF002D3947 /* ARTBookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookCell.m; sourceTree = "<group>"; };
 		677598C91CEDA3AF002D3947 /* ARTBookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARTBookCell.xib; sourceTree = "<group>"; };
+		677599291CF5AE70002D3947 /* UIScrollView+ART.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ART.h"; sourceTree = "<group>"; };
+		6775992A1CF5AE70002D3947 /* UIScrollView+ART.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ART.m"; sourceTree = "<group>"; };
 		678FFB321CD3471E0071EAF6 /* ARTRegisterParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRegisterParam.h; sourceTree = "<group>"; };
 		678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterParam.m; sourceTree = "<group>"; };
 		678FFB351CD846E00071EAF6 /* ARTUdidUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUdidUtil.h; sourceTree = "<group>"; };
@@ -722,6 +725,8 @@
 			children = (
 				67FD12AA1CEB064100C93DFD /* NSFileManager+ART.h */,
 				67FD12AB1CEB064100C93DFD /* NSFileManager+ART.m */,
+				677599291CF5AE70002D3947 /* UIScrollView+ART.h */,
+				6775992A1CF5AE70002D3947 /* UIScrollView+ART.m */,
 			);
 			path = "类别";
 			sourceTree = "<group>";
@@ -890,6 +895,7 @@
 				678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */,
 				67B92D571CDB391F0009E5B9 /* ARTCustomParam.m in Sources */,
 				677598BB1CEC788A002D3947 /* ARTBookScreen.m in Sources */,
+				6775992B1CF5AE70002D3947 /* UIScrollView+ART.m in Sources */,
 				678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */,
 				67FD12AC1CEB064100C93DFD /* NSFileManager+ART.m in Sources */,
 				67B92D661CDB58AA0009E5B9 /* ARTTalkData.m in Sources */,

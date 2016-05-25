@@ -18,5 +18,6 @@
 #import "ColorMacros.h"
 
 #import <YYKit.h>
+#import "UIScrollView+ART.h"
 
 #endif

@@ -77,7 +77,7 @@ DZNEmptyDataSetSource>
     self.bookCollection.emptyDataSetSource = self;
     
     WS(weak)
-    self.bookCollection.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    [self.bookCollection addMJRefreshHeader:^{
         [weak requestWithBooks:YES];
         [weak requestWithGroups];
     }];
@@ -165,7 +165,7 @@ DZNEmptyDataSetSource>
             [weak.bookCollection.mj_header endRefreshing];
             if (datas.count >= ARTPAGESIZE.integerValue)
             {
-                weak.bookCollection.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+                [weak.bookCollection addMJRefreshFooter:^{
                     [weak requestWithBooks:NO];
                 }];
             }
@@ -176,7 +176,6 @@ DZNEmptyDataSetSource>
             if (!datas.count)
             {
                 [weak.bookCollection.mj_footer endRefreshingWithNoMoreData];
-                weak.bookCollection.mj_footer = nil;
             }
         }
         [weak.books addObjectsFromArray:datas];
