@@ -22,6 +22,14 @@ MJExtensionCodingImplementation;
 {
     if (value)
     {
+        if ([value isKindOfClass:[NSString class]])
+        {
+            NSString *string = value;
+            if (!string.length)
+            {
+                return;
+            }
+        }
         [param setValue:value forKey:key];
     }
 }

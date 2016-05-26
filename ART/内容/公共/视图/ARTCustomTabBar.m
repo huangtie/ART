@@ -7,6 +7,7 @@
 //
 
 #import "ARTCustomTabBar.h"
+#import "ARTFPSLabel.h"
 
 @interface ARTCustomTabBar()
 
@@ -20,7 +21,10 @@
 {
     self = [[[NSBundle mainBundle] loadNibNamed:@"ARTCustomTabBar" owner:self options:nil] lastObject];
     if (self) {
-        
+#ifdef DEBUG
+        ARTFPSLabel *fps = [[ARTFPSLabel alloc] initWithFrame:CGRectMake(self.width - 320, 10, 300, 20)];
+        [self addSubview:fps];
+#endif
     }
     return self;
 }

@@ -33,6 +33,8 @@
 		677598CA1CEDA3AF002D3947 /* ARTBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598C81CEDA3AF002D3947 /* ARTBookCell.m */; };
 		677598CB1CEDA3AF002D3947 /* ARTBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 677598C91CEDA3AF002D3947 /* ARTBookCell.xib */; };
 		6775992B1CF5AE70002D3947 /* UIScrollView+ART.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775992A1CF5AE70002D3947 /* UIScrollView+ART.m */; };
+		6775992E1CF5BBCD002D3947 /* ARTPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775992D1CF5BBCD002D3947 /* ARTPointView.m */; };
+		678B4F811CF69F68006CEB17 /* ARTFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 678B4F801CF69F68006CEB17 /* ARTFPSLabel.m */; };
 		678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */; };
 		678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */; };
 		678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB3C1CD88E070071EAF6 /* ARTForgetParam.m */; };
@@ -119,6 +121,10 @@
 		677598C91CEDA3AF002D3947 /* ARTBookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARTBookCell.xib; sourceTree = "<group>"; };
 		677599291CF5AE70002D3947 /* UIScrollView+ART.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ART.h"; sourceTree = "<group>"; };
 		6775992A1CF5AE70002D3947 /* UIScrollView+ART.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ART.m"; sourceTree = "<group>"; };
+		6775992C1CF5BBCD002D3947 /* ARTPointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTPointView.h; sourceTree = "<group>"; };
+		6775992D1CF5BBCD002D3947 /* ARTPointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTPointView.m; sourceTree = "<group>"; };
+		678B4F7F1CF69F68006CEB17 /* ARTFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTFPSLabel.h; sourceTree = "<group>"; };
+		678B4F801CF69F68006CEB17 /* ARTFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTFPSLabel.m; sourceTree = "<group>"; };
 		678FFB321CD3471E0071EAF6 /* ARTRegisterParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRegisterParam.h; sourceTree = "<group>"; };
 		678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterParam.m; sourceTree = "<group>"; };
 		678FFB351CD846E00071EAF6 /* ARTUdidUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUdidUtil.h; sourceTree = "<group>"; };
@@ -500,6 +506,10 @@
 				677598A51CEC5970002D3947 /* ARTCustomTabBar.h */,
 				677598A61CEC5970002D3947 /* ARTCustomTabBar.m */,
 				677598A81CEC5988002D3947 /* ARTCustomTabBar.xib */,
+				6775992C1CF5BBCD002D3947 /* ARTPointView.h */,
+				6775992D1CF5BBCD002D3947 /* ARTPointView.m */,
+				678B4F7F1CF69F68006CEB17 /* ARTFPSLabel.h */,
+				678B4F801CF69F68006CEB17 /* ARTFPSLabel.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -908,8 +918,10 @@
 				677598C01CED681B002D3947 /* ARTTalkListParam.m in Sources */,
 				67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */,
 				678FFB6B1CD9FF8F0071EAF6 /* ARTCommentListParam.m in Sources */,
+				678B4F811CF69F68006CEB17 /* ARTFPSLabel.m in Sources */,
 				677598871CEC1344002D3947 /* ARTBookDownObject.m in Sources */,
 				67B92D691CDC6F3A0009E5B9 /* ARTTalkComData.m in Sources */,
+				6775992E1CF5BBCD002D3947 /* ARTPointView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,6 +21,8 @@
 #import "ARTAuctionViewController.h"
 #import "ARTTabBarViewController.h"
 
+
+
 @interface AppDelegate ()
 
 //@property (nonatomic , strong) ARTBookDownObject *object;

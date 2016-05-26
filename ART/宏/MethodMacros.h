@@ -32,4 +32,6 @@ typedef enum
 
 #define STRING_FORMAT(m,n) [NSString stringWithFormat:@"%@%@",m,n]
 
+#define PLACEHOLDER_IMAGE_BOOK [UIImage imageNamed:@"book_bg_placeholder"]
+
 #endif /* MethodMacros_h */
