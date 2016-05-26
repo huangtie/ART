@@ -13,6 +13,7 @@
 #import <UIScrollView+EmptyDataSet.h>
 #import "ARTBookCell.h"
 #import <MJRefresh.h>
+#import "ARTBookDetailViewController.h"
 
 @interface ARTBookViewController ()
 <ARTBookScreenDelegate,
@@ -49,6 +50,7 @@ DZNEmptyDataSetSource>
 {
     [super viewDidLoad];
     self.title = @"图集";
+    self.navigationBar.hidden = YES;
     
     [self.view addSubview:self.screenContrl];
     
@@ -232,6 +234,11 @@ DZNEmptyDataSetSource>
     
     [cell bindingWithData:self.books[indexPath.row]];
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [ARTBookDetailViewController launchFromController:self bookID:nil];
 }
 
 #pragma mark DELEGAT_DZNEMPTY

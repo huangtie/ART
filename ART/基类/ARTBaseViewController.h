@@ -15,4 +15,7 @@
  */
 @property (readonly, nonatomic) UINavigationBar *navigationBar;
 
+- (void)_backItemClicked:(id)sender;
+- (void)_rightItemClicked:(id)sender;
+
 @end

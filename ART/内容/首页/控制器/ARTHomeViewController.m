@@ -18,6 +18,8 @@
 {
     [super viewDidLoad];
     self.title = @"首页";
+    
+    self.navigationBar.hidden = YES;
 }
 
 

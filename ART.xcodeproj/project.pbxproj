@@ -35,6 +35,8 @@
 		6775992B1CF5AE70002D3947 /* UIScrollView+ART.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775992A1CF5AE70002D3947 /* UIScrollView+ART.m */; };
 		6775992E1CF5BBCD002D3947 /* ARTPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775992D1CF5BBCD002D3947 /* ARTPointView.m */; };
 		678B4F811CF69F68006CEB17 /* ARTFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 678B4F801CF69F68006CEB17 /* ARTFPSLabel.m */; };
+		678B4F841CF6DC30006CEB17 /* UIBarButtonItem+ART.m in Sources */ = {isa = PBXBuildFile; fileRef = 678B4F831CF6DC30006CEB17 /* UIBarButtonItem+ART.m */; };
+		678B4F871CF6DDD5006CEB17 /* ARTBookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678B4F861CF6DDD5006CEB17 /* ARTBookDetailViewController.m */; };
 		678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */; };
 		678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB361CD846E00071EAF6 /* ARTUdidUtil.m */; };
 		678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FFB3C1CD88E070071EAF6 /* ARTForgetParam.m */; };
@@ -125,6 +127,10 @@
 		6775992D1CF5BBCD002D3947 /* ARTPointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTPointView.m; sourceTree = "<group>"; };
 		678B4F7F1CF69F68006CEB17 /* ARTFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTFPSLabel.h; sourceTree = "<group>"; };
 		678B4F801CF69F68006CEB17 /* ARTFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTFPSLabel.m; sourceTree = "<group>"; };
+		678B4F821CF6DC30006CEB17 /* UIBarButtonItem+ART.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ART.h"; sourceTree = "<group>"; };
+		678B4F831CF6DC30006CEB17 /* UIBarButtonItem+ART.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+ART.m"; sourceTree = "<group>"; };
+		678B4F851CF6DDD5006CEB17 /* ARTBookDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookDetailViewController.h; sourceTree = "<group>"; };
+		678B4F861CF6DDD5006CEB17 /* ARTBookDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookDetailViewController.m; sourceTree = "<group>"; };
 		678FFB321CD3471E0071EAF6 /* ARTRegisterParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRegisterParam.h; sourceTree = "<group>"; };
 		678FFB331CD3471E0071EAF6 /* ARTRegisterParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterParam.m; sourceTree = "<group>"; };
 		678FFB351CD846E00071EAF6 /* ARTUdidUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUdidUtil.h; sourceTree = "<group>"; };
@@ -528,6 +534,8 @@
 			children = (
 				677598AD1CEC6851002D3947 /* ARTBookViewController.h */,
 				677598AE1CEC6851002D3947 /* ARTBookViewController.m */,
+				678B4F851CF6DDD5006CEB17 /* ARTBookDetailViewController.h */,
+				678B4F861CF6DDD5006CEB17 /* ARTBookDetailViewController.m */,
 			);
 			path = "控制器";
 			sourceTree = "<group>";
@@ -737,6 +745,8 @@
 				67FD12AB1CEB064100C93DFD /* NSFileManager+ART.m */,
 				677599291CF5AE70002D3947 /* UIScrollView+ART.h */,
 				6775992A1CF5AE70002D3947 /* UIScrollView+ART.m */,
+				678B4F821CF6DC30006CEB17 /* UIBarButtonItem+ART.h */,
+				678B4F831CF6DC30006CEB17 /* UIBarButtonItem+ART.m */,
 			);
 			path = "类别";
 			sourceTree = "<group>";
@@ -880,6 +890,7 @@
 				677534ED1CC8B62D00B34C59 /* main.m in Sources */,
 				67FD12941CE5AC4C00C93DFD /* ARTDaoUtil.m in Sources */,
 				678FFB681CD9FDD60071EAF6 /* ARTCommentSendParam.m in Sources */,
+				678B4F871CF6DDD5006CEB17 /* ARTBookDetailViewController.m in Sources */,
 				67FD128E1CE57D5300C93DFD /* ARTUMengUtil.m in Sources */,
 				67B92D5A1CDB3E960009E5B9 /* ARTSendTalkParam.m in Sources */,
 				677598C61CED701D002D3947 /* ARTBookGroupCell.m in Sources */,
@@ -890,6 +901,7 @@
 				67B92D531CDB378D0009E5B9 /* ARTPurchasesLogData.m in Sources */,
 				677598A41CEC5938002D3947 /* ARTTabBarViewController.m in Sources */,
 				67FD12821CE48AC500C93DFD /* ARTBaseViewController.m in Sources */,
+				678B4F841CF6DC30006CEB17 /* UIBarButtonItem+ART.m in Sources */,
 				677598B81CEC68C6002D3947 /* ARTAuctionViewController.m in Sources */,
 				6701C9421CD1F63400E0EA6A /* ARTHttpServers.m in Sources */,
 				6701C9511CD2122100E0EA6A /* ARTBaseParam.m in Sources */,

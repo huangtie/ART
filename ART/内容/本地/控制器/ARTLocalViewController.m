@@ -18,6 +18,8 @@
 {
     [super viewDidLoad];
     self.title = @"本地";
+    
+    self.navigationBar.hidden = YES;
 }
 
 @end

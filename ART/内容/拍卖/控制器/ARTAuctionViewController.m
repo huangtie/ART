@@ -18,6 +18,8 @@
 {
     [super viewDidLoad];
     self.title = @"拍卖";
+    
+    self.navigationBar.hidden = YES;
 }
 
 

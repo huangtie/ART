@@ -19,5 +19,6 @@
 
 #import <YYKit.h>
 #import "UIScrollView+ART.h"
+#import "UIBarButtonItem+ART.h"
 
 #endif

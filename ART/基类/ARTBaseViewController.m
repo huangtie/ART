@@ -34,15 +34,19 @@
     
     // 每个UIViewController保持自己的导航栏，与其他界面无关
     UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, NAVIGATION_HEIGH)];
-    [navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     navigationBar.backgroundColor = COLOR_DAOHANG_WHITE;
-    navigationBar.translucent = YES;
-    navigationBar.shadowImage = [UIImage new];
-    navigationBar.tintColor = [UIColor whiteColor];
-    navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    navigationBar.barTintColor = COLOR_DAOHANG_WHITE;
+    navigationBar.tintColor = UICOLOR_ARGB(0xff333333);
+    navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:UICOLOR_ARGB(0xff333333),NSFontAttributeName:FONT_WITH_15};
     [self.view addSubview:navigationBar];
     self.navigationBar = navigationBar;
     self.navigationBar.items = @[self.navigationItem];
+    
+    NSInteger index = [self.navigationController.viewControllers indexOfObject:self];
+    if (index != NSNotFound && index != 0)
+    {
+        self.navigationItem.leftBarButtonItem = [UIBarButtonItem barItemWithBack:self action:@selector(_backItemClicked:)];
+    }
 }
 
 - (UINavigationBar *)navigationBar
@@ -59,14 +63,27 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     //友盟统计
     [MobClick beginLogPageView:self.title];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+    [super viewWillDisappear:animated];
     //友盟统计
     [MobClick endLogPageView:self.title];
+}
+
+#pragma mark ACTION
+- (void)_backItemClicked:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)_rightItemClicked:(id)sender
+{
+    
 }
 
 @end

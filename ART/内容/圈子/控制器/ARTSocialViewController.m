@@ -18,6 +18,8 @@
 {
     [super viewDidLoad];
     self.title = @"圈子";
+    
+    self.navigationBar.hidden = YES;
 }
 
 @end

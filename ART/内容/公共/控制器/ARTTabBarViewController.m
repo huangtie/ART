@@ -17,13 +17,31 @@
 
 @implementation ARTTabBarViewController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     self.view.backgroundColor = [UIColor whiteColor];
     [self.tabBar removeFromSuperview];
-    [self.view addSubview:self.customTabBar];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (!self.customTabBar.superview)
+    {
+        UINavigationController *selectVC = self.viewControllers[self.selectedIndex];
+        [selectVC.viewControllers.firstObject.view addSubview:self.customTabBar];
+    }
 }
 
 - (ARTCustomTabBar *)customTabBar
@@ -50,7 +68,10 @@
 - (void)customTabBarDidTouchItems:(ART_TABINDEX)index
 {
     self.selectedIndex = index;
+    UINavigationController *selectVC = self.viewControllers[self.selectedIndex];
+    [selectVC.viewControllers.firstObject.view addSubview:self.customTabBar];
 }
+
 
 
 @end
