@@ -23,10 +23,13 @@
 #define UICOLOR_ARGB(color) [UIColor colorWithRed: _R_COLOR(color)/255.0 green: _G_COLOR(color)/255.0 blue: _B_COLOR(color)/ 255.0 alpha:_A_COLOR(color)/ 255.0]
 
 //导航颜色（白色）
-#define COLOR_DAOHANG_WHITE [UIColor whiteColor]
+#define COLOR_DAOHANG_WHITE     [UIColor whiteColor]
+//导航文字颜色（灰色）
+#define COLOR_BARTINT_GRAY      UICOLOR_ARGB(0xff333333)
+
 //界面默认背景颜色（白色）
-#define COLOR_VIEWBG_WHITE [UIColor whiteColor]
+#define COLOR_VIEWBG_WHITE      [UIColor whiteColor]
 //橘黄色
-#define COLOR_YSYC_ORANGE UICOLOR_ARGB(0xfff4a629)
+#define COLOR_YSYC_ORANGE       UICOLOR_ARGB(0xfff4a629)
 
 #endif

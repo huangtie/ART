@@ -36,8 +36,11 @@
     UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, NAVIGATION_HEIGH)];
     navigationBar.backgroundColor = COLOR_DAOHANG_WHITE;
     navigationBar.barTintColor = COLOR_DAOHANG_WHITE;
-    navigationBar.tintColor = UICOLOR_ARGB(0xff333333);
-    navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:UICOLOR_ARGB(0xff333333),NSFontAttributeName:FONT_WITH_15};
+    navigationBar.tintColor = COLOR_BARTINT_GRAY;
+    navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:COLOR_BARTINT_GRAY,NSFontAttributeName:FONT_WITH_15};
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, navigationBar.height - ONE_POINT_LINE_WIDTH, navigationBar.width, ONE_POINT_LINE_WIDTH)];
+    line.backgroundColor = UICOLOR_ARGB(0xff999999);
+    [navigationBar addSubview:line];
     [self.view addSubview:navigationBar];
     self.navigationBar = navigationBar;
     self.navigationBar.items = @[self.navigationItem];

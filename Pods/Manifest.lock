@@ -70,6 +70,7 @@ PODS:
   - ShareSDK2/Extend/SinaWeiboSDK (2.12.4)
   - ShareSDK2/Extend/WeChatSDK (2.12.4)
   - SSKeychain (1.4.0)
+  - Toast (3.0)
   - TTTAttributedLabel (1.13.4)
   - UMengAnalytics (3.6.6)
   - YYKit (1.0.1):
@@ -102,6 +103,7 @@ DEPENDENCIES:
   - ShareSDK2/Connection/SMS
   - ShareSDK2/Connection/WeChat
   - SSKeychain
+  - Toast
   - TTTAttributedLabel
   - UMengAnalytics
   - YYKit
@@ -133,6 +135,7 @@ SPEC CHECKSUMS:
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   ShareSDK2: cfe71b8d026bf8f7d592396ab195937bc89bbead
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
+  Toast: 32c59229abfcf41850162b83bb9259dc84372473
   TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
   UMengAnalytics: 4bf831415146b9c57cb10be65fbd43462ef8cf65
   YYKit: 8b618ca8d8cefa534d8d4fe2cad10fe9fbd030ed

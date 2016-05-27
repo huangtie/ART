@@ -44,8 +44,8 @@
     //封面
     WS(weak)
     [self.picture.layer setImageWithURL:[NSURL URLWithString:bookData.bookImage]
-                         placeholder:PLACEHOLDER_IMAGE_BOOK
-                             options:YYWebImageOptionAvoidSetImage
+                         placeholder:IMAGE_PLACEHOLDER_BOOK
+                             options:YYWebImageOptionShowNetworkActivity
                           completion:^(UIImage *image, NSURL *url, YYWebImageFromType from, YYWebImageStage stage, NSError *error) {
                               if (!weak.picture) return;
                               if (image && stage == YYWebImageStageFinished)

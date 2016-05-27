@@ -10,4 +10,10 @@
 
 @implementation ARTCommentData
 
+
+- (void)bindingWithData:(ARTCommentData *)commentData
+{
+    
+}
+
 @end

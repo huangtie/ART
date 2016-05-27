@@ -34,6 +34,10 @@
 		677598CB1CEDA3AF002D3947 /* ARTBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 677598C91CEDA3AF002D3947 /* ARTBookCell.xib */; };
 		6775992B1CF5AE70002D3947 /* UIScrollView+ART.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775992A1CF5AE70002D3947 /* UIScrollView+ART.m */; };
 		6775992E1CF5BBCD002D3947 /* ARTPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775992D1CF5BBCD002D3947 /* ARTPointView.m */; };
+		6787ADD41CF7E94C002E59F5 /* ARTBookComentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6787ADD31CF7E94C002E59F5 /* ARTBookComentCell.m */; };
+		6787ADD71CF7FB7B002E59F5 /* UIView+ART.m in Sources */ = {isa = PBXBuildFile; fileRef = 6787ADD61CF7FB7B002E59F5 /* UIView+ART.m */; };
+		6787ADDA1CF82A72002E59F5 /* ARTBookInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6787ADD91CF82A72002E59F5 /* ARTBookInputView.m */; };
+		6787ADE01CF83374002E59F5 /* ARTStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6787ADDF1CF83374002E59F5 /* ARTStarRatingView.m */; };
 		678B4F811CF69F68006CEB17 /* ARTFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 678B4F801CF69F68006CEB17 /* ARTFPSLabel.m */; };
 		678B4F841CF6DC30006CEB17 /* UIBarButtonItem+ART.m in Sources */ = {isa = PBXBuildFile; fileRef = 678B4F831CF6DC30006CEB17 /* UIBarButtonItem+ART.m */; };
 		678B4F871CF6DDD5006CEB17 /* ARTBookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678B4F861CF6DDD5006CEB17 /* ARTBookDetailViewController.m */; };
@@ -125,6 +129,15 @@
 		6775992A1CF5AE70002D3947 /* UIScrollView+ART.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ART.m"; sourceTree = "<group>"; };
 		6775992C1CF5BBCD002D3947 /* ARTPointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTPointView.h; sourceTree = "<group>"; };
 		6775992D1CF5BBCD002D3947 /* ARTPointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTPointView.m; sourceTree = "<group>"; };
+		6787ADD21CF7E94C002E59F5 /* ARTBookComentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookComentCell.h; sourceTree = "<group>"; };
+		6787ADD31CF7E94C002E59F5 /* ARTBookComentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookComentCell.m; sourceTree = "<group>"; };
+		6787ADD51CF7FB7B002E59F5 /* UIView+ART.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ART.h"; sourceTree = "<group>"; };
+		6787ADD61CF7FB7B002E59F5 /* UIView+ART.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ART.m"; sourceTree = "<group>"; };
+		6787ADD81CF82A72002E59F5 /* ARTBookInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBookInputView.h; sourceTree = "<group>"; };
+		6787ADD91CF82A72002E59F5 /* ARTBookInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookInputView.m; sourceTree = "<group>"; };
+		6787ADDE1CF83374002E59F5 /* ARTStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTStarRatingView.h; sourceTree = "<group>"; };
+		6787ADDF1CF83374002E59F5 /* ARTStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTStarRatingView.m; sourceTree = "<group>"; };
+		6787ADE11CF848BA002E59F5 /* ImageMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageMacros.h; sourceTree = "<group>"; };
 		678B4F7F1CF69F68006CEB17 /* ARTFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTFPSLabel.h; sourceTree = "<group>"; };
 		678B4F801CF69F68006CEB17 /* ARTFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTFPSLabel.m; sourceTree = "<group>"; };
 		678B4F821CF6DC30006CEB17 /* UIBarButtonItem+ART.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ART.h"; sourceTree = "<group>"; };
@@ -516,6 +529,8 @@
 				6775992D1CF5BBCD002D3947 /* ARTPointView.m */,
 				678B4F7F1CF69F68006CEB17 /* ARTFPSLabel.h */,
 				678B4F801CF69F68006CEB17 /* ARTFPSLabel.m */,
+				6787ADDE1CF83374002E59F5 /* ARTStarRatingView.h */,
+				6787ADDF1CF83374002E59F5 /* ARTStarRatingView.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -551,6 +566,10 @@
 				677598C71CEDA3AF002D3947 /* ARTBookCell.h */,
 				677598C81CEDA3AF002D3947 /* ARTBookCell.m */,
 				677598C91CEDA3AF002D3947 /* ARTBookCell.xib */,
+				6787ADD21CF7E94C002E59F5 /* ARTBookComentCell.h */,
+				6787ADD31CF7E94C002E59F5 /* ARTBookComentCell.m */,
+				6787ADD81CF82A72002E59F5 /* ARTBookInputView.h */,
+				6787ADD91CF82A72002E59F5 /* ARTBookInputView.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -701,6 +720,7 @@
 				67FD12A51CEACDB600C93DFD /* PathMacros.h */,
 				6775988B1CEC48CE002D3947 /* FontMacros.h */,
 				6775988C1CEC4B5C002D3947 /* ColorMacros.h */,
+				6787ADE11CF848BA002E59F5 /* ImageMacros.h */,
 			);
 			path = "宏";
 			sourceTree = "<group>";
@@ -747,6 +767,8 @@
 				6775992A1CF5AE70002D3947 /* UIScrollView+ART.m */,
 				678B4F821CF6DC30006CEB17 /* UIBarButtonItem+ART.h */,
 				678B4F831CF6DC30006CEB17 /* UIBarButtonItem+ART.m */,
+				6787ADD51CF7FB7B002E59F5 /* UIView+ART.h */,
+				6787ADD61CF7FB7B002E59F5 /* UIView+ART.m */,
 			);
 			path = "类别";
 			sourceTree = "<group>";
@@ -884,6 +906,7 @@
 				678FFB6E1CDA009B0071EAF6 /* ARTCommentData.m in Sources */,
 				67FD12881CE4941B00C93DFD /* ARTShareUtil.m in Sources */,
 				678FFB621CD9FAFA0071EAF6 /* ARTBookDownData.m in Sources */,
+				6787ADD41CF7E94C002E59F5 /* ARTBookComentCell.m in Sources */,
 				677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */,
 				678FFB5F1CD9F3730071EAF6 /* ARTAuthorData.m in Sources */,
 				677598B51CEC68A5002D3947 /* ARTSocialViewController.m in Sources */,
@@ -903,6 +926,7 @@
 				67FD12821CE48AC500C93DFD /* ARTBaseViewController.m in Sources */,
 				678B4F841CF6DC30006CEB17 /* UIBarButtonItem+ART.m in Sources */,
 				677598B81CEC68C6002D3947 /* ARTAuctionViewController.m in Sources */,
+				6787ADDA1CF82A72002E59F5 /* ARTBookInputView.m in Sources */,
 				6701C9421CD1F63400E0EA6A /* ARTHttpServers.m in Sources */,
 				6701C9511CD2122100E0EA6A /* ARTBaseParam.m in Sources */,
 				677598C31CED691B002D3947 /* ARTGroupData.m in Sources */,
@@ -929,11 +953,13 @@
 				678FFB401CD893A90071EAF6 /* ARTUpsetParam.m in Sources */,
 				677598C01CED681B002D3947 /* ARTTalkListParam.m in Sources */,
 				67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */,
+				6787ADD71CF7FB7B002E59F5 /* UIView+ART.m in Sources */,
 				678FFB6B1CD9FF8F0071EAF6 /* ARTCommentListParam.m in Sources */,
 				678B4F811CF69F68006CEB17 /* ARTFPSLabel.m in Sources */,
 				677598871CEC1344002D3947 /* ARTBookDownObject.m in Sources */,
 				67B92D691CDC6F3A0009E5B9 /* ARTTalkComData.m in Sources */,
 				6775992E1CF5BBCD002D3947 /* ARTPointView.m in Sources */,
+				6787ADE01CF83374002E59F5 /* ARTStarRatingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

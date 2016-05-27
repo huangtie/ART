@@ -238,7 +238,8 @@ DZNEmptyDataSetSource>
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [ARTBookDetailViewController launchFromController:self bookID:nil];
+    ARTBookData *data = self.books[indexPath.row];
+    [ARTBookDetailViewController launchFromController:self bookID:data.bookID];
 }
 
 #pragma mark DELEGAT_DZNEMPTY

@@ -16,9 +16,14 @@
 #import "PathMacros.h"
 #import "FontMacros.h"
 #import "ColorMacros.h"
+#import "ImageMacros.h"
+
+#import "ARTUserManager.h"
 
 #import <YYKit.h>
 #import "UIScrollView+ART.h"
 #import "UIBarButtonItem+ART.h"
+#import "UIView+ART.h"
+#import <UIView+Toast.h>
 
 #endif
