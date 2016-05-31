@@ -287,6 +287,21 @@ DZNEmptyDataSetSource>
             self.bookParam.bookVIP = STRING_FORMAT_ADC(@(index == 1 ? 1 : 0));
         }
     }
+    if(screenView == self.timeScreen)
+    {
+        if (index > 0)
+        {
+            self.bookParam.bookOrder = STRING_FORMAT_ADC(@(index == 1 ? 1 : 2));
+        }
+    }
+    if (screenView == self.freeScreen)
+    {
+        if (index > 0)
+        {
+            self.bookParam.bookFree = STRING_FORMAT_ADC(@(index == 1 ? 0 : 1));
+        }
+    }
+    
     [self requestWithBooks:YES];
 }
 

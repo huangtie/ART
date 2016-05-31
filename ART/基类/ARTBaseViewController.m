@@ -89,4 +89,35 @@
     
 }
 
+#pragma mark HUD
+- (void)displayHUD
+{
+    LBProgressHUD *hud = [[LBProgressHUD alloc] initWithFrame:self.view.bounds];
+    hud.tipText = @"艺赏雅藏";
+    hud.contentColor = COLOR_YSYC_ORANGE;
+    hud.showMask = YES;
+    [self.view addSubview:hud];
+    [hud show:YES];
+}
+
+- (void)hideHUD
+{
+    WS(weak)
+    [self performBlock:^{
+        [LBProgressHUD hideAllHUDsForView:weak.view animated:YES];
+    } afterDelay:.4];
+}
+
+- (void)performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay
+{
+    block = [block copy];
+    
+    [self performSelector:@selector(fireBlockAfterDelay:) withObject:block afterDelay:delay];
+}
+
+- (void)fireBlockAfterDelay:(void (^)(void))block
+{
+    block();
+}
+
 @end

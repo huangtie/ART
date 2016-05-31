@@ -18,4 +18,9 @@
 - (void)_backItemClicked:(id)sender;
 - (void)_rightItemClicked:(id)sender;
 
+- (void)displayHUD;
+- (void)hideHUD;
+
+- (void)performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay;
+
 @end

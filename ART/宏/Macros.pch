@@ -24,6 +24,8 @@
 #import "UIScrollView+ART.h"
 #import "UIBarButtonItem+ART.h"
 #import "UIView+ART.h"
+#import "NSString+ART.h"
 #import <UIView+Toast.h>
+#import <LBProgressHUD.h>
 
 #endif

@@ -12,6 +12,9 @@
 #import "ARTBookComentCell.h"
 #import <UIImageView+WebCache.h>
 #import "ARTBookInputView.h"
+#import <UIScrollView+EmptyDataSet.h>
+#import "ARTBookDetailHead.h"
+#import "ARTBookHtmlViewController.h"
 
 typedef NS_ENUM(NSInteger, ARTDETAIL_SECTIONS)
 {
@@ -24,7 +27,10 @@ typedef NS_ENUM(NSInteger, ARTDETAIL_SECTIONS)
 @interface ARTBookDetailViewController()<
 UITableViewDelegate,
 UITableViewDataSource,
-ARTBookInputViewDelegate>
+ARTBookInputViewDelegate,
+DZNEmptyDataSetSource,
+DZNEmptyDataSetDelegate,
+ARTBookDetailHeadDelegate>
 
 @property (nonatomic , copy) NSString *bookID;
 
@@ -48,6 +54,10 @@ ARTBookInputViewDelegate>
 
 @property (nonatomic , strong) ARTBookInputView *inputView;
 
+@property (nonatomic , strong) ARTBookDetailHead *tableHead;
+
+@property (nonatomic , assign) BOOL isLoadError;
+
 @end
 
 @implementation ARTBookDetailViewController
@@ -68,16 +78,7 @@ ARTBookInputViewDelegate>
     
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem barItemWithMore:self action:@selector(_rightItemClicked:)];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIGATION_HEIGH, self.view.width, self.view.height - NAVIGATION_HEIGH - self.inputView.height) style:UITableViewStyleGrouped];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.backgroundColor = UICOLOR_ARGB(0xfffafafa);
-    self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
-    [self.view addSubview:self.tableView];
-    
-    self.inputView.bottom = self.view.height;
-    [self.view addSubview:self.inputView];
+    [self crateSubviews];
     
     WS(weak)
     [self.tableView addMJRefreshHeader:^{
@@ -88,7 +89,26 @@ ARTBookInputViewDelegate>
         [weak requestCommentList:NO];
     }];
     
+    [self displayHUD];
+    self.tableView.hidden = YES;
     [self requestWithBookData];
+}
+
+- (void)crateSubviews
+{
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIGATION_HEIGH, self.view.width, self.view.height - NAVIGATION_HEIGH - self.inputView.height) style:UITableViewStyleGrouped];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = UICOLOR_ARGB(0xfffafafa);
+    self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+    self.tableView.tableHeaderView = self.tableHead;
+    self.tableView.emptyDataSetSource = self;
+    self.tableView.emptyDataSetDelegate = self;
+    [self.view addSubview:self.tableView];
+    
+    self.inputView.bottom = self.view.height;
+    [self.view addSubview:self.inputView];
 }
 
 #pragma mark METHOD
@@ -106,6 +126,9 @@ ARTBookInputViewDelegate>
 #pragma mark LAYOUT
 - (void)updateSubviews
 {
+    [self.tableHead updateSubviews:self.bookData];
+    self.tableView.tableHeaderView = self.tableHead;
+    
     //藏家头像
     [self.authorFace sd_setImageWithURL:[NSURL URLWithString:self.bookData.author.authorImag] placeholderImage:IMAGE_PLACEHOLDER_BOOK];
     
@@ -251,6 +274,16 @@ ARTBookInputViewDelegate>
     return _inputView;
 }
 
+- (ARTBookDetailHead *)tableHead
+{
+    if (!_tableHead)
+    {
+        _tableHead = [[ARTBookDetailHead alloc] init];
+        _tableHead.delegate = self;
+    }
+    return _tableHead;
+}
+
 #pragma mark REQUEST
 - (void)requestWithBookData
 {
@@ -259,7 +292,7 @@ ARTBookInputViewDelegate>
         weak.bookData = data;
         [weak requestCommentList:YES];
     } failure:^(ErrorItemd *error) {
-        [weak.view displayTostError:error.errMsg];
+        [weak requestError:error];
     }];
 }
 
@@ -272,6 +305,9 @@ ARTBookInputViewDelegate>
     
     WS(weak)
     [ARTRequestUtil requestCommentList:param completion:^(NSURLSessionDataTask *task, NSArray<ARTCommentData *> *datas) {
+        [weak hideHUD];
+        weak.tableView.hidden = NO;
+        weak.isLoadError = NO;
         if (isRefresh)
         {
             [weak.tableView.mj_header endRefreshing];
@@ -288,12 +324,13 @@ ARTBookInputViewDelegate>
         [weak.commentDatas addObjectsFromArray:datas];
         [weak updateSubviews];
     } failure:^(ErrorItemd *error) {
-        [weak.view displayTostError:error.errMsg];
+        [weak requestError:error];
     }];
 }
 
 - (void)requestSendComment:(NSString *)text scole:(NSString *)sole
 {
+    [self displayHUD];
     ARTCommentSendParam *param = [[ARTCommentSendParam alloc] init];
     param.commentText = text;
     param.commentPoint = sole;
@@ -301,12 +338,25 @@ ARTBookInputViewDelegate>
     [ARTUserManager sharedInstance].userinfo.c = @"1e87f58e7f78cfa5c1987afbe29d343ce7e7929cadc4bb8ed559eec21e72b10d";
     WS(weak)
     [ARTRequestUtil requestSendComment:param completion:^(NSURLSessionDataTask *task) {
+        [weak hideHUD];
         [weak.view displayTostSuccess:@"发表成功!"];
         [weak.inputView cleanText];
         [weak requestWithBookData];
     } failure:^(ErrorItemd *error) {
+        [weak hideHUD];
         [weak.view displayTostError:error.errMsg];
     }];
+}
+
+- (void)requestError:(ErrorItemd *)error
+{
+    [self hideHUD];
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
+    [self.view displayTostError:error.errMsg];
+    self.isLoadError = YES;
+    self.tableView.hidden = NO;
+    [self.tableView reloadEmptyDataSet];
 }
 
 #pragma mark DELEGATE_TABLEVIEW
@@ -417,6 +467,13 @@ ARTBookInputViewDelegate>
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (cell == self.contentCell)
+    {
+        ARTBookHtmlViewController *vc = [[ARTBookHtmlViewController alloc] initWithHtmlText:self.bookData.bookContext];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -456,10 +513,62 @@ ARTBookInputViewDelegate>
     return CGFLOAT_MIN;
 }
 
+#pragma mark DELEGAT_DZNEMPTY
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [[NSAttributedString alloc] initWithString:@"加载失败,点击重新加载" attributes:@{NSFontAttributeName:FONT_WITH_15}];
+}
+
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return IMAGE_EMPTY_ONE;
+}
+
+- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+- (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView
+{
+    return self.isLoadError;
+}
+
+- (void)emptyDataSet:(UIScrollView *)scrollView didTapView:(UIView *)view
+{
+    [self requestWithBookData];
+}
+
 #pragma mark DELEGATE_INPUTVIEW
 - (void)bookInputViewDidDoSend:(NSString *)text scole:(NSString *)scole
 {
     [self requestSendComment:text scole:scole];
+}
+
+#pragma mark DELEGATE_HEAD
+- (void)detailHeadDidChangeFrame
+{
+    [self updateSubviews];
+}
+
+- (void)detailHeadDidTouchBuy
+{
+
+}
+
+- (void)detailHeadDidTouchDown
+{
+
+}
+
+- (void)detailHeadDidTouchSave
+{
+
+}
+
+- (void)detailHeadDidTouchRead
+{
+
 }
 
 @end

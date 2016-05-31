@@ -107,6 +107,7 @@
     NSLog(@"\nRequest URL  : %@?%@",URL,[ARTHttpServers URLParam:param]);
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html",@"text/json",@"text/javascript", nil];
+    manager.requestSerializer.timeoutInterval = 10;
     return [manager POST:URL parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"\nRequest success : \n%@\n",[ARTHttpServers replaceUnicode:[responseObject description]]);
         if (completion)
@@ -130,6 +131,7 @@
     param = [[self class] superParam:param];
     NSLog(@"\nRequest URL  : %@?%@",URL,[ARTHttpServers URLParam:param]);
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer.timeoutInterval = 10;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html",@"text/json",@"text/javascript", nil];
     return [manager POST:URL parameters:param constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         for (NSData *data in datas)

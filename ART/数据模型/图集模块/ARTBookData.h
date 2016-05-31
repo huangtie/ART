@@ -45,7 +45,7 @@
 @property (nonatomic , copy) NSString *bookPrice;
 
 //下载量
-@property (nonatomic , copy) NSString *bookDows;
+@property (nonatomic , copy) NSString *bookDowns;
 
 //评论数量
 @property (nonatomic , copy) NSString *bookComments;
