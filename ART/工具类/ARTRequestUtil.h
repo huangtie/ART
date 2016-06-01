@@ -29,6 +29,7 @@
 #import "ARTPurchasesLogData.h"
 #import "ARTTalkData.h"
 #import "ARTGroupData.h"
+#import "ARTAuthorData.h"
 
 typedef NS_ENUM(NSInteger, NET_ERROR)
 {
@@ -203,6 +204,13 @@ typedef NS_ENUM(NSInteger, NET_ERROR)
 + (NSURLSessionDataTask *)requestGroups:(void (^)(NSURLSessionDataTask *task, NSArray<ARTGroupData *> *datas))completion
                                 failure:(void (^)(ErrorItemd *error))failure;
 
-
+#pragma mark 7.2 获取藏家列表
++ (NSURLSessionDataTask *)requestAuthorList:(ARTCustomParam *)param
+                                 completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTAuthorData *> *datas))completion
+                                    failure:(void (^)(ErrorItemd *error))failure;
+#pragma mark 7.3 获取藏家详情
++ (NSURLSessionDataTask *)requestAuthorDetail:(NSString *)authorID
+                                   completion:(void (^)(NSURLSessionDataTask *task, ARTAuthorData *data))completion
+                                      failure:(void (^)(ErrorItemd *error))failure;
 
 @end

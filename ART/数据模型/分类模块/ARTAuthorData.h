@@ -25,4 +25,7 @@
 //详细介绍
 @property (nonatomic , copy) NSString *authorContent;
 
+//藏家性别
+@property (nonatomic , copy) NSString *authorSex;
+
 @end

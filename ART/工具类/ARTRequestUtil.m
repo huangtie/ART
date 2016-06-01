@@ -621,4 +621,45 @@
     }];
 }
 
+#pragma mark 7.2 获取藏家列表
++ (NSURLSessionDataTask *)requestAuthorList:(ARTCustomParam *)param
+                                 completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTAuthorData *> *datas))completion
+                                    failure:(void (^)(ErrorItemd *error))failure
+{
+    return [ARTHttpServers requestWithPOST:URL_OT_GETAUTHORLIST param:[param buildRequestParam] completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
+        if ([ARTRequestUtil isSuccessCode:result])
+        {
+            NSMutableArray *list = [NSMutableArray array];
+            for (NSDictionary *dic in [result objectForKey:@"data"])
+            {
+                ARTAuthorData *data = [ARTAuthorData mj_objectWithKeyValues:dic];
+                [list addObject:data];
+            }
+            completion(task , list);
+        }
+        else
+        {
+            failure([ARTRequestUtil tamp:error response:result]);
+        }
+    }];
+}
+
+#pragma mark 7.3 获取藏家详情
++ (NSURLSessionDataTask *)requestAuthorDetail:(NSString *)authorID
+                                   completion:(void (^)(NSURLSessionDataTask *task, ARTAuthorData *data))completion
+                                      failure:(void (^)(ErrorItemd *error))failure
+{
+    return [ARTHttpServers requestWithPOST:URL_OT_GETAUTHORDETAIL param:@{@"authorID":authorID} completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
+        if ([ARTRequestUtil isSuccessCode:result])
+        {
+            ARTAuthorData *data = [ARTAuthorData mj_objectWithKeyValues:[result objectForKey:@"data"]];
+            completion(task , data);
+        }
+        else
+        {
+            failure([ARTRequestUtil tamp:error response:result]);
+        }
+    }];
+}
+
 @end

@@ -58,6 +58,7 @@
     self.backgroundColor = [UIColor clearColor];
     self.delegate = self;
     self.opaque = NO;
+    self.scrollView.bounces = NO;
     
     self.scrollView.delegate = self;
     
@@ -121,7 +122,7 @@
     
     if(self.loadFinishBlock)
     {
-        self.loadFinishBlock(webView.scrollView.contentSize.height);
+        self.loadFinishBlock(webView.scrollView.contentSize.height + 10);
     }
 }
 
@@ -131,45 +132,45 @@
     
     if(self.loadFinishBlock)
     {
-        self.loadFinishBlock(webView.scrollView.contentSize.height);
+        self.loadFinishBlock(webView.scrollView.contentSize.height + 10);
     }
 }
 
 #pragma mark 背部代理
--(void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    
-    CGPoint point = scrollView.contentOffset;
-    
-    CGFloat contentHeight = scrollView.contentSize.height;
-    CGFloat frameHeight   = scrollView.frame.size.height;
-    
-    if(point.y < 0)
-        
-    {
-        
-        [scrollView setContentOffset:CGPointMake(point.x, 0) animated:NO];
-        
-    }
-    else if(contentHeight > frameHeight)
-    {
-        
-        if(contentHeight - point.y < frameHeight)
-            
-        {
-            
-            [scrollView setContentOffset:CGPointMake(point.x, contentHeight - frameHeight) animated:NO];
-            
-        }
-        
-    }
-    else if(contentHeight <= frameHeight)
-    {
-        
-        [scrollView setContentOffset:CGPointMake(point.x, 0) animated:NO];
-        
-    }
-    
-}
+//-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//    
+//    CGPoint point = scrollView.contentOffset;
+//    
+//    CGFloat contentHeight = scrollView.contentSize.height;
+//    CGFloat frameHeight   = scrollView.frame.size.height;
+//    
+//    if(point.y < 0)
+//        
+//    {
+//        
+//        [scrollView setContentOffset:CGPointMake(point.x, 0) animated:NO];
+//        
+//    }
+//    else if(contentHeight > frameHeight)
+//    {
+//        
+//        if(contentHeight - point.y < frameHeight)
+//            
+//        {
+//            
+//            [scrollView setContentOffset:CGPointMake(point.x, contentHeight - frameHeight) animated:NO];
+//            
+//        }
+//        
+//    }
+//    else if(contentHeight <= frameHeight)
+//    {
+//        
+//        [scrollView setContentOffset:CGPointMake(point.x, 0) animated:NO];
+//        
+//    }
+//    
+//}
 
 @end

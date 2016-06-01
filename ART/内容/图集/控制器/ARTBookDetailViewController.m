@@ -15,6 +15,7 @@
 #import <UIScrollView+EmptyDataSet.h>
 #import "ARTBookDetailHead.h"
 #import "ARTBookHtmlViewController.h"
+#import "ARTAuthorDetailViewController.h"
 
 typedef NS_ENUM(NSInteger, ARTDETAIL_SECTIONS)
 {
@@ -472,6 +473,15 @@ ARTBookDetailHeadDelegate>
     if (cell == self.contentCell)
     {
         ARTBookHtmlViewController *vc = [[ARTBookHtmlViewController alloc] initWithHtmlText:self.bookData.bookContext];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if (cell == self.authorCell)
+    {
+        if (!self.bookData.author.authorID.length)
+        {
+            return;
+        }
+        ARTAuthorDetailViewController *vc = [[ARTAuthorDetailViewController alloc] initWithAuthorID:self.bookData.author.authorID];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
