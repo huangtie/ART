@@ -16,6 +16,7 @@
 #import "ARTBookDetailHead.h"
 #import "ARTBookHtmlViewController.h"
 #import "ARTAuthorDetailViewController.h"
+#import "ARTShareView.h"
 
 typedef NS_ENUM(NSInteger, ARTDETAIL_SECTIONS)
 {
@@ -59,6 +60,10 @@ ARTBookDetailHeadDelegate>
 
 @property (nonatomic , assign) BOOL isLoadError;
 
+@property (nonatomic , strong) ARTShareView *shareView;
+
+@property (nonatomic , strong) UIView *markView;
+
 @end
 
 @implementation ARTBookDetailViewController
@@ -80,6 +85,7 @@ ARTBookDetailHeadDelegate>
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem barItemWithMore:self action:@selector(_rightItemClicked:)];
     
     [self crateSubviews];
+    [self.view bringSubviewToFront:self.navigationBar];
     
     WS(weak)
     [self.tableView addMJRefreshHeader:^{
@@ -283,6 +289,65 @@ ARTBookDetailHeadDelegate>
         _tableHead.delegate = self;
     }
     return _tableHead;
+}
+
+- (ARTShareView *)shareView
+{
+    if (!_shareView)
+    {
+        _shareView = [[ARTShareView alloc] init];
+        WS(weak)
+        _shareView.shareChoseeBlock = ^(SHARE_DESTINATION destination)
+        {
+            [weak _rightItemClicked:nil];
+            [ARTShareUtil shareIn:destination content:@"" defaultContent:@"" image:[ShareSDK imageWithUrl:weak.bookData.bookImage] title:weak.bookData.bookName url:weak.bookData.shareURL description:weak.bookData.bookRemark mediaType:SSPublishContentMediaTypeNews];
+        };
+    }
+    return _shareView;
+}
+
+- (UIView *)markView
+{
+    if (!_markView)
+    {
+        _markView = [[UIView alloc] initWithFrame:self.view.bounds];
+        _markView.backgroundColor = RGBCOLOR(33, 33, 33, .6);
+        
+        WS(weak)
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
+            [weak _rightItemClicked:nil];
+        }];
+        [_markView addGestureRecognizer:tap];
+        _markView.userInteractionEnabled = YES;
+    }
+    return _markView;
+}
+
+#pragma mark ACTION
+- (void)_rightItemClicked:(id)sender
+{
+    if (!self.shareView.superview)
+    {
+        self.shareView.bottom = self.navigationBar.height;
+        [self.view insertSubview:self.shareView aboveSubview:self.inputView];
+        [self.view insertSubview:self.markView aboveSubview:self.inputView];
+        [UIView animateWithDuration:.3 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            self.shareView.top = self.navigationBar.bottom;
+            self.markView.alpha = 1;
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
+    else
+    {
+        [UIView animateWithDuration:.3 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            self.shareView.bottom = self.navigationBar.height;
+            self.markView.alpha = 0;
+        } completion:^(BOOL finished) {
+            [self.shareView removeFromSuperview];
+            [self.markView removeFromSuperview];
+        }];
+    }
 }
 
 #pragma mark REQUEST

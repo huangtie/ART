@@ -38,7 +38,7 @@
     [CSToastManager sharedStyle].cornerRadius = 5.0;
     [CSToastManager sharedStyle].horizontalPadding = 15;
     [CSToastManager sharedStyle].backgroundColor = RGBCOLOR(33, 33, 33, .8);
-    [self makeToast:message duration:2.5 position:[NSValue valueWithCGPoint:CGPointMake(self.centerX, self.centerY)] title:nil image:[UIImage imageNamed:@"emoji_icon_3"] style:[CSToastManager sharedStyle] completion:nil];
+    [self makeToast:message duration:2.5 position:[NSValue valueWithCGPoint:CGPointMake(self.centerX, self.centerY + 100)] title:nil image:[UIImage imageNamed:@"emoji_icon_3"] style:[CSToastManager sharedStyle] completion:nil];
 }
 
 - (void)displayTostError:(NSString *)message
@@ -48,7 +48,7 @@
     [CSToastManager sharedStyle].cornerRadius = 5.0;
     [CSToastManager sharedStyle].horizontalPadding = 15;
     [CSToastManager sharedStyle].backgroundColor = RGBCOLOR(33, 33, 33, .8);
-    [self makeToast:message duration:2.5 position:[NSValue valueWithCGPoint:CGPointMake(self.centerX, self.centerY)] title:nil image:[UIImage imageNamed:@"emoji_icon_4"] style:[CSToastManager sharedStyle] completion:nil];
+    [self makeToast:message duration:2.5 position:[NSValue valueWithCGPoint:CGPointMake(self.centerX, self.centerY + 100)] title:nil image:[UIImage imageNamed:@"emoji_icon_4"] style:[CSToastManager sharedStyle] completion:nil];
 }
 
 - (void)displayTost:(NSString *)message
@@ -57,7 +57,7 @@
     [CSToastManager sharedStyle].cornerRadius = 5.0;
     [CSToastManager sharedStyle].horizontalPadding = 15;
     [CSToastManager sharedStyle].backgroundColor = RGBCOLOR(33, 33, 33, .8);
-    [CSToastManager setDefaultPosition:[NSValue valueWithCGPoint:CGPointMake(self.centerX, self.centerY)]];
+    [CSToastManager setDefaultPosition:[NSValue valueWithCGPoint:CGPointMake(self.centerX, self.centerY + 100)]];
     [self makeToast:message];
 }
 

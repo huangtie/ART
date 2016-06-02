@@ -86,7 +86,7 @@
 }
 
 + (void)loginThird:(SHARE_DESTINATION)type
-        completion:(void (^)(id<ISSPlatformCredential> credential))completion
+        completion:(void (^)(id<ISSPlatformCredential> credential , id<ISSPlatformUser> userInfo))completion
 {
     [ShareSDK getUserInfoWithType:(ShareType)type authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
         if (result)
@@ -95,7 +95,7 @@
             
             if(completion)
             {
-                completion(credential);
+                completion(credential , userInfo);
             }
         }
     }];

@@ -38,6 +38,6 @@ typedef enum
       mediaType:(SSPublishContentMediaType)mediaType;
 
 + (void)loginThird:(SHARE_DESTINATION)type
-        completion:(void (^)(id<ISSPlatformCredential> credential))completion;
+        completion:(void (^)(id<ISSPlatformCredential> credential , id<ISSPlatformUser> userInfo))completion;
 
 @end

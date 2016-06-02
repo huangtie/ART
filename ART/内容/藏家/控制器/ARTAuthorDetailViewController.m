@@ -306,7 +306,7 @@ typedef NS_ENUM(NSInteger, ARTAUTHOR_SECTIONS)
     {
         _contentCell = [[UITableViewCell alloc] init];
         _contentCell.width = self.tableView.width;
-        _contentCell.height = 400;
+        _contentCell.height = 200;
         _contentCell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return _contentCell;

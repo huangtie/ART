@@ -7,6 +7,7 @@
 //
 
 #import "ARTUserManager.h"
+#import "ARTLoginViewController.h"
 
 #define FILE_NAME_ARCHIVE @"FILE_NAME_ARCHIVE"
 @implementation ARTUserManager
@@ -29,7 +30,7 @@
     if (self) {
         if([self loadUserData])
         {
-            self.userinfo = [self loadUserData];
+            //self.userinfo = [self loadUserData];
         }
     }
     return self;
@@ -44,6 +45,35 @@
 - (BOOL)isLogin
 {
     return self.userinfo.c.length;
+}
+
+- (BOOL)isLogin:(ARTBaseViewController *)targe
+        logined:(void (^)(ARTUserData *userInfo))logined
+{
+    if(self.userinfo.c.length)
+    {
+        if (logined)
+        {
+            logined(self.userinfo);
+        }
+        return YES;
+    }
+    else
+    {
+        if (targe)
+        {
+            ARTLoginViewController *loginVC = [[ARTLoginViewController alloc] init];
+            loginVC.loginSuccessBlock = ^(ARTUserData * data)
+            {
+                if (logined)
+                {
+                    logined(data);
+                }
+            };
+            [targe.navigationController pushViewController:loginVC animated:YES];
+        }
+        return NO;
+    }
 }
 
 - (void)logout

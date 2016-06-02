@@ -47,6 +47,8 @@
 		6787ADFD1CFC4376002E59F5 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6787ADFC1CFC4376002E59F5 /* XPathQuery.m */; };
 		6787AE001CFC478C002E59F5 /* ARTBookHtmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6787ADFF1CFC478C002E59F5 /* ARTBookHtmlViewController.m */; };
 		6787AE091CFE7FAA002E59F5 /* ARTAuthorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6787AE081CFE7FAA002E59F5 /* ARTAuthorDetailViewController.m */; };
+		6787AE0C1CFED85A002E59F5 /* ARTShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6787AE0B1CFED85A002E59F5 /* ARTShareView.m */; };
+		6787AE441D0035A8002E59F5 /* ARTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6787AE431D0035A8002E59F5 /* ARTLoginViewController.m */; };
 		678B4F811CF69F68006CEB17 /* ARTFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 678B4F801CF69F68006CEB17 /* ARTFPSLabel.m */; };
 		678B4F841CF6DC30006CEB17 /* UIBarButtonItem+ART.m in Sources */ = {isa = PBXBuildFile; fileRef = 678B4F831CF6DC30006CEB17 /* UIBarButtonItem+ART.m */; };
 		678B4F871CF6DDD5006CEB17 /* ARTBookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678B4F861CF6DDD5006CEB17 /* ARTBookDetailViewController.m */; };
@@ -164,6 +166,10 @@
 		6787ADFF1CFC478C002E59F5 /* ARTBookHtmlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBookHtmlViewController.m; sourceTree = "<group>"; };
 		6787AE071CFE7FAA002E59F5 /* ARTAuthorDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAuthorDetailViewController.h; sourceTree = "<group>"; };
 		6787AE081CFE7FAA002E59F5 /* ARTAuthorDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAuthorDetailViewController.m; sourceTree = "<group>"; };
+		6787AE0A1CFED85A002E59F5 /* ARTShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTShareView.h; sourceTree = "<group>"; };
+		6787AE0B1CFED85A002E59F5 /* ARTShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTShareView.m; sourceTree = "<group>"; };
+		6787AE421D0035A8002E59F5 /* ARTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTLoginViewController.h; sourceTree = "<group>"; };
+		6787AE431D0035A8002E59F5 /* ARTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTLoginViewController.m; sourceTree = "<group>"; };
 		678B4F7F1CF69F68006CEB17 /* ARTFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTFPSLabel.h; sourceTree = "<group>"; };
 		678B4F801CF69F68006CEB17 /* ARTFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTFPSLabel.m; sourceTree = "<group>"; };
 		678B4F821CF6DC30006CEB17 /* UIBarButtonItem+ART.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ART.h"; sourceTree = "<group>"; };
@@ -526,6 +532,7 @@
 				677598961CEC5890002D3947 /* 圈子 */,
 				677598991CEC5890002D3947 /* 拍卖 */,
 				6787AE041CFE7F55002E59F5 /* 藏家 */,
+				6787AE3F1D003545002E59F5 /* 登录 */,
 			);
 			path = "内容";
 			sourceTree = "<group>";
@@ -562,6 +569,8 @@
 				6787ADDF1CF83374002E59F5 /* ARTStarRatingView.m */,
 				6787ADEB1CFC40B9002E59F5 /* ARTHtmlView.h */,
 				6787ADEC1CFC40B9002E59F5 /* ARTHtmlView.m */,
+				6787AE0A1CFED85A002E59F5 /* ARTShareView.h */,
+				6787AE0B1CFED85A002E59F5 /* ARTShareView.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -749,6 +758,31 @@
 			sourceTree = "<group>";
 		};
 		6787AE061CFE7F55002E59F5 /* 视图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "视图";
+			sourceTree = "<group>";
+		};
+		6787AE3F1D003545002E59F5 /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				6787AE401D003545002E59F5 /* 控制器 */,
+				6787AE411D003545002E59F5 /* 视图 */,
+			);
+			path = "登录";
+			sourceTree = "<group>";
+		};
+		6787AE401D003545002E59F5 /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				6787AE421D0035A8002E59F5 /* ARTLoginViewController.h */,
+				6787AE431D0035A8002E59F5 /* ARTLoginViewController.m */,
+			);
+			path = "控制器";
+			sourceTree = "<group>";
+		};
+		6787AE411D003545002E59F5 /* 视图 */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -984,6 +1018,7 @@
 				678FFB621CD9FAFA0071EAF6 /* ARTBookDownData.m in Sources */,
 				6787ADD41CF7E94C002E59F5 /* ARTBookComentCell.m in Sources */,
 				677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */,
+				6787AE441D0035A8002E59F5 /* ARTLoginViewController.m in Sources */,
 				678FFB5F1CD9F3730071EAF6 /* ARTAuthorData.m in Sources */,
 				6787ADEA1CFC2A47002E59F5 /* NSString+ART.m in Sources */,
 				677598B51CEC68A5002D3947 /* ARTSocialViewController.m in Sources */,
@@ -1023,6 +1058,7 @@
 				67B92D571CDB391F0009E5B9 /* ARTCustomParam.m in Sources */,
 				677598BB1CEC788A002D3947 /* ARTBookScreen.m in Sources */,
 				6787ADED1CFC40B9002E59F5 /* ARTHtmlView.m in Sources */,
+				6787AE0C1CFED85A002E59F5 /* ARTShareView.m in Sources */,
 				6775992B1CF5AE70002D3947 /* UIScrollView+ART.m in Sources */,
 				6787AE091CFE7FAA002E59F5 /* ARTAuthorDetailViewController.m in Sources */,
 				6787ADF61CFC4283002E59F5 /* TFHpple.m in Sources */,

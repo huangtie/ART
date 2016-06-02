@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ARTUserData.h"
+#import "ARTBaseViewController.h"
 
 @interface ARTUserManager : NSObject
 
@@ -19,4 +20,6 @@
 
 - (void)logout;
 
+- (BOOL)isLogin:(ARTBaseViewController *)targe
+        logined:(void (^)(ARTUserData *userInfo))logined;
 @end

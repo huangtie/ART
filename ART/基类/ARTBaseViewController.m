@@ -37,9 +37,9 @@
     navigationBar.backgroundColor = COLOR_DAOHANG_WHITE;
     navigationBar.barTintColor = COLOR_DAOHANG_WHITE;
     navigationBar.tintColor = COLOR_BARTINT_GRAY;
-    navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:COLOR_BARTINT_GRAY,NSFontAttributeName:FONT_WITH_15};
+    navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:COLOR_BARTINT_GRAY,NSFontAttributeName:FONT_WITH_18};
     UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, navigationBar.height - ONE_POINT_LINE_WIDTH, navigationBar.width, ONE_POINT_LINE_WIDTH)];
-    line.backgroundColor = UICOLOR_ARGB(0xff999999);
+    line.backgroundColor = UICOLOR_ARGB(0xffdedede);
     [navigationBar addSubview:line];
     [self.view addSubview:navigationBar];
     self.navigationBar = navigationBar;
