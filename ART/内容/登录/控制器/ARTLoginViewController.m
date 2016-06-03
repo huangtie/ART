@@ -9,6 +9,7 @@
 #import "ARTLoginViewController.h"
 #import "ARTShareUtil.h"
 #import "ARTRequestUtil.h"
+#import "ARTUdidUtil.h"
 
 typedef enum
 {
@@ -50,6 +51,16 @@ typedef enum
     self.title = @"登录艺赏雅藏";
     
     self.view.backgroundColor = UICOLOR_ARGB(0xfff2f2f2);
+    
+    if (self.rememberButton.selected)
+    {
+        NSDictionary *dic = [ARTUdidUtil loadAccount];
+        if (dic)
+        {
+            self.nameTextField.text = dic[@"name"];
+            self.pawTextField.text = dic[@"pwd"];
+        }
+    }
     
     UIView *nameInput = [[UIView alloc] initWithFrame:CGRectMake(0, 145, 367, 45)];
     nameInput.centerX = self.view.width / 2;
@@ -157,28 +168,7 @@ typedef enum
 }
 
 #pragma mark METHOD
-- (BOOL)isRemember
-{
-    return YES;
-}
 
-- (void)saveAccount
-{
-//    NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
-//    [dic setValue:self.phoneTextField.text forKey:@"phone"];
-//    [dic setValue:self.passwordTextField.text forKey:@"password"];
-//    [HTSaveCachesFile saveDataList:dic fileName:kAccount];
-}
-
-- (void)loadAccount
-{
-//    NSDictionary *dic = [HTSaveCachesFile loadDataList:kAccount];
-//    if (dic)
-//    {
-//        self.phoneTextField.text = [dic objectForKey:@"phone"];
-//        self.passwordTextField.text = [dic objectForKey:@"password"];
-//    }
-}
 
 #pragma mark GET-SET
 - (UITextField *)nameTextField
@@ -215,7 +205,7 @@ typedef enum
         _rememberButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_rememberButton setBackgroundImage:[UIImage imageNamed:@"login_2"] forState:UIControlStateNormal];
         [_rememberButton setBackgroundImage:[UIImage imageNamed:@"login_1"] forState:UIControlStateSelected];
-        _rememberButton.selected = [self isRemember];
+        _rememberButton.selected = [ARTUdidUtil isRemmenber];
         [_rememberButton sizeToFit];
         [_rememberButton addTarget:self action:@selector(rememberTouchAction:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -258,7 +248,8 @@ typedef enum
 //记住用户名和密码
 - (void)rememberTouchAction:(UIButton *)button
 {
-    
+    button.selected = !button.selected;
+    [ARTUdidUtil remmenber:button.selected];
 }
 
 //登录
@@ -275,6 +266,10 @@ typedef enum
         return;
     }
     
+    if (self.rememberButton.selected)
+    {
+        [ARTUdidUtil saveAccoutName:self.nameTextField.text pwd:self.pawTextField.text];
+    }
     [self requestWithLogin:LOGIN_TYPE_ACCOUNT part:nil nick:nil];
 }
 
@@ -293,7 +288,12 @@ typedef enum
 //注册
 - (void)registerTouchAction
 {
-    
+    ARTRegisterViewController *regisetVC = [[ARTRegisterViewController alloc] init];
+    if (self.loginSuccessBlock)
+    {
+        regisetVC.loginSuccessBlock = self.loginSuccessBlock;
+    }
+    [self.navigationController pushViewController:regisetVC animated:YES];
 }
 
 //第三方登录

@@ -13,4 +13,12 @@
 
 + (NSString *)LoadUDID;
 
++ (BOOL)isRemmenber;
+
++ (void)remmenber:(BOOL)isRemmenber;
+
++ (void)saveAccoutName:(NSString *)name pwd:(NSString *)pwd;
+
++ (NSDictionary *)loadAccount;
+
 @end

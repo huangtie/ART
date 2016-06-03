@@ -11,6 +11,7 @@
 		6701C9511CD2122100E0EA6A /* ARTBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C9501CD2122100E0EA6A /* ARTBaseParam.m */; };
 		6701C9541CD2131500E0EA6A /* ARTLoginParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C9531CD2131500E0EA6A /* ARTLoginParam.m */; };
 		6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C95F1CD21DDC00E0EA6A /* ARTUserData.m */; };
+		672002511D016B4200B4A329 /* ARTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002501D016B4200B4A329 /* ARTRegisterViewController.m */; };
 		677534ED1CC8B62D00B34C59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EC1CC8B62D00B34C59 /* main.m */; };
 		677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EF1CC8B62D00B34C59 /* AppDelegate.m */; };
 		677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677534F71CC8B62E00B34C59 /* Assets.xcassets */; };
@@ -97,6 +98,8 @@
 		6701C9531CD2131500E0EA6A /* ARTLoginParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTLoginParam.m; sourceTree = "<group>"; };
 		6701C95E1CD21DDC00E0EA6A /* ARTUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUserData.h; sourceTree = "<group>"; };
 		6701C95F1CD21DDC00E0EA6A /* ARTUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUserData.m; sourceTree = "<group>"; };
+		6720024F1D016B4200B4A329 /* ARTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRegisterViewController.h; sourceTree = "<group>"; };
+		672002501D016B4200B4A329 /* ARTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterViewController.m; sourceTree = "<group>"; };
 		677534E81CC8B62D00B34C59 /* ART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ART.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677534EC1CC8B62D00B34C59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		677534EE1CC8B62D00B34C59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -778,6 +781,8 @@
 			children = (
 				6787AE421D0035A8002E59F5 /* ARTLoginViewController.h */,
 				6787AE431D0035A8002E59F5 /* ARTLoginViewController.m */,
+				6720024F1D016B4200B4A329 /* ARTRegisterViewController.h */,
+				672002501D016B4200B4A329 /* ARTRegisterViewController.m */,
 			);
 			path = "控制器";
 			sourceTree = "<group>";
@@ -1024,6 +1029,7 @@
 				677598B51CEC68A5002D3947 /* ARTSocialViewController.m in Sources */,
 				677534ED1CC8B62D00B34C59 /* main.m in Sources */,
 				67FD12941CE5AC4C00C93DFD /* ARTDaoUtil.m in Sources */,
+				672002511D016B4200B4A329 /* ARTRegisterViewController.m in Sources */,
 				678FFB681CD9FDD60071EAF6 /* ARTCommentSendParam.m in Sources */,
 				678B4F871CF6DDD5006CEB17 /* ARTBookDetailViewController.m in Sources */,
 				67FD128E1CE57D5300C93DFD /* ARTUMengUtil.m in Sources */,

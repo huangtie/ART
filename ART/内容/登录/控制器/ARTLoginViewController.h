@@ -8,8 +8,8 @@
 
 #import "ARTBaseViewController.h"
 #import "ARTUserData.h"
+#import "ARTRegisterViewController.h"
 
-typedef void (^ARTLoginSuccessBlock)(ARTUserData * data);
 @interface ARTLoginViewController : ARTBaseViewController
 
 @property (nonatomic , copy) ARTLoginSuccessBlock loginSuccessBlock;
