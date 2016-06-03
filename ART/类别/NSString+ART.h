@@ -13,4 +13,7 @@
 //时间戳转换为可读时间
 + (NSString *)timeString:(NSString *)timestamp dateFormat:(NSString *)dateFormat;
 
+//是否为手机号格式
+- (BOOL)isMobileNumber;
+
 @end

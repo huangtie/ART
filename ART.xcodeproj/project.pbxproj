@@ -12,6 +12,7 @@
 		6701C9541CD2131500E0EA6A /* ARTLoginParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C9531CD2131500E0EA6A /* ARTLoginParam.m */; };
 		6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C95F1CD21DDC00E0EA6A /* ARTUserData.m */; };
 		672002511D016B4200B4A329 /* ARTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002501D016B4200B4A329 /* ARTRegisterViewController.m */; };
+		672002541D017F1800B4A329 /* ARTForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002531D017F1800B4A329 /* ARTForgetViewController.m */; };
 		677534ED1CC8B62D00B34C59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EC1CC8B62D00B34C59 /* main.m */; };
 		677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EF1CC8B62D00B34C59 /* AppDelegate.m */; };
 		677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677534F71CC8B62E00B34C59 /* Assets.xcassets */; };
@@ -100,6 +101,8 @@
 		6701C95F1CD21DDC00E0EA6A /* ARTUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUserData.m; sourceTree = "<group>"; };
 		6720024F1D016B4200B4A329 /* ARTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRegisterViewController.h; sourceTree = "<group>"; };
 		672002501D016B4200B4A329 /* ARTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterViewController.m; sourceTree = "<group>"; };
+		672002521D017F1800B4A329 /* ARTForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTForgetViewController.h; sourceTree = "<group>"; };
+		672002531D017F1800B4A329 /* ARTForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTForgetViewController.m; sourceTree = "<group>"; };
 		677534E81CC8B62D00B34C59 /* ART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ART.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677534EC1CC8B62D00B34C59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		677534EE1CC8B62D00B34C59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -783,6 +786,8 @@
 				6787AE431D0035A8002E59F5 /* ARTLoginViewController.m */,
 				6720024F1D016B4200B4A329 /* ARTRegisterViewController.h */,
 				672002501D016B4200B4A329 /* ARTRegisterViewController.m */,
+				672002521D017F1800B4A329 /* ARTForgetViewController.h */,
+				672002531D017F1800B4A329 /* ARTForgetViewController.m */,
 			);
 			path = "控制器";
 			sourceTree = "<group>";
@@ -1086,6 +1091,7 @@
 				67B92D691CDC6F3A0009E5B9 /* ARTTalkComData.m in Sources */,
 				6775992E1CF5BBCD002D3947 /* ARTPointView.m in Sources */,
 				6787ADE01CF83374002E59F5 /* ARTStarRatingView.m in Sources */,
+				672002541D017F1800B4A329 /* ARTForgetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

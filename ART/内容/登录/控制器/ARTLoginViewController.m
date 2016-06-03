@@ -10,6 +10,7 @@
 #import "ARTShareUtil.h"
 #import "ARTRequestUtil.h"
 #import "ARTUdidUtil.h"
+#import "ARTForgetViewController.h"
 
 typedef enum
 {
@@ -282,7 +283,7 @@ typedef enum
 //忘记密码
 - (void)forgetTouchAction
 {
-
+    [self.navigationController pushViewController:[[ARTForgetViewController alloc] init] animated:YES];
 }
 
 //注册
