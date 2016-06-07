@@ -38,4 +38,5 @@
 
 - (void)getALLBook:(void (^)(NSMutableArray <ARTBookLocalData *> *dataList))completion;
 
+- (BOOL)isDownLoad:(NSString *)bookID;
 @end

@@ -31,5 +31,7 @@
 #define COLOR_VIEWBG_WHITE      [UIColor whiteColor]
 //橘黄色
 #define COLOR_YSYC_ORANGE       UICOLOR_ARGB(0xfff4a629)
+//浅灰色
+#define COLOR_YSYC_GRAY         UICOLOR_ARGB(0xfffafafa)
 
 #endif

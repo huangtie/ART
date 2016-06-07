@@ -201,4 +201,9 @@
 
 }
 
++ (AppDelegate *)delegate
+{
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
 @end

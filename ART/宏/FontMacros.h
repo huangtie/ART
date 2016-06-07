@@ -25,6 +25,9 @@
 #define FONT_WITH_18    FONT_WITH_SIZE(18)
 #define FONT_WITH_19    FONT_WITH_SIZE(19)
 #define FONT_WITH_20    FONT_WITH_SIZE(20)
+#define FONT_WITH_21    FONT_WITH_SIZE(21)
+#define FONT_WITH_22    FONT_WITH_SIZE(22)
+#define FONT_WITH_23    FONT_WITH_SIZE(23)
 
 
 #endif /* FontMacros_h */

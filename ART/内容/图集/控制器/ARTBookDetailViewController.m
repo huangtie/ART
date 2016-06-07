@@ -17,6 +17,7 @@
 #import "ARTBookHtmlViewController.h"
 #import "ARTAuthorDetailViewController.h"
 #import "ARTShareView.h"
+#import "ARTDownLoadManager.h"
 
 typedef NS_ENUM(NSInteger, ARTDETAIL_SECTIONS)
 {
@@ -617,7 +618,10 @@ ARTBookDetailHeadDelegate>
 #pragma mark DELEGATE_INPUTVIEW
 - (void)bookInputViewDidDoSend:(NSString *)text scole:(NSString *)scole
 {
-    [self requestSendComment:text scole:scole];
+    WS(weak)
+    [[ARTUserManager sharedInstance] isLogin:self logined:^(ARTUserData *userInfo) {
+        [weak requestSendComment:text scole:scole];
+    }];
 }
 
 #pragma mark DELEGATE_HEAD
@@ -628,12 +632,19 @@ ARTBookDetailHeadDelegate>
 
 - (void)detailHeadDidTouchBuy
 {
-
+    [ARTAlertView alertTitle:@"提示" message:@"该图集已存在本地,是否重新下载?" doneTitle:@"重新下载" cancelTitle:@"否,打开" doneBlock:^{
+        
+    } cancelBlock:^{
+        
+    }];
 }
 
 - (void)detailHeadDidTouchDown
 {
+    if ([[ARTDownLoadManager sharedInstance] isDownLoad:self.bookID])
+    {
 
+    }
 }
 
 - (void)detailHeadDidTouchSave

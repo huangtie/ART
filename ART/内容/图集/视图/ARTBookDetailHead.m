@@ -8,6 +8,7 @@
 
 #import "ARTBookDetailHead.h"
 #import "ARTPointView.h"
+#import "ARTDownLoadManager.h"
 
 @interface ARTBookDetailHead()
 
@@ -143,6 +144,8 @@
 }
 
 #define ITEMD_HEIGHT 35
+#define buttonWidth 160
+#define spasing (SCREEN_WIDTH - 30 - 4 * buttonWidth) / 3
 - (UIView *)itemsContrl
 {
     if (!_itemsContrl)
@@ -151,8 +154,6 @@
         _itemsContrl.size = CGSizeMake(SCREEN_WIDTH, ITEMD_HEIGHT);
         _itemsContrl.backgroundColor = [UIColor clearColor];
         
-        CGFloat buttonWidth = 160;
-        CGFloat spasing = (SCREEN_WIDTH - 30 - 4 * buttonWidth) / 3;
         self.buyButton = [self itemd:@"立即购买" frame:CGRectMake(15 , 0 , buttonWidth , ITEMD_HEIGHT)];
         [_itemsContrl addSubview:self.buyButton];
         
@@ -168,13 +169,16 @@
     return _itemsContrl;
 }
 
+#define DISA_COLOR UICOLOR_ARGB(0xff999999)
 - (UIButton *)itemd:(NSString *)text frame:(CGRect)frame
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = frame;
     [button clipRadius:2 borderWidth:1 borderColor:COLOR_YSYC_ORANGE];
     [button setTitleColor:COLOR_YSYC_ORANGE forState:UIControlStateNormal];
+    [button setTitleColor:DISA_COLOR forState:UIControlStateDisabled];
     button.titleLabel.font = FONT_WITH_15;
+    [button setBackgroundColor:[UIColor whiteColor]];
     [button setTitle:text forState:UIControlStateNormal];
     [button addTarget:self action:@selector(itemsClick:) forControlEvents:UIControlEventTouchUpInside];
     return button;
@@ -286,6 +290,53 @@
     }
 
     self.height = self.itemsContrl.bottom + 2 * padding;
+    
+    //暂时不要收藏
+    self.saveButton.hidden = YES;
+    
+    //是否能点击够买
+    if (!bookData.bookFree.boolValue || bookData.isBuy.boolValue)
+    {
+        self.buyButton.hidden = YES;
+    }
+    else
+    {
+        self.buyButton.hidden = NO;
+    }
+    
+    //是否能点击下载
+    if (bookData.bookFree.boolValue && !bookData.isBuy.boolValue)
+    {
+        self.downButton.hidden = YES;
+    }
+    else
+    {
+        self.downButton.hidden = NO;
+    }
+    
+    //是否能点击阅读
+    if ([[ARTDownLoadManager sharedInstance] isDownLoad:bookData.bookID])
+    {
+        self.readButton.hidden = NO;
+    }
+    else
+    {
+        self.readButton.hidden = YES;
+    }
+    
+    //重新设置按钮坐标
+    NSInteger index = 0;
+    for (NSInteger i = 0; i < self.itemsContrl.subviews.count; i++)
+    {
+        UIButton *button = self.itemsContrl.subviews[i];
+        if (!button.hidden)
+        {
+            button.left = index * (button.width + spasing);
+            self.itemsContrl.width = button.right;
+            index += 1;
+        }
+    }
+    self.itemsContrl.centerX = self.width / 2;
 }
 
 #pragma mark ACTION

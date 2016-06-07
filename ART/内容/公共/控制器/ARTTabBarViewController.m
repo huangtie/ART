@@ -62,7 +62,11 @@
 
 - (void)customTabBarDidTouchUser
 {
-
+    [ARTAlertView alertTitle:@"温馨提示" message:@"确定删除?" doneTitle:@"取消" cancelTitle:@"确定" doneBlock:^{
+        
+    } cancelBlock:^{
+        
+    }];
 }
 
 - (void)customTabBarDidTouchItems:(ART_TABINDEX)index

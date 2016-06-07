@@ -27,5 +27,7 @@
 #import "NSString+ART.h"
 #import <UIView+Toast.h>
 #import <LBProgressHUD.h>
+#import "ARTAlertView.h"
+#import "UIImage+ART.h"
 
 #endif

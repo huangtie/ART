@@ -30,7 +30,7 @@
     if (self) {
         if([self loadUserData])
         {
-            //self.userinfo = [self loadUserData];
+            self.userinfo = [self loadUserData];
         }
     }
     return self;

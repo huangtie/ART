@@ -25,10 +25,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [[ARTUserManager sharedInstance] isLogin:self logined:^(ARTUserData *userInfo) {
-        
-    }];
 }
 
 @end

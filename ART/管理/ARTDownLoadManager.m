@@ -235,7 +235,18 @@
     });
 }
 
-
+- (BOOL)isDownLoad:(NSString *)bookID
+{
+    [self.db open];
+    NSInteger allCount = [self.db intForQuery:@"select count(*) from photos where bookID=?",bookID];
+    NSInteger fishCount = [self.db intForQuery:@"select count(*) from photos where bookID=? and downed=1",bookID];
+    [self.db close];
+    if (allCount == 0 || allCount != fishCount)
+    {
+        return NO;
+    }
+    return YES;
+}
 
 
 

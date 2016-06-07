@@ -13,6 +13,13 @@
 		6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C95F1CD21DDC00E0EA6A /* ARTUserData.m */; };
 		672002511D016B4200B4A329 /* ARTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002501D016B4200B4A329 /* ARTRegisterViewController.m */; };
 		672002541D017F1800B4A329 /* ARTForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002531D017F1800B4A329 /* ARTForgetViewController.m */; };
+		6720025D1D051BC100B4A329 /* ARTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6720025C1D051BC100B4A329 /* ARTAlertView.m */; };
+		672002601D0579AF00B4A329 /* ARTSocialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6720025F1D0579AF00B4A329 /* ARTSocialCell.m */; };
+		672002661D058A0500B4A329 /* ARTTalkSendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002651D058A0500B4A329 /* ARTTalkSendViewController.m */; };
+		672002691D058D0600B4A329 /* ARTTalkTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002681D058D0600B4A329 /* ARTTalkTextView.m */; };
+		6720026C1D06AA1D00B4A329 /* ARTAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6720026B1D06AA1D00B4A329 /* ARTAssetsViewController.m */; };
+		6720026F1D06C63400B4A329 /* ARTPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6720026E1D06C63400B4A329 /* ARTPreviewViewController.m */; };
+		672002721D06CDFD00B4A329 /* UIImage+ART.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002711D06CDFD00B4A329 /* UIImage+ART.m */; };
 		677534ED1CC8B62D00B34C59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EC1CC8B62D00B34C59 /* main.m */; };
 		677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EF1CC8B62D00B34C59 /* AppDelegate.m */; };
 		677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677534F71CC8B62E00B34C59 /* Assets.xcassets */; };
@@ -103,6 +110,20 @@
 		672002501D016B4200B4A329 /* ARTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterViewController.m; sourceTree = "<group>"; };
 		672002521D017F1800B4A329 /* ARTForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTForgetViewController.h; sourceTree = "<group>"; };
 		672002531D017F1800B4A329 /* ARTForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTForgetViewController.m; sourceTree = "<group>"; };
+		6720025B1D051BC100B4A329 /* ARTAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAlertView.h; sourceTree = "<group>"; };
+		6720025C1D051BC100B4A329 /* ARTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAlertView.m; sourceTree = "<group>"; };
+		6720025E1D0579AF00B4A329 /* ARTSocialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSocialCell.h; sourceTree = "<group>"; };
+		6720025F1D0579AF00B4A329 /* ARTSocialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSocialCell.m; sourceTree = "<group>"; };
+		672002641D058A0500B4A329 /* ARTTalkSendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkSendViewController.h; sourceTree = "<group>"; };
+		672002651D058A0500B4A329 /* ARTTalkSendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkSendViewController.m; sourceTree = "<group>"; };
+		672002671D058D0600B4A329 /* ARTTalkTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkTextView.h; sourceTree = "<group>"; };
+		672002681D058D0600B4A329 /* ARTTalkTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkTextView.m; sourceTree = "<group>"; };
+		6720026A1D06AA1D00B4A329 /* ARTAssetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAssetsViewController.h; sourceTree = "<group>"; };
+		6720026B1D06AA1D00B4A329 /* ARTAssetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAssetsViewController.m; sourceTree = "<group>"; };
+		6720026D1D06C63400B4A329 /* ARTPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTPreviewViewController.h; sourceTree = "<group>"; };
+		6720026E1D06C63400B4A329 /* ARTPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTPreviewViewController.m; sourceTree = "<group>"; };
+		672002701D06CDFD00B4A329 /* UIImage+ART.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ART.h"; sourceTree = "<group>"; };
+		672002711D06CDFD00B4A329 /* UIImage+ART.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ART.m"; sourceTree = "<group>"; };
 		677534E81CC8B62D00B34C59 /* ART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ART.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677534EC1CC8B62D00B34C59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		677534EE1CC8B62D00B34C59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -470,6 +491,33 @@
 			path = "购买充值";
 			sourceTree = "<group>";
 		};
+		672002611D05893500B4A329 /* 动态 */ = {
+			isa = PBXGroup;
+			children = (
+				672002621D05893500B4A329 /* 控制器 */,
+				672002631D05893500B4A329 /* 视图 */,
+			);
+			path = "动态";
+			sourceTree = "<group>";
+		};
+		672002621D05893500B4A329 /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				672002641D058A0500B4A329 /* ARTTalkSendViewController.h */,
+				672002651D058A0500B4A329 /* ARTTalkSendViewController.m */,
+			);
+			path = "控制器";
+			sourceTree = "<group>";
+		};
+		672002631D05893500B4A329 /* 视图 */ = {
+			isa = PBXGroup;
+			children = (
+				672002671D058D0600B4A329 /* ARTTalkTextView.h */,
+				672002681D058D0600B4A329 /* ARTTalkTextView.m */,
+			);
+			path = "视图";
+			sourceTree = "<group>";
+		};
 		677534DF1CC8B62D00B34C59 = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +587,7 @@
 				677598991CEC5890002D3947 /* 拍卖 */,
 				6787AE041CFE7F55002E59F5 /* 藏家 */,
 				6787AE3F1D003545002E59F5 /* 登录 */,
+				672002611D05893500B4A329 /* 动态 */,
 			);
 			path = "内容";
 			sourceTree = "<group>";
@@ -557,6 +606,10 @@
 			children = (
 				677598A21CEC5938002D3947 /* ARTTabBarViewController.h */,
 				677598A31CEC5938002D3947 /* ARTTabBarViewController.m */,
+				6720026A1D06AA1D00B4A329 /* ARTAssetsViewController.h */,
+				6720026B1D06AA1D00B4A329 /* ARTAssetsViewController.m */,
+				6720026D1D06C63400B4A329 /* ARTPreviewViewController.h */,
+				6720026E1D06C63400B4A329 /* ARTPreviewViewController.m */,
 			);
 			path = "控制器";
 			sourceTree = "<group>";
@@ -577,6 +630,8 @@
 				6787ADEC1CFC40B9002E59F5 /* ARTHtmlView.m */,
 				6787AE0A1CFED85A002E59F5 /* ARTShareView.h */,
 				6787AE0B1CFED85A002E59F5 /* ARTShareView.m */,
+				6720025B1D051BC100B4A329 /* ARTAlertView.h */,
+				6720025C1D051BC100B4A329 /* ARTAlertView.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -645,6 +700,8 @@
 		677598981CEC5890002D3947 /* 视图 */ = {
 			isa = PBXGroup;
 			children = (
+				6720025E1D0579AF00B4A329 /* ARTSocialCell.h */,
+				6720025F1D0579AF00B4A329 /* ARTSocialCell.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -889,6 +946,8 @@
 				6787ADD61CF7FB7B002E59F5 /* UIView+ART.m */,
 				6787ADE81CFC2A47002E59F5 /* NSString+ART.h */,
 				6787ADE91CFC2A47002E59F5 /* NSString+ART.m */,
+				672002701D06CDFD00B4A329 /* UIImage+ART.h */,
+				672002711D06CDFD00B4A329 /* UIImage+ART.m */,
 			);
 			path = "类别";
 			sourceTree = "<group>";
@@ -1031,16 +1090,19 @@
 				6787AE441D0035A8002E59F5 /* ARTLoginViewController.m in Sources */,
 				678FFB5F1CD9F3730071EAF6 /* ARTAuthorData.m in Sources */,
 				6787ADEA1CFC2A47002E59F5 /* NSString+ART.m in Sources */,
+				672002691D058D0600B4A329 /* ARTTalkTextView.m in Sources */,
 				677598B51CEC68A5002D3947 /* ARTSocialViewController.m in Sources */,
 				677534ED1CC8B62D00B34C59 /* main.m in Sources */,
 				67FD12941CE5AC4C00C93DFD /* ARTDaoUtil.m in Sources */,
 				672002511D016B4200B4A329 /* ARTRegisterViewController.m in Sources */,
+				6720026C1D06AA1D00B4A329 /* ARTAssetsViewController.m in Sources */,
 				678FFB681CD9FDD60071EAF6 /* ARTCommentSendParam.m in Sources */,
 				678B4F871CF6DDD5006CEB17 /* ARTBookDetailViewController.m in Sources */,
 				67FD128E1CE57D5300C93DFD /* ARTUMengUtil.m in Sources */,
 				67B92D5A1CDB3E960009E5B9 /* ARTSendTalkParam.m in Sources */,
 				6787ADF71CFC4283002E59F5 /* TFHppleElement.m in Sources */,
 				677598C61CED701D002D3947 /* ARTBookGroupCell.m in Sources */,
+				672002661D058A0500B4A329 /* ARTTalkSendViewController.m in Sources */,
 				677598CA1CEDA3AF002D3947 /* ARTBookCell.m in Sources */,
 				67FD127B1CE465D100C93DFD /* ARTEasemobServer.m in Sources */,
 				67FD128B1CE5769F00C93DFD /* ARTGTPushUtil.m in Sources */,
@@ -1048,6 +1110,7 @@
 				67B92D531CDB378D0009E5B9 /* ARTPurchasesLogData.m in Sources */,
 				677598A41CEC5938002D3947 /* ARTTabBarViewController.m in Sources */,
 				67FD12821CE48AC500C93DFD /* ARTBaseViewController.m in Sources */,
+				6720026F1D06C63400B4A329 /* ARTPreviewViewController.m in Sources */,
 				678B4F841CF6DC30006CEB17 /* UIBarButtonItem+ART.m in Sources */,
 				677598B81CEC68C6002D3947 /* ARTAuctionViewController.m in Sources */,
 				6787ADDA1CF82A72002E59F5 /* ARTBookInputView.m in Sources */,
@@ -1058,6 +1121,7 @@
 				67B92D631CDB49E40009E5B9 /* ARTSendTalkComParam.m in Sources */,
 				67FD12A01CE9D32800C93DFD /* ARTDownLoadManager.m in Sources */,
 				67B92D4D1CDB2F2B0009E5B9 /* ARTPurchasesData.m in Sources */,
+				672002601D0579AF00B4A329 /* ARTSocialCell.m in Sources */,
 				6787ADFD1CFC4376002E59F5 /* XPathQuery.m in Sources */,
 				67FD12A41CE9D7DA00C93DFD /* ARTBookLocalData.m in Sources */,
 				67FD12911CE57DF000C93DFD /* ARTRequestUtil.m in Sources */,
@@ -1068,6 +1132,7 @@
 				678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */,
 				67B92D571CDB391F0009E5B9 /* ARTCustomParam.m in Sources */,
 				677598BB1CEC788A002D3947 /* ARTBookScreen.m in Sources */,
+				6720025D1D051BC100B4A329 /* ARTAlertView.m in Sources */,
 				6787ADED1CFC40B9002E59F5 /* ARTHtmlView.m in Sources */,
 				6787AE0C1CFED85A002E59F5 /* ARTShareView.m in Sources */,
 				6775992B1CF5AE70002D3947 /* UIScrollView+ART.m in Sources */,
@@ -1091,6 +1156,7 @@
 				67B92D691CDC6F3A0009E5B9 /* ARTTalkComData.m in Sources */,
 				6775992E1CF5BBCD002D3947 /* ARTPointView.m in Sources */,
 				6787ADE01CF83374002E59F5 /* ARTStarRatingView.m in Sources */,
+				672002721D06CDFD00B4A329 /* UIImage+ART.m in Sources */,
 				672002541D017F1800B4A329 /* ARTForgetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
