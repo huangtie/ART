@@ -402,7 +402,6 @@ ARTBookDetailHeadDelegate>
     param.commentText = text;
     param.commentPoint = sole;
     param.bookID = self.bookID;
-    [ARTUserManager sharedInstance].userinfo.c = @"1e87f58e7f78cfa5c1987afbe29d343ce7e7929cadc4bb8ed559eec21e72b10d";
     WS(weak)
     [ARTRequestUtil requestSendComment:param completion:^(NSURLSessionDataTask *task) {
         [weak hideHUD];
@@ -412,6 +411,41 @@ ARTBookDetailHeadDelegate>
     } failure:^(ErrorItemd *error) {
         [weak hideHUD];
         [weak.view displayTostError:error.errMsg];
+    }];
+}
+
+- (void)requestDownLoad
+{
+    WS(weak)
+    //判断该图集是不是正在下载，如果正在下载则停止并删除已下载的数据，重新下载
+    ARTBookDownObject *object = [[ARTDownLoadManager sharedInstance] isDownLoadIng:self.bookID];
+    if (object)
+    {
+        [object downLoadPause];
+        [[ARTDownLoadManager sharedInstance] deleteBook:[object downLoadingBookID] completion:^{
+            [weak requestDownLoad];
+        }];
+        return;
+    }
+    
+    [self displayHUD];
+    [ARTRequestUtil requestBookDowns:self.bookID completion:^(NSURLSessionDataTask *task, NSArray<ARTBookDownData *> *datas) {
+        NSMutableArray *urls = [NSMutableArray array];
+        for (ARTBookDownData *data in datas)
+        {
+            [urls addObject:data.dataURL];
+        }
+        ARTBookDownObject *downObject = [[ARTBookDownObject alloc] initWithBookData:self.bookData urls:urls];
+        NSLog(@"%@",[downObject downLoadingBookID]);
+        [weak hideHUD];
+        [weak performBlock:^{
+            [weak.view displayTostSuccess:@"已加入下载列表,详细进度请到[本地]查看"];
+        } afterDelay:1.5];
+    } failure:^(ErrorItemd *error) {
+        [weak hideHUD];
+        [weak performBlock:^{
+            [weak.view displayTostError:error.errMsg];
+        } afterDelay:1.5];
     }];
 }
 
@@ -632,18 +666,23 @@ ARTBookDetailHeadDelegate>
 
 - (void)detailHeadDidTouchBuy
 {
-    [ARTAlertView alertTitle:@"提示" message:@"该图集已存在本地,是否重新下载?" doneTitle:@"重新下载" cancelTitle:@"否,打开" doneBlock:^{
-        
-    } cancelBlock:^{
-        
-    }];
+    
 }
 
 - (void)detailHeadDidTouchDown
 {
     if ([[ARTDownLoadManager sharedInstance] isDownLoad:self.bookID])
     {
-
+        WS(weak)
+        [ARTAlertView alertTitle:@"温馨提示" message:@"该图集已经存在本地,是否重新下载?" doneTitle:@"重新下载" cancelTitle:@"取消" doneBlock:^{
+            [weak requestDownLoad];
+        } cancelBlock:^{
+            
+        }];
+    }
+    else
+    {
+        [self requestDownLoad];
     }
 }
 

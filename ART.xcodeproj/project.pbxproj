@@ -20,12 +20,14 @@
 		6720026C1D06AA1D00B4A329 /* ARTAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6720026B1D06AA1D00B4A329 /* ARTAssetsViewController.m */; };
 		6720026F1D06C63400B4A329 /* ARTPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6720026E1D06C63400B4A329 /* ARTPreviewViewController.m */; };
 		672002721D06CDFD00B4A329 /* UIImage+ART.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002711D06CDFD00B4A329 /* UIImage+ART.m */; };
+		672002751D07FB2100B4A329 /* ARTLocalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002741D07FB2100B4A329 /* ARTLocalCell.m */; };
+		672002771D08202900B4A329 /* 图片资源.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672002761D08202900B4A329 /* 图片资源.xcassets */; };
+		6720027A1D08213900B4A329 /* ARTLocalReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002791D08213900B4A329 /* ARTLocalReadViewController.m */; };
 		677534ED1CC8B62D00B34C59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EC1CC8B62D00B34C59 /* main.m */; };
 		677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EF1CC8B62D00B34C59 /* AppDelegate.m */; };
 		677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677534F71CC8B62E00B34C59 /* Assets.xcassets */; };
 		677598871CEC1344002D3947 /* ARTBookDownObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598861CEC1344002D3947 /* ARTBookDownObject.m */; };
 		6775988A1CEC4875002D3947 /* Microsoft Yahei.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 677598891CEC4875002D3947 /* Microsoft Yahei.ttf */; };
-		6775988E1CEC56E3002D3947 /* 图片资源.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6775988D1CEC56E3002D3947 /* 图片资源.xcassets */; };
 		677598A41CEC5938002D3947 /* ARTTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598A31CEC5938002D3947 /* ARTTabBarViewController.m */; };
 		677598A71CEC5970002D3947 /* ARTCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 677598A61CEC5970002D3947 /* ARTCustomTabBar.m */; };
 		677598A91CEC5988002D3947 /* ARTCustomTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 677598A81CEC5988002D3947 /* ARTCustomTabBar.xib */; };
@@ -124,6 +126,11 @@
 		6720026E1D06C63400B4A329 /* ARTPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTPreviewViewController.m; sourceTree = "<group>"; };
 		672002701D06CDFD00B4A329 /* UIImage+ART.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ART.h"; sourceTree = "<group>"; };
 		672002711D06CDFD00B4A329 /* UIImage+ART.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ART.m"; sourceTree = "<group>"; };
+		672002731D07FB2100B4A329 /* ARTLocalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTLocalCell.h; sourceTree = "<group>"; };
+		672002741D07FB2100B4A329 /* ARTLocalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTLocalCell.m; sourceTree = "<group>"; };
+		672002761D08202900B4A329 /* 图片资源.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "图片资源.xcassets"; sourceTree = "<group>"; };
+		672002781D08213900B4A329 /* ARTLocalReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTLocalReadViewController.h; sourceTree = "<group>"; };
+		672002791D08213900B4A329 /* ARTLocalReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTLocalReadViewController.m; sourceTree = "<group>"; };
 		677534E81CC8B62D00B34C59 /* ART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ART.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677534EC1CC8B62D00B34C59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		677534EE1CC8B62D00B34C59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,7 +142,6 @@
 		677598891CEC4875002D3947 /* Microsoft Yahei.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Microsoft Yahei.ttf"; sourceTree = "<group>"; };
 		6775988B1CEC48CE002D3947 /* FontMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontMacros.h; sourceTree = "<group>"; };
 		6775988C1CEC4B5C002D3947 /* ColorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorMacros.h; sourceTree = "<group>"; };
-		6775988D1CEC56E3002D3947 /* 图片资源.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "图片资源.xcassets"; sourceTree = "<group>"; };
 		677598A21CEC5938002D3947 /* ARTTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTabBarViewController.h; sourceTree = "<group>"; };
 		677598A31CEC5938002D3947 /* ARTTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTabBarViewController.m; sourceTree = "<group>"; };
 		677598A51CEC5970002D3947 /* ARTCustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTCustomTabBar.h; sourceTree = "<group>"; };
@@ -570,8 +576,8 @@
 		677598881CEC4807002D3947 /* 资源 */ = {
 			isa = PBXGroup;
 			children = (
+				672002761D08202900B4A329 /* 图片资源.xcassets */,
 				677598891CEC4875002D3947 /* Microsoft Yahei.ttf */,
-				6775988D1CEC56E3002D3947 /* 图片资源.xcassets */,
 			);
 			path = "资源";
 			sourceTree = "<group>";
@@ -745,6 +751,8 @@
 			children = (
 				677598B01CEC6862002D3947 /* ARTLocalViewController.h */,
 				677598B11CEC6862002D3947 /* ARTLocalViewController.m */,
+				672002781D08213900B4A329 /* ARTLocalReadViewController.h */,
+				672002791D08213900B4A329 /* ARTLocalReadViewController.m */,
 			);
 			path = "控制器";
 			sourceTree = "<group>";
@@ -752,6 +760,8 @@
 		6775989E1CEC5890002D3947 /* 视图 */ = {
 			isa = PBXGroup;
 			children = (
+				672002731D07FB2100B4A329 /* ARTLocalCell.h */,
+				672002741D07FB2100B4A329 /* ARTLocalCell.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -1017,8 +1027,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				672002771D08202900B4A329 /* 图片资源.xcassets in Resources */,
 				677598CB1CEDA3AF002D3947 /* ARTBookCell.xib in Resources */,
-				6775988E1CEC56E3002D3947 /* 图片资源.xcassets in Resources */,
 				677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */,
 				677598A91CEC5988002D3947 /* ARTCustomTabBar.xib in Resources */,
 				677598BD1CEC7B2D002D3947 /* ARTBookScreen.xib in Resources */,
@@ -1138,10 +1148,12 @@
 				6775992B1CF5AE70002D3947 /* UIScrollView+ART.m in Sources */,
 				6787AE091CFE7FAA002E59F5 /* ARTAuthorDetailViewController.m in Sources */,
 				6787ADF61CFC4283002E59F5 /* TFHpple.m in Sources */,
+				6720027A1D08213900B4A329 /* ARTLocalReadViewController.m in Sources */,
 				678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */,
 				67FD12AC1CEB064100C93DFD /* NSFileManager+ART.m in Sources */,
 				67B92D661CDB58AA0009E5B9 /* ARTTalkData.m in Sources */,
 				677598A71CEC5970002D3947 /* ARTCustomTabBar.m in Sources */,
+				672002751D07FB2100B4A329 /* ARTLocalCell.m in Sources */,
 				67FD12A11CE9D32800C93DFD /* ARTUserManager.m in Sources */,
 				677598AC1CEC680E002D3947 /* ARTHomeViewController.m in Sources */,
 				677598AF1CEC6851002D3947 /* ARTBookViewController.m in Sources */,

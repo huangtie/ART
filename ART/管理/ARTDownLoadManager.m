@@ -248,6 +248,37 @@
     return YES;
 }
 
+- (ARTBookDownObject *)isDownLoadIng:(NSString *)bookID
+{
+    for (ARTBookDownObject *object in self.downQueueList)
+    {
+        if ([[object downLoadingBookID] isEqualToString:bookID])
+        {
+            return object;
+        }
+    }
+    return nil;
+}
 
++ (BOOL)isDownLoading:(NSString *)bookId
+{
+    for (ARTBookDownObject *object in [ARTDownLoadManager sharedInstance].downQueueList)
+    {
+        if ([[object downLoadingBookID] isEqualToString:bookId])
+        {
+            return YES;
+        }
+    }
+    return NO;
+}
+
++ (BOOL)isDownFinish:(ARTBookLocalData *)data
+{
+    if (data.bookAllCount != 0 && data.bookAllCount == data.bookFinishCount)
+    {
+        return YES;
+    }
+    return NO;
+}
 
 @end

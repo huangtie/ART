@@ -12,6 +12,8 @@
 
 @interface ARTBookDownObject : NSObject
 
++ (ARTBookDownObject *)downLoadWithReadData:(ARTBookLocalData *)readData;
+
 - (instancetype)initWithReadData:(ARTBookLocalData *)readData;
 
 - (instancetype)initWithBookData:(ARTBookData *)bookData urls:(NSArray <NSString *> *)urls;

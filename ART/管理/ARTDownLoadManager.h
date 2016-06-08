@@ -10,6 +10,7 @@
 #import "ARTBookData.h"
 #import <FMDB.h>
 #import "ARTBookLocalData.h"
+#import "ARTBookDownObject.h"
 
 @interface ARTDownLoadManager : NSObject
 
@@ -38,5 +39,14 @@
 
 - (void)getALLBook:(void (^)(NSMutableArray <ARTBookLocalData *> *dataList))completion;
 
+//是否已经下载完成
 - (BOOL)isDownLoad:(NSString *)bookID;
+
+//是否正在下载中,如果正在下载中则返回他
+- (ARTBookDownObject *)isDownLoadIng:(NSString *)bookID;
+
++ (BOOL)isDownLoading:(NSString *)bookId;
+
++ (BOOL)isDownFinish:(ARTBookLocalData *)data;
+
 @end
