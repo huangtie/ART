@@ -74,6 +74,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    
     //友盟统计
     [MobClick endLogPageView:self.title];
 }

@@ -10,4 +10,6 @@
 
 @interface ARTLocalReadViewController : ARTBaseViewController
 
++ (ARTLocalReadViewController *)lunch:(NSString *)bookID viewController:(UIViewController *)vc;
+
 @end

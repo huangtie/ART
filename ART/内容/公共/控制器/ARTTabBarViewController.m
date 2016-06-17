@@ -8,6 +8,8 @@
 
 #import "ARTTabBarViewController.h"
 #import "ARTCustomTabBar.h"
+#import "AppDelegate.h"
+#import "ARTBaseViewController.h"
 
 @interface ARTTabBarViewController ()<ARTCustomTabBarDelegate>
 
@@ -75,7 +77,6 @@
     UINavigationController *selectVC = self.viewControllers[self.selectedIndex];
     [selectVC.viewControllers.firstObject.view addSubview:self.customTabBar];
 }
-
 
 
 @end

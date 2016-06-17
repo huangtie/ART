@@ -9,6 +9,7 @@
 #import "ARTSocialViewController.h"
 #import "ARTSocialCell.h"
 #import "ARTTalkSendViewController.h"
+#import "ARTLocalPageViewController.h"
 
 @interface ARTSocialViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -83,6 +84,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.row == 1)
+    {
+        ARTLocalPageViewController *vc = [[ARTLocalPageViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
     
     if (indexPath.row == 2)
     {

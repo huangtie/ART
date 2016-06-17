@@ -10,6 +10,7 @@
 #import "ARTDownLoadManager.h"
 #import <UIScrollView+EmptyDataSet.h>
 #import "ARTLocalCell.h"
+#import "ARTLocalReadViewController.h"
 
 @interface ARTLocalViewController ()
 <UICollectionViewDelegateFlowLayout,
@@ -175,6 +176,7 @@ DZNEmptyDataSetSource>
     if ([ARTDownLoadManager isDownFinish:data])
     {
         //已下载完成，直接打开
+        [ARTLocalReadViewController lunch:data.bookID viewController:self];
     }
     else
     {

@@ -10,6 +10,9 @@
 
 @interface ARTBaseViewController : UIViewController
 
+//是否能旋转屏幕
+@property (nonatomic , assign) BOOL isAutorotate;
+
 /**
  * 自定制导航条
  */

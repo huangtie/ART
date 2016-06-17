@@ -23,6 +23,11 @@
 		672002751D07FB2100B4A329 /* ARTLocalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002741D07FB2100B4A329 /* ARTLocalCell.m */; };
 		672002771D08202900B4A329 /* 图片资源.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672002761D08202900B4A329 /* 图片资源.xcassets */; };
 		6720027A1D08213900B4A329 /* ARTLocalReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002791D08213900B4A329 /* ARTLocalReadViewController.m */; };
+		6720027D1D08246600B4A329 /* ARTLocalPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6720027C1D08246600B4A329 /* ARTLocalPageViewController.m */; };
+		672002941D13EA6C00B4A329 /* ARTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002931D13EA6C00B4A329 /* ARTBaseNavigationController.m */; };
+		6720029A1D13FF6000B4A329 /* ARTLocalMinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002991D13FF6000B4A329 /* ARTLocalMinCell.m */; };
+		672002A01D1408EE00B4A329 /* ImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6720029D1D1408EE00B4A329 /* ImageLoader.m */; };
+		672002A11D1408EE00B4A329 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6720029F1D1408EE00B4A329 /* UIImage+Resize.m */; };
 		677534ED1CC8B62D00B34C59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EC1CC8B62D00B34C59 /* main.m */; };
 		677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EF1CC8B62D00B34C59 /* AppDelegate.m */; };
 		677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677534F71CC8B62E00B34C59 /* Assets.xcassets */; };
@@ -131,6 +136,16 @@
 		672002761D08202900B4A329 /* 图片资源.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "图片资源.xcassets"; sourceTree = "<group>"; };
 		672002781D08213900B4A329 /* ARTLocalReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTLocalReadViewController.h; sourceTree = "<group>"; };
 		672002791D08213900B4A329 /* ARTLocalReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTLocalReadViewController.m; sourceTree = "<group>"; };
+		6720027B1D08246600B4A329 /* ARTLocalPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTLocalPageViewController.h; sourceTree = "<group>"; };
+		6720027C1D08246600B4A329 /* ARTLocalPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTLocalPageViewController.m; sourceTree = "<group>"; };
+		672002921D13EA6C00B4A329 /* ARTBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTBaseNavigationController.h; sourceTree = "<group>"; };
+		672002931D13EA6C00B4A329 /* ARTBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTBaseNavigationController.m; sourceTree = "<group>"; };
+		672002981D13FF6000B4A329 /* ARTLocalMinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTLocalMinCell.h; sourceTree = "<group>"; };
+		672002991D13FF6000B4A329 /* ARTLocalMinCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTLocalMinCell.m; sourceTree = "<group>"; };
+		6720029C1D1408EE00B4A329 /* ImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLoader.h; sourceTree = "<group>"; };
+		6720029D1D1408EE00B4A329 /* ImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLoader.m; sourceTree = "<group>"; };
+		6720029E1D1408EE00B4A329 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		6720029F1D1408EE00B4A329 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		677534E81CC8B62D00B34C59 /* ART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ART.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677534EC1CC8B62D00B34C59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		677534EE1CC8B62D00B34C59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -524,6 +539,17 @@
 			path = "视图";
 			sourceTree = "<group>";
 		};
+		6720029B1D1408EE00B4A329 /* 异步加载沙盒图片 */ = {
+			isa = PBXGroup;
+			children = (
+				6720029C1D1408EE00B4A329 /* ImageLoader.h */,
+				6720029D1D1408EE00B4A329 /* ImageLoader.m */,
+				6720029E1D1408EE00B4A329 /* UIImage+Resize.h */,
+				6720029F1D1408EE00B4A329 /* UIImage+Resize.m */,
+			);
+			path = "异步加载沙盒图片";
+			sourceTree = "<group>";
+		};
 		677534DF1CC8B62D00B34C59 = {
 			isa = PBXGroup;
 			children = (
@@ -753,6 +779,8 @@
 				677598B11CEC6862002D3947 /* ARTLocalViewController.m */,
 				672002781D08213900B4A329 /* ARTLocalReadViewController.h */,
 				672002791D08213900B4A329 /* ARTLocalReadViewController.m */,
+				6720027B1D08246600B4A329 /* ARTLocalPageViewController.h */,
+				6720027C1D08246600B4A329 /* ARTLocalPageViewController.m */,
 			);
 			path = "控制器";
 			sourceTree = "<group>";
@@ -762,6 +790,8 @@
 			children = (
 				672002731D07FB2100B4A329 /* ARTLocalCell.h */,
 				672002741D07FB2100B4A329 /* ARTLocalCell.m */,
+				672002981D13FF6000B4A329 /* ARTLocalMinCell.h */,
+				672002991D13FF6000B4A329 /* ARTLocalMinCell.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -794,6 +824,7 @@
 		6787ADEE1CFC4219002E59F5 /* 第三方 */ = {
 			isa = PBXGroup;
 			children = (
+				6720029B1D1408EE00B4A329 /* 异步加载沙盒图片 */,
 				6787ADEF1CFC4283002E59F5 /* HTML */,
 			);
 			path = "第三方";
@@ -917,6 +948,8 @@
 				6701C9501CD2122100E0EA6A /* ARTBaseParam.m */,
 				67FD12801CE48AC500C93DFD /* ARTBaseViewController.h */,
 				67FD12811CE48AC500C93DFD /* ARTBaseViewController.m */,
+				672002921D13EA6C00B4A329 /* ARTBaseNavigationController.h */,
+				672002931D13EA6C00B4A329 /* ARTBaseNavigationController.m */,
 			);
 			path = "基类";
 			sourceTree = "<group>";
@@ -1132,6 +1165,7 @@
 				67FD12A01CE9D32800C93DFD /* ARTDownLoadManager.m in Sources */,
 				67B92D4D1CDB2F2B0009E5B9 /* ARTPurchasesData.m in Sources */,
 				672002601D0579AF00B4A329 /* ARTSocialCell.m in Sources */,
+				672002A11D1408EE00B4A329 /* UIImage+Resize.m in Sources */,
 				6787ADFD1CFC4376002E59F5 /* XPathQuery.m in Sources */,
 				67FD12A41CE9D7DA00C93DFD /* ARTBookLocalData.m in Sources */,
 				67FD12911CE57DF000C93DFD /* ARTRequestUtil.m in Sources */,
@@ -1143,12 +1177,15 @@
 				67B92D571CDB391F0009E5B9 /* ARTCustomParam.m in Sources */,
 				677598BB1CEC788A002D3947 /* ARTBookScreen.m in Sources */,
 				6720025D1D051BC100B4A329 /* ARTAlertView.m in Sources */,
+				672002941D13EA6C00B4A329 /* ARTBaseNavigationController.m in Sources */,
 				6787ADED1CFC40B9002E59F5 /* ARTHtmlView.m in Sources */,
+				6720027D1D08246600B4A329 /* ARTLocalPageViewController.m in Sources */,
 				6787AE0C1CFED85A002E59F5 /* ARTShareView.m in Sources */,
 				6775992B1CF5AE70002D3947 /* UIScrollView+ART.m in Sources */,
 				6787AE091CFE7FAA002E59F5 /* ARTAuthorDetailViewController.m in Sources */,
 				6787ADF61CFC4283002E59F5 /* TFHpple.m in Sources */,
 				6720027A1D08213900B4A329 /* ARTLocalReadViewController.m in Sources */,
+				6720029A1D13FF6000B4A329 /* ARTLocalMinCell.m in Sources */,
 				678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */,
 				67FD12AC1CEB064100C93DFD /* NSFileManager+ART.m in Sources */,
 				67B92D661CDB58AA0009E5B9 /* ARTTalkData.m in Sources */,
@@ -1159,6 +1196,7 @@
 				677598AF1CEC6851002D3947 /* ARTBookViewController.m in Sources */,
 				6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */,
 				678FFB401CD893A90071EAF6 /* ARTUpsetParam.m in Sources */,
+				672002A01D1408EE00B4A329 /* ImageLoader.m in Sources */,
 				677598C01CED681B002D3947 /* ARTTalkListParam.m in Sources */,
 				67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */,
 				6787ADD71CF7FB7B002E59F5 /* UIView+ART.m in Sources */,
