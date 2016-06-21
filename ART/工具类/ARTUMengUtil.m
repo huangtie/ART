@@ -12,7 +12,8 @@
 
 + (void)initUMengSDK
 {
-    [MobClick startWithAppkey:UMENG_APPKEY];
+    UMConfigInstance.appKey = UMENG_APPKEY;
+    [MobClick startWithConfigure:UMConfigInstance];
 #ifdef DEBUG
     [MobClick setLogEnabled:YES];
 #endif

@@ -125,7 +125,7 @@ static NSTimeInterval _yy_CGImageSourceGetGIFFrameDelayAtIndex(CGImageSourceRef 
             CFRelease(imageRef);
             return nil;
         }
-        UIImage *image = image = [UIImage imageWithCGImage:decoded scale:scale orientation:UIImageOrientationUp];
+        UIImage *image = [UIImage imageWithCGImage:decoded scale:scale orientation:UIImageOrientationUp];
         CGImageRelease(imageRef);
         CGImageRelease(decoded);
         if (!image) {
@@ -211,7 +211,7 @@ static NSTimeInterval _yy_CGImageSourceGetGIFFrameDelayAtIndex(CGImageSourceRef 
         pdf = CGPDFDocumentCreateWithProvider(provider);
         CGDataProviderRelease(provider);
     } else if ([dataOrPath isKindOfClass:[NSString class]]) {
-        pdf = CGPDFDocumentCreateWithURL((__bridge CFURLRef)[NSURL URLWithString:dataOrPath]);
+        pdf = CGPDFDocumentCreateWithURL((__bridge CFURLRef)[NSURL fileURLWithPath:dataOrPath]);
     }
     if (!pdf) return nil;
     

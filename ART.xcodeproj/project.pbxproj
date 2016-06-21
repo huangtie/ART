@@ -33,6 +33,7 @@
 		672002AA1D17D79D00B4A329 /* ARTNoticeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002A91D17D79D00B4A329 /* ARTNoticeData.m */; };
 		672002AD1D17D8D300B4A329 /* ARTCityParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002AC1D17D8D300B4A329 /* ARTCityParam.m */; };
 		672002B01D17D92C00B4A329 /* ARTCityData.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002AF1D17D92C00B4A329 /* ARTCityData.m */; };
+		672002B31D18EFD400B4A329 /* ARTHomeNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002B21D18EFD400B4A329 /* ARTHomeNoticeViewController.m */; };
 		677534ED1CC8B62D00B34C59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EC1CC8B62D00B34C59 /* main.m */; };
 		677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EF1CC8B62D00B34C59 /* AppDelegate.m */; };
 		677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677534F71CC8B62E00B34C59 /* Assets.xcassets */; };
@@ -161,6 +162,8 @@
 		672002AC1D17D8D300B4A329 /* ARTCityParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARTCityParam.m; path = "ART/数据模型/分类模块/ARTCityParam.m"; sourceTree = SOURCE_ROOT; };
 		672002AE1D17D92C00B4A329 /* ARTCityData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTCityData.h; sourceTree = "<group>"; };
 		672002AF1D17D92C00B4A329 /* ARTCityData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTCityData.m; sourceTree = "<group>"; };
+		672002B11D18EFD400B4A329 /* ARTHomeNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTHomeNoticeViewController.h; sourceTree = "<group>"; };
+		672002B21D18EFD400B4A329 /* ARTHomeNoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTHomeNoticeViewController.m; sourceTree = "<group>"; };
 		677534E81CC8B62D00B34C59 /* ART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ART.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677534EC1CC8B62D00B34C59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		677534EE1CC8B62D00B34C59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -835,6 +838,8 @@
 			children = (
 				677598AA1CEC680E002D3947 /* ARTHomeViewController.h */,
 				677598AB1CEC680E002D3947 /* ARTHomeViewController.m */,
+				672002B11D18EFD400B4A329 /* ARTHomeNoticeViewController.h */,
+				672002B21D18EFD400B4A329 /* ARTHomeNoticeViewController.m */,
 			);
 			path = "控制器";
 			sourceTree = "<group>";
@@ -1150,6 +1155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				677598B21CEC6862002D3947 /* ARTLocalViewController.m in Sources */,
+				672002B31D18EFD400B4A329 /* ARTHomeNoticeViewController.m in Sources */,
 				678FFB6E1CDA009B0071EAF6 /* ARTCommentData.m in Sources */,
 				67FD12881CE4941B00C93DFD /* ARTShareUtil.m in Sources */,
 				678FFB621CD9FAFA0071EAF6 /* ARTBookDownData.m in Sources */,
@@ -1383,8 +1389,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(PODS_ROOT)/UMengAnalytics/**\"",
 					"$(inherited)",
-					"\"${PODS_ROOT}/GTSDK\"",
-					"$(inherited)",
 					"\"${PODS_ROOT}/HyphenateFullSDK/HyphenateFullSDK/lib\"",
 					"$(inherited)",
 					"\"${PODS_ROOT}/HyphenateFullSDK/HyphenateFullSDK/lib\"",
@@ -1407,7 +1411,7 @@
 					"-l\"DZNEmptyDataSet\"",
 					"-l\"FDFullscreenPopGesture\"",
 					"-l\"FMDB\"",
-					"-l\"GeTuiSdk-1.3.2\"",
+					"-l\"GeTuiSdk-1.4.2\"",
 					"-l\"HyphenateFullSDK_arm64\"",
 					"-l\"HyphenateFullSDK_armv7\"",
 					"-l\"HyphenateFullSDK_armv7s\"",
@@ -1418,7 +1422,6 @@
 					"-l\"MJExtension\"",
 					"-l\"MJRefresh\"",
 					"-l\"MMDrawerController\"",
-					"-l\"MobClickLibrary\"",
 					"-l\"Reachability\"",
 					"-l\"ReactiveCocoa\"",
 					"-l\"SDWebImage\"",
@@ -1578,8 +1581,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(PODS_ROOT)/UMengAnalytics/**\"",
 					"$(inherited)",
-					"\"${PODS_ROOT}/GTSDK\"",
-					"$(inherited)",
 					"\"${PODS_ROOT}/HyphenateFullSDK/HyphenateFullSDK/lib\"",
 					"$(inherited)",
 					"\"${PODS_ROOT}/HyphenateFullSDK/HyphenateFullSDK/lib\"",
@@ -1602,7 +1603,7 @@
 					"-l\"DZNEmptyDataSet\"",
 					"-l\"FDFullscreenPopGesture\"",
 					"-l\"FMDB\"",
-					"-l\"GeTuiSdk-1.3.2\"",
+					"-l\"GeTuiSdk-1.4.2\"",
 					"-l\"HyphenateFullSDK_arm64\"",
 					"-l\"HyphenateFullSDK_armv7\"",
 					"-l\"HyphenateFullSDK_armv7s\"",
@@ -1613,7 +1614,6 @@
 					"-l\"MJExtension\"",
 					"-l\"MJRefresh\"",
 					"-l\"MMDrawerController\"",
-					"-l\"MobClickLibrary\"",
 					"-l\"Reachability\"",
 					"-l\"ReactiveCocoa\"",
 					"-l\"SDWebImage\"",

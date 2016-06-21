@@ -208,6 +208,11 @@ static const NSInteger kInfiniteCount       = 20000;
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
 {
+    NSInteger count = [_dataSource numberOfItemsInBannerView:self];
+    if (!count)
+    {
+        return;
+    }
     CGPoint targetOffset = *targetContentOffset;
     NSInteger targetIndex = (NSInteger)(targetOffset.x/_collectionView.frame.size.width)%_pageControl.numberOfPages;
     _pageControl.currentPage = targetIndex;

@@ -228,8 +228,9 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
             [text setAttribute:key value:value range:NSMakeRange(_innerText.length, 1)];
         }];
     }
-    
+    [self willChangeValueForKey:@"textLayout"];
     _innerLayout = [YYTextLayout layoutWithContainer:_innerContainer text:text];
+    [self didChangeValueForKey:@"textLayout"];
     CGSize size = [_innerLayout textBoundingSize];
     CGSize visibleSize = [self _getVisibleSize];
     if (_innerContainer.isVerticalForm) {
@@ -1945,6 +1946,7 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
     _selectable = YES;
     _highlightable = YES;
     _allowsCopyAttributedString = YES;
+    _textAlignment = NSTextAlignmentNatural;
     
     _innerText = [NSMutableAttributedString new];
     _innerContainer = [YYTextContainer new];

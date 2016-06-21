@@ -11,8 +11,12 @@
 #import "ARTRequestUtil.h"
 #import <UIImageView+WebCache.h>
 #import "ARTBookDetailViewController.h"
+#import "ARTHomeNoticeViewController.h"
+#import <UIScrollView+EmptyDataSet.h>
 
-@interface ARTHomeViewController ()<ARTBannerViewDataSource,ARTBannerViewDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface ARTHomeViewController ()
+<ARTBannerViewDataSource,ARTBannerViewDelegate,UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetDelegate,
+DZNEmptyDataSetSource>
 
 @property (nonatomic , strong) ARTBannerView *bannerView;
 
@@ -25,6 +29,10 @@
 @property (nonatomic , strong) UITableViewCell *iconCell;
 
 @property (nonatomic , strong) UIView *bookCell;
+
+@property (nonatomic , assign) BOOL isNetworkError;
+
+@property (nonatomic , strong) YYReachability *reachability;
 @end
 
 @implementation ARTHomeViewController
@@ -36,10 +44,13 @@
     self.title = @"首页";
     
     self.navigationBar.hidden = YES;
+    self.isNetworkError = YES;
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIGATION_HEIGH, SCREEN_WIDTH, self.view.height - NAVIGATION_HEIGH)];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.emptyDataSetDelegate = self;
+    self.tableView.emptyDataSetSource = self;
     [self.view addSubview:self.tableView];
     WS(weak)
     [self.tableView addMJRefreshHeader:^{
@@ -56,6 +67,20 @@
     
     [self requestNotice];
     [self requestBooks];
+    
+    self.reachability = [YYReachability reachability];
+    self.reachability.notifyBlock = ^(YYReachability *reachability)
+    {
+        if (reachability.status == YYReachabilityStatusNone)
+        {
+            weak.isNetworkError = YES;
+        }
+        else
+        {
+            weak.isNetworkError = NO;
+        }
+        [weak.tableView reloadData];
+    };
 }
 
 #pragma mark LAYOUT
@@ -75,7 +100,7 @@
         itemView.size = itemSize;
         itemView.left = left + (itemSize.width + padding) * i;
         itemView.top = 20;
-        [self.bookCell addSubview:itemView];
+        [self.bookCell addSubview:itemView]; 
         
         UIView *bg = [[UIView alloc] initWithFrame:CGRectMake(0, 0, itemSize.width, 262)];
         bg.backgroundColor = UICOLOR_ARGB(0xffe5e5e5);
@@ -191,9 +216,13 @@
     [ARTRequestUtil requestNotices:^(NSURLSessionDataTask *task, NSArray<ARTNoticeData *> *datas) {
         [weak.tableView.mj_header endRefreshing];
         weak.bannerDatas = datas;
+        weak.isNetworkError = NO;
         [weak.bannerView reloadData];
+        [weak.tableView reloadEmptyDataSet];
     } failure:^(ErrorItemd *error) {
         [weak.tableView.mj_header endRefreshing];
+        weak.isNetworkError = YES;
+        [weak.tableView reloadEmptyDataSet];
     }];
 }
 
@@ -269,6 +298,32 @@
 }
 
 - (void)bannerView:(ARTBannerView *)bannerView didSelectItemAtIndex:(NSInteger)index
+{
+    [ARTHomeNoticeViewController launchFromController:self data:self.bannerDatas[index]];
+}
+
+#pragma mark DELEGAT_DZNEMPTY
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [[NSAttributedString alloc] initWithString:@"无网络状态" attributes:@{NSFontAttributeName:FONT_WITH_15}];
+}
+
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return IMAGE_EMPTY_ONE;
+}
+
+- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+- (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView
+{
+    return self.isNetworkError;
+}
+
+- (void)emptyDataSet:(UIScrollView *)scrollView didTapView:(UIView *)view
 {
     
 }

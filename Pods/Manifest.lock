@@ -1,32 +1,32 @@
 PODS:
-  - AFNetworking (3.0.4):
-    - AFNetworking/NSURLSession (= 3.0.4)
-    - AFNetworking/Reachability (= 3.0.4)
-    - AFNetworking/Security (= 3.0.4)
-    - AFNetworking/Serialization (= 3.0.4)
-    - AFNetworking/UIKit (= 3.0.4)
-  - AFNetworking/NSURLSession (3.0.4):
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.0.4)
-  - AFNetworking/Security (3.0.4)
-  - AFNetworking/Serialization (3.0.4)
-  - AFNetworking/UIKit (3.0.4):
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - DZNEmptyDataSet (1.7.3)
+  - DZNEmptyDataSet (1.8.1)
   - FDFullscreenPopGesture (1.1)
-  - FMDB (2.6):
-    - FMDB/standard (= 2.6)
-  - FMDB/standard (2.6)
-  - GTSDK (1.3.2)
-  - HyphenateFullSDK (3.1.2)
-  - JSPatch (0.1.5):
-    - JSPatch/Core (= 0.1.5)
-  - JSPatch/Core (0.1.5)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - GTSDK (1.4.2)
+  - HyphenateFullSDK (3.1.3)
+  - JSPatch (1.0):
+    - JSPatch/Core (= 1.0)
+  - JSPatch/Core (1.0)
   - LBProgressHUD (1.0.1)
   - MJExtension (3.0.10)
-  - MJRefresh (3.1.0)
+  - MJRefresh (3.1.8)
   - MMDrawerController (0.6.0):
     - MMDrawerController/Core (= 0.6.0)
     - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
@@ -39,7 +39,7 @@ PODS:
     - MMDrawerController/Core
   - MMDrawerController/Subclass (0.6.0):
     - MMDrawerController/Core
-  - MOBFoundation (1.5.1)
+  - MOBFoundation (2.0.1)
   - Reachability (3.2)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -48,42 +48,42 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-  - SDWebImage (3.7.5):
-    - SDWebImage/Core (= 3.7.5)
-  - SDWebImage/Core (3.7.5)
-  - ShareSDK2 (2.12.4):
-    - ShareSDK2/Core (= 2.12.4)
-  - ShareSDK2/Connection/Copy (2.12.4)
-  - ShareSDK2/Connection/Mail (2.12.4)
-  - ShareSDK2/Connection/Print (2.12.4)
-  - ShareSDK2/Connection/QQ (2.12.4):
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - ShareSDK2 (2.12.5):
+    - ShareSDK2/Core (= 2.12.5)
+  - ShareSDK2/Connection/Copy (2.12.5)
+  - ShareSDK2/Connection/Mail (2.12.5)
+  - ShareSDK2/Connection/Print (2.12.5)
+  - ShareSDK2/Connection/QQ (2.12.5):
     - ShareSDK2/Extend/QQConnectSDK
-  - ShareSDK2/Connection/QZone (2.12.4):
+  - ShareSDK2/Connection/QZone (2.12.5):
     - ShareSDK2/Extend/QQConnectSDK
-  - ShareSDK2/Connection/SinaWeibo (2.12.4):
+  - ShareSDK2/Connection/SinaWeibo (2.12.5):
     - ShareSDK2/Extend/SinaWeiboSDK
-  - ShareSDK2/Connection/SMS (2.12.4)
-  - ShareSDK2/Connection/WeChat (2.12.4):
+  - ShareSDK2/Connection/SMS (2.12.5)
+  - ShareSDK2/Connection/WeChat (2.12.5):
     - ShareSDK2/Extend/WeChatSDK
-  - ShareSDK2/Core (2.12.4)
-  - ShareSDK2/Extend/QQConnectSDK (2.12.4)
-  - ShareSDK2/Extend/SinaWeiboSDK (2.12.4)
-  - ShareSDK2/Extend/WeChatSDK (2.12.4)
+  - ShareSDK2/Core (2.12.5)
+  - ShareSDK2/Extend/QQConnectSDK (2.12.5)
+  - ShareSDK2/Extend/SinaWeiboSDK (2.12.5)
+  - ShareSDK2/Extend/WeChatSDK (2.12.5)
   - SSKeychain (1.4.0)
   - Toast (3.0)
   - TTTAttributedLabel (1.13.4)
-  - UMengAnalytics (3.6.6)
-  - YYKit (1.0.1):
-    - YYKit/no-arc (= 1.0.1)
-  - YYKit/no-arc (1.0.1)
+  - UMengAnalytics (4.0.4)
+  - YYKit (1.0.7):
+    - YYKit/no-arc (= 1.0.7)
+  - YYKit/no-arc (1.0.7)
 
 DEPENDENCIES:
   - AFNetworking
   - DZNEmptyDataSet
   - FDFullscreenPopGesture
   - FMDB
-  - GTSDK
-  - HyphenateFullSDK (from `https://github.com/easemob/hyphenate-full-cocoapods.git`)
+  - GTSDK (~> 1.4.2-noidfa)
+  - HyphenateFullSDK
   - JSPatch
   - LBProgressHUD
   - MJExtension
@@ -108,36 +108,27 @@ DEPENDENCIES:
   - UMengAnalytics
   - YYKit
 
-EXTERNAL SOURCES:
-  HyphenateFullSDK:
-    :git: https://github.com/easemob/hyphenate-full-cocoapods.git
-
-CHECKOUT OPTIONS:
-  HyphenateFullSDK:
-    :commit: 97403d44258b04a874dee09b24d384327570752e
-    :git: https://github.com/easemob/hyphenate-full-cocoapods.git
-
 SPEC CHECKSUMS:
-  AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
-  DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
-  FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
-  GTSDK: 9ea284237331495fd76a71088bfd2da30981d510
-  HyphenateFullSDK: f6ed4f5fed2b41f344eab73b451a27f1e8aa8ba2
-  JSPatch: 405b5f5990643e6717dd6715ac60d6a2b582a6ba
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  GTSDK: 51a12836895312a872f75a2fe0f2e788dee75b19
+  HyphenateFullSDK: 8b5b092055480308a47c9bb9b78baed7f45f7713
+  JSPatch: c689ea4dde17441f2f4a95d40dfedb8900c20099
   LBProgressHUD: d55bc6c1b966032e59fc01ed3544fddec40fd6e1
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
-  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  MJRefresh: d226bbe0b1ec398f426ba1dc99319b4e51182e19
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
-  MOBFoundation: 79efc94db961fe5a08cf32de69166f6a29a3b2b5
+  MOBFoundation: a42168392e216fc56cbcbdfc3d5dcb3bbce5ef87
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
-  ShareSDK2: cfe71b8d026bf8f7d592396ab195937bc89bbead
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  ShareSDK2: c076a9ea57d9d87650130b8071f2bcf0f169cb94
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   Toast: 32c59229abfcf41850162b83bb9259dc84372473
   TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
-  UMengAnalytics: 4bf831415146b9c57cb10be65fbd43462ef8cf65
-  YYKit: 8b618ca8d8cefa534d8d4fe2cad10fe9fbd030ed
+  UMengAnalytics: 4ed421fb3bca63b26fc13c947743cabf3831d199
+  YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
 
 COCOAPODS: 0.39.0

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MobClick.h>
+#import <UMengAnalytics/UMMobClick/MobClick.h>
 
 @interface ARTUMengUtil : NSObject
 
