@@ -20,6 +20,7 @@
 #import "ARTSendTalkParam.h"
 #import "ARTSendTalkComParam.h"
 #import "ARTTalkListParam.h"
+#import "ARTCityParam.h"
 
 #import "ARTUserData.h"
 #import "ARTBookData.h"
@@ -30,6 +31,9 @@
 #import "ARTTalkData.h"
 #import "ARTGroupData.h"
 #import "ARTAuthorData.h"
+#import "ARTNewsData.h"
+#import "ARTNoticeData.h"
+#import "ARTCityData.h"
 
 typedef NS_ENUM(NSInteger, NET_ERROR)
 {
@@ -208,9 +212,28 @@ typedef NS_ENUM(NSInteger, NET_ERROR)
 + (NSURLSessionDataTask *)requestAuthorList:(ARTCustomParam *)param
                                  completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTAuthorData *> *datas))completion
                                     failure:(void (^)(ErrorItemd *error))failure;
+
 #pragma mark 7.3 获取藏家详情
 + (NSURLSessionDataTask *)requestAuthorDetail:(NSString *)authorID
                                    completion:(void (^)(NSURLSessionDataTask *task, ARTAuthorData *data))completion
                                       failure:(void (^)(ErrorItemd *error))failure;
 
+#pragma mark 7.4 获取文章列表
++ (NSURLSessionDataTask *)requestNewsList:(ARTCustomParam *)param
+                               completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTNewsData *> *datas))completion
+                                  failure:(void (^)(ErrorItemd *error))failure;
+
+#pragma mark 7.5 获取新闻详情
++ (NSURLSessionDataTask *)requestNewsDetail:(NSString *)newsID
+                                 completion:(void (^)(NSURLSessionDataTask *task, ARTNewsData *data))completion
+                                    failure:(void (^)(ErrorItemd *error))failure;
+
+#pragma mark 7.6 获取通知公告(Banner)
++ (NSURLSessionDataTask *)requestNotices:(void (^)(NSURLSessionDataTask *task, NSArray<ARTNoticeData *> *datas))completion
+                                failure:(void (^)(ErrorItemd *error))failure;
+
+#pragma mark 7.7 获取省市区列表
++ (NSURLSessionDataTask *)requestCityList:(ARTCityParam *)param
+                               completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTCityData *> *datas))completion
+                                  failure:(void (^)(ErrorItemd *error))failure;
 @end

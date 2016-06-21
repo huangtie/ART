@@ -662,4 +662,90 @@
     }];
 }
 
+#pragma mark 7.4 获取文章列表
++ (NSURLSessionDataTask *)requestNewsList:(ARTCustomParam *)param
+                               completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTNewsData *> *datas))completion
+                                  failure:(void (^)(ErrorItemd *error))failure
+{
+    return [ARTHttpServers requestWithPOST:URL_OT_GETNEWSLIST param:[param buildRequestParam] completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
+        if ([ARTRequestUtil isSuccessCode:result])
+        {
+            NSMutableArray *list = [NSMutableArray array];
+            for (NSDictionary *dic in [result objectForKey:@"data"])
+            {
+                ARTNewsData *data = [ARTNewsData mj_objectWithKeyValues:dic];
+                [list addObject:data];
+            }
+            completion(task , list);
+        }
+        else
+        {
+            failure([ARTRequestUtil tamp:error response:result]);
+        }
+    }];
+}
+
+#pragma mark 7.5 获取新闻详情
++ (NSURLSessionDataTask *)requestNewsDetail:(NSString *)newsID
+                                 completion:(void (^)(NSURLSessionDataTask *task, ARTNewsData *data))completion
+                                    failure:(void (^)(ErrorItemd *error))failure
+{
+    return [ARTHttpServers requestWithPOST:URL_OT_GETNEWSDETAIL param:@{@"newsID":newsID} completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
+        if ([ARTRequestUtil isSuccessCode:result])
+        {
+            ARTNewsData *data = [ARTNewsData mj_objectWithKeyValues:[result objectForKey:@"data"]];
+            completion(task , data);
+        }
+        else
+        {
+            failure([ARTRequestUtil tamp:error response:result]);
+        }
+    }];
+}
+
+#pragma mark 7.6 获取通知公告(Banner)
++ (NSURLSessionDataTask *)requestNotices:(void (^)(NSURLSessionDataTask *task, NSArray<ARTNoticeData *> *datas))completion
+                                 failure:(void (^)(ErrorItemd *error))failure
+{
+    return [ARTHttpServers requestWithPOST:URL_OT_GETBANNERLIST param:[[NSDictionary alloc] init] completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
+        if ([ARTRequestUtil isSuccessCode:result])
+        {
+            NSMutableArray *list = [NSMutableArray array];
+            for (NSDictionary *dic in [result objectForKey:@"data"])
+            {
+                ARTNoticeData *data = [ARTNoticeData mj_objectWithKeyValues:dic];
+                [list addObject:data];
+            }
+            completion(task , list);
+        }
+        else
+        {
+            failure([ARTRequestUtil tamp:error response:result]);
+        }
+    }];
+}
+
+#pragma mark 7.7 获取省市区列表
++ (NSURLSessionDataTask *)requestCityList:(ARTCityParam *)param
+                               completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTCityData *> *datas))completion
+                                  failure:(void (^)(ErrorItemd *error))failure
+{
+    return [ARTHttpServers requestWithPOST:URL_OT_GETCITYLIST param:[param buildRequestParam] completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
+        if ([ARTRequestUtil isSuccessCode:result])
+        {
+            NSMutableArray *list = [NSMutableArray array];
+            for (NSDictionary *dic in [result objectForKey:@"data"])
+            {
+                ARTCityData *data = [ARTCityData mj_objectWithKeyValues:dic];
+                [list addObject:data];
+            }
+            completion(task , list);
+        }
+        else
+        {
+            failure([ARTRequestUtil tamp:error response:result]);
+        }
+    }];
+}
+
 @end
