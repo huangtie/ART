@@ -18,6 +18,8 @@
 #import "ARTAuthorDetailViewController.h"
 #import "ARTShareView.h"
 #import "ARTDownLoadManager.h"
+#import "ARTPurchasesViewController.h"
+#import "ARTLocalReadViewController.h"
 
 typedef NS_ENUM(NSInteger, ARTDETAIL_SECTIONS)
 {
@@ -460,6 +462,28 @@ ARTBookDetailHeadDelegate>
     [self.tableView reloadEmptyDataSet];
 }
 
+- (void)requestBuybook
+{
+    [self displayHUD];
+    WS(weak)
+    [ARTRequestUtil requestBuyBook:self.bookID completion:^(NSURLSessionDataTask *task) {
+        [weak hideHUD];
+        [weak.view displayTostSuccess:@"购买成功,您可以下载该图集"];
+        [weak requestWithBookData];
+    } failure:^(ErrorItemd *error) {
+        [weak hideHUD];
+        if (error.code == NET_ERROR_10006)
+        {
+            [ARTAlertView alertTitle:@"提示" message:@"账户金币余额不足,是否充值？" doneTitle:@"充值" cancelTitle:@"取消" doneBlock:^{
+                [ARTPurchasesViewController launch:weak];
+            } cancelBlock:^{
+                
+            }];
+        }
+        [weak.view displayTostError:error.errMsg];
+    }];
+}
+
 #pragma mark DELEGATE_TABLEVIEW
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -666,7 +690,14 @@ ARTBookDetailHeadDelegate>
 
 - (void)detailHeadDidTouchBuy
 {
-    
+    WS(weak)
+    [[ARTUserManager sharedInstance] isLogin:self logined:^(ARTUserData *userInfo) {
+        [ARTAlertView alertTitle:@"温馨提示" message:[NSString stringWithFormat:@"是否花费%@个金币购买该图集?",weak.bookData.bookPrice] doneTitle:@"购买" cancelTitle:@"取消" doneBlock:^{
+            [weak requestBuybook];
+        } cancelBlock:^{
+            
+        }];
+    }];
 }
 
 - (void)detailHeadDidTouchDown
@@ -693,7 +724,7 @@ ARTBookDetailHeadDelegate>
 
 - (void)detailHeadDidTouchRead
 {
-
+    [ARTLocalReadViewController lunch:self.bookID viewController:self];
 }
 
 @end

@@ -109,6 +109,11 @@
     } afterDelay:.4];
 }
 
+- (void)hideHUDnoDelay
+{
+    [LBProgressHUD hideAllHUDsForView:self.view animated:NO];
+}
+
 - (void)performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay
 {
     block = [block copy];

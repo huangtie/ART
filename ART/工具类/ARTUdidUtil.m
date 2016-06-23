@@ -57,6 +57,10 @@ static NSString * const kAccountName = @"com.ART.yishangyacang";
 + (NSDictionary *)loadAccount
 {
     NSData *data = [SSKeychain passwordDataForService:@"account" account:kAccountName];
+    if (!data)
+    {
+        return nil;
+    }
     return [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
 }
 

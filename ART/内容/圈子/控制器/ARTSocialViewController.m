@@ -10,6 +10,7 @@
 #import "ARTSocialCell.h"
 #import "ARTTalkSendViewController.h"
 #import "ARTLocalPageViewController.h"
+#import "ARTPurchasesViewController.h"
 
 @interface ARTSocialViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -95,6 +96,11 @@
     {
         ARTTalkSendViewController *vc = [[ARTTalkSendViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
+    }
+    
+    if (indexPath.row == 3)
+    {
+        [ARTPurchasesViewController launch:self];
     }
 }
 

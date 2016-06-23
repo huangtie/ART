@@ -23,6 +23,7 @@
 
 - (void)displayHUD;
 - (void)hideHUD;
+- (void)hideHUDnoDelay;
 
 - (void)performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay;
 

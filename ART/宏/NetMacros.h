@@ -71,6 +71,9 @@
 //5.4 获取充值和消费记录
 #define URL_PURCHASE_GETPURCHASELOGS APPHOST(@"/sjwlv3/script/getPurchaseLogs")
 
+//5.5 验证充值
+#define URL_PURCHASE_VERIFYPUCHA     APPHOST(@"/sjwlv3/script/verifyPurchases")
+
 
 //6.1 加关注
 #define URL_TALK_BECOMEFANS          APPHOST(@"/sjwlv3/script/becomeFans")

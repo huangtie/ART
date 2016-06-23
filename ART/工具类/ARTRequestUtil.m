@@ -143,13 +143,13 @@
 
 #pragma mark 2.4 获取基本资料
 + (NSURLSessionDataTask *)requestUserinfo:(NSString *)userID
-                               completion:(void (^)(NSURLSessionDataTask *task, ARTUserData *data))completion
+                               completion:(void (^)(NSURLSessionDataTask *task, ARTUserInfo *data))completion
                                   failure:(void (^)(ErrorItemd *error))failure
 {
     return [ARTHttpServers requestWithPOST:URL_USER_GETUSERINFO param:@{@"userID":userID} completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
         if ([ARTRequestUtil isSuccessCode:result])
         {
-            ARTUserData *user = [ARTUserData mj_objectWithKeyValues:[result objectForKey:@"data"]];
+            ARTUserInfo *user = [ARTUserInfo mj_objectWithKeyValues:[result objectForKey:@"data"]];
             completion(task , user);
         }
         else
@@ -324,7 +324,7 @@
                               completion:(void (^)(NSURLSessionDataTask *task))completion
                                  failure:(void (^)(ErrorItemd *error))failure
 {
-    return [ARTHttpServers requestWithPOST:URL_BOOK_GETBOOKDOWNDATA param:@{@"bookID":bookID} completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
+    return [ARTHttpServers requestWithPOST:URL_PURCHASE_BUYWITHBOOK param:@{@"bookID":bookID} completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
         if ([ARTRequestUtil isSuccessCode:result])
         {
             completion(task);
@@ -374,6 +374,24 @@
                 [list addObject:data];
             }
             completion(task , list);
+        }
+        else
+        {
+            failure([ARTRequestUtil tamp:error response:result]);
+        }
+    }];
+}
+
+#pragma mark 5.5 验证充值
++ (NSURLSessionDataTask *)requestVerifyPurchases:(ARTPurchaParam *)param
+                                      completion:(void (^)(NSURLSessionDataTask *task, PURCHA_STATUS status))completion
+                                         failure:(void (^)(ErrorItemd *error))failure
+{
+    return [ARTHttpServers requestWithPOST:URL_PURCHASE_VERIFYPUCHA param:[param buildRequestParam] completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
+        if ([ARTRequestUtil isSuccessCode:result])
+        {
+            NSDictionary *data = [result objectForKey:@"data"];
+            completion(task , [data[@"status"] integerValue]);
         }
         else
         {

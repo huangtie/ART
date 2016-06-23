@@ -229,7 +229,7 @@
     [self addSubview:self.starView];
     
     //价格
-    self.priceLabel.attributedText = [self title:@"价格：" text:bookData.bookFree ? STRING_FORMAT(STRING_FORMAT_ADC(bookData.bookPrice), @"金币") : @"免费"];
+    self.priceLabel.attributedText = [self title:@"价格：" text:bookData.bookFree.boolValue ? STRING_FORMAT(STRING_FORMAT_ADC(bookData.bookPrice), @"金币") : @"免费"];
     
     //分类
     self.typeLabel.attributedText = [self title:@"分类：" text:bookData.bookGroupName];

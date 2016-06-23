@@ -170,7 +170,6 @@ typedef enum
 
 #pragma mark METHOD
 
-
 #pragma mark GET-SET
 - (UITextField *)nameTextField
 {

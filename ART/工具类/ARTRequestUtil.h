@@ -21,6 +21,7 @@
 #import "ARTSendTalkComParam.h"
 #import "ARTTalkListParam.h"
 #import "ARTCityParam.h"
+#import "ARTPurchaParam.h"
 
 #import "ARTUserData.h"
 #import "ARTBookData.h"
@@ -61,6 +62,14 @@ typedef NS_ENUM(NSInteger, NET_ERROR)
     NET_ERROR_10017,             // 成交失败
 };
 
+typedef NS_ENUM(NSInteger, PURCHA_STATUS)
+{
+    PURCHA_STATUS_SUCCEED = 0,       // 验证成功
+    PURCHA_STATUS_FAILURE = 1,       // 加密串验证失败
+    PURCHA_STATUS_ERROR = 2  ,       // 验证失败,原因未知
+    PURCHA_STATUS_REPEAT = 3         // 重复验证
+};
+
 @interface ErrorItemd : NSObject
 
 @property (nonatomic , assign) NET_ERROR code;
@@ -88,7 +97,7 @@ typedef NS_ENUM(NSInteger, NET_ERROR)
 
 #pragma mark 2.4 获取基本资料
 + (NSURLSessionDataTask *)requestUserinfo:(NSString *)userID
-                               completion:(void (^)(NSURLSessionDataTask *task, ARTUserData *data))completion
+                               completion:(void (^)(NSURLSessionDataTask *task, ARTUserInfo *data))completion
                                   failure:(void (^)(ErrorItemd *error))failure;
 
 #pragma mark 2.5 修改资料
@@ -148,6 +157,10 @@ typedef NS_ENUM(NSInteger, NET_ERROR)
                                 completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTPurchasesLogData *> *datas))completion
                                    failure:(void (^)(ErrorItemd *error))failure;
 
+#pragma mark 5.5 验证充值
++ (NSURLSessionDataTask *)requestVerifyPurchases:(ARTPurchaParam *)param
+                                      completion:(void (^)(NSURLSessionDataTask *task, PURCHA_STATUS status))completion
+                                         failure:(void (^)(ErrorItemd *error))failure;
 
 #pragma mark 6.1 加关注
 + (NSURLSessionDataTask *)requestBecomeFans:(NSString *)userID

@@ -135,6 +135,7 @@ DZNEmptyDataSetSource>
             [ARTBookDownObject downLoadWithReadData:data];
         }
     }
+    [self.collectionView reloadData];
 }
 
 - (void)endAction

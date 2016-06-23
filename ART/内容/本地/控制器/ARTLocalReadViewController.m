@@ -177,6 +177,7 @@ UICollectionViewDataSource , ARTLocalMinCellDelegate>
         self.backButton.titleLabel.font = FONT_WITH_20;
         [self.backButton sizeToFit];
         self.backButton.left = 20;
+        self.backButton.height = 50;
         self.backButton.centerY = _topContrl.height / 2;
         [self.backButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
         [_topContrl addSubview:self.backButton];
