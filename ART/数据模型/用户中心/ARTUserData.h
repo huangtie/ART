@@ -50,6 +50,9 @@
 //性别（0 男 1女）
 @property (nonatomic , copy) NSString *userSex;
 
+//个性签名
+@property (nonatomic , copy) NSString *userSign;
+
 //头像
 @property (nonatomic , copy) NSString *userImage;
 

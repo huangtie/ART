@@ -16,4 +16,7 @@
 //是否为手机号格式
 - (BOOL)isMobileNumber;
 
+//是否是邮箱格式
+- (BOOL)isEmailNumber;
+
 @end

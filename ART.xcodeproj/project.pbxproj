@@ -97,6 +97,10 @@
 		67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D6B1CDC81000009E5B9 /* ARTZanListParam.m */; };
 		67FA3B811D1B873B009AB7BA /* ARTPurchaParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FA3B801D1B873B009AB7BA /* ARTPurchaParam.m */; };
 		67FA3B871D1BD085009AB7BA /* ARTMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FA3B861D1BD085009AB7BA /* ARTMemberViewController.m */; };
+		67FA3B8A1D1BEFE0009AB7BA /* ARTMemberEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FA3B891D1BEFE0009AB7BA /* ARTMemberEditViewController.m */; };
+		67FA3B8D1D1BF239009AB7BA /* ARTMemberEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FA3B8C1D1BF239009AB7BA /* ARTMemberEditCell.m */; };
+		67FA3B901D1D069F009AB7BA /* ARTMemberInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FA3B8F1D1D069F009AB7BA /* ARTMemberInputViewController.m */; };
+		67FA3B931D1D214B009AB7BA /* ARTPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FA3B921D1D214B009AB7BA /* ARTPickerView.m */; };
 		67FD127B1CE465D100C93DFD /* ARTEasemobServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD127A1CE465D100C93DFD /* ARTEasemobServer.m */; };
 		67FD12821CE48AC500C93DFD /* ARTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD12811CE48AC500C93DFD /* ARTBaseViewController.m */; };
 		67FD12881CE4941B00C93DFD /* ARTShareUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD12871CE4941B00C93DFD /* ARTShareUtil.m */; };
@@ -292,6 +296,14 @@
 		67FA3B801D1B873B009AB7BA /* ARTPurchaParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARTPurchaParam.m; path = "ART/内容/充值/视图/ARTPurchaParam.m"; sourceTree = SOURCE_ROOT; };
 		67FA3B851D1BD085009AB7BA /* ARTMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTMemberViewController.h; sourceTree = "<group>"; };
 		67FA3B861D1BD085009AB7BA /* ARTMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTMemberViewController.m; sourceTree = "<group>"; };
+		67FA3B881D1BEFE0009AB7BA /* ARTMemberEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTMemberEditViewController.h; sourceTree = "<group>"; };
+		67FA3B891D1BEFE0009AB7BA /* ARTMemberEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTMemberEditViewController.m; sourceTree = "<group>"; };
+		67FA3B8B1D1BF239009AB7BA /* ARTMemberEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTMemberEditCell.h; sourceTree = "<group>"; };
+		67FA3B8C1D1BF239009AB7BA /* ARTMemberEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTMemberEditCell.m; sourceTree = "<group>"; };
+		67FA3B8E1D1D069F009AB7BA /* ARTMemberInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTMemberInputViewController.h; sourceTree = "<group>"; };
+		67FA3B8F1D1D069F009AB7BA /* ARTMemberInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTMemberInputViewController.m; sourceTree = "<group>"; };
+		67FA3B911D1D214B009AB7BA /* ARTPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTPickerView.h; sourceTree = "<group>"; };
+		67FA3B921D1D214B009AB7BA /* ARTPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTPickerView.m; sourceTree = "<group>"; };
 		67FD12791CE465D100C93DFD /* ARTEasemobServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEasemobServer.h; sourceTree = "<group>"; };
 		67FD127A1CE465D100C93DFD /* ARTEasemobServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEasemobServer.m; sourceTree = "<group>"; };
 		67FD127C1CE472FF00C93DFD /* NotificationMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationMacros.h; sourceTree = "<group>"; };
@@ -735,6 +747,8 @@
 				6720025C1D051BC100B4A329 /* ARTAlertView.m */,
 				672002A21D17D00D00B4A329 /* ARTBannerView.h */,
 				672002A31D17D00D00B4A329 /* ARTBannerView.m */,
+				67FA3B911D1D214B009AB7BA /* ARTPickerView.h */,
+				67FA3B921D1D214B009AB7BA /* ARTPickerView.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -1052,6 +1066,10 @@
 			children = (
 				67FA3B851D1BD085009AB7BA /* ARTMemberViewController.h */,
 				67FA3B861D1BD085009AB7BA /* ARTMemberViewController.m */,
+				67FA3B881D1BEFE0009AB7BA /* ARTMemberEditViewController.h */,
+				67FA3B891D1BEFE0009AB7BA /* ARTMemberEditViewController.m */,
+				67FA3B8E1D1D069F009AB7BA /* ARTMemberInputViewController.h */,
+				67FA3B8F1D1D069F009AB7BA /* ARTMemberInputViewController.m */,
 			);
 			path = "控制器";
 			sourceTree = "<group>";
@@ -1059,6 +1077,8 @@
 		67FA3B841D1BCFDE009AB7BA /* 视图 */ = {
 			isa = PBXGroup;
 			children = (
+				67FA3B8B1D1BF239009AB7BA /* ARTMemberEditCell.h */,
+				67FA3B8C1D1BF239009AB7BA /* ARTMemberEditCell.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -1224,6 +1244,7 @@
 			files = (
 				677598B21CEC6862002D3947 /* ARTLocalViewController.m in Sources */,
 				672002B31D18EFD400B4A329 /* ARTHomeNoticeViewController.m in Sources */,
+				67FA3B931D1D214B009AB7BA /* ARTPickerView.m in Sources */,
 				673AD0181D1A39650081300E /* ARTPurchasesCell.m in Sources */,
 				678FFB6E1CDA009B0071EAF6 /* ARTCommentData.m in Sources */,
 				67FD12881CE4941B00C93DFD /* ARTShareUtil.m in Sources */,
@@ -1276,12 +1297,14 @@
 				672002A41D17D00D00B4A329 /* ARTBannerView.m in Sources */,
 				6701C9541CD2131500E0EA6A /* ARTLoginParam.m in Sources */,
 				6787AE001CFC478C002E59F5 /* ARTBookHtmlViewController.m in Sources */,
+				67FA3B901D1D069F009AB7BA /* ARTMemberInputViewController.m in Sources */,
 				678FFB591CD9F0330071EAF6 /* ARTBookListParam.m in Sources */,
 				678FFB371CD846E00071EAF6 /* ARTUdidUtil.m in Sources */,
 				67B92D571CDB391F0009E5B9 /* ARTCustomParam.m in Sources */,
 				677598BB1CEC788A002D3947 /* ARTBookScreen.m in Sources */,
 				67FA3B871D1BD085009AB7BA /* ARTMemberViewController.m in Sources */,
 				6720025D1D051BC100B4A329 /* ARTAlertView.m in Sources */,
+				67FA3B8A1D1BEFE0009AB7BA /* ARTMemberEditViewController.m in Sources */,
 				672002941D13EA6C00B4A329 /* ARTBaseNavigationController.m in Sources */,
 				6787ADED1CFC40B9002E59F5 /* ARTHtmlView.m in Sources */,
 				6720027D1D08246600B4A329 /* ARTLocalPageViewController.m in Sources */,
@@ -1304,6 +1327,7 @@
 				6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */,
 				678FFB401CD893A90071EAF6 /* ARTUpsetParam.m in Sources */,
 				673AD0151D1A35B40081300E /* ARTPurchasesViewController.m in Sources */,
+				67FA3B8D1D1BF239009AB7BA /* ARTMemberEditCell.m in Sources */,
 				672002A01D1408EE00B4A329 /* ImageLoader.m in Sources */,
 				677598C01CED681B002D3947 /* ARTTalkListParam.m in Sources */,
 				67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */,
@@ -1410,6 +1434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing YiShangYaCang technology co., LTD (NFG332EGHM)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1593,7 +1618,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ysyc.ipad;
 				PRODUCT_NAME = ART;
-				PROVISIONING_PROFILE = "c4f2f426-dd15-4aaa-921f-714a790e6f23";
+				PROVISIONING_PROFILE = "a4a7cf0f-a82e-4178-a6ab-9812c609734c";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1604,6 +1629,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing YiShangYaCang technology co., LTD (NFG332EGHM)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1787,7 +1813,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ysyc.ipad;
 				PRODUCT_NAME = ART;
-				PROVISIONING_PROFILE = "c4f2f426-dd15-4aaa-921f-714a790e6f23";
+				PROVISIONING_PROFILE = "a4a7cf0f-a82e-4178-a6ab-9812c609734c";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

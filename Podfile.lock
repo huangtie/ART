@@ -1,4 +1,5 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.1.0)
   - AFNetworking (3.1.0):
     - AFNetworking/NSURLSession (= 3.1.0)
     - AFNetworking/Reachability (= 3.1.0)
@@ -78,6 +79,7 @@ PODS:
   - YYKit/no-arc (1.0.7)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0
   - AFNetworking
   - DZNEmptyDataSet
   - FDFullscreenPopGesture
@@ -109,6 +111,7 @@ DEPENDENCIES:
   - YYKit
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: db66605feb85689279d328206c61f0e4f398df92
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0

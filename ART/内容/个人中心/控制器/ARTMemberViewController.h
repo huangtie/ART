@@ -10,4 +10,6 @@
 
 @interface ARTMemberViewController : ARTBaseViewController
 
++ (ARTMemberViewController *)launchViewController:(UIViewController *)vc;
+
 @end

@@ -34,4 +34,9 @@
 //个性签名
 @property (nonatomic , copy) NSString *userSign;
 
+
+@property (nonatomic , copy) NSString *shengName;
+@property (nonatomic , copy) NSString *shiName;
+@property (nonatomic , copy) NSString *quName;
+
 @end

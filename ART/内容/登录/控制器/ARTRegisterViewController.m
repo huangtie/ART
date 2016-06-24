@@ -190,6 +190,13 @@
         return;
     }
     
+    //校验昵称是否过长
+    if (self.nickTextField.text.length > 20)
+    {
+        [self.view displayTostError:@"昵称过长"];
+        return;
+    }
+    
     [self.view endEditing:YES];
     [self requestWithRegister];
 }

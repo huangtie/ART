@@ -29,5 +29,6 @@
 #import <LBProgressHUD.h>
 #import "ARTAlertView.h"
 #import "UIImage+ART.h"
+#import <UIImageView+WebCache.h>
 
 #endif
