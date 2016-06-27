@@ -11,6 +11,11 @@
 		6701C9511CD2122100E0EA6A /* ARTBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C9501CD2122100E0EA6A /* ARTBaseParam.m */; };
 		6701C9541CD2131500E0EA6A /* ARTLoginParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C9531CD2131500E0EA6A /* ARTLoginParam.m */; };
 		6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701C95F1CD21DDC00E0EA6A /* ARTUserData.m */; };
+		671A1CC21D20FDA700319E7E /* ARTMemberLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CC11D20FDA700319E7E /* ARTMemberLogViewController.m */; };
+		671A1CC51D2104BA00319E7E /* ARTMemberLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CC41D2104BA00319E7E /* ARTMemberLogCell.m */; };
+		671A1CC81D211A0500319E7E /* ARTMemberMybookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CC71D211A0500319E7E /* ARTMemberMybookViewController.m */; };
+		671A1CCB1D2123E800319E7E /* ARTMemberSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CCA1D2123E800319E7E /* ARTMemberSetupViewController.m */; };
+		671A1CD11D2131BB00319E7E /* ARTSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CD01D2131BB00319E7E /* ARTSearchViewController.m */; };
 		672002511D016B4200B4A329 /* ARTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002501D016B4200B4A329 /* ARTRegisterViewController.m */; };
 		672002541D017F1800B4A329 /* ARTForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002531D017F1800B4A329 /* ARTForgetViewController.m */; };
 		6720025D1D051BC100B4A329 /* ARTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6720025C1D051BC100B4A329 /* ARTAlertView.m */; };
@@ -127,6 +132,16 @@
 		6701C9531CD2131500E0EA6A /* ARTLoginParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTLoginParam.m; sourceTree = "<group>"; };
 		6701C95E1CD21DDC00E0EA6A /* ARTUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTUserData.h; sourceTree = "<group>"; };
 		6701C95F1CD21DDC00E0EA6A /* ARTUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTUserData.m; sourceTree = "<group>"; };
+		671A1CC01D20FDA700319E7E /* ARTMemberLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTMemberLogViewController.h; sourceTree = "<group>"; };
+		671A1CC11D20FDA700319E7E /* ARTMemberLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTMemberLogViewController.m; sourceTree = "<group>"; };
+		671A1CC31D2104BA00319E7E /* ARTMemberLogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTMemberLogCell.h; sourceTree = "<group>"; };
+		671A1CC41D2104BA00319E7E /* ARTMemberLogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTMemberLogCell.m; sourceTree = "<group>"; };
+		671A1CC61D211A0500319E7E /* ARTMemberMybookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTMemberMybookViewController.h; sourceTree = "<group>"; };
+		671A1CC71D211A0500319E7E /* ARTMemberMybookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTMemberMybookViewController.m; sourceTree = "<group>"; };
+		671A1CC91D2123E800319E7E /* ARTMemberSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTMemberSetupViewController.h; sourceTree = "<group>"; };
+		671A1CCA1D2123E800319E7E /* ARTMemberSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTMemberSetupViewController.m; sourceTree = "<group>"; };
+		671A1CCF1D2131BB00319E7E /* ARTSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSearchViewController.h; sourceTree = "<group>"; };
+		671A1CD01D2131BB00319E7E /* ARTSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSearchViewController.m; sourceTree = "<group>"; };
 		6720024F1D016B4200B4A329 /* ARTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRegisterViewController.h; sourceTree = "<group>"; };
 		672002501D016B4200B4A329 /* ARTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterViewController.m; sourceTree = "<group>"; };
 		672002521D017F1800B4A329 /* ARTForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTForgetViewController.h; sourceTree = "<group>"; };
@@ -564,6 +579,31 @@
 			path = "购买充值";
 			sourceTree = "<group>";
 		};
+		671A1CCC1D21319C00319E7E /* 搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				671A1CCD1D21319C00319E7E /* 控制器 */,
+				671A1CCE1D21319C00319E7E /* 视图 */,
+			);
+			path = "搜索";
+			sourceTree = "<group>";
+		};
+		671A1CCD1D21319C00319E7E /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				671A1CCF1D2131BB00319E7E /* ARTSearchViewController.h */,
+				671A1CD01D2131BB00319E7E /* ARTSearchViewController.m */,
+			);
+			path = "控制器";
+			sourceTree = "<group>";
+		};
+		671A1CCE1D21319C00319E7E /* 视图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "视图";
+			sourceTree = "<group>";
+		};
 		672002611D05893500B4A329 /* 动态 */ = {
 			isa = PBXGroup;
 			children = (
@@ -700,6 +740,7 @@
 				6787AE3F1D003545002E59F5 /* 登录 */,
 				672002611D05893500B4A329 /* 动态 */,
 				673AD0101D1A301A0081300E /* 充值 */,
+				671A1CCC1D21319C00319E7E /* 搜索 */,
 				67FA3B821D1BCFDE009AB7BA /* 个人中心 */,
 			);
 			path = "内容";
@@ -1070,6 +1111,12 @@
 				67FA3B891D1BEFE0009AB7BA /* ARTMemberEditViewController.m */,
 				67FA3B8E1D1D069F009AB7BA /* ARTMemberInputViewController.h */,
 				67FA3B8F1D1D069F009AB7BA /* ARTMemberInputViewController.m */,
+				671A1CC01D20FDA700319E7E /* ARTMemberLogViewController.h */,
+				671A1CC11D20FDA700319E7E /* ARTMemberLogViewController.m */,
+				671A1CC61D211A0500319E7E /* ARTMemberMybookViewController.h */,
+				671A1CC71D211A0500319E7E /* ARTMemberMybookViewController.m */,
+				671A1CC91D2123E800319E7E /* ARTMemberSetupViewController.h */,
+				671A1CCA1D2123E800319E7E /* ARTMemberSetupViewController.m */,
 			);
 			path = "控制器";
 			sourceTree = "<group>";
@@ -1079,6 +1126,8 @@
 			children = (
 				67FA3B8B1D1BF239009AB7BA /* ARTMemberEditCell.h */,
 				67FA3B8C1D1BF239009AB7BA /* ARTMemberEditCell.m */,
+				671A1CC31D2104BA00319E7E /* ARTMemberLogCell.h */,
+				671A1CC41D2104BA00319E7E /* ARTMemberLogCell.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -1147,6 +1196,7 @@
 				TargetAttributes = {
 					677534E71CC8B62D00B34C59 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = NFG332EGHM;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1247,6 +1297,7 @@
 				67FA3B931D1D214B009AB7BA /* ARTPickerView.m in Sources */,
 				673AD0181D1A39650081300E /* ARTPurchasesCell.m in Sources */,
 				678FFB6E1CDA009B0071EAF6 /* ARTCommentData.m in Sources */,
+				671A1CD11D2131BB00319E7E /* ARTSearchViewController.m in Sources */,
 				67FD12881CE4941B00C93DFD /* ARTShareUtil.m in Sources */,
 				678FFB621CD9FAFA0071EAF6 /* ARTBookDownData.m in Sources */,
 				6787ADD41CF7E94C002E59F5 /* ARTBookComentCell.m in Sources */,
@@ -1282,6 +1333,7 @@
 				6787ADDA1CF82A72002E59F5 /* ARTBookInputView.m in Sources */,
 				6701C9421CD1F63400E0EA6A /* ARTHttpServers.m in Sources */,
 				6701C9511CD2122100E0EA6A /* ARTBaseParam.m in Sources */,
+				671A1CCB1D2123E800319E7E /* ARTMemberSetupViewController.m in Sources */,
 				677598C31CED691B002D3947 /* ARTGroupData.m in Sources */,
 				678FFB5C1CD9F1800071EAF6 /* ARTBookData.m in Sources */,
 				67B92D631CDB49E40009E5B9 /* ARTSendTalkComParam.m in Sources */,
@@ -1292,6 +1344,7 @@
 				6787ADFD1CFC4376002E59F5 /* XPathQuery.m in Sources */,
 				67FA3B811D1B873B009AB7BA /* ARTPurchaParam.m in Sources */,
 				67FD12A41CE9D7DA00C93DFD /* ARTBookLocalData.m in Sources */,
+				671A1CC51D2104BA00319E7E /* ARTMemberLogCell.m in Sources */,
 				67FD12911CE57DF000C93DFD /* ARTRequestUtil.m in Sources */,
 				6787ADE71CFC1260002E59F5 /* ARTBookDetailHead.m in Sources */,
 				672002A41D17D00D00B4A329 /* ARTBannerView.m in Sources */,
@@ -1321,7 +1374,9 @@
 				677598A71CEC5970002D3947 /* ARTCustomTabBar.m in Sources */,
 				672002B01D17D92C00B4A329 /* ARTCityData.m in Sources */,
 				672002751D07FB2100B4A329 /* ARTLocalCell.m in Sources */,
+				671A1CC21D20FDA700319E7E /* ARTMemberLogViewController.m in Sources */,
 				67FD12A11CE9D32800C93DFD /* ARTUserManager.m in Sources */,
+				671A1CC81D211A0500319E7E /* ARTMemberMybookViewController.m in Sources */,
 				677598AC1CEC680E002D3947 /* ARTHomeViewController.m in Sources */,
 				677598AF1CEC6851002D3947 /* ARTBookViewController.m in Sources */,
 				6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */,
@@ -1434,7 +1489,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing YiShangYaCang technology co., LTD (NFG332EGHM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1618,7 +1674,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ysyc.ipad;
 				PRODUCT_NAME = ART;
-				PROVISIONING_PROFILE = "a4a7cf0f-a82e-4178-a6ab-9812c609734c";
+				PROVISIONING_PROFILE = "258f69d9-4349-4ee4-8dd3-dffd0c21a855";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1629,7 +1685,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing YiShangYaCang technology co., LTD (NFG332EGHM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1813,7 +1870,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ysyc.ipad;
 				PRODUCT_NAME = ART;
-				PROVISIONING_PROFILE = "a4a7cf0f-a82e-4178-a6ab-9812c609734c";
+				PROVISIONING_PROFILE = "258f69d9-4349-4ee4-8dd3-dffd0c21a855";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

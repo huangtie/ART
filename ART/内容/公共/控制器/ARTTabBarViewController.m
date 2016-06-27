@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "ARTBaseViewController.h"
 #import "ARTMemberViewController.h"
+#import "ARTSearchViewController.h"
 
 @interface ARTTabBarViewController ()<ARTCustomTabBarDelegate>
 
@@ -60,7 +61,8 @@
 #pragma mark DELEGATE
 - (void)customTabBarDidTouchSearch
 {
-
+    UINavigationController *selectVC = self.viewControllers[self.selectedIndex];
+    [ARTSearchViewController launchViewController:selectVC.viewControllers.firstObject];
 }
 
 - (void)customTabBarDidTouchUser

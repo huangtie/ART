@@ -94,11 +94,7 @@ ARTBookDetailHeadDelegate>
     [self.tableView addMJRefreshHeader:^{
         [weak requestWithBookData];
     }];
-    
-    [self.tableView addMJRefreshFooter:^{
-        [weak requestCommentList:NO];
-    }];
-    
+
     [self displayHUD];
     self.tableView.hidden = YES;
     [self requestWithBookData];
@@ -381,6 +377,9 @@ ARTBookDetailHeadDelegate>
         {
             [weak.tableView.mj_header endRefreshing];
             [weak.commentDatas removeAllObjects];
+            [weak.tableView addMJRefreshFooter:^{
+                [weak requestCommentList:NO];
+            }];
         }
         else
         {

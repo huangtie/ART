@@ -58,6 +58,8 @@ UICollectionViewDataSource , ARTLocalMinCellDelegate>
         weak.localData = data;
         [weak crareSubviews];
     }];
+    
+    [self deviceOrentationDidChange:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -227,7 +229,7 @@ UICollectionViewDataSource , ARTLocalMinCellDelegate>
 
 - (void)deviceOrentationDidChange:(NSNotification *)notification
 {
-    self.markView.transform = CGAffineTransformIdentity;
+    self.view.transform = CGAffineTransformIdentity;
     CGAffineTransform transform;
     if ([[UIDevice currentDevice] orientation] == UIInterfaceOrientationLandscapeLeft)
     {
@@ -248,11 +250,15 @@ UICollectionViewDataSource , ARTLocalMinCellDelegate>
     
     if ([[UIDevice currentDevice] orientation] == UIInterfaceOrientationPortrait || [[UIDevice currentDevice] orientation] == UIInterfaceOrientationPortraitUpsideDown)
     {
+        self.view.width = 768;
+        self.view.height = 1024;
         self.markView.width = 768;
         self.markView.height = 1024;
     }
     else
     {
+        self.view.width = 1024;
+        self.view.height = 768;
         self.markView.width = 1024;
         self.markView.height = 768;
     }
@@ -261,12 +267,14 @@ UICollectionViewDataSource , ARTLocalMinCellDelegate>
     self.bottomContrl.bottom = self.markView.height;
     self.indexLabel.centerX = self.topContrl.width / 2;
     self.collectionView.centerX = self.bottomContrl.width / 2;
-    self.markView.center = self.view.center;
+    self.view.center = self.view.window.center;
+    self.markView.left = 0;
+    self.markView.top = 0;
     
     CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration;
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:duration];
-    self.markView.transform = transform;
+    self.view.transform = transform;
     [UIView commitAnimations];
 }
 

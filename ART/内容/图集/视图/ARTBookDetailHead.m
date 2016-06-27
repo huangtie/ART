@@ -64,7 +64,7 @@
     {
         self.picture = [[UIImageView alloc] initWithFrame:CGRectMake(15, 20, 240, 320)];
         self.picture.clipsToBounds = YES;
-        self.picture.contentMode = UIViewContentModeScaleAspectFit;
+        self.picture.contentMode = UIViewContentModeScaleAspectFill;
         [self addSubview:self.picture];
         
         //图集名

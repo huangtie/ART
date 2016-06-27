@@ -330,11 +330,20 @@ typedef enum
         [ARTUserManager sharedInstance].userinfo = data;
         [weak.view displayTostSuccess:@"登录成功"];
         [weak performBlock:^{
+            [weak.navigationController popViewControllerAnimated:YES];
             if (weak.loginSuccessBlock)
             {
                 weak.loginSuccessBlock(data);
             }
-            [weak.navigationController popViewControllerAnimated:YES];
+//            NSMutableArray *array = [NSMutableArray array];
+//            for (UIViewController *vc in weak.navigationController.viewControllers)
+//            {
+//                if (![vc isKindOfClass:weak.class])
+//                {
+//                    [array addObject:vc];
+//                }
+//            }
+//            weak.navigationController.viewControllers = array;
         } afterDelay:1.5];
     } failure:^(ErrorItemd *error) {
         [weak hideHUD];

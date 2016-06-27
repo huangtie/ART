@@ -11,6 +11,10 @@
 #import "ARTRequestUtil.h"
 #import <UIImageView+WebCache.h>
 #import "ARTMemberEditViewController.h"
+#import "ARTMemberLogViewController.h"
+#import "ARTMemberMybookViewController.h"
+#import "ARTMemberSetupViewController.h"
+#import <SDImageCache.h>
 
 typedef NS_ENUM(NSInteger, JUMP_CODE)
 {
@@ -18,7 +22,7 @@ typedef NS_ENUM(NSInteger, JUMP_CODE)
     JUMP_CODE_1002 = 1002,       // 我的认证
     JUMP_CODE_1003 = 1003,       // 我的动态
     JUMP_CODE_1004 = 1004,       // 我的图集
-    JUMP_CODE_1005 = 1005,       // 消费记录
+    JUMP_CODE_1005 = 1005,       // 金币明细
     JUMP_CODE_1006 = 1006,       // 我的拍卖
     JUMP_CODE_1007 = 1007,       // 我的成交记录
     JUMP_CODE_1008 = 1008,       // 我的出价
@@ -59,7 +63,6 @@ typedef NS_ENUM(NSInteger, JUMP_CODE)
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIGATION_HEIGH, self.view.width, self.view.height - NAVIGATION_HEIGH) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.separatorColor = UICOLOR_ARGB(0xfffafafa);
     self.tableView.backgroundColor = UICOLOR_ARGB(0xfffafafa);
     self.tableView.separatorColor = UICOLOR_ARGB(0xffe5e5e5);
     self.tableView.tableFooterView = self.footder;
@@ -83,7 +86,7 @@ typedef NS_ENUM(NSInteger, JUMP_CODE)
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:info.userImage] placeholderImage:[UIImage imageNamed:@"user_icon_1"]];
     
     //昵称
-    self.nickLabel.attributedText = [self title:@"昵称:  " text:info.userNick];
+    self.nickLabel.attributedText = [self title:@"用户昵称:  " text:info.userNick];
     
     //金币
     self.priceLabel.attributedText = [self title:@"金币余额:  " text:info.userPrice];
@@ -121,7 +124,7 @@ typedef NS_ENUM(NSInteger, JUMP_CODE)
         NSDictionary *dic1 = @{@"title":@"基本资料",@"code":STRING_FORMAT_ADC(@(JUMP_CODE_1001))};
         NSDictionary *dic2 = @{@"title":@"我的图集",@"code":STRING_FORMAT_ADC(@(JUMP_CODE_1004))};
         NSDictionary *dic3 = @{@"title":@"消费记录",@"code":STRING_FORMAT_ADC(@(JUMP_CODE_1005))};
-        NSDictionary *dic4 = @{@"title":@"设置",@"code":STRING_FORMAT_ADC(@(JUMP_CODE_1006))};
+        NSDictionary *dic4 = @{@"title":@"设置",@"code":STRING_FORMAT_ADC(@(JUMP_CODE_1009))};
         
         _item2D = @[@[dic1,dic2,dic3],@[dic4]];
     }
@@ -204,8 +207,10 @@ typedef NS_ENUM(NSInteger, JUMP_CODE)
 #pragma mark ACTION
 - (void)logoutAction
 {
+    WS(weak)
     [ARTAlertView alertTitle:@"警告" message:@"确定退出当前账号?" doneTitle:@"退出" cancelTitle:@"取消" doneBlock:^{
-        
+        [[ARTUserManager sharedInstance] logout];
+        [weak.navigationController popViewControllerAnimated:YES];
     } cancelBlock:^{
         
     }];
@@ -287,6 +292,21 @@ typedef NS_ENUM(NSInteger, JUMP_CODE)
         case JUMP_CODE_1001:
         {
             [ARTMemberEditViewController launchViewController:self];
+        }
+            break;
+        case JUMP_CODE_1004:
+        {
+            [ARTMemberMybookViewController launchViewController:self];
+        }
+            break;
+        case JUMP_CODE_1005:
+        {
+            [ARTMemberLogViewController launchViewController:self];
+        }
+            break;
+        case JUMP_CODE_1009:
+        {
+            [ARTMemberSetupViewController launchViewController:self];
         }
             break;
         default:

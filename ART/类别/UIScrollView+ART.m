@@ -27,7 +27,7 @@
     footer.stateLabel.font = FONT_WITH_15;
     footer.stateLabel.textColor = COLOR_YSYC_ORANGE;
     [footer setTitle:@"" forState:MJRefreshStateIdle];
-    [footer setTitle:@"没有更多数据..." forState:MJRefreshStateNoMoreData];
+    [footer setTitle:@"" forState:MJRefreshStateNoMoreData];
     self.mj_footer = footer;
 }
 

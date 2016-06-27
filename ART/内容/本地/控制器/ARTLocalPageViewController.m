@@ -53,6 +53,8 @@
     tap.numberOfTapsRequired = 2;
     [self.scrollView addGestureRecognizer:tap];
     self.scrollView.userInteractionEnabled = YES;
+    
+    [self deviceOrentationDidChange:nil];
 }
 
 - (void)dealloc
@@ -77,25 +79,6 @@
 
 - (void)deviceOrentationDidChange:(NSNotification *)notification
 {
-    self.view.transform = CGAffineTransformIdentity;
-    CGAffineTransform transform;
-    if ([[UIDevice currentDevice] orientation] == UIInterfaceOrientationLandscapeLeft)
-    {
-        transform = CGAffineTransformMakeRotation(M_PI * 1.5);
-    }
-    else if([[UIDevice currentDevice] orientation] == UIInterfaceOrientationLandscapeRight)
-    {
-        transform = CGAffineTransformMakeRotation(M_PI / 2);
-    }
-    else if([[UIDevice currentDevice] orientation] == UIInterfaceOrientationPortraitUpsideDown)
-    {
-        transform = CGAffineTransformMakeRotation(- M_PI);
-    }
-    else
-    {
-        transform = CGAffineTransformIdentity;
-    }
-    
     if ([[UIDevice currentDevice] orientation] == UIInterfaceOrientationPortrait || [[UIDevice currentDevice] orientation] == UIInterfaceOrientationPortraitUpsideDown)
     {
         self.view.width = 768;
@@ -107,15 +90,11 @@
         self.view.height = 768;
     }
 
-    self.view.center = self.view.window.center;
+    self.view.left = 0;
+    self.view.top = 0;
     self.scrollView.size = self.view.size;
+    self.scrollView.center = CGPointMake(self.view.width / 2, self.view.height / 2);
     self.imageView.size = self.scrollView.size;
-
-    CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration;
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:duration];
-    self.view.transform = transform;
-    [UIView commitAnimations];
 }
 
 #pragma mark DELEGATE
