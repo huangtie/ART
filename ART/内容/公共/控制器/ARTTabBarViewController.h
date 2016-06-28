@@ -10,4 +10,6 @@
 
 @interface ARTTabBarViewController : UITabBarController
 
+- (void)moveTabin:(ART_TABINDEX)index;
+
 @end

@@ -271,6 +271,7 @@ static const NSInteger kInfiniteCount       = 20000;
 
 - (void)reloadData
 {
+    _pageControl.currentPage = 0;
     _needsInvalidate = YES;
     [_collectionView reloadData];
     [self setNeedsLayout];

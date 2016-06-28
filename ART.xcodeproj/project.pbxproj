@@ -16,6 +16,11 @@
 		671A1CC81D211A0500319E7E /* ARTMemberMybookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CC71D211A0500319E7E /* ARTMemberMybookViewController.m */; };
 		671A1CCB1D2123E800319E7E /* ARTMemberSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CCA1D2123E800319E7E /* ARTMemberSetupViewController.m */; };
 		671A1CD11D2131BB00319E7E /* ARTSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CD01D2131BB00319E7E /* ARTSearchViewController.m */; };
+		671A1CD41D225E9D00319E7E /* ARTAuthorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CD31D225E9D00319E7E /* ARTAuthorViewController.m */; };
+		671A1CD71D225F5800319E7E /* ARTAuthorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CD61D225F5800319E7E /* ARTAuthorCell.m */; };
+		671A1CDD1D22684E00319E7E /* ARTNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CDC1D22684E00319E7E /* ARTNewsViewController.m */; };
+		671A1CE01D22697800319E7E /* ARTNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CDF1D22697800319E7E /* ARTNewsCell.m */; };
+		671A1CE31D227F1200319E7E /* ARTNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CE21D227F1200319E7E /* ARTNewsDetailViewController.m */; };
 		672002511D016B4200B4A329 /* ARTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002501D016B4200B4A329 /* ARTRegisterViewController.m */; };
 		672002541D017F1800B4A329 /* ARTForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002531D017F1800B4A329 /* ARTForgetViewController.m */; };
 		6720025D1D051BC100B4A329 /* ARTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6720025C1D051BC100B4A329 /* ARTAlertView.m */; };
@@ -142,6 +147,16 @@
 		671A1CCA1D2123E800319E7E /* ARTMemberSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTMemberSetupViewController.m; sourceTree = "<group>"; };
 		671A1CCF1D2131BB00319E7E /* ARTSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSearchViewController.h; sourceTree = "<group>"; };
 		671A1CD01D2131BB00319E7E /* ARTSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSearchViewController.m; sourceTree = "<group>"; };
+		671A1CD21D225E9D00319E7E /* ARTAuthorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAuthorViewController.h; sourceTree = "<group>"; };
+		671A1CD31D225E9D00319E7E /* ARTAuthorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAuthorViewController.m; sourceTree = "<group>"; };
+		671A1CD51D225F5800319E7E /* ARTAuthorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAuthorCell.h; sourceTree = "<group>"; };
+		671A1CD61D225F5800319E7E /* ARTAuthorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAuthorCell.m; sourceTree = "<group>"; };
+		671A1CDB1D22684E00319E7E /* ARTNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTNewsViewController.h; sourceTree = "<group>"; };
+		671A1CDC1D22684E00319E7E /* ARTNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTNewsViewController.m; sourceTree = "<group>"; };
+		671A1CDE1D22697800319E7E /* ARTNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTNewsCell.h; sourceTree = "<group>"; };
+		671A1CDF1D22697800319E7E /* ARTNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTNewsCell.m; sourceTree = "<group>"; };
+		671A1CE11D227F1200319E7E /* ARTNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTNewsDetailViewController.h; sourceTree = "<group>"; };
+		671A1CE21D227F1200319E7E /* ARTNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTNewsDetailViewController.m; sourceTree = "<group>"; };
 		6720024F1D016B4200B4A329 /* ARTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRegisterViewController.h; sourceTree = "<group>"; };
 		672002501D016B4200B4A329 /* ARTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterViewController.m; sourceTree = "<group>"; };
 		672002521D017F1800B4A329 /* ARTForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTForgetViewController.h; sourceTree = "<group>"; };
@@ -604,6 +619,35 @@
 			path = "视图";
 			sourceTree = "<group>";
 		};
+		671A1CD81D22680400319E7E /* 文章 */ = {
+			isa = PBXGroup;
+			children = (
+				671A1CD91D22680400319E7E /* 控制器 */,
+				671A1CDA1D22680400319E7E /* 视图 */,
+			);
+			path = "文章";
+			sourceTree = "<group>";
+		};
+		671A1CD91D22680400319E7E /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				671A1CDB1D22684E00319E7E /* ARTNewsViewController.h */,
+				671A1CDC1D22684E00319E7E /* ARTNewsViewController.m */,
+				671A1CE11D227F1200319E7E /* ARTNewsDetailViewController.h */,
+				671A1CE21D227F1200319E7E /* ARTNewsDetailViewController.m */,
+			);
+			path = "控制器";
+			sourceTree = "<group>";
+		};
+		671A1CDA1D22680400319E7E /* 视图 */ = {
+			isa = PBXGroup;
+			children = (
+				671A1CDE1D22697800319E7E /* ARTNewsCell.h */,
+				671A1CDF1D22697800319E7E /* ARTNewsCell.m */,
+			);
+			path = "视图";
+			sourceTree = "<group>";
+		};
 		672002611D05893500B4A329 /* 动态 */ = {
 			isa = PBXGroup;
 			children = (
@@ -741,6 +785,7 @@
 				672002611D05893500B4A329 /* 动态 */,
 				673AD0101D1A301A0081300E /* 充值 */,
 				671A1CCC1D21319C00319E7E /* 搜索 */,
+				671A1CD81D22680400319E7E /* 文章 */,
 				67FA3B821D1BCFDE009AB7BA /* 个人中心 */,
 			);
 			path = "内容";
@@ -983,6 +1028,8 @@
 		6787AE051CFE7F55002E59F5 /* 控制器 */ = {
 			isa = PBXGroup;
 			children = (
+				671A1CD21D225E9D00319E7E /* ARTAuthorViewController.h */,
+				671A1CD31D225E9D00319E7E /* ARTAuthorViewController.m */,
 				6787AE071CFE7FAA002E59F5 /* ARTAuthorDetailViewController.h */,
 				6787AE081CFE7FAA002E59F5 /* ARTAuthorDetailViewController.m */,
 			);
@@ -992,6 +1039,8 @@
 		6787AE061CFE7F55002E59F5 /* 视图 */ = {
 			isa = PBXGroup;
 			children = (
+				671A1CD51D225F5800319E7E /* ARTAuthorCell.h */,
+				671A1CD61D225F5800319E7E /* ARTAuthorCell.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -1321,10 +1370,12 @@
 				672002661D058A0500B4A329 /* ARTTalkSendViewController.m in Sources */,
 				677598CA1CEDA3AF002D3947 /* ARTBookCell.m in Sources */,
 				67FD127B1CE465D100C93DFD /* ARTEasemobServer.m in Sources */,
+				671A1CD41D225E9D00319E7E /* ARTAuthorViewController.m in Sources */,
 				672002A71D17D48600B4A329 /* ARTNewsData.m in Sources */,
 				67FD128B1CE5769F00C93DFD /* ARTGTPushUtil.m in Sources */,
 				678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */,
 				67B92D531CDB378D0009E5B9 /* ARTPurchasesLogData.m in Sources */,
+				671A1CD71D225F5800319E7E /* ARTAuthorCell.m in Sources */,
 				677598A41CEC5938002D3947 /* ARTTabBarViewController.m in Sources */,
 				67FD12821CE48AC500C93DFD /* ARTBaseViewController.m in Sources */,
 				6720026F1D06C63400B4A329 /* ARTPreviewViewController.m in Sources */,
@@ -1348,6 +1399,8 @@
 				67FD12911CE57DF000C93DFD /* ARTRequestUtil.m in Sources */,
 				6787ADE71CFC1260002E59F5 /* ARTBookDetailHead.m in Sources */,
 				672002A41D17D00D00B4A329 /* ARTBannerView.m in Sources */,
+				671A1CE31D227F1200319E7E /* ARTNewsDetailViewController.m in Sources */,
+				671A1CE01D22697800319E7E /* ARTNewsCell.m in Sources */,
 				6701C9541CD2131500E0EA6A /* ARTLoginParam.m in Sources */,
 				6787AE001CFC478C002E59F5 /* ARTBookHtmlViewController.m in Sources */,
 				67FA3B901D1D069F009AB7BA /* ARTMemberInputViewController.m in Sources */,
@@ -1361,6 +1414,7 @@
 				672002941D13EA6C00B4A329 /* ARTBaseNavigationController.m in Sources */,
 				6787ADED1CFC40B9002E59F5 /* ARTHtmlView.m in Sources */,
 				6720027D1D08246600B4A329 /* ARTLocalPageViewController.m in Sources */,
+				671A1CDD1D22684E00319E7E /* ARTNewsViewController.m in Sources */,
 				6787AE0C1CFED85A002E59F5 /* ARTShareView.m in Sources */,
 				672002AA1D17D79D00B4A329 /* ARTNoticeData.m in Sources */,
 				6775992B1CF5AE70002D3947 /* UIScrollView+ART.m in Sources */,

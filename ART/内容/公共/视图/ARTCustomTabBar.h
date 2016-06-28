@@ -21,4 +21,6 @@
 
 @property (nonatomic , assign) id<ARTCustomTabBarDelegate> delegate;
 
+- (void)moveTabin:(ART_TABINDEX)index;
+
 @end

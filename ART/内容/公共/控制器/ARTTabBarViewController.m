@@ -48,6 +48,11 @@
     }
 }
 
+- (void)moveTabin:(ART_TABINDEX)index
+{
+    [self.customTabBar moveTabin:index];
+}
+
 - (ARTCustomTabBar *)customTabBar
 {
     if (!_customTabBar)

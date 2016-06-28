@@ -9,10 +9,12 @@
 #import "ARTHomeViewController.h"
 #import "ARTBannerView.h"
 #import "ARTRequestUtil.h"
-#import <UIImageView+WebCache.h>
 #import "ARTBookDetailViewController.h"
 #import "ARTHomeNoticeViewController.h"
+#import "ARTAuthorViewController.h"
 #import <UIScrollView+EmptyDataSet.h>
+#import "ARTTabBarViewController.h"
+#import "ARTNewsViewController.h"
 
 @interface ARTHomeViewController ()
 <ARTBannerViewDataSource,ARTBannerViewDelegate,UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetDelegate,
@@ -196,7 +198,19 @@ DZNEmptyDataSetSource>
 #pragma mark ACTION
 - (void)itemsTouchAction:(UIButton *)button
 {
-    
+    if ([button.titleLabel.text isEqualToString:@"图集"])
+    {
+        ARTTabBarViewController *tabViewController = (ARTTabBarViewController *)self.tabBarController;
+        [tabViewController moveTabin:ART_TABINDEX_BOOK];
+    }
+    if ([button.titleLabel.text isEqualToString:@"藏家"])
+    {
+        [ARTAuthorViewController launchViewController:self];
+    }
+    if ([button.titleLabel.text isEqualToString:@"文章"])
+    {
+        [ARTNewsViewController launchViewController:self];
+    }
 }
 
 - (void)bookClick:(UIButton *)button

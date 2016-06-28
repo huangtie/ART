@@ -31,8 +31,21 @@
 
 
 #pragma mark ACTION
+- (void)moveTabin:(ART_TABINDEX)index
+{
+    if (index < self.itemsContrl.subviews.count)
+    {
+        [self itemsTouchAction:self.itemsContrl.subviews[index]];
+    }
+}
+
 - (IBAction)itemsTouchAction:(UIButton *)sender
 {
+    if (![sender isKindOfClass:[UIButton class]])
+    {
+        return;
+    }
+    
     for (UIView *view in self.itemsContrl.subviews)
     {
         if ([view isKindOfClass:[UIButton class]])
