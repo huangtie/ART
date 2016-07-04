@@ -225,7 +225,6 @@ DZNEmptyDataSetSource>
     }
     
     [cell bindingWithData:self.groups[indexPath.row] isSelect:indexPath.row == self.groupIndex];
-    
     return cell;
 }
 
