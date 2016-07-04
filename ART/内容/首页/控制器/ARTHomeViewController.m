@@ -32,9 +32,6 @@ DZNEmptyDataSetSource>
 
 @property (nonatomic , strong) UIView *bookCell;
 
-@property (nonatomic , assign) BOOL isNetworkError;
-
-@property (nonatomic , strong) YYReachability *reachability;
 @end
 
 @implementation ARTHomeViewController
@@ -46,7 +43,6 @@ DZNEmptyDataSetSource>
     self.title = @"首页";
     
     self.navigationBar.hidden = YES;
-    self.isNetworkError = YES;
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIGATION_HEIGH, SCREEN_WIDTH, self.view.height - NAVIGATION_HEIGH)];
     self.tableView.delegate = self;
@@ -117,8 +113,8 @@ DZNEmptyDataSetSource>
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(picture.left, 0, picture.width, 20)];
         titleLabel.bottom = itemView.height;
         titleLabel.textAlignment = NSTextAlignmentCenter;
-        titleLabel.textColor = UICOLOR_ARGB(0xff999999);
-        titleLabel.font = FONT_WITH_15;
+        titleLabel.textColor = UICOLOR_ARGB(0xff666666);
+        titleLabel.font = FONT_WITH_18;
         titleLabel.text = data.bookName;
         [itemView addSubview:titleLabel];
         
@@ -130,6 +126,22 @@ DZNEmptyDataSetSource>
 }
 
 #pragma mark GET_SET
+- (void)setIsNetworkError:(BOOL)isNetworkError
+{
+    if (isNetworkError)
+    {
+        self.tableView.tableHeaderView = nil;
+        self.tableView.tableFooterView = nil;
+    }
+    else
+    {
+        self.tableView.tableHeaderView = self.bannerView;
+        self.tableView.tableFooterView = self.bookCell;
+    }
+    [self.tableView reloadData];
+    [super setIsNetworkError:isNetworkError];
+}
+
 - (UITableViewCell *)iconCell
 {
     if (!_iconCell)
@@ -140,12 +152,12 @@ DZNEmptyDataSetSource>
         NSDictionary *dic1 = @{@"title":@"图集",@"image":@"home_icon_1"};
         NSDictionary *dic2 = @{@"title":@"藏家",@"image":@"home_icon_2"};
         NSDictionary *dic3 = @{@"title":@"文章",@"image":@"home_icon_3"};
-        //NSDictionary *dic4 = @{@"title":@"拍卖",@"image":@"home_icon_4"};
-        NSDictionary *dic5 = @{@"title":@"关于",@"image":@"home_icon_5"};
-        NSDictionary *dic6 = @{@"title":@"藏友",@"image":@"home_icon_6"};
-        NSDictionary *dic7 = @{@"title":@"更多",@"image":@"home_icon_7"};
+//        NSDictionary *dic4 = @{@"title":@"拍卖",@"image":@"home_icon_4"};
+//        NSDictionary *dic5 = @{@"title":@"关于",@"image":@"home_icon_5"};
+//        NSDictionary *dic6 = @{@"title":@"藏友",@"image":@"home_icon_6"};
+//        NSDictionary *dic7 = @{@"title":@"更多",@"image":@"home_icon_7"};
         
-        NSArray *items = @[@[dic1,dic2,dic3,dic5],@[dic6,dic7]];
+        NSArray *items = @[@[dic1,dic2,dic3]];
         CGSize size = CGSizeMake(180, 160);
         _iconCell.width = SCREEN_WIDTH;
         _iconCell.height = size.height * items.count;
@@ -235,7 +247,10 @@ DZNEmptyDataSetSource>
         [weak.tableView reloadEmptyDataSet];
     } failure:^(ErrorItemd *error) {
         [weak.tableView.mj_header endRefreshing];
-        weak.isNetworkError = YES;
+        if (error.code == NET_ERROR_0000)
+        {
+            weak.isNetworkError = YES;
+        }
         [weak.tableView reloadEmptyDataSet];
     }];
 }
@@ -257,7 +272,7 @@ DZNEmptyDataSetSource>
 #pragma mark DELEGATE_TABLEVIEW
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return !self.isNetworkError;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -319,7 +334,7 @@ DZNEmptyDataSetSource>
 #pragma mark DELEGAT_DZNEMPTY
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
 {
-    return [[NSAttributedString alloc] initWithString:@"无网络状态" attributes:@{NSFontAttributeName:FONT_WITH_15}];
+    return [[NSAttributedString alloc] initWithString:@"当前无网络连接" attributes:@{NSFontAttributeName:FONT_WITH_18}];
 }
 
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView

@@ -22,4 +22,8 @@
 - (void)displayTostError:(NSString *)message;
 
 - (void)displayTost:(NSString *)message;
+
+- (void)rock;
+
+-(void)parabola:(CGPoint)point;
 @end

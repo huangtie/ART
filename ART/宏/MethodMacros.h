@@ -32,4 +32,9 @@ typedef enum
 
 #define STRING_FORMAT(m,n) [NSString stringWithFormat:@"%@%@",m,n]
 
+
+#define FIRST_KEY @"FIRSTINAPP"
+#define FIRST_IN_APP(m) [[NSUserDefaults standardUserDefaults] setBool:m forKey:FIRST_KEY]
+#define FIRST_OUT_APP [[NSUserDefaults standardUserDefaults] boolForKey:FIRST_KEY]
+
 #endif /* MethodMacros_h */

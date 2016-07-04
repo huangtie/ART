@@ -318,7 +318,8 @@ static const NSInteger kInfiniteCount       = 20000;
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
+    if (self)
+    {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.contentView.bounds];
         imageView.clipsToBounds = YES;
         imageView.contentMode = UIViewContentModeScaleAspectFill;

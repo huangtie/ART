@@ -4,7 +4,7 @@
 //
 //  Created by huangtie on 16/5/12.
 //  Copyright © 2016年 huangtie. All rights reserved.
-//
+///var/folders/18/_0089vt16jd6xjzm0s1b9ry00000gn/T/AppIconMaker/appicon.png
 
 #import "ARTShareUtil.h"
 
@@ -91,7 +91,7 @@
     [ShareSDK getUserInfoWithType:(ShareType)type authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
         if (result)
         {
-            id<ISSPlatformCredential> credential = [ShareSDK getCredentialWithType:ShareTypeWeixiSession];
+            id<ISSPlatformCredential> credential = [ShareSDK getCredentialWithType:(ShareType)type];
             
             if(completion)
             {

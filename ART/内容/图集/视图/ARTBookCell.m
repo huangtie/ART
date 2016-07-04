@@ -32,7 +32,7 @@
     self = [[[NSBundle mainBundle] loadNibNamed:@"ARTBookCell" owner:self options:nil] lastObject];
     if (self)
     {
-        
+        self.picture.clipsToBounds = YES;
     }
     return self;
 }

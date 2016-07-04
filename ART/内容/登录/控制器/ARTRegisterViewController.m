@@ -217,18 +217,19 @@
             [weak.view displayTostSuccess:@"注册并登录成功"];
             [weak performBlock:^{
                 [ARTUserManager sharedInstance].userinfo = data;
-                if (weak.loginSuccessBlock)
-                {
-                    weak.loginSuccessBlock(data);
-                }
                 NSInteger index = [weak.navigationController.viewControllers indexOfObject:weak];
                 if (index > 1)
                 {
-                    UIViewController *vc = weak.navigationController.viewControllers[index - 1];
-                    if ([vc isKindOfClass:[ARTLoginViewController class]])
-                    {
-                        [weak.navigationController popToViewController:weak.navigationController.viewControllers[index - 2] animated:YES];
-                    }
+                    [weak.navigationController popToViewController:weak.navigationController.viewControllers[index - 2] animated:YES];
+                }
+                else
+                {
+                    [weak.navigationController popViewControllerAnimated:YES];
+                }
+                
+                if (weak.loginSuccessBlock)
+                {
+                    weak.loginSuccessBlock(data);
                 }
             } afterDelay:1.5];
         } afterDelay:1];

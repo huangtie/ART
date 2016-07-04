@@ -9,6 +9,7 @@
 #import "ARTBaseViewController.h"
 #import "ARTUMengUtil.h"
 #import <UINavigationController+FDFullscreenPopGesture.h>
+#import "AppDelegate.h"
 
 @interface ARTBaseViewController()
 {
@@ -124,6 +125,27 @@
 - (void)fireBlockAfterDelay:(void (^)(void))block
 {
     block();
+}
+
++ (UIViewController *)getVisibleViewController
+{
+    @try {
+        UIViewController *focusViewController = [AppDelegate delegate].window.rootViewController;
+        UITabBarController *tbc = (UITabBarController *)focusViewController;
+        if([tbc respondsToSelector:@selector(selectedViewController)])
+        {
+            NSArray* arrayViewControllers = [tbc.selectedViewController childViewControllers];
+            if(arrayViewControllers != nil)
+            {
+                return arrayViewControllers.lastObject;
+            }
+        }
+        return tbc;
+    } @catch(NSException *exception) {
+        
+    } @finally {
+        
+    }
 }
 
 @end

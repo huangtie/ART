@@ -15,7 +15,7 @@
 #import <ActionSheetPicker.h>
 #import "ARTPickerView.h"
 
-@interface ARTMemberEditViewController()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
+@interface ARTMemberEditViewController()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 @property (nonatomic , strong) UITableView *tableView;
 
@@ -500,11 +500,35 @@
     }
     else if(buttonIndex == 1)
     {
-        
+        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+        {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"访问摄像头出错"
+                                                                message:@"您的设备似乎没有摄像头"
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"确定"
+                                                      otherButtonTitles: nil];
+            [alertView show];
+        }
+        else
+        {
+            UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+            picker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+            picker.showsCameraControls = YES;
+            picker.navigationBarHidden = YES;
+            picker.delegate = self;
+            [self presentViewController:picker animated:YES completion:nil];
+        }
     }
 }
 
-
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    [self requestUpLoadFace:image];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 

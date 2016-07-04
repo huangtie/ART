@@ -9,9 +9,9 @@
 #import "ARTGTPushUtil.h"
 #import "AppDelegate.h"
 
-#define GT_APPID           @"iMahVVxurw6BNr7XSn9EF2"
-#define GT_APPKEY          @"yIPfqwq6OMAPp6dkqgLpG5"
-#define GT_APPSECRET       @"G0aBqAD6t79JfzTB6Z5lo5"
+#define GT_APPID           @"Gc1RUssw3VAGj95R1nyWL3"
+#define GT_APPKEY          @"X8SdsQzY1L9ZXdTGwNmXm7"
+#define GT_APPSECRET       @"vdPQ0oG6sH8RQxZNH6Mhc"
 
 @interface ARTGTPushUtil()<GeTuiSdkDelegate>
 
@@ -87,16 +87,17 @@
 /**
  *  SDK通知收到个推推送的透传消息
  *
- *  @param payloadId 代表推送消息的唯一id
- *  @param taskId    推送消息的任务id
- *  @param aMsgId    推送消息的messageid
- *  @param offLine   是否是离线消息，YES.是离线消息
- *  @param appId     应用的appId
- *  说明: SDK会将推送消息在本地数据库中保留5天，请及时取出（See retrivePayloadById：），取出后消息将被删除。
+ *  @param payloadData 推送消息内容
+ *  @param taskId      推送消息的任务id
+ *  @param msgId       推送消息的messageid
+ *  @param offLine     是否是离线消息，YES.是离线消息
+ *  @param appId       应用的appId
  */
-- (void)GeTuiSdkDidReceivePayload:(NSString *)payloadId andTaskId:(NSString *)taskId andMessageId:(NSString *)aMsgId andOffLine:(BOOL)offLine fromApplication:(NSString *)appId
+- (void)GeTuiSdkDidReceivePayloadData:(NSData *)payloadData andTaskId:(NSString *)taskId andMsgId:(NSString *)msgId andOffLine:(BOOL)offLine fromGtAppId:(NSString *)appId
 {
-
+    NSLog(@"%@",payloadData.modelToJSONString);
+    
+    [GeTuiSdk sendFeedbackMessage:90001 taskId:taskId msgId:msgId];
 }
 
 /**

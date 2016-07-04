@@ -71,7 +71,7 @@ ARTBookDetailHeadDelegate>
 
 @implementation ARTBookDetailViewController
 
-+ (ARTBookDetailViewController *)launchFromController:(ARTBaseViewController *)controller
++ (ARTBookDetailViewController *)launchFromController:(UIViewController *)controller
                                                bookID:(NSString *)bookID
 {
     ARTBookDetailViewController *detailVC = [[ARTBookDetailViewController alloc] init];

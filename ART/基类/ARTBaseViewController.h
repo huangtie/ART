@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <YYReachability.h>
 
 @interface ARTBaseViewController : UIViewController
+
+@property (nonatomic , strong) YYReachability *reachability;
+
+//是否是无网络状态(YES 是)
+@property (nonatomic , assign) BOOL isNetworkError;
 
 //是否能旋转屏幕
 @property (nonatomic , assign) BOOL isAutorotate;
@@ -27,4 +33,6 @@
 
 - (void)performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay;
 
+//获得当前可见的viewController
++ (UIViewController *)getVisibleViewController;
 @end

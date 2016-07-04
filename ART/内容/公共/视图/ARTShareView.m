@@ -45,10 +45,10 @@
         [wechatZone setObject:@(SHARE_DESTINATION_TIMELINE) forKey:@"type"];
         [self.shareItems addObject:wechatZone];
         
-        NSMutableDictionary *message = [[NSMutableDictionary alloc] init];
-        [message setObject:@"share_icon_message" forKey:@"image"];
-        [message setObject:@(SHARE_DESTINATION_SMS) forKey:@"type"];
-        [self.shareItems addObject:message];
+//        NSMutableDictionary *message = [[NSMutableDictionary alloc] init];
+//        [message setObject:@"share_icon_message" forKey:@"image"];
+//        [message setObject:@(SHARE_DESTINATION_EMAIL) forKey:@"type"];
+//        [self.shareItems addObject:message];
         
         if (![QQApiInterface isQQInstalled])
         {

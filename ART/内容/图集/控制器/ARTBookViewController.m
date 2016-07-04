@@ -84,8 +84,23 @@ DZNEmptyDataSetSource>
         [weak requestWithGroups];
     }];
     
+    [self displayHUD];
     [self requestWithGroups];
     [self requestWithBooks:YES];
+    
+    self.reachability = [YYReachability reachability];
+    self.reachability.notifyBlock = ^(YYReachability *reachability)
+    {
+        if (reachability.status == YYReachabilityStatusNone)
+        {
+            weak.isNetworkError = YES;
+        }
+        else
+        {
+            weak.isNetworkError = NO;
+        }
+        [weak.bookCollection reloadData];
+    };
 }
 
 #pragma mark GET_SET
@@ -161,6 +176,8 @@ DZNEmptyDataSetSource>
     
     WS(weak)
     [ARTRequestUtil requestBookList:self.bookParam completion:^(NSURLSessionDataTask *task, NSArray<ARTBookData *> *datas) {
+        [weak hideHUD];
+        weak.isNetworkError = NO;
         if (isRefresh)
         {
             weak.books = [NSMutableArray array];
@@ -183,7 +200,12 @@ DZNEmptyDataSetSource>
         [weak.books addObjectsFromArray:datas];
         [weak.bookCollection reloadData];
     } failure:^(ErrorItemd *error) {
-        
+        [weak hideHUD];
+        if (error.code == NET_ERROR_0000)
+        {
+            weak.isNetworkError = YES;
+            [weak.bookCollection reloadData];
+        }
     }];
 }
 
@@ -225,7 +247,7 @@ DZNEmptyDataSetSource>
 #pragma mark DELEGAT_COLLECTION
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.books.count;
+    return self.isNetworkError ? 0 : self.books.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -245,12 +267,19 @@ DZNEmptyDataSetSource>
 #pragma mark DELEGAT_DZNEMPTY
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
 {
-    return [[NSAttributedString alloc] initWithString:@"暂无数据" attributes:@{NSFontAttributeName:FONT_WITH_15}];
+    if (self.isNetworkError)
+    {
+        return [[NSAttributedString alloc] initWithString:@"当前无网络连接" attributes:@{NSFontAttributeName:FONT_WITH_18}];
+    }
+    else
+    {
+        return [[NSAttributedString alloc] initWithString:@"暂无相关图集" attributes:@{NSFontAttributeName:FONT_WITH_18}];
+    }
 }
 
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
 {
-    return [UIImage imageNamed:@"book_icon_emtty"];
+    return IMAGE_EMPTY_ONE;
 }
 
 - (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView
@@ -260,7 +289,7 @@ DZNEmptyDataSetSource>
 
 - (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView
 {
-    return self.books && !self.books.count;
+    return (self.books && !self.books.count) || self.isNetworkError;
 }
 
 - (void)emptyDataSet:(UIScrollView *)scrollView didTapView:(UIView *)view

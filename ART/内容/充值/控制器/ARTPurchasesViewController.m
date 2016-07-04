@@ -118,8 +118,15 @@
 #pragma mark REQUEST
 - (void)requestPay
 {
-    SKPayment *payment = [SKPayment paymentWithProduct:self.parchasesDatas[self.selectIndex]];
-    [[SKPaymentQueue defaultQueue] addPayment:payment];
+    if (self.selectIndex < self.parchasesDatas.count)
+    {
+        SKPayment *payment = [SKPayment paymentWithProduct:self.parchasesDatas[self.selectIndex]];
+        [[SKPaymentQueue defaultQueue] addPayment:payment];
+    }
+    else
+    {
+        [self.view displayTostError:@"请选择要充值的项目"];
+    }
 }
 
 - (void)requestAppleStore
@@ -129,6 +136,11 @@
     SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:productIdentifiers];
     request.delegate = self;
     [request start];
+    
+    WS(weak)
+    [self performBlock:^{
+        [weak hideHUD];
+    } afterDelay:6];
 }
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response

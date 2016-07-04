@@ -141,7 +141,7 @@ typedef enum
         [self.loginTypes removeObject:qq];
     }
     
-    if (![WXApi isWXAppInstalled])
+    //if (![WXApi isWXAppInstalled])
     {
         [self.loginTypes removeObject:wechat];
     }
@@ -335,15 +335,6 @@ typedef enum
             {
                 weak.loginSuccessBlock(data);
             }
-//            NSMutableArray *array = [NSMutableArray array];
-//            for (UIViewController *vc in weak.navigationController.viewControllers)
-//            {
-//                if (![vc isKindOfClass:weak.class])
-//                {
-//                    [array addObject:vc];
-//                }
-//            }
-//            weak.navigationController.viewControllers = array;
         } afterDelay:1.5];
     } failure:^(ErrorItemd *error) {
         [weak hideHUD];

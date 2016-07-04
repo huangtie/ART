@@ -21,11 +21,14 @@
 #import "ARTAuctionViewController.h"
 #import "ARTTabBarViewController.h"
 
+#import "ARTBookDetailViewController.h"
+#import "ARTNewsDetailViewController.h"
 
+#import "ARTLaunchScreen.h"
+#import "ARTGuideView.h"
 
 @interface AppDelegate ()
 
-//@property (nonatomic , strong) ARTBookDownObject *object;
 
 @end
 
@@ -40,9 +43,6 @@
     
     //初始化分享
     [ARTShareUtil initShareSDK];
-    
-    //初始化个推
-    [ARTGTPushUtil sharedInstance];
     
     self.window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
     ARTHomeViewController *homeVC = [[ARTHomeViewController alloc] init];
@@ -59,89 +59,28 @@
     ARTTabBarViewController *tabVC = [[ARTTabBarViewController alloc] init];
     tabVC.viewControllers = @[homeNav,bookNav,localNav,socialNav,auctionNav];
     self.window.rootViewController = tabVC;
+    YYReachability *bility = [YYReachability reachability];
+    if (bility.status == YYReachabilityStatusNone)
+    {
+        [tabVC moveTabin:ART_TABINDEX_LOCAL];
+    }
     
-//    ARTLoginParam *param = [[ARTLoginParam alloc] init];
-//    param.userName = @"223";
-//    param.userPassword = @"1";
-//    param.userType = @"1";
-//    
-//    [ARTRequestUtil requestLogin:param completion:^(NSURLSessionDataTask *task, ARTUserData *data) {
-//        [ARTUserManager sharedInstance].userinfo = data;
-//        
-//        [ARTRequestUtil requestBookDetail:@"9" completion:^(NSURLSessionDataTask *task, ARTBookData *data) {
-//            [ARTRequestUtil requestBookDowns:@"9" completion:^(NSURLSessionDataTask *task, NSArray<ARTBookDownData *> *datas) {
-//                NSMutableArray *urls = [NSMutableArray array];
-//                for (ARTBookDownData *down in datas)
-//                {
-//                    [urls addObject:down.dataURL];
-//                }
-//                ARTBookDownObject *object = [[ARTBookDownObject alloc] initWithBookData:data urls:urls];
-//                
-//            } failure:^(ErrorItemd *error) {
-//                
-//            }];
-//        } failure:^(ErrorItemd *error) {
-//            
-//        }];
-//        
-//    } failure:^(ErrorItemd *error) {
-//        
-//    }];
-    
-//    ARTRegisterParam *param = [[ARTRegisterParam alloc] init];
-//    param.userName = @"66666";
-//    param.userPassword = @"1";
-//    param.userNick = @"喝喝";
-//    [ARTNetUtil requestLogin:param completion:^(NSURLSessionDataTask *task, ARTUserData *data) {
-//        [ARTUserManager sharedInstance].userinfo = data;
-//        ARTSendTalkParam * talkParam = [[ARTSendTalkParam alloc] init];
-//        talkParam.talkText = @"测试发表";
-//        talkParam.talkAllLook = @"0";
-//        talkParam.talkImages = [@[UIImageJPEGRepresentation([UIImage imageNamed:@"2323.jpg"], .5),UIImageJPEGRepresentation([UIImage imageNamed:@"11.png"], .5),UIImageJPEGRepresentation([UIImage imageNamed:@"22.png"], .5)] mutableCopy];
-//        [ARTNetUtil requestSendTalk:talkParam completion:^(NSURLSessionDataTask *task) {
-//            
-//        } failure:^(ErrorItemd *error) {
-//            
-//        }];
-//    } failure:^(ErrorItemd *error) {
-//        
-//    }];
-    
-//    [ARTNetUtil requestRegister:param completion:^(NSURLSessionDataTask *task, ARTUserData *data) {
-//        
-//    } failure:^(ErrorItemd *error) {
-//        
-//    }];
-    
-//    [ARTNetUtil requestUserinfo:@"17" completion:^(NSURLSessionDataTask *task, ARTUserData *data) {
-//        
-//    } failure:^(ErrorItemd *error) {
-//        
-//    }];
-//    ARTCommentListParam *param = [[ARTCommentListParam alloc] init];
-//    param.bookID = @"13";
-//    [ARTNetUtil requestCommentList:param completion:^(NSURLSessionDataTask *task, NSArray<ARTCommentData *> *datas) {
-//        
-//    } failure:^(ErrorItemd *error) {
-//        
-//    }];
-    
-//    [ARTNetUtil requestPurchasesList:^(NSURLSessionDataTask *task, NSArray<ARTPurchasesData *> *datas) {
-//        
-//    } failure:^(ErrorItemd *error) {
-//        
-//    }];
-    
-//    [ARTNetUtil requestTalkDetail:@"7" completion:^(NSURLSessionDataTask *task, ARTTalkData *data) {
-//        
-//    } failure:^(ErrorItemd *error) {
-//        
-//    }];
-
-    [[ARTEasemobServer services] loginEasemob:@"test" completion:^(EMError *error) {
-        
-    }];
     [self.window makeKeyAndVisible];
+    if(!FIRST_OUT_APP)
+    {
+        [ARTGuideView launchIn:self.window];
+        
+    }
+    [ARTLaunchScreen launchIn:self.window completion:^{
+        if (!FIRST_OUT_APP)
+        {
+            [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+        }
+        FIRST_IN_APP(YES);
+        //初始化个推
+        [ARTGTPushUtil sharedInstance];
+    }];
+    
     return YES;
 }
 
@@ -180,24 +119,80 @@
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler
+{
+    if([UIApplication sharedApplication].applicationState == UIApplicationStateInactive)
+    {
+        NSDictionary *aps = userInfo[@"aps"];
+        NSString *category = aps[@"category"];
+        if (category.length)
+        {
+            NSArray *array = [category componentsSeparatedByString:@"&&"];
+            if (array.count > 1)
+            {
+                NSString *type = array.firstObject;
+                NSString *code = array.lastObject;
+                
+                switch (type.integerValue)
+                {
+                    case 1:
+                    {
+                        [ARTBookDetailViewController launchFromController:[ARTBaseViewController getVisibleViewController] bookID:code];
+                    }
+                        break;
+                    case 2:
+                    {
+                        [ARTNewsDetailViewController launchViewController:[ARTBaseViewController getVisibleViewController] newsID:code];
+                    }
+                        break;
+                    case 3:
+                    {
+                        
+                    }
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+    
+    completionHandler(UIBackgroundFetchResultNewData);
+}
 
-- (void)applicationWillResignActive:(UIApplication *)application {
+
+- (void)applicationWillResignActive:(UIApplication *)application
+{
 
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
 
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
 
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
 
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application {
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
 
 }
 

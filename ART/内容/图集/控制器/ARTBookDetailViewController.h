@@ -10,7 +10,7 @@
 
 @interface ARTBookDetailViewController : ARTBaseViewController
 
-+ (ARTBookDetailViewController *)launchFromController:(ARTBaseViewController *)controller
++ (ARTBookDetailViewController *)launchFromController:(UIViewController *)controller
                                                bookID:(NSString *)bookID;
 
 @end

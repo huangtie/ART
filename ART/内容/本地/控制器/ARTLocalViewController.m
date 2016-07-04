@@ -197,7 +197,7 @@ DZNEmptyDataSetSource>
 #pragma mark DELEGAT_DZNEMPTY
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
 {
-    return [[NSAttributedString alloc] initWithString:@"暂无图集" attributes:@{NSFontAttributeName:FONT_WITH_15}];
+    return [[NSAttributedString alloc] initWithString:@"[本地]没有已下载的图集" attributes:@{NSFontAttributeName:FONT_WITH_15}];
 }
 
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView

@@ -61,4 +61,48 @@
     [self makeToast:message];
 }
 
+- (void)rock
+{
+    CAKeyframeAnimation * animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.translation.x"];
+    animation.duration = 1;
+    animation.values = @[ @(0), @(10), @(-8), @(8), @(-5), @(5), @(0) ];
+    animation.keyTimes = @[ @(0), @(0.225), @(0.425), @(0.6), @(0.75), @(0.875), @(1) ];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [self.layer addAnimation:animation forKey:@"transienceRock"];
+}
+
+-(void)parabola:(CGPoint)point
+{
+    float duration = .7;
+    
+    CGPoint orignal =  self.center;
+    CGPoint focus = CGPointZero;
+    CGPoint symPoint = CGPointZero;
+    CGPoint destPoint = point;
+    focus.x = orignal.x + (destPoint.x - orignal.x)/2;
+    focus.y = orignal.y - (destPoint.y - orignal.y);
+    
+    symPoint.x = 2* focus.x - orignal.x;
+    symPoint.y = orignal.y;
+    
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathMoveToPoint(path,NULL,orignal.x,orignal.y);
+    CGPathAddQuadCurveToPoint(path,NULL,focus.x ,focus.y,destPoint.x,destPoint.y);
+    CAKeyframeAnimation *
+    animation = [CAKeyframeAnimation
+                 animationWithKeyPath:@"position"];
+    [animation setPath:path];
+    [animation setDuration:duration];
+    CFRelease(path);
+    
+    
+    CAAnimationGroup * animationGp = [CAAnimationGroup animation];
+    animationGp.duration = duration;
+    animationGp.animations = @[animation];
+    
+    [self.layer addAnimation:animationGp forKey:nil];
+    
+    self.center = point;
+}
+
 @end

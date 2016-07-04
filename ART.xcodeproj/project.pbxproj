@@ -21,6 +21,9 @@
 		671A1CDD1D22684E00319E7E /* ARTNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CDC1D22684E00319E7E /* ARTNewsViewController.m */; };
 		671A1CE01D22697800319E7E /* ARTNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CDF1D22697800319E7E /* ARTNewsCell.m */; };
 		671A1CE31D227F1200319E7E /* ARTNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CE21D227F1200319E7E /* ARTNewsDetailViewController.m */; };
+		671A1CE61D26147A00319E7E /* ARTLaunchScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CE51D26147A00319E7E /* ARTLaunchScreen.m */; };
+		671A1CE81D26149200319E7E /* ARTLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 671A1CE71D26149200319E7E /* ARTLaunchScreen.xib */; };
+		671A1CEB1D265CB200319E7E /* ARTGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CEA1D265CB200319E7E /* ARTGuideView.m */; };
 		672002511D016B4200B4A329 /* ARTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002501D016B4200B4A329 /* ARTRegisterViewController.m */; };
 		672002541D017F1800B4A329 /* ARTForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002531D017F1800B4A329 /* ARTForgetViewController.m */; };
 		6720025D1D051BC100B4A329 /* ARTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6720025C1D051BC100B4A329 /* ARTAlertView.m */; };
@@ -157,6 +160,11 @@
 		671A1CDF1D22697800319E7E /* ARTNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTNewsCell.m; sourceTree = "<group>"; };
 		671A1CE11D227F1200319E7E /* ARTNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTNewsDetailViewController.h; sourceTree = "<group>"; };
 		671A1CE21D227F1200319E7E /* ARTNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTNewsDetailViewController.m; sourceTree = "<group>"; };
+		671A1CE41D26147A00319E7E /* ARTLaunchScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTLaunchScreen.h; sourceTree = "<group>"; };
+		671A1CE51D26147A00319E7E /* ARTLaunchScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTLaunchScreen.m; sourceTree = "<group>"; };
+		671A1CE71D26149200319E7E /* ARTLaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARTLaunchScreen.xib; sourceTree = "<group>"; };
+		671A1CE91D265CB200319E7E /* ARTGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTGuideView.h; sourceTree = "<group>"; };
+		671A1CEA1D265CB200319E7E /* ARTGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTGuideView.m; sourceTree = "<group>"; };
 		6720024F1D016B4200B4A329 /* ARTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRegisterViewController.h; sourceTree = "<group>"; };
 		672002501D016B4200B4A329 /* ARTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterViewController.m; sourceTree = "<group>"; };
 		672002521D017F1800B4A329 /* ARTForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTForgetViewController.h; sourceTree = "<group>"; };
@@ -835,6 +843,11 @@
 				672002A31D17D00D00B4A329 /* ARTBannerView.m */,
 				67FA3B911D1D214B009AB7BA /* ARTPickerView.h */,
 				67FA3B921D1D214B009AB7BA /* ARTPickerView.m */,
+				671A1CE41D26147A00319E7E /* ARTLaunchScreen.h */,
+				671A1CE51D26147A00319E7E /* ARTLaunchScreen.m */,
+				671A1CE71D26149200319E7E /* ARTLaunchScreen.xib */,
+				671A1CE91D265CB200319E7E /* ARTGuideView.h */,
+				671A1CEA1D265CB200319E7E /* ARTGuideView.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -1281,6 +1294,7 @@
 				677598CB1CEDA3AF002D3947 /* ARTBookCell.xib in Resources */,
 				677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */,
 				677598A91CEC5988002D3947 /* ARTCustomTabBar.xib in Resources */,
+				671A1CE81D26149200319E7E /* ARTLaunchScreen.xib in Resources */,
 				677598BD1CEC7B2D002D3947 /* ARTBookScreen.xib in Resources */,
 				6775988A1CEC4875002D3947 /* Microsoft Yahei.ttf in Resources */,
 			);
@@ -1348,6 +1362,7 @@
 				678FFB6E1CDA009B0071EAF6 /* ARTCommentData.m in Sources */,
 				671A1CD11D2131BB00319E7E /* ARTSearchViewController.m in Sources */,
 				67FD12881CE4941B00C93DFD /* ARTShareUtil.m in Sources */,
+				671A1CEB1D265CB200319E7E /* ARTGuideView.m in Sources */,
 				678FFB621CD9FAFA0071EAF6 /* ARTBookDownData.m in Sources */,
 				6787ADD41CF7E94C002E59F5 /* ARTBookComentCell.m in Sources */,
 				677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */,
@@ -1448,6 +1463,7 @@
 				6775992E1CF5BBCD002D3947 /* ARTPointView.m in Sources */,
 				6787ADE01CF83374002E59F5 /* ARTStarRatingView.m in Sources */,
 				672002721D06CDFD00B4A329 /* UIImage+ART.m in Sources */,
+				671A1CE61D26147A00319E7E /* ARTLaunchScreen.m in Sources */,
 				672002541D017F1800B4A329 /* ARTForgetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1728,8 +1744,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ysyc.ipad;
 				PRODUCT_NAME = ART;
-				PROVISIONING_PROFILE = "258f69d9-4349-4ee4-8dd3-dffd0c21a855";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "331b3fa7-f3c0-444f-8e77-35d92510df64";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -1924,8 +1940,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ysyc.ipad;
 				PRODUCT_NAME = ART;
-				PROVISIONING_PROFILE = "258f69d9-4349-4ee4-8dd3-dffd0c21a855";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "331b3fa7-f3c0-444f-8e77-35d92510df64";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
