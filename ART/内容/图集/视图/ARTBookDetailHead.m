@@ -163,7 +163,7 @@
         self.saveButton = [self itemd:@"收藏" frame:CGRectMake(self.downButton.right + spasing, 0 , buttonWidth , ITEMD_HEIGHT)];
         [_itemsContrl addSubview:self.saveButton];
         
-        self.readButton = [self itemd:@"开始阅读" frame:CGRectMake(self.saveButton.right + spasing, 0 , buttonWidth , ITEMD_HEIGHT)];
+        self.readButton = [self itemd:@"开始鉴赏" frame:CGRectMake(self.saveButton.right + spasing, 0 , buttonWidth , ITEMD_HEIGHT)];
         [_itemsContrl addSubview:self.readButton];
     }
     return _itemsContrl;

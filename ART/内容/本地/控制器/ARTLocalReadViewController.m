@@ -28,6 +28,7 @@ UICollectionViewDataSource , ARTLocalMinCellDelegate>
 
 @property (nonatomic , strong) UIButton *backButton;
 @property (nonatomic , strong) UILabel *indexLabel;
+@property (nonatomic , strong) UIImageView *tipView;
 @property (nonatomic , strong) UICollectionView *collectionView;
 
 @property (nonatomic , assign) NSInteger pageIndex;
@@ -59,7 +60,8 @@ UICollectionViewDataSource , ARTLocalMinCellDelegate>
         [weak crareSubviews];
     }];
     
-    [self deviceOrentationDidChange:nil];
+    //[self deviceOrentationDidChange:nil];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -151,11 +153,26 @@ UICollectionViewDataSource , ARTLocalMinCellDelegate>
     if (!_markView)
     {
         _markView = [[UIView alloc] initWithFrame:self.view.bounds];
-        _markView.backgroundColor = RGBCOLOR(100, 100, 100, .7);
+        _markView.backgroundColor = RGBCOLOR(33, 33, 33, .7);
         [_markView addSubview:self.topContrl];
         
         self.bottomContrl.bottom = _markView.height;
         [_markView addSubview:self.bottomContrl];
+        
+        self.tipView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"book_icon_9"]];
+        [self.tipView sizeToFit];
+        self.tipView.center = CGPointMake(_markView.width / 2, _markView.height / 2);
+        self.tipView.top = 150;
+        [_markView addSubview:self.tipView];
+        
+        CABasicAnimation *pulse = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        pulse.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+        pulse.duration = 0.7;
+        pulse.repeatCount = MAXFLOAT;
+        pulse.autoreverses = YES;
+        pulse.fromValue = [NSNumber numberWithFloat:.84];
+        pulse.toValue = [NSNumber numberWithFloat:1.14];
+        [self.tipView.layer addAnimation:pulse forKey:@"tip"];
         
         WS(weak)
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
@@ -266,6 +283,8 @@ UICollectionViewDataSource , ARTLocalMinCellDelegate>
     self.bottomContrl.width = self.markView.width;
     self.bottomContrl.bottom = self.markView.height;
     self.indexLabel.centerX = self.topContrl.width / 2;
+    self.tipView.center = CGPointMake(self.markView.width / 2, self.markView.height / 2);
+    self.tipView.top = 150;
     self.collectionView.centerX = self.bottomContrl.width / 2;
     self.view.center = self.view.window.center;
     self.markView.left = 0;
