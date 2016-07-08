@@ -11,8 +11,9 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "ARTAssetsViewController.h"
 #import "ARTPreviewViewController.h"
+#import "ARTRequestUtil.h"
 
-@interface ARTTalkSendViewController ()
+@interface ARTTalkSendViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (nonatomic , strong) ARTTalkTextView *textView;
 @property (nonatomic , strong) UIView *inputRectView;
@@ -23,6 +24,7 @@
 
 @property (nonatomic , strong) UIView *imageRectView;
 @property (nonatomic , strong) NSMutableArray <ALAsset *> *uploadImages;
+@property (nonatomic , strong) ALAssetsLibrary *assetsLibrary;
 @end
 
 @implementation ARTTalkSendViewController
@@ -30,6 +32,14 @@
 #define IMAGE_WIDTH 125
 #define IMAGE_UPLOAD_MAX 9
 #define IMAGE_ROW_MAX 5
+
++ (ARTTalkSendViewController *)launchViewController:(UIViewController *)viewController
+{
+    ARTTalkSendViewController *vc = [[ARTTalkSendViewController alloc] init];
+    [viewController.navigationController pushViewController:vc animated:YES];
+    return vc;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -195,7 +205,7 @@
         _friendButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_friendButton setBackgroundImage:[UIImage imageNamed:@"talk_icon_2"] forState:UIControlStateNormal];
         [_friendButton setBackgroundImage:[UIImage imageNamed:@"talk_icon_1"] forState:UIControlStateSelected];
-        _friendButton.selected = YES;
+        _friendButton.selected = NO;
         [_friendButton addTarget:self action:@selector(friendButtonTouchAction) forControlEvents:UIControlEventTouchUpInside];
         [_friendButton sizeToFit];
     }
@@ -215,35 +225,74 @@
 #pragma mark ACTION_BUTTON
 - (void)barSendItemClicked
 {
+    if (!self.textView.text.length && !self.uploadImages.count)
+    {
+        [self.view displayTostError:@"文字和图片至少有一项"];
+        return;
+    }
+    
+    if (self.textView.text.length > 1000)
+    {
+        [self.view displayTostError:@"文字不能超过1000个字"];
+        return;
+    }
     [self.view endEditing:YES];
+    [self requesSend];
 }
 
 - (void)allButtonTouchAction
 {
     self.allButton.selected = !self.allButton.selected;
+    self.friendButton.selected = !self.allButton.selected;
 }
 
 - (void)friendButtonTouchAction
 {
     self.friendButton.selected = !self.friendButton.selected;
+    self.allButton.selected = !self.friendButton.selected;
 }
 
 #pragma mark ACTION_GESTURE
 - (void)imageItemsDidClick:(UITapGestureRecognizer *)tap
 {
+    [self.view endEditing:YES];
     NSInteger index = [self.imageRectView.subviews indexOfObject:tap.view];
     if (index >= self.uploadImages.count)
     {
-        ARTAssetsViewController *vc = [[ARTAssetsViewController alloc] init];
-        vc.multipleMax = IMAGE_UPLOAD_MAX - self.uploadImages.count;
         WS(weak)
-        vc.chooseBlock = ^(NSArray *assets)
-        {
-            [weak.uploadImages addObjectsFromArray:assets];
-            [weak layoutImageRect];
-        };
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-        [self presentViewController:nav animated:YES completion:nil];
+        [ARTAlertView alertTitle:@"请选择" message:@"图片来源" doneTitle:@"本地相册" cancelTitle:@"使用相机" doneBlock:^{
+            ARTAssetsViewController *vc = [[ARTAssetsViewController alloc] init];
+            vc.multipleMax = IMAGE_UPLOAD_MAX - weak.uploadImages.count;
+            WS(weak)
+            vc.chooseBlock = ^(NSArray *assets)
+            {
+                [weak.uploadImages addObjectsFromArray:assets];
+                [weak layoutImageRect];
+            };
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+            [weak presentViewController:nav animated:YES completion:nil];
+        } cancelBlock:^{
+            if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+            {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"访问摄像头出错"
+                                                                    message:@"您的设备似乎没有摄像头"
+                                                                   delegate:nil
+                                                          cancelButtonTitle:@"确定"
+                                                          otherButtonTitles: nil];
+                [alertView show];
+            }
+            else
+            {
+                UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+                picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+                picker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+                picker.showsCameraControls = YES;
+                picker.navigationBarHidden = YES;
+                picker.delegate = weak;
+                [weak presentViewController:picker animated:YES completion:nil];
+            }
+        }];
     }
     else
     {
@@ -257,5 +306,79 @@
         [self.navigationController pushViewController:preview animated:YES];
     }
 }
+
+#pragma mark REQUEST
+- (void)requesSend
+{
+    ARTSendTalkParam *param = [[ARTSendTalkParam alloc] init];
+    param.talkText = self.textView.text;
+    param.talkAllLook = STRING_FORMAT_ADC(@(self.allButton.selected));
+    for (ALAsset *asset in self.uploadImages)
+    {
+        UIImage *fullScreenImage = [UIImage imageWithCGImage:[asset.defaultRepresentation fullResolutionImage] scale:[asset.defaultRepresentation scale] orientation:(UIImageOrientation)[asset.defaultRepresentation orientation]];
+        UIImage *image = [fullScreenImage imageOfOrientationUp];
+        [param.talkImages addObject:UIImageJPEGRepresentation(image, .5)];
+    }
+    [self displayHUD];
+    WS(weak)
+    [ARTRequestUtil requestSendTalk:param completion:^(NSURLSessionDataTask *task) {
+        [weak hideHUD];
+        [weak.view displayTostSuccess:@"发表成功"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_TALK_DIDSEND object:nil];
+        [weak performBlock:^{
+            [weak.navigationController popViewControllerAnimated:YES];
+        } afterDelay:1.5];
+    } failure:^(ErrorItemd *error) {
+        [weak hideHUD];
+        [weak.view displayTostError:error.errMsg];
+    }];
+}
+
+#pragma mark DELEGATE
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    __weak typeof(self) weakSelf = self;
+    [self.assetsLibrary writeImageToSavedPhotosAlbum:image.CGImage orientation:(ALAssetOrientation)image.imageOrientation completionBlock: ^(NSURL *assetURL, NSError *error) {
+        
+        [weakSelf.assetsLibrary assetForURL:assetURL resultBlock: ^(ALAsset *asset) {
+            [weakSelf.uploadImages addObject:asset];
+        }failureBlock: ^(NSError *error) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"保存图片出错" message:nil delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil];
+            [alertView show];
+        }];
+    }];
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (ALAssetsLibrary *)assetsLibrary {
+    static dispatch_once_t onceToken;
+    static ALAssetsLibrary *sharedInstance = nil;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[ALAssetsLibrary alloc] init];
+    });
+    
+    return sharedInstance;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

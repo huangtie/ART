@@ -22,4 +22,7 @@
 //内容
 @property (nonatomic , copy) NSString *text;
 
+//回复某人的昵称
+@property (nonatomic , copy) NSString *replayNick;
+
 @end

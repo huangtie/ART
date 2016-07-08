@@ -31,13 +31,13 @@
 @property (nonatomic , strong) NSArray <NSString *> *talkImages;
 
 //发布人 信息
-@property (nonatomic , strong) ARTUserData *sender;
+@property (nonatomic , strong) ARTUserInfo *sender;
 
 //赞数量
 @property (nonatomic , copy) NSString *zanCount;
 
 //点赞列表(只展示前10条)
-@property (nonatomic , strong) NSArray <ARTUserData *> *zanList;
+@property (nonatomic , strong) NSArray *zanList;
 
 //评论数量
 @property (nonatomic , copy) NSString *comCount;

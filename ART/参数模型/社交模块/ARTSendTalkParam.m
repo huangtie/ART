@@ -10,6 +10,16 @@
 
 @implementation ARTSendTalkParam
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        self.talkImages = [NSMutableArray array];
+    }
+    return self;
+}
+
 - (NSMutableDictionary *)buildRequestParam
 {
     NSMutableDictionary *param = [NSMutableDictionary dictionary];

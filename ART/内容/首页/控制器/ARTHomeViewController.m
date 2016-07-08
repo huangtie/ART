@@ -15,6 +15,7 @@
 #import <UIScrollView+EmptyDataSet.h>
 #import "ARTTabBarViewController.h"
 #import "ARTNewsViewController.h"
+#import "ARTTalkViewController.h"
 
 @interface ARTHomeViewController ()
 <ARTBannerViewDataSource,ARTBannerViewDelegate,UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetDelegate,
@@ -155,9 +156,9 @@ DZNEmptyDataSetSource>
 //        NSDictionary *dic4 = @{@"title":@"拍卖",@"image":@"home_icon_4"};
 //        NSDictionary *dic5 = @{@"title":@"关于",@"image":@"home_icon_5"};
 //        NSDictionary *dic6 = @{@"title":@"藏友",@"image":@"home_icon_6"};
-//        NSDictionary *dic7 = @{@"title":@"更多",@"image":@"home_icon_7"};
+        NSDictionary *dic7 = @{@"title":@"动态",@"image":@"home_icon_7"};
         
-        NSArray *items = @[@[dic1,dic2,dic3]];
+        NSArray *items = @[@[dic1,dic2,dic3,dic7]];
         CGSize size = CGSizeMake(180, 160);
         _iconCell.width = SCREEN_WIDTH;
         _iconCell.height = size.height * items.count;
@@ -222,6 +223,10 @@ DZNEmptyDataSetSource>
     if ([button.titleLabel.text isEqualToString:@"文章"])
     {
         [ARTNewsViewController launchViewController:self];
+    }
+    if ([button.titleLabel.text isEqualToString:@"动态"])
+    {
+        [ARTTalkViewController launchViewController:self];
     }
 }
 

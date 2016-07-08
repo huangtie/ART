@@ -14,4 +14,10 @@
 
 @implementation ARTTalkComData
 
++ (NSDictionary *)objectClassInArray
+{
+    return @{@"replays" : [ARTTalkReplayData class]};
+}
+
+
 @end

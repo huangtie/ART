@@ -607,6 +607,8 @@
             {
                 ARTTalkData *data = [ARTTalkData mj_objectWithKeyValues:dic];
                 [list addObject:data];
+                NSArray *images = dic[@"talkImages"];
+                data.talkImages = images;
             }
             completion(task , list);
         }

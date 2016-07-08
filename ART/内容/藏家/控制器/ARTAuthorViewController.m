@@ -100,6 +100,14 @@ DZNEmptyDataSetSource>
         [weak.collectionView reloadData];
     } failure:^(ErrorItemd *error) {
         [weak hideHUD];
+        if (isRefresh)
+        {
+            [weak.collectionView.mj_header endRefreshing];
+        }
+        else
+        {
+            [weak.collectionView.mj_footer endRefreshing];
+        }
     }];
 }
 

@@ -13,5 +13,6 @@
 #define IMAGE_EMPTY_TWO [UIImage imageNamed:@"emoji_icon_5"]
 
 #define IMAGE_PLACEHOLDER_BOOK [UIImage imageNamed:@"book_bg_placeholder"]
+#define IMAGE_PLACEHOLDER_MEMBER [UIImage imageNamed:@"user_icon_2"]
 
 #endif

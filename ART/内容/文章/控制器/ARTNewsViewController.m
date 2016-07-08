@@ -83,6 +83,14 @@
         [weak.tableView reloadData];
     } failure:^(ErrorItemd *error) {
         [weak hideHUD];
+        if (isRefresh)
+        {
+            [weak.tableView.mj_header endRefreshing];
+        }
+        else
+        {
+            [weak.tableView.mj_footer endRefreshing];
+        }
     }];
 }
 

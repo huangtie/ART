@@ -8,11 +8,13 @@
 
 #import "ARTSocialViewController.h"
 #import "ARTSocialCell.h"
-#import "ARTTalkSendViewController.h"
+#import "ARTTalkViewController.h"
 #import "ARTLocalPageViewController.h"
-#import "ARTPurchasesViewController.h"
+#import "ARTNewsViewController.h"
+#import <UIScrollView+EmptyDataSet.h>
 
-@interface ARTSocialViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ARTSocialViewController ()<UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetDelegate,
+DZNEmptyDataSetSource>
 
 @property (nonatomic , strong) UITableView *tableView;
 
@@ -31,21 +33,45 @@
     
     self.navigationBar.hidden = YES;
     
-    self.icons = @[@"talk_icon_chat",@"talk_icon_friend",@"talk_icon_shuo",@"talk_icon_news"];
-    self.titles = @[@"我的私信",@"我的关注",@"动态",@"文章中心"];
+//    self.icons = @[@"talk_icon_chat",@"talk_icon_friend",@"talk_icon_shuo",@"talk_icon_news"];
+//    self.titles = @[@"我的私信",@"我的关注",@"动态",@"文章中心"];
+    self.icons = @[@"talk_icon_shuo",@"talk_icon_news"];
+    self.titles = @[@"动态",@"文章中心"];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIGATION_HEIGH, self.view.width, self.view.height - NAVIGATION_HEIGH)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIGATION_HEIGH + 0.5, self.view.width, self.view.height - NAVIGATION_HEIGH)];
     self.tableView.backgroundColor = COLOR_YSYC_GRAY;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.emptyDataSetDelegate = self;
+    self.tableView.emptyDataSetSource = self;
     [self.view addSubview:self.tableView];
+    
+    WS(weak)
+    self.reachability = [YYReachability reachability];
+    self.reachability.notifyBlock = ^(YYReachability *reachability)
+    {
+        if (reachability.status == YYReachabilityStatusNone)
+        {
+            weak.isNetworkError = YES;
+        }
+        else
+        {
+            weak.isNetworkError = NO;
+        }
+        [weak.tableView reloadData];
+    };
+    if (self.reachability.status == YYReachabilityStatusNone)
+    {
+        self.isNetworkError = YES;
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark DELEGATE_TABLEVIEW
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.icons.count;
+    return self.isNetworkError ? 0 : self.icons.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -58,12 +84,6 @@
     }
     
     [cell updateData:self.icons[indexPath.row] titleName:self.titles[indexPath.row] isWhite:indexPath.row % 2 != 0];
-    
-    if (indexPath.row == 0)
-    {
-        [cell upDateNoRead:13];
-    }
-    
     return cell;
 }
 
@@ -86,22 +106,47 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.row == 1)
+    if (indexPath.row == 3)
     {
         ARTLocalPageViewController *vc = [[ARTLocalPageViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
     
-    if (indexPath.row == 2)
+    if (indexPath.row == 0)
     {
-        ARTTalkSendViewController *vc = [[ARTTalkSendViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
+        [ARTTalkViewController launchViewController:self];
     }
     
-    if (indexPath.row == 3)
+    if (indexPath.row == 1)
     {
-        [ARTPurchasesViewController launch:self];
+        [ARTNewsViewController launchViewController:self];
     }
+}
+
+#pragma mark DELEGAT_DZNEMPTY
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [[NSAttributedString alloc] initWithString:@"当前无网络连接" attributes:@{NSFontAttributeName:FONT_WITH_18}];
+}
+
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return IMAGE_EMPTY_ONE;
+}
+
+- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+- (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView
+{
+    return self.isNetworkError;
+}
+
+- (void)emptyDataSet:(UIScrollView *)scrollView didTapView:(UIView *)view
+{
+    
 }
 
 

@@ -10,4 +10,6 @@
 
 @interface ARTTalkSendViewController : ARTBaseViewController
 
++ (ARTTalkSendViewController *)launchViewController:(UIViewController *)viewController;
+
 @end

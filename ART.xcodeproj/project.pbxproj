@@ -24,6 +24,15 @@
 		671A1CE61D26147A00319E7E /* ARTLaunchScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CE51D26147A00319E7E /* ARTLaunchScreen.m */; };
 		671A1CE81D26149200319E7E /* ARTLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 671A1CE71D26149200319E7E /* ARTLaunchScreen.xib */; };
 		671A1CEB1D265CB200319E7E /* ARTGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CEA1D265CB200319E7E /* ARTGuideView.m */; };
+		671A1CEE1D2A503900319E7E /* ARTTalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CED1D2A503900319E7E /* ARTTalkViewController.m */; };
+		671A1CF41D2A5E4A00319E7E /* ARTTalkHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CF31D2A5E4A00319E7E /* ARTTalkHeadView.m */; };
+		671A1CF71D2BB39C00319E7E /* ARTTalkFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CF61D2BB39C00319E7E /* ARTTalkFooterView.m */; };
+		671A1CFD1D2CB69C00319E7E /* ARTTalkInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CFC1D2CB69C00319E7E /* ARTTalkInputView.m */; };
+		671A1D001D2D031200319E7E /* ARTTalkImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1CFF1D2D031200319E7E /* ARTTalkImageViewController.m */; };
+		671A1D031D2D0DB600319E7E /* ARTTalkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1D021D2D0DB600319E7E /* ARTTalkDetailViewController.m */; };
+		671A1D061D2D1E6800319E7E /* ARTTalkDetailSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1D051D2D1E6800319E7E /* ARTTalkDetailSection.m */; };
+		671A1D091D2DF95C00319E7E /* ARTTalkDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1D081D2DF95C00319E7E /* ARTTalkDetailCell.m */; };
+		671A1D0C1D2E455200319E7E /* ARTTalkWallpaper.m in Sources */ = {isa = PBXBuildFile; fileRef = 671A1D0B1D2E455200319E7E /* ARTTalkWallpaper.m */; };
 		672002511D016B4200B4A329 /* ARTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002501D016B4200B4A329 /* ARTRegisterViewController.m */; };
 		672002541D017F1800B4A329 /* ARTForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002531D017F1800B4A329 /* ARTForgetViewController.m */; };
 		6720025D1D051BC100B4A329 /* ARTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6720025C1D051BC100B4A329 /* ARTAlertView.m */; };
@@ -165,6 +174,24 @@
 		671A1CE71D26149200319E7E /* ARTLaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARTLaunchScreen.xib; sourceTree = "<group>"; };
 		671A1CE91D265CB200319E7E /* ARTGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTGuideView.h; sourceTree = "<group>"; };
 		671A1CEA1D265CB200319E7E /* ARTGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTGuideView.m; sourceTree = "<group>"; };
+		671A1CEC1D2A503900319E7E /* ARTTalkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkViewController.h; sourceTree = "<group>"; };
+		671A1CED1D2A503900319E7E /* ARTTalkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkViewController.m; sourceTree = "<group>"; };
+		671A1CF21D2A5E4A00319E7E /* ARTTalkHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkHeadView.h; sourceTree = "<group>"; };
+		671A1CF31D2A5E4A00319E7E /* ARTTalkHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkHeadView.m; sourceTree = "<group>"; };
+		671A1CF51D2BB39C00319E7E /* ARTTalkFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkFooterView.h; sourceTree = "<group>"; };
+		671A1CF61D2BB39C00319E7E /* ARTTalkFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkFooterView.m; sourceTree = "<group>"; };
+		671A1CFB1D2CB69C00319E7E /* ARTTalkInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkInputView.h; sourceTree = "<group>"; };
+		671A1CFC1D2CB69C00319E7E /* ARTTalkInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkInputView.m; sourceTree = "<group>"; };
+		671A1CFE1D2D031200319E7E /* ARTTalkImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkImageViewController.h; sourceTree = "<group>"; };
+		671A1CFF1D2D031200319E7E /* ARTTalkImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkImageViewController.m; sourceTree = "<group>"; };
+		671A1D011D2D0DB600319E7E /* ARTTalkDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkDetailViewController.h; sourceTree = "<group>"; };
+		671A1D021D2D0DB600319E7E /* ARTTalkDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkDetailViewController.m; sourceTree = "<group>"; };
+		671A1D041D2D1E6800319E7E /* ARTTalkDetailSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkDetailSection.h; sourceTree = "<group>"; };
+		671A1D051D2D1E6800319E7E /* ARTTalkDetailSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkDetailSection.m; sourceTree = "<group>"; };
+		671A1D071D2DF95C00319E7E /* ARTTalkDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkDetailCell.h; sourceTree = "<group>"; };
+		671A1D081D2DF95C00319E7E /* ARTTalkDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkDetailCell.m; sourceTree = "<group>"; };
+		671A1D0A1D2E455200319E7E /* ARTTalkWallpaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTalkWallpaper.h; sourceTree = "<group>"; };
+		671A1D0B1D2E455200319E7E /* ARTTalkWallpaper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkWallpaper.m; sourceTree = "<group>"; };
 		6720024F1D016B4200B4A329 /* ARTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRegisterViewController.h; sourceTree = "<group>"; };
 		672002501D016B4200B4A329 /* ARTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRegisterViewController.m; sourceTree = "<group>"; };
 		672002521D017F1800B4A329 /* ARTForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTForgetViewController.h; sourceTree = "<group>"; };
@@ -668,8 +695,14 @@
 		672002621D05893500B4A329 /* 控制器 */ = {
 			isa = PBXGroup;
 			children = (
+				671A1CEC1D2A503900319E7E /* ARTTalkViewController.h */,
+				671A1CED1D2A503900319E7E /* ARTTalkViewController.m */,
+				671A1D011D2D0DB600319E7E /* ARTTalkDetailViewController.h */,
+				671A1D021D2D0DB600319E7E /* ARTTalkDetailViewController.m */,
 				672002641D058A0500B4A329 /* ARTTalkSendViewController.h */,
 				672002651D058A0500B4A329 /* ARTTalkSendViewController.m */,
+				671A1CFE1D2D031200319E7E /* ARTTalkImageViewController.h */,
+				671A1CFF1D2D031200319E7E /* ARTTalkImageViewController.m */,
 			);
 			path = "控制器";
 			sourceTree = "<group>";
@@ -679,6 +712,18 @@
 			children = (
 				672002671D058D0600B4A329 /* ARTTalkTextView.h */,
 				672002681D058D0600B4A329 /* ARTTalkTextView.m */,
+				671A1CF21D2A5E4A00319E7E /* ARTTalkHeadView.h */,
+				671A1CF31D2A5E4A00319E7E /* ARTTalkHeadView.m */,
+				671A1CF51D2BB39C00319E7E /* ARTTalkFooterView.h */,
+				671A1CF61D2BB39C00319E7E /* ARTTalkFooterView.m */,
+				671A1CFB1D2CB69C00319E7E /* ARTTalkInputView.h */,
+				671A1CFC1D2CB69C00319E7E /* ARTTalkInputView.m */,
+				671A1D041D2D1E6800319E7E /* ARTTalkDetailSection.h */,
+				671A1D051D2D1E6800319E7E /* ARTTalkDetailSection.m */,
+				671A1D071D2DF95C00319E7E /* ARTTalkDetailCell.h */,
+				671A1D081D2DF95C00319E7E /* ARTTalkDetailCell.m */,
+				671A1D0A1D2E455200319E7E /* ARTTalkWallpaper.h */,
+				671A1D0B1D2E455200319E7E /* ARTTalkWallpaper.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -1360,6 +1405,7 @@
 				67FA3B931D1D214B009AB7BA /* ARTPickerView.m in Sources */,
 				673AD0181D1A39650081300E /* ARTPurchasesCell.m in Sources */,
 				678FFB6E1CDA009B0071EAF6 /* ARTCommentData.m in Sources */,
+				671A1CF41D2A5E4A00319E7E /* ARTTalkHeadView.m in Sources */,
 				671A1CD11D2131BB00319E7E /* ARTSearchViewController.m in Sources */,
 				67FD12881CE4941B00C93DFD /* ARTShareUtil.m in Sources */,
 				671A1CEB1D265CB200319E7E /* ARTGuideView.m in Sources */,
@@ -1371,6 +1417,7 @@
 				6787ADEA1CFC2A47002E59F5 /* NSString+ART.m in Sources */,
 				672002691D058D0600B4A329 /* ARTTalkTextView.m in Sources */,
 				672002AD1D17D8D300B4A329 /* ARTCityParam.m in Sources */,
+				671A1CFD1D2CB69C00319E7E /* ARTTalkInputView.m in Sources */,
 				677598B51CEC68A5002D3947 /* ARTSocialViewController.m in Sources */,
 				677534ED1CC8B62D00B34C59 /* main.m in Sources */,
 				67FD12941CE5AC4C00C93DFD /* ARTDaoUtil.m in Sources */,
@@ -1382,6 +1429,7 @@
 				67B92D5A1CDB3E960009E5B9 /* ARTSendTalkParam.m in Sources */,
 				6787ADF71CFC4283002E59F5 /* TFHppleElement.m in Sources */,
 				677598C61CED701D002D3947 /* ARTBookGroupCell.m in Sources */,
+				671A1CF71D2BB39C00319E7E /* ARTTalkFooterView.m in Sources */,
 				672002661D058A0500B4A329 /* ARTTalkSendViewController.m in Sources */,
 				677598CA1CEDA3AF002D3947 /* ARTBookCell.m in Sources */,
 				67FD127B1CE465D100C93DFD /* ARTEasemobServer.m in Sources */,
@@ -1389,6 +1437,7 @@
 				672002A71D17D48600B4A329 /* ARTNewsData.m in Sources */,
 				67FD128B1CE5769F00C93DFD /* ARTGTPushUtil.m in Sources */,
 				678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */,
+				671A1D001D2D031200319E7E /* ARTTalkImageViewController.m in Sources */,
 				67B92D531CDB378D0009E5B9 /* ARTPurchasesLogData.m in Sources */,
 				671A1CD71D225F5800319E7E /* ARTAuthorCell.m in Sources */,
 				677598A41CEC5938002D3947 /* ARTTabBarViewController.m in Sources */,
@@ -1397,6 +1446,7 @@
 				678B4F841CF6DC30006CEB17 /* UIBarButtonItem+ART.m in Sources */,
 				677598B81CEC68C6002D3947 /* ARTAuctionViewController.m in Sources */,
 				6787ADDA1CF82A72002E59F5 /* ARTBookInputView.m in Sources */,
+				671A1D091D2DF95C00319E7E /* ARTTalkDetailCell.m in Sources */,
 				6701C9421CD1F63400E0EA6A /* ARTHttpServers.m in Sources */,
 				6701C9511CD2122100E0EA6A /* ARTBaseParam.m in Sources */,
 				671A1CCB1D2123E800319E7E /* ARTMemberSetupViewController.m in Sources */,
@@ -1406,6 +1456,7 @@
 				67FD12A01CE9D32800C93DFD /* ARTDownLoadManager.m in Sources */,
 				67B92D4D1CDB2F2B0009E5B9 /* ARTPurchasesData.m in Sources */,
 				672002601D0579AF00B4A329 /* ARTSocialCell.m in Sources */,
+				671A1D0C1D2E455200319E7E /* ARTTalkWallpaper.m in Sources */,
 				672002A11D1408EE00B4A329 /* UIImage+Resize.m in Sources */,
 				6787ADFD1CFC4376002E59F5 /* XPathQuery.m in Sources */,
 				67FA3B811D1B873B009AB7BA /* ARTPurchaParam.m in Sources */,
@@ -1416,6 +1467,7 @@
 				672002A41D17D00D00B4A329 /* ARTBannerView.m in Sources */,
 				671A1CE31D227F1200319E7E /* ARTNewsDetailViewController.m in Sources */,
 				671A1CE01D22697800319E7E /* ARTNewsCell.m in Sources */,
+				671A1D031D2D0DB600319E7E /* ARTTalkDetailViewController.m in Sources */,
 				6701C9541CD2131500E0EA6A /* ARTLoginParam.m in Sources */,
 				6787AE001CFC478C002E59F5 /* ARTBookHtmlViewController.m in Sources */,
 				67FA3B901D1D069F009AB7BA /* ARTMemberInputViewController.m in Sources */,
@@ -1444,6 +1496,7 @@
 				672002B01D17D92C00B4A329 /* ARTCityData.m in Sources */,
 				672002751D07FB2100B4A329 /* ARTLocalCell.m in Sources */,
 				671A1CC21D20FDA700319E7E /* ARTMemberLogViewController.m in Sources */,
+				671A1D061D2D1E6800319E7E /* ARTTalkDetailSection.m in Sources */,
 				67FD12A11CE9D32800C93DFD /* ARTUserManager.m in Sources */,
 				671A1CC81D211A0500319E7E /* ARTMemberMybookViewController.m in Sources */,
 				677598AC1CEC680E002D3947 /* ARTHomeViewController.m in Sources */,
@@ -1452,6 +1505,7 @@
 				678FFB401CD893A90071EAF6 /* ARTUpsetParam.m in Sources */,
 				673AD0151D1A35B40081300E /* ARTPurchasesViewController.m in Sources */,
 				67FA3B8D1D1BF239009AB7BA /* ARTMemberEditCell.m in Sources */,
+				671A1CEE1D2A503900319E7E /* ARTTalkViewController.m in Sources */,
 				672002A01D1408EE00B4A329 /* ImageLoader.m in Sources */,
 				677598C01CED681B002D3947 /* ARTTalkListParam.m in Sources */,
 				67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */,

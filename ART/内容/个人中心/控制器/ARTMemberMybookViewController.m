@@ -101,6 +101,14 @@ DZNEmptyDataSetSource>
         [weak.bookCollection reloadData];
     } failure:^(ErrorItemd *error) {
         [weak hideHUD];
+        if (isRefresh)
+        {
+            [weak.bookCollection.mj_header endRefreshing];
+        }
+        else
+        {
+            [weak.bookCollection.mj_footer endRefreshing];
+        }
     }];
 }
 

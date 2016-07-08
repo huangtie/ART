@@ -40,6 +40,7 @@
 {
     _userinfo = userinfo;
     [self saveUserData:userinfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_ACCOUNT_LOGINSUCCSES object:nil];
 }
 
 - (BOOL)isLogin
@@ -80,6 +81,7 @@
 {
     self.userinfo = nil;
     [[self class] removeFile:FILE_NAME_ARCHIVE];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_ACCOUNT_DIDLOGOUT object:nil];
 }
 
 - (void)saveUserData:(ARTUserData *)data

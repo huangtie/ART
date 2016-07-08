@@ -10,4 +10,9 @@
 
 @implementation ARTTalkData
 
++ (NSDictionary *)objectClassInArray
+{
+    return @{@"comList" : [ARTTalkComData class],@"zanList" : [ARTUserInfo class]};
+}
+
 @end

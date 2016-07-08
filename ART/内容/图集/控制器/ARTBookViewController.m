@@ -206,6 +206,14 @@ DZNEmptyDataSetSource>
             weak.isNetworkError = YES;
             [weak.bookCollection reloadData];
         }
+        if (isRefresh)
+        {
+            [weak.bookCollection.mj_header endRefreshing];
+        }
+        else
+        {
+            [weak.bookCollection.mj_footer endRefreshing];
+        }
     }];
 }
 
