@@ -117,6 +117,9 @@
 		67B92D661CDB58AA0009E5B9 /* ARTTalkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D651CDB58AA0009E5B9 /* ARTTalkData.m */; };
 		67B92D691CDC6F3A0009E5B9 /* ARTTalkComData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D681CDC6F3A0009E5B9 /* ARTTalkComData.m */; };
 		67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B92D6B1CDC81000009E5B9 /* ARTZanListParam.m */; };
+		67F457B71D2FAF6A00D75D5A /* ARTAccountFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F457B61D2FAF6A00D75D5A /* ARTAccountFollowViewController.m */; };
+		67F457BA1D2FB16500D75D5A /* ARTAccountFollowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F457B91D2FB16500D75D5A /* ARTAccountFollowCell.m */; };
+		67F457BD1D2FB62400D75D5A /* ARTAccountListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F457BC1D2FB62400D75D5A /* ARTAccountListViewController.m */; };
 		67FA3B811D1B873B009AB7BA /* ARTPurchaParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FA3B801D1B873B009AB7BA /* ARTPurchaParam.m */; };
 		67FA3B871D1BD085009AB7BA /* ARTMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FA3B861D1BD085009AB7BA /* ARTMemberViewController.m */; };
 		67FA3B8A1D1BEFE0009AB7BA /* ARTMemberEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FA3B891D1BEFE0009AB7BA /* ARTMemberEditViewController.m */; };
@@ -357,6 +360,12 @@
 		67B92D681CDC6F3A0009E5B9 /* ARTTalkComData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTalkComData.m; sourceTree = "<group>"; };
 		67B92D6A1CDC81000009E5B9 /* ARTZanListParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTZanListParam.h; sourceTree = "<group>"; };
 		67B92D6B1CDC81000009E5B9 /* ARTZanListParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTZanListParam.m; sourceTree = "<group>"; };
+		67F457B51D2FAF6A00D75D5A /* ARTAccountFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAccountFollowViewController.h; sourceTree = "<group>"; };
+		67F457B61D2FAF6A00D75D5A /* ARTAccountFollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAccountFollowViewController.m; sourceTree = "<group>"; };
+		67F457B81D2FB16500D75D5A /* ARTAccountFollowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAccountFollowCell.h; sourceTree = "<group>"; };
+		67F457B91D2FB16500D75D5A /* ARTAccountFollowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAccountFollowCell.m; sourceTree = "<group>"; };
+		67F457BB1D2FB62400D75D5A /* ARTAccountListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAccountListViewController.h; sourceTree = "<group>"; };
+		67F457BC1D2FB62400D75D5A /* ARTAccountListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAccountListViewController.m; sourceTree = "<group>"; };
 		67FA3B7F1D1B873B009AB7BA /* ARTPurchaParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARTPurchaParam.h; path = "ART/内容/充值/视图/ARTPurchaParam.h"; sourceTree = SOURCE_ROOT; };
 		67FA3B801D1B873B009AB7BA /* ARTPurchaParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARTPurchaParam.m; path = "ART/内容/充值/视图/ARTPurchaParam.m"; sourceTree = SOURCE_ROOT; };
 		67FA3B851D1BD085009AB7BA /* ARTMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTMemberViewController.h; sourceTree = "<group>"; };
@@ -839,6 +848,7 @@
 				673AD0101D1A301A0081300E /* 充值 */,
 				671A1CCC1D21319C00319E7E /* 搜索 */,
 				671A1CD81D22680400319E7E /* 文章 */,
+				67F457B21D2FAEE700D75D5A /* 用户 */,
 				67FA3B821D1BCFDE009AB7BA /* 个人中心 */,
 			);
 			path = "内容";
@@ -1200,6 +1210,35 @@
 			path = "网络层";
 			sourceTree = "<group>";
 		};
+		67F457B21D2FAEE700D75D5A /* 用户 */ = {
+			isa = PBXGroup;
+			children = (
+				67F457B31D2FAEE700D75D5A /* 控制器 */,
+				67F457B41D2FAEE700D75D5A /* 视图 */,
+			);
+			path = "用户";
+			sourceTree = "<group>";
+		};
+		67F457B31D2FAEE700D75D5A /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				67F457B51D2FAF6A00D75D5A /* ARTAccountFollowViewController.h */,
+				67F457B61D2FAF6A00D75D5A /* ARTAccountFollowViewController.m */,
+				67F457BB1D2FB62400D75D5A /* ARTAccountListViewController.h */,
+				67F457BC1D2FB62400D75D5A /* ARTAccountListViewController.m */,
+			);
+			path = "控制器";
+			sourceTree = "<group>";
+		};
+		67F457B41D2FAEE700D75D5A /* 视图 */ = {
+			isa = PBXGroup;
+			children = (
+				67F457B81D2FB16500D75D5A /* ARTAccountFollowCell.h */,
+				67F457B91D2FB16500D75D5A /* ARTAccountFollowCell.m */,
+			);
+			path = "视图";
+			sourceTree = "<group>";
+		};
 		67FA3B821D1BCFDE009AB7BA /* 个人中心 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1434,6 +1473,8 @@
 				677598CA1CEDA3AF002D3947 /* ARTBookCell.m in Sources */,
 				67FD127B1CE465D100C93DFD /* ARTEasemobServer.m in Sources */,
 				671A1CD41D225E9D00319E7E /* ARTAuthorViewController.m in Sources */,
+				67F457BD1D2FB62400D75D5A /* ARTAccountListViewController.m in Sources */,
+				67F457B71D2FAF6A00D75D5A /* ARTAccountFollowViewController.m in Sources */,
 				672002A71D17D48600B4A329 /* ARTNewsData.m in Sources */,
 				67FD128B1CE5769F00C93DFD /* ARTGTPushUtil.m in Sources */,
 				678FFB341CD3471E0071EAF6 /* ARTRegisterParam.m in Sources */,
@@ -1483,6 +1524,7 @@
 				6720027D1D08246600B4A329 /* ARTLocalPageViewController.m in Sources */,
 				671A1CDD1D22684E00319E7E /* ARTNewsViewController.m in Sources */,
 				6787AE0C1CFED85A002E59F5 /* ARTShareView.m in Sources */,
+				67F457BA1D2FB16500D75D5A /* ARTAccountFollowCell.m in Sources */,
 				672002AA1D17D79D00B4A329 /* ARTNoticeData.m in Sources */,
 				6775992B1CF5AE70002D3947 /* UIScrollView+ART.m in Sources */,
 				6787AE091CFE7FAA002E59F5 /* ARTAuthorDetailViewController.m in Sources */,
@@ -1798,7 +1840,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ysyc.ipad;
 				PRODUCT_NAME = ART;
-				PROVISIONING_PROFILE = "331b3fa7-f3c0-444f-8e77-35d92510df64";
+				PROVISIONING_PROFILE = "4b5f928c-de10-4418-85e2-e514a6b822d0";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -1994,7 +2036,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ysyc.ipad;
 				PRODUCT_NAME = ART;
-				PROVISIONING_PROFILE = "331b3fa7-f3c0-444f-8e77-35d92510df64";
+				PROVISIONING_PROFILE = "4b5f928c-de10-4418-85e2-e514a6b822d0";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

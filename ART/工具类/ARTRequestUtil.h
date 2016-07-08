@@ -169,11 +169,11 @@ typedef NS_ENUM(NSInteger, PURCHA_STATUS)
 
 #pragma mark 6.2 获取用户列表
 + (NSURLSessionDataTask *)requestMemberList:(ARTCustomParam *)param
-                                 completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTUserData *> *datas))completion
+                                 completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTUserInfo *> *datas))completion
                                     failure:(void (^)(ErrorItemd *error))failure;
 
 #pragma mark 6.3 获取我关注的人列表
-+ (NSURLSessionDataTask *)requestMyFans:(void (^)(NSURLSessionDataTask *task, NSArray<ARTUserData *> *datas))completion
++ (NSURLSessionDataTask *)requestMyFans:(void (^)(NSURLSessionDataTask *task, NSArray<ARTUserInfo *> *datas))completion
                                 failure:(void (^)(ErrorItemd *error))failure;
 
 #pragma mark 6.4 发表说说

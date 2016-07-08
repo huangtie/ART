@@ -419,7 +419,7 @@
 
 #pragma mark 6.2 获取用户列表
 + (NSURLSessionDataTask *)requestMemberList:(ARTCustomParam *)param
-                                 completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTUserData *> *datas))completion
+                                 completion:(void (^)(NSURLSessionDataTask *task, NSArray<ARTUserInfo *> *datas))completion
                                     failure:(void (^)(ErrorItemd *error))failure
 {
     return [ARTHttpServers requestWithPOST:URL_TALK_GETMENBERLIST param:[param buildRequestParam] completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
@@ -428,7 +428,7 @@
             NSMutableArray *list = [NSMutableArray array];
             for (NSDictionary *dic in [result objectForKey:@"data"])
             {
-                ARTUserData *data = [ARTUserData mj_objectWithKeyValues:dic];
+                ARTUserInfo *data = [ARTUserInfo mj_objectWithKeyValues:dic];
                 [list addObject:data];
             }
             completion(task , list);
@@ -441,7 +441,7 @@
 }
 
 #pragma mark 6.3 获取我关注的人列表
-+ (NSURLSessionDataTask *)requestMyFans:(void (^)(NSURLSessionDataTask *task, NSArray<ARTUserData *> *datas))completion
++ (NSURLSessionDataTask *)requestMyFans:(void (^)(NSURLSessionDataTask *task, NSArray<ARTUserInfo *> *datas))completion
                                 failure:(void (^)(ErrorItemd *error))failure
 {
     return [ARTHttpServers requestWithPOST:URL_TALK_GETFANSLIST param:[[NSDictionary alloc] init] completion:^(NSURLSessionDataTask *task, id result, NSError *error) {
@@ -450,7 +450,7 @@
             NSMutableArray *list = [NSMutableArray array];
             for (NSDictionary *dic in [result objectForKey:@"data"])
             {
-                ARTUserData *data = [ARTUserData mj_objectWithKeyValues:dic];
+                ARTUserInfo *data = [ARTUserInfo mj_objectWithKeyValues:dic];
                 [list addObject:data];
             }
             completion(task , list);
