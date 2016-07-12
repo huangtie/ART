@@ -36,8 +36,6 @@
     if (self)
     {
         self.readData = readData;
-        self.downManager = [[ARTDownLoadManager alloc] init];
-        
         [[ARTDownLoadManager sharedInstance].downQueueList addObject:self];
         [self downLoadBegan];
     }
@@ -50,7 +48,6 @@
     if (self)
     {
         self.bookData = bookData;
-        self.downManager = [[ARTDownLoadManager alloc] init];
         [self.downManager deleteBook:bookData.bookID completion:^{
             [self.downManager inserBook:bookData completion:^{
                 [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DOWNLOAD_STATUSCHANGE object:bookData.bookID];
@@ -90,9 +87,15 @@
             {
                 weak.downOperation = [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:photoData.downURL] options:SDWebImageDownloaderLowPriority progress:nil completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
                     if(!weak) return;
-                    NSString *fileName = FILE_NAME_IMAGE(weak.readData.bookID);
-                    [UIImageJPEGRepresentation(image, 1.0) writeToFile:FILE_PATH_PIC(fileName) options:NSAtomicWrite error:nil];
-                    [weak.downManager inserSaveURL:photoData.ID url:fileName completion:^(FMDatabase *db) {
+                    NSString *fileName = [NSString stringWithFormat:@"FM%@%@%@.jpg",weak.readData.bookID,photoData.ID,@((NSInteger)[[NSDate date] timeIntervalSince1970])];
+                    NSString *filePath = FILE_PATH_PIC(fileName);
+                    BOOL isDone = [UIImageJPEGRepresentation(image, 1.0) writeToFile:filePath options:NSAtomicWrite error:nil];
+                    if (!isDone)
+                    {
+                        [weak downLoadBegan];
+                        return;
+                    }
+                    [weak.downManager inserSaveURL:photoData.ID url:fileName completion:^() {
                         if(!weak) return;
                         [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_DOWNLOAD_STATUSCHANGE object:weak.readData.bookID];
                         [weak downLoadBegan];
@@ -116,6 +119,15 @@
         [self.downOperation cancel];
     }
     [[ARTDownLoadManager sharedInstance].downQueueList removeObject:self];
+}
+
+- (ARTDownLoadManager *)downManager
+{
+    if (!_downManager)
+    {
+        _downManager = [[ARTDownLoadManager alloc] init];
+    }
+    return _downManager;
 }
 
 @end

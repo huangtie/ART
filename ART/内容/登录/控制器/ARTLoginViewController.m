@@ -21,7 +21,7 @@ typedef enum
     LOGIN_TYPE_WECHAT,              //微信
 }LOGIN_TYPE;
 
-@interface ARTLoginViewController()
+@interface ARTLoginViewController()<UITextFieldDelegate>
 
 @property (nonatomic , strong) UITextField *nameTextField;
 @property (nonatomic , strong) UITextField *pawTextField;
@@ -194,6 +194,8 @@ typedef enum
         _pawTextField.font = FONT_WITH_15;
         _pawTextField.placeholder = @"密码";
         _pawTextField.secureTextEntry = YES;
+        _pawTextField.returnKeyType = UIReturnKeyDone;
+        _pawTextField.delegate = self;
     }
     return _pawTextField;
 }
@@ -340,7 +342,13 @@ typedef enum
         [weak hideHUD];
         [weak.view displayTostError:error.errMsg];
     }];
-    
+}
+
+#pragma mark DELEGATE
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.view endEditing:YES];
+    return NO;
 }
 
 @end

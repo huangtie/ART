@@ -45,7 +45,10 @@
     self.imageView = [[UIImageView alloc] initWithFrame:self.scrollView.bounds];
     self.imageView.clipsToBounds = YES;
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    self.imageView.image = [UIImage imageWithContentsOfFile:FILE_PATH_PIC(self.photoData.saveURL)];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:FILE_PATH_PIC(self.photoData.saveURL)])
+    {
+        self.imageView.image = [UIImage imageWithContentsOfFile:FILE_PATH_PIC(self.photoData.saveURL)];
+    }
     [self.scrollView addSubview:self.imageView];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doubleTouchAction)];

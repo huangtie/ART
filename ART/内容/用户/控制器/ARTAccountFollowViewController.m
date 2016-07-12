@@ -11,6 +11,7 @@
 #import "ARTAccountFollowCell.h"
 #import "ARTRequestUtil.h"
 #import "ARTAccountListViewController.h"
+#import "ARTAccountViewController.h"
 
 @interface ARTAccountFollowViewController ()<DZNEmptyDataSetDelegate,
 DZNEmptyDataSetSource,UITableViewDataSource,UITableViewDelegate,ARTAccountFollowCellDelegate>
@@ -116,6 +117,12 @@ DZNEmptyDataSetSource,UITableViewDataSource,UITableViewDelegate,ARTAccountFollow
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return CGFLOAT_MIN;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [ARTAccountViewController launchViewController:self userID:self.dataList[indexPath.row].userID];
 }
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView

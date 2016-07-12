@@ -701,19 +701,21 @@ ARTBookDetailHeadDelegate>
 
 - (void)detailHeadDidTouchDown
 {
-    if ([[ARTDownLoadManager sharedInstance] isDownLoad:self.bookID])
-    {
-        WS(weak)
-        [ARTAlertView alertTitle:@"温馨提示" message:@"该图集已经存在本地,是否重新下载?" doneTitle:@"重新下载" cancelTitle:@"取消" doneBlock:^{
-            [weak requestDownLoad];
-        } cancelBlock:^{
-            
-        }];
-    }
-    else
-    {
-        [self requestDownLoad];
-    }
+    [[ARTUserManager sharedInstance] isLogin:self logined:^(ARTUserData *userInfo) {
+        if ([[ARTDownLoadManager sharedInstance] isDownLoad:self.bookID])
+        {
+            WS(weak)
+            [ARTAlertView alertTitle:@"温馨提示" message:@"该图集已经存在本地,是否重新下载?" doneTitle:@"重新下载" cancelTitle:@"取消" doneBlock:^{
+                [weak requestDownLoad];
+            } cancelBlock:^{
+                
+            }];
+        }
+        else
+        {
+            [self requestDownLoad];
+        }
+    }];
 }
 
 - (void)detailHeadDidTouchSave

@@ -9,6 +9,7 @@
 #import "ARTAccountListViewController.h"
 #import "ARTAccountFollowCell.h"
 #import "ARTRequestUtil.h"
+#import "ARTAccountViewController.h"
 
 @interface ARTAccountListViewController ()<UITableViewDelegate,UITableViewDataSource,ARTAccountFollowCellDelegate>
 
@@ -171,7 +172,7 @@
         if (result.count)
         {
             ARTUserInfo *info = result.firstObject;
-            info.isFans = @"1";
+            info.isFan = @"1";
             [weak.tableView reloadData];
         }
         [weak.view displayTostSuccess:@"关注成功"];
@@ -196,7 +197,7 @@
         cell = [[ARTAccountFollowCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
         cell.delegate = self;
     }
-    [cell bindingWithData:self.dataList[indexPath.row] type:self.dataList[indexPath.row].isFans.boolValue ? ACCOUNT_CELL_TYPE_TALK : ACCOUNT_CELL_TYPE_FOLLOW];
+    [cell bindingWithData:self.dataList[indexPath.row] type:self.dataList[indexPath.row].isFan.boolValue ? ACCOUNT_CELL_TYPE_TALK : ACCOUNT_CELL_TYPE_FOLLOW];
     return cell;
 }
 
@@ -213,6 +214,12 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return CGFLOAT_MIN;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [ARTAccountViewController launchViewController:self userID:self.dataList[indexPath.row].userID];
 }
 
 #pragma mark DELEGATE_CELL

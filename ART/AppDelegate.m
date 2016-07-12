@@ -71,7 +71,7 @@
         [ARTGuideView launchIn:self.window];
         
     }
-//    [ARTLaunchScreen launchIn:self.window completion:^{
+    [ARTLaunchScreen launchIn:self.window completion:^{
         if (!FIRST_OUT_APP)
         {
             [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
@@ -79,7 +79,7 @@
         FIRST_IN_APP(YES);
         //初始化个推
         [ARTGTPushUtil sharedInstance];
-//    }];
+    }];
     
     return YES;
 }

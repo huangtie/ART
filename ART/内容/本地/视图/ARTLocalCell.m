@@ -64,6 +64,7 @@
     return self;
 }
 
+#define ShakeAnimationKey @"ShakeAnimationKey"
 - (void)updateData:(ARTBookLocalData *)data isDelete:(BOOL)isDelete
 {
     self.localData = data;
@@ -85,6 +86,17 @@
     
     //删除按钮
     self.deleteButton.hidden = !isDelete;
+    if (isDelete)
+    {
+        if (!self.layer.animationKeys.count)
+        {
+            [self.layer addAnimation:[self shakeAnimation] forKey:ShakeAnimationKey];
+        }
+    }
+    else
+    {
+        [self.layer removeAllAnimations];
+    }
     
     //进度
     CGFloat bi = (CGFloat)data.bookFinishCount / (CGFloat)data.bookAllCount;
@@ -94,6 +106,18 @@
     self.statusLabel.attributedText = [ARTLocalCell statusText:[ARTDownLoadManager isDownLoading:data.bookID]];
     
 
+}
+
+- (CABasicAnimation *)shakeAnimation
+{
+    CABasicAnimation* shake = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    //设置抖动幅度
+    shake.fromValue = [NSNumber numberWithFloat:-0.04];
+    shake.toValue = [NSNumber numberWithFloat:+0.04];
+    shake.duration = 0.1;
+    shake.autoreverses = YES; //是否重复
+    shake.repeatCount = MAXFLOAT;
+    return shake;
 }
 
 #pragma mark GET_SET

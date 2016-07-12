@@ -45,7 +45,15 @@
     self.data = data;
     
     ImageLoader *loader = [[ImageLoader alloc] init];
-    [loader displayImage:FILE_PATH_PIC(data.saveURL) inImageView:self.imageView];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:FILE_PATH_PIC(data.saveURL)])
+    {
+        [loader displayImage:FILE_PATH_PIC(data.saveURL) inImageView:self.imageView];
+    }
+    else
+    {
+        [loader displayImage:nil inImageView:self.imageView];
+    }
+    
     if (isSelect)
     {
         [self.imageView clipRadius:5 borderWidth:5 borderColor:COLOR_YSYC_ORANGE];

@@ -74,25 +74,7 @@
 {
     self.userID = data.userID;
     
-    WS(weak)
-    [self.faceView.layer setImageWithURL:[NSURL URLWithString:data.userImage]
-                    placeholder:IMAGE_PLACEHOLDER_MEMBER
-                        options:YYWebImageOptionShowNetworkActivity
-                     completion:^(UIImage *image, NSURL *url, YYWebImageFromType from, YYWebImageStage stage, NSError *error) {
-                         if (image && stage == YYWebImageStageFinished)
-                         {
-                             weak.faceView.layer.contentsRect = CGRectMake(0, 0, 1, 1);
-                             weak.faceView.image = image;
-                             if (from != YYWebImageFromMemoryCacheFast)
-                             {
-                                 CATransition *transition = [CATransition animation];
-                                 transition.duration = 0.15;
-                                 transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-                                 transition.type = kCATransitionFade;
-                                 [weak.faceView.layer addAnimation:transition forKey:@"contents"];
-                             }
-                         }
-                     }];
+    [self.faceView sd_setImageWithURL:[NSURL URLWithString:data.userImage] placeholderImage:IMAGE_PLACEHOLDER_MEMBER];
     
     self.nickLabel.text = data.userNick;
     

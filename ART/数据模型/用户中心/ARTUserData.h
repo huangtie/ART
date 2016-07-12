@@ -72,7 +72,7 @@
 @property (nonatomic , copy) NSString *userLook;
 
 //是否已关注
-@property (nonatomic , copy) NSString *isFans;
+@property (nonatomic , copy) NSString *isFan;
 
 //地区
 @property (nonatomic , strong) ARTUserCity *userCity;

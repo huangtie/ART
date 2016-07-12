@@ -36,8 +36,8 @@ DZNEmptyDataSetSource>
     
 //    self.icons = @[@"talk_icon_chat",@"talk_icon_friend",@"talk_icon_shuo",@"talk_icon_news"];
 //    self.titles = @[@"我的私信",@"我的关注",@"动态",@"文章中心"];
-    self.icons = @[@"talk_icon_friend",@"talk_icon_shuo",@"talk_icon_news"];
-    self.titles = @[@"我的关注",@"动态",@"文章中心"];
+    self.icons = @[@"talk_icon_shuo",@"talk_icon_news"];
+    self.titles = @[@"动态",@"文章中心"];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIGATION_HEIGH + 0.5, self.view.width, self.view.height - NAVIGATION_HEIGH)];
     self.tableView.backgroundColor = COLOR_YSYC_GRAY;
@@ -113,20 +113,20 @@ DZNEmptyDataSetSource>
         [self.navigationController pushViewController:vc animated:YES];
     }
     
-    if (indexPath.row == 0)
-    {
-        WS(weak)
-        [[ARTUserManager sharedInstance] isLogin:self logined:^(ARTUserData *userInfo) {
-            [ARTAccountFollowViewController launchViewController:weak];
-        }];
-    }
+//    if (indexPath.row == 0)
+//    {
+//        WS(weak)
+//        [[ARTUserManager sharedInstance] isLogin:self logined:^(ARTUserData *userInfo) {
+//            [ARTAccountFollowViewController launchViewController:weak];
+//        }];
+//    }
     
-    if (indexPath.row == 1)
+    if (indexPath.row == 0)
     {
         [ARTTalkViewController launchViewController:self];
     }
     
-    if (indexPath.row == 2)
+    if (indexPath.row == 1)
     {
         [ARTNewsViewController launchViewController:self];
     }
