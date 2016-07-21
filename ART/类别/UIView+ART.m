@@ -61,6 +61,17 @@
     [self makeToast:message];
 }
 
+- (void)displayTost:(NSString *)message offsetY:(CGFloat)offsetY
+{
+    [CSToastManager sharedStyle].messageFont = FONT_WITH_20;
+    [CSToastManager sharedStyle].cornerRadius = 5.0;
+    [CSToastManager sharedStyle].horizontalPadding = 15;
+    [CSToastManager sharedStyle].backgroundColor = RGBCOLOR(33, 33, 33, .8);
+    [CSToastManager setDefaultPosition:[NSValue valueWithCGPoint:CGPointMake(self.centerX, offsetY)]];
+    [self makeToast:message];
+}
+
+
 - (void)rock
 {
     CAKeyframeAnimation * animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.translation.x"];

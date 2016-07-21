@@ -10,6 +10,7 @@
 #import "ARTAccountFollowCell.h"
 #import "ARTRequestUtil.h"
 #import "ARTAccountViewController.h"
+#import "ARTConversationViewController.h"
 
 @interface ARTAccountListViewController ()<UITableViewDelegate,UITableViewDataSource,ARTAccountFollowCellDelegate>
 
@@ -219,13 +220,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [ARTAccountViewController launchViewController:self userID:self.dataList[indexPath.row].userID];
+    [ARTAccountViewController launchViewController:self userID:self.dataList[indexPath.row].userID info:self.dataList[indexPath.row]];
 }
 
 #pragma mark DELEGATE_CELL
-- (void)accountDidTouchButton:(NSString *)userID
+- (void)accountDidTouchButton:(ARTUserInfo *)info
 {
-    [self requestAddFollow:userID];
+    if (!info.isFan.boolValue)
+    {
+        [self requestAddFollow:info.userID];
+    }
+    else
+    {
+        [ARTConversationViewController launchViewController:self chater:info.userID info:info];
+    }
 }
 
 @end

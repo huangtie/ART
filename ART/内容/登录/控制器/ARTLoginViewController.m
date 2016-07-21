@@ -328,20 +328,27 @@ typedef enum
     [self displayHUD];
     WS(weak)
     [ARTRequestUtil requestLogin:param completion:^(NSURLSessionDataTask *task, ARTUserData *data) {
-        [weak hideHUD];
         [ARTUserManager sharedInstance].userinfo = data;
-        [weak.view displayTostSuccess:@"登录成功"];
-        [weak performBlock:^{
-            [weak.navigationController popViewControllerAnimated:YES];
-            if (weak.loginSuccessBlock)
-            {
-                weak.loginSuccessBlock(data);
-            }
-        } afterDelay:1.5];
+        [[ARTEasemobServer services] loginEasemob:data.userInfo.userID completion:^(EMError *error) {
+            [weak.view displayTostSuccess:@"登录成功"];
+            [weak hideHUD];
+            [weak loginFinish:data];
+        }];
     } failure:^(ErrorItemd *error) {
         [weak hideHUD];
         [weak.view displayTostError:error.errMsg];
     }];
+}
+
+- (void)loginFinish:(ARTUserData *)data
+{
+    [self performBlock:^{
+        [self.navigationController popViewControllerAnimated:YES];
+        if (self.loginSuccessBlock)
+        {
+            self.loginSuccessBlock(data);
+        }
+    } afterDelay:1.5];
 }
 
 #pragma mark DELEGATE

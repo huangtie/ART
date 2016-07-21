@@ -100,7 +100,7 @@
     self.face.left = left;
     WS(weak)
     [self.face.layer setImageWithURL:[NSURL URLWithString:commentData.userImage]
-                            placeholder:IMAGE_PLACEHOLDER_BOOK
+                            placeholder:IMAGE_PLACEHOLDER_MEMBER(commentData.userID.integerValue)
                                 options:YYWebImageOptionShowNetworkActivity
                              completion:^(UIImage *image, NSURL *url, YYWebImageFromType from, YYWebImageStage stage, NSError *error) {
                                  if (!weak.face) return;

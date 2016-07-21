@@ -85,7 +85,7 @@
         [self addSubview:face];
         __weak __typeof(face) weak = face;
         [face.layer setImageWithURL:[NSURL URLWithString:comData.comImage]
-                        placeholder:IMAGE_PLACEHOLDER_MEMBER
+                        placeholder:IMAGE_PLACEHOLDER_MEMBER(comData.comUser.integerValue)
                             options:YYWebImageOptionShowNetworkActivity
                          completion:^(UIImage *image, NSURL *url, YYWebImageFromType from, YYWebImageStage stage, NSError *error) {
                                       if (image && stage == YYWebImageStageFinished)

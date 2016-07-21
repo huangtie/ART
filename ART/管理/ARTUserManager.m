@@ -31,6 +31,9 @@
         if([self loadUserData])
         {
             self.userinfo = [self loadUserData];
+            [[ARTEasemobServer services] loginEasemob:self.userinfo.userInfo.userID completion:^(EMError *error) {
+                
+            }];
         }
     }
     return self;
@@ -82,6 +85,9 @@
     self.userinfo = nil;
     [[self class] removeFile:FILE_NAME_ARCHIVE];
     [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_ACCOUNT_DIDLOGOUT object:nil];
+    [[ARTEasemobServer services] logoutEasemob:^(EMError *error) {
+        
+    }];
 }
 
 - (void)saveUserData:(ARTUserData *)data

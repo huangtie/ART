@@ -19,4 +19,15 @@
 //是否是邮箱格式
 - (BOOL)isEmailNumber;
 
+/**
+ *  返回正则表达式匹配的第一个结果
+ *
+ *  @param pattern 正则表达式
+ *
+ *  @return 匹配的第一个结果 是NSTextCheckingResult类型
+ */
+- (NSTextCheckingResult *)firstMacthWithPattern:(NSString *)pattern;
+
+- (NSArray <NSTextCheckingResult *> *)machesWithPattern:(NSString *)pattern;
+
 @end

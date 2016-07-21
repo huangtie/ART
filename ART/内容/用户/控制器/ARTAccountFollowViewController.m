@@ -12,6 +12,7 @@
 #import "ARTRequestUtil.h"
 #import "ARTAccountListViewController.h"
 #import "ARTAccountViewController.h"
+#import "ARTConversationViewController.h"
 
 @interface ARTAccountFollowViewController ()<DZNEmptyDataSetDelegate,
 DZNEmptyDataSetSource,UITableViewDataSource,UITableViewDelegate,ARTAccountFollowCellDelegate>
@@ -122,7 +123,7 @@ DZNEmptyDataSetSource,UITableViewDataSource,UITableViewDelegate,ARTAccountFollow
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [ARTAccountViewController launchViewController:self userID:self.dataList[indexPath.row].userID];
+    [ARTAccountViewController launchViewController:self userID:self.dataList[indexPath.row].userID info:self.dataList[indexPath.row]];
 }
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
@@ -151,9 +152,9 @@ DZNEmptyDataSetSource,UITableViewDataSource,UITableViewDelegate,ARTAccountFollow
 }
 
 #pragma mark DELEGAT_CELL
-- (void)accountDidTouchButton:(NSString *)userID
+- (void)accountDidTouchButton:(ARTUserInfo *)info
 {
-    
+    [ARTConversationViewController launchViewController:self chater:info.userID info:info];
 }
 
 @end

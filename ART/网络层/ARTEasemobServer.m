@@ -131,6 +131,13 @@
     });
 }
 
+- (EMConversation *)conversationForChatter:(NSString *)chatter
+{
+    return [[EMClient sharedClient].chatManager getConversation:chatter
+                                                           type:EMConversationTypeChat
+                                               createIfNotExist:YES];
+}
+
 #pragma mark DELEGATE-CLIENT
 - (void)didLoginFromOtherDevice
 {

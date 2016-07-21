@@ -19,7 +19,7 @@
         [self setBackgroundImage:[UIImage imageWithColor:COLOR_YSYC_ORANGE] forState:UIControlStateDisabled];
         [self setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forState:UIControlStateNormal];
         
-        [self clipRadius:0 borderWidth:1 borderColor:COLOR_YSYC_ORANGE];
+        [self clipRadius:2 borderWidth:2 borderColor:COLOR_YSYC_ORANGE];
         [self.titleLabel setFont:FONT_WITH_20];
     }
     return self;

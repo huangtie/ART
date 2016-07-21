@@ -58,6 +58,8 @@
 		672002B31D18EFD400B4A329 /* ARTHomeNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672002B21D18EFD400B4A329 /* ARTHomeNoticeViewController.m */; };
 		673AD0151D1A35B40081300E /* ARTPurchasesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 673AD0141D1A35B40081300E /* ARTPurchasesViewController.m */; };
 		673AD0181D1A39650081300E /* ARTPurchasesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 673AD0171D1A39650081300E /* ARTPurchasesCell.m */; };
+		674761EB1D40B27800AB2775 /* ARTConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 674761EA1D40B27800AB2775 /* ARTConversationListViewController.m */; };
+		674761EE1D40B66100AB2775 /* ARTConversationListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 674761ED1D40B66100AB2775 /* ARTConversationListCell.m */; };
 		677534ED1CC8B62D00B34C59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EC1CC8B62D00B34C59 /* main.m */; };
 		677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 677534EF1CC8B62D00B34C59 /* AppDelegate.m */; };
 		677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677534F71CC8B62E00B34C59 /* Assets.xcassets */; };
@@ -126,6 +128,29 @@
 		67D66F541D338E8F00411342 /* ARTAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F531D338E8F00411342 /* ARTAccountViewController.m */; };
 		67D66F571D33916900411342 /* ARTAccountDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F561D33916900411342 /* ARTAccountDetailViewController.m */; };
 		67D66F5A1D3391E800411342 /* ARTAccountTalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F591D3391E800411342 /* ARTAccountTalkViewController.m */; };
+		67D66F5D1D34CF8F00411342 /* ARTAccountDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F5C1D34CF8F00411342 /* ARTAccountDetailCell.m */; };
+		67D66F631D34ECB700411342 /* ARTConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F621D34ECB700411342 /* ARTConversationViewController.m */; };
+		67D66F651D34F23100411342 /* FaceList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67D66F641D34F23100411342 /* FaceList.plist */; };
+		67D66F681D34F29B00411342 /* ARTConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F671D34F29B00411342 /* ARTConversationCell.m */; };
+		67D66F6E1D35E2F900411342 /* ARTEmojiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F6D1D35E2F900411342 /* ARTEmojiManager.m */; };
+		67D66F731D36287600411342 /* ARTConversationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F721D36287600411342 /* ARTConversationUtil.m */; };
+		67D66F761D372EC900411342 /* ARTConversationInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F751D372EC900411342 /* ARTConversationInput.m */; };
+		67D66F7C1D3778B100411342 /* ARTEmojiKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F7B1D3778B100411342 /* ARTEmojiKeyboard.m */; };
+		67D66FA21D38E77800411342 /* EMAudioPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F841D38E77800411342 /* EMAudioPlayerUtil.m */; };
+		67D66FA31D38E77800411342 /* EMAudioRecorderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F861D38E77800411342 /* EMAudioRecorderUtil.m */; };
+		67D66FA41D38E77800411342 /* EMCDDeviceManager+Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F881D38E77800411342 /* EMCDDeviceManager+Media.m */; };
+		67D66FA51D38E77800411342 /* EMCDDeviceManager+Microphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F8A1D38E77800411342 /* EMCDDeviceManager+Microphone.m */; };
+		67D66FA61D38E77800411342 /* EMCDDeviceManager+ProximitySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F8C1D38E77800411342 /* EMCDDeviceManager+ProximitySensor.m */; };
+		67D66FA71D38E77800411342 /* EMCDDeviceManager+Remind.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F8E1D38E77800411342 /* EMCDDeviceManager+Remind.m */; };
+		67D66FA81D38E77800411342 /* EMCDDeviceManagerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F911D38E77800411342 /* EMCDDeviceManagerBase.m */; };
+		67D66FA91D38E77800411342 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F951D38E77800411342 /* amrFileCodec.mm */; };
+		67D66FAA1D38E77800411342 /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F971D38E77800411342 /* wav.mm */; };
+		67D66FAB1D38E77800411342 /* EMVoiceConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 67D66F991D38E77800411342 /* EMVoiceConverter.mm */; };
+		67D66FAC1D38E77800411342 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D66F9D1D38E77800411342 /* libopencore-amrnb.a */; };
+		67D66FAD1D38E77800411342 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D66FA11D38E77800411342 /* libopencore-amrwb.a */; };
+		67D66FB01D38EC5800411342 /* ARTRecorderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66FAF1D38EC5800411342 /* ARTRecorderControl.m */; };
+		67D66FB31D38FD7B00411342 /* ARTPlayAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66FB21D38FD7B00411342 /* ARTPlayAnimation.m */; };
+		67D66FB61D3CC0B000411342 /* EMVoiceMessageBody+ART.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D66FB51D3CC0B000411342 /* EMVoiceMessageBody+ART.m */; };
 		67F457B71D2FAF6A00D75D5A /* ARTAccountFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F457B61D2FAF6A00D75D5A /* ARTAccountFollowViewController.m */; };
 		67F457BA1D2FB16500D75D5A /* ARTAccountFollowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F457B91D2FB16500D75D5A /* ARTAccountFollowCell.m */; };
 		67F457BD1D2FB62400D75D5A /* ARTAccountListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F457BC1D2FB62400D75D5A /* ARTAccountListViewController.m */; };
@@ -253,6 +278,10 @@
 		673AD0141D1A35B40081300E /* ARTPurchasesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTPurchasesViewController.m; sourceTree = "<group>"; };
 		673AD0161D1A39650081300E /* ARTPurchasesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTPurchasesCell.h; sourceTree = "<group>"; };
 		673AD0171D1A39650081300E /* ARTPurchasesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTPurchasesCell.m; sourceTree = "<group>"; };
+		674761E91D40B27800AB2775 /* ARTConversationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTConversationListViewController.h; sourceTree = "<group>"; };
+		674761EA1D40B27800AB2775 /* ARTConversationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTConversationListViewController.m; sourceTree = "<group>"; };
+		674761EC1D40B66100AB2775 /* ARTConversationListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTConversationListCell.h; sourceTree = "<group>"; };
+		674761ED1D40B66100AB2775 /* ARTConversationListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTConversationListCell.m; sourceTree = "<group>"; };
 		677534E81CC8B62D00B34C59 /* ART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ART.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677534EC1CC8B62D00B34C59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		677534EE1CC8B62D00B34C59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -389,6 +418,57 @@
 		67D66F561D33916900411342 /* ARTAccountDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAccountDetailViewController.m; sourceTree = "<group>"; };
 		67D66F581D3391E800411342 /* ARTAccountTalkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAccountTalkViewController.h; sourceTree = "<group>"; };
 		67D66F591D3391E800411342 /* ARTAccountTalkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAccountTalkViewController.m; sourceTree = "<group>"; };
+		67D66F5B1D34CF8F00411342 /* ARTAccountDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAccountDetailCell.h; sourceTree = "<group>"; };
+		67D66F5C1D34CF8F00411342 /* ARTAccountDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAccountDetailCell.m; sourceTree = "<group>"; };
+		67D66F611D34ECB700411342 /* ARTConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTConversationViewController.h; sourceTree = "<group>"; };
+		67D66F621D34ECB700411342 /* ARTConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTConversationViewController.m; sourceTree = "<group>"; };
+		67D66F641D34F23100411342 /* FaceList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FaceList.plist; sourceTree = "<group>"; };
+		67D66F661D34F29B00411342 /* ARTConversationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTConversationCell.h; sourceTree = "<group>"; };
+		67D66F671D34F29B00411342 /* ARTConversationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTConversationCell.m; sourceTree = "<group>"; };
+		67D66F6C1D35E2F900411342 /* ARTEmojiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEmojiManager.h; sourceTree = "<group>"; };
+		67D66F6D1D35E2F900411342 /* ARTEmojiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEmojiManager.m; sourceTree = "<group>"; };
+		67D66F711D36287600411342 /* ARTConversationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTConversationUtil.h; sourceTree = "<group>"; };
+		67D66F721D36287600411342 /* ARTConversationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTConversationUtil.m; sourceTree = "<group>"; };
+		67D66F741D372EC900411342 /* ARTConversationInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTConversationInput.h; sourceTree = "<group>"; };
+		67D66F751D372EC900411342 /* ARTConversationInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTConversationInput.m; sourceTree = "<group>"; };
+		67D66F7A1D3778B100411342 /* ARTEmojiKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEmojiKeyboard.h; sourceTree = "<group>"; };
+		67D66F7B1D3778B100411342 /* ARTEmojiKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEmojiKeyboard.m; sourceTree = "<group>"; };
+		67D66F7F1D38E77800411342 /* EMCDDeviceManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerDelegate.h; sourceTree = "<group>"; };
+		67D66F801D38E77800411342 /* EMCDDeviceManagerProximitySensorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerProximitySensorDelegate.h; sourceTree = "<group>"; };
+		67D66F821D38E77800411342 /* DemoErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoErrorCode.h; sourceTree = "<group>"; };
+		67D66F831D38E77800411342 /* EMAudioPlayerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAudioPlayerUtil.h; sourceTree = "<group>"; };
+		67D66F841D38E77800411342 /* EMAudioPlayerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAudioPlayerUtil.m; sourceTree = "<group>"; };
+		67D66F851D38E77800411342 /* EMAudioRecorderUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAudioRecorderUtil.h; sourceTree = "<group>"; };
+		67D66F861D38E77800411342 /* EMAudioRecorderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAudioRecorderUtil.m; sourceTree = "<group>"; };
+		67D66F871D38E77800411342 /* EMCDDeviceManager+Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Media.h"; sourceTree = "<group>"; };
+		67D66F881D38E77800411342 /* EMCDDeviceManager+Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Media.m"; sourceTree = "<group>"; };
+		67D66F891D38E77800411342 /* EMCDDeviceManager+Microphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Microphone.h"; sourceTree = "<group>"; };
+		67D66F8A1D38E77800411342 /* EMCDDeviceManager+Microphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Microphone.m"; sourceTree = "<group>"; };
+		67D66F8B1D38E77800411342 /* EMCDDeviceManager+ProximitySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+ProximitySensor.h"; sourceTree = "<group>"; };
+		67D66F8C1D38E77800411342 /* EMCDDeviceManager+ProximitySensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+ProximitySensor.m"; sourceTree = "<group>"; };
+		67D66F8D1D38E77800411342 /* EMCDDeviceManager+Remind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Remind.h"; sourceTree = "<group>"; };
+		67D66F8E1D38E77800411342 /* EMCDDeviceManager+Remind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Remind.m"; sourceTree = "<group>"; };
+		67D66F8F1D38E77800411342 /* EMCDDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManager.h; sourceTree = "<group>"; };
+		67D66F901D38E77800411342 /* EMCDDeviceManagerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerBase.h; sourceTree = "<group>"; };
+		67D66F911D38E77800411342 /* EMCDDeviceManagerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCDDeviceManagerBase.m; sourceTree = "<group>"; };
+		67D66F941D38E77800411342 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		67D66F951D38E77800411342 /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
+		67D66F961D38E77800411342 /* wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
+		67D66F971D38E77800411342 /* wav.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
+		67D66F981D38E77800411342 /* EMVoiceConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMVoiceConverter.h; sourceTree = "<group>"; };
+		67D66F991D38E77800411342 /* EMVoiceConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EMVoiceConverter.mm; sourceTree = "<group>"; };
+		67D66F9B1D38E77800411342 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		67D66F9C1D38E77800411342 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		67D66F9D1D38E77800411342 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		67D66F9F1D38E77800411342 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		67D66FA01D38E77800411342 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		67D66FA11D38E77800411342 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		67D66FAE1D38EC5800411342 /* ARTRecorderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTRecorderControl.h; sourceTree = "<group>"; };
+		67D66FAF1D38EC5800411342 /* ARTRecorderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTRecorderControl.m; sourceTree = "<group>"; };
+		67D66FB11D38FD7B00411342 /* ARTPlayAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTPlayAnimation.h; sourceTree = "<group>"; };
+		67D66FB21D38FD7B00411342 /* ARTPlayAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTPlayAnimation.m; sourceTree = "<group>"; };
+		67D66FB41D3CC0B000411342 /* EMVoiceMessageBody+ART.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMVoiceMessageBody+ART.h"; sourceTree = "<group>"; };
+		67D66FB51D3CC0B000411342 /* EMVoiceMessageBody+ART.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMVoiceMessageBody+ART.m"; sourceTree = "<group>"; };
 		67F457B51D2FAF6A00D75D5A /* ARTAccountFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAccountFollowViewController.h; sourceTree = "<group>"; };
 		67F457B61D2FAF6A00D75D5A /* ARTAccountFollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAccountFollowViewController.m; sourceTree = "<group>"; };
 		67F457B81D2FB16500D75D5A /* ARTAccountFollowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAccountFollowCell.h; sourceTree = "<group>"; };
@@ -443,6 +523,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6787ADFA1CFC42A9002E59F5 /* libxml2.tbd in Frameworks */,
+				67D66FAC1D38E77800411342 /* libopencore-amrnb.a in Frameworks */,
+				67D66FAD1D38E77800411342 /* libopencore-amrwb.a in Frameworks */,
 				F57062AFCB5EAE7038E51A71 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -858,6 +940,7 @@
 			children = (
 				672002761D08202900B4A329 /* 图片资源.xcassets */,
 				677598891CEC4875002D3947 /* Microsoft Yahei.ttf */,
+				67D66F641D34F23100411342 /* FaceList.plist */,
 			);
 			path = "资源";
 			sourceTree = "<group>";
@@ -878,6 +961,7 @@
 				671A1CCC1D21319C00319E7E /* 搜索 */,
 				671A1CD81D22680400319E7E /* 文章 */,
 				67F457B21D2FAEE700D75D5A /* 用户 */,
+				67D66F5E1D34EC2C00411342 /* 聊天 */,
 				67FA3B821D1BCFDE009AB7BA /* 个人中心 */,
 			);
 			path = "内容";
@@ -1094,6 +1178,7 @@
 		6787ADEE1CFC4219002E59F5 /* 第三方 */ = {
 			isa = PBXGroup;
 			children = (
+				67D66F7D1D38E77800411342 /* DeviceHelper */,
 				67D66F3D1D338CD400411342 /* QHPageContainer */,
 				6720029B1D1408EE00B4A329 /* 异步加载沙盒图片 */,
 				6787ADEF1CFC4283002E59F5 /* HTML */,
@@ -1196,6 +1281,8 @@
 				67FD128A1CE5769F00C93DFD /* ARTGTPushUtil.m */,
 				67FD128C1CE57D5300C93DFD /* ARTUMengUtil.h */,
 				67FD128D1CE57D5300C93DFD /* ARTUMengUtil.m */,
+				67D66F711D36287600411342 /* ARTConversationUtil.h */,
+				67D66F721D36287600411342 /* ARTConversationUtil.m */,
 			);
 			path = "工具类";
 			sourceTree = "<group>";
@@ -1261,6 +1348,132 @@
 			path = QHPageContainer;
 			sourceTree = "<group>";
 		};
+		67D66F5E1D34EC2C00411342 /* 聊天 */ = {
+			isa = PBXGroup;
+			children = (
+				67D66F5F1D34EC2C00411342 /* 控制器 */,
+				67D66F601D34EC2C00411342 /* 视图 */,
+			);
+			path = "聊天";
+			sourceTree = "<group>";
+		};
+		67D66F5F1D34EC2C00411342 /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				674761E91D40B27800AB2775 /* ARTConversationListViewController.h */,
+				674761EA1D40B27800AB2775 /* ARTConversationListViewController.m */,
+				67D66F611D34ECB700411342 /* ARTConversationViewController.h */,
+				67D66F621D34ECB700411342 /* ARTConversationViewController.m */,
+			);
+			path = "控制器";
+			sourceTree = "<group>";
+		};
+		67D66F601D34EC2C00411342 /* 视图 */ = {
+			isa = PBXGroup;
+			children = (
+				67D66F661D34F29B00411342 /* ARTConversationCell.h */,
+				67D66F671D34F29B00411342 /* ARTConversationCell.m */,
+				67D66F741D372EC900411342 /* ARTConversationInput.h */,
+				67D66F751D372EC900411342 /* ARTConversationInput.m */,
+				67D66F7A1D3778B100411342 /* ARTEmojiKeyboard.h */,
+				67D66F7B1D3778B100411342 /* ARTEmojiKeyboard.m */,
+				67D66FAE1D38EC5800411342 /* ARTRecorderControl.h */,
+				67D66FAF1D38EC5800411342 /* ARTRecorderControl.m */,
+				67D66FB11D38FD7B00411342 /* ARTPlayAnimation.h */,
+				67D66FB21D38FD7B00411342 /* ARTPlayAnimation.m */,
+				67D66FB41D3CC0B000411342 /* EMVoiceMessageBody+ART.h */,
+				67D66FB51D3CC0B000411342 /* EMVoiceMessageBody+ART.m */,
+				674761EC1D40B66100AB2775 /* ARTConversationListCell.h */,
+				674761ED1D40B66100AB2775 /* ARTConversationListCell.m */,
+			);
+			path = "视图";
+			sourceTree = "<group>";
+		};
+		67D66F7D1D38E77800411342 /* DeviceHelper */ = {
+			isa = PBXGroup;
+			children = (
+				67D66F7E1D38E77800411342 /* delegates */,
+				67D66F811D38E77800411342 /* internal */,
+				67D66F921D38E77800411342 /* VoiceConvert */,
+			);
+			path = DeviceHelper;
+			sourceTree = "<group>";
+		};
+		67D66F7E1D38E77800411342 /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				67D66F7F1D38E77800411342 /* EMCDDeviceManagerDelegate.h */,
+				67D66F801D38E77800411342 /* EMCDDeviceManagerProximitySensorDelegate.h */,
+			);
+			path = delegates;
+			sourceTree = "<group>";
+		};
+		67D66F811D38E77800411342 /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				67D66F821D38E77800411342 /* DemoErrorCode.h */,
+				67D66F831D38E77800411342 /* EMAudioPlayerUtil.h */,
+				67D66F841D38E77800411342 /* EMAudioPlayerUtil.m */,
+				67D66F851D38E77800411342 /* EMAudioRecorderUtil.h */,
+				67D66F861D38E77800411342 /* EMAudioRecorderUtil.m */,
+				67D66F871D38E77800411342 /* EMCDDeviceManager+Media.h */,
+				67D66F881D38E77800411342 /* EMCDDeviceManager+Media.m */,
+				67D66F891D38E77800411342 /* EMCDDeviceManager+Microphone.h */,
+				67D66F8A1D38E77800411342 /* EMCDDeviceManager+Microphone.m */,
+				67D66F8B1D38E77800411342 /* EMCDDeviceManager+ProximitySensor.h */,
+				67D66F8C1D38E77800411342 /* EMCDDeviceManager+ProximitySensor.m */,
+				67D66F8D1D38E77800411342 /* EMCDDeviceManager+Remind.h */,
+				67D66F8E1D38E77800411342 /* EMCDDeviceManager+Remind.m */,
+				67D66F8F1D38E77800411342 /* EMCDDeviceManager.h */,
+				67D66F901D38E77800411342 /* EMCDDeviceManagerBase.h */,
+				67D66F911D38E77800411342 /* EMCDDeviceManagerBase.m */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
+		67D66F921D38E77800411342 /* VoiceConvert */ = {
+			isa = PBXGroup;
+			children = (
+				67D66F931D38E77800411342 /* amrwapper */,
+				67D66F981D38E77800411342 /* EMVoiceConverter.h */,
+				67D66F991D38E77800411342 /* EMVoiceConverter.mm */,
+				67D66F9A1D38E77800411342 /* opencore-amrnb */,
+				67D66F9E1D38E77800411342 /* opencore-amrwb */,
+			);
+			path = VoiceConvert;
+			sourceTree = "<group>";
+		};
+		67D66F931D38E77800411342 /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				67D66F941D38E77800411342 /* amrFileCodec.h */,
+				67D66F951D38E77800411342 /* amrFileCodec.mm */,
+				67D66F961D38E77800411342 /* wav.h */,
+				67D66F971D38E77800411342 /* wav.mm */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
+		67D66F9A1D38E77800411342 /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				67D66F9B1D38E77800411342 /* interf_dec.h */,
+				67D66F9C1D38E77800411342 /* interf_enc.h */,
+				67D66F9D1D38E77800411342 /* libopencore-amrnb.a */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		67D66F9E1D38E77800411342 /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				67D66F9F1D38E77800411342 /* dec_if.h */,
+				67D66FA01D38E77800411342 /* if_rom.h */,
+				67D66FA11D38E77800411342 /* libopencore-amrwb.a */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
 		67F457B21D2FAEE700D75D5A /* 用户 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1292,6 +1505,8 @@
 			children = (
 				67F457B81D2FB16500D75D5A /* ARTAccountFollowCell.h */,
 				67F457B91D2FB16500D75D5A /* ARTAccountFollowCell.m */,
+				67D66F5B1D34CF8F00411342 /* ARTAccountDetailCell.h */,
+				67D66F5C1D34CF8F00411342 /* ARTAccountDetailCell.m */,
 			);
 			path = "视图";
 			sourceTree = "<group>";
@@ -1342,6 +1557,8 @@
 				67FD129F1CE9D32800C93DFD /* ARTUserManager.m */,
 				67FD129C1CE9D32800C93DFD /* ARTDownLoadManager.h */,
 				67FD129D1CE9D32800C93DFD /* ARTDownLoadManager.m */,
+				67D66F6C1D35E2F900411342 /* ARTEmojiManager.h */,
+				67D66F6D1D35E2F900411342 /* ARTEmojiManager.m */,
 			);
 			path = "管理";
 			sourceTree = "<group>";
@@ -1434,6 +1651,7 @@
 				672002771D08202900B4A329 /* 图片资源.xcassets in Resources */,
 				677598CB1CEDA3AF002D3947 /* ARTBookCell.xib in Resources */,
 				677534F81CC8B62E00B34C59 /* Assets.xcassets in Resources */,
+				67D66F651D34F23100411342 /* FaceList.plist in Resources */,
 				677598A91CEC5988002D3947 /* ARTCustomTabBar.xib in Resources */,
 				671A1CE81D26149200319E7E /* ARTLaunchScreen.xib in Resources */,
 				677598BD1CEC7B2D002D3947 /* ARTBookScreen.xib in Resources */,
@@ -1500,6 +1718,7 @@
 				672002B31D18EFD400B4A329 /* ARTHomeNoticeViewController.m in Sources */,
 				67FA3B931D1D214B009AB7BA /* ARTPickerView.m in Sources */,
 				673AD0181D1A39650081300E /* ARTPurchasesCell.m in Sources */,
+				674761EE1D40B66100AB2775 /* ARTConversationListCell.m in Sources */,
 				678FFB6E1CDA009B0071EAF6 /* ARTCommentData.m in Sources */,
 				671A1CF41D2A5E4A00319E7E /* ARTTalkHeadView.m in Sources */,
 				671A1CD11D2131BB00319E7E /* ARTSearchViewController.m in Sources */,
@@ -1508,17 +1727,22 @@
 				678FFB621CD9FAFA0071EAF6 /* ARTBookDownData.m in Sources */,
 				6787ADD41CF7E94C002E59F5 /* ARTBookComentCell.m in Sources */,
 				677534F01CC8B62D00B34C59 /* AppDelegate.m in Sources */,
+				67D66F6E1D35E2F900411342 /* ARTEmojiManager.m in Sources */,
 				6787AE441D0035A8002E59F5 /* ARTLoginViewController.m in Sources */,
 				678FFB5F1CD9F3730071EAF6 /* ARTAuthorData.m in Sources */,
 				6787ADEA1CFC2A47002E59F5 /* NSString+ART.m in Sources */,
+				67D66F731D36287600411342 /* ARTConversationUtil.m in Sources */,
 				672002691D058D0600B4A329 /* ARTTalkTextView.m in Sources */,
+				67D66F631D34ECB700411342 /* ARTConversationViewController.m in Sources */,
 				672002AD1D17D8D300B4A329 /* ARTCityParam.m in Sources */,
 				671A1CFD1D2CB69C00319E7E /* ARTTalkInputView.m in Sources */,
 				677598B51CEC68A5002D3947 /* ARTSocialViewController.m in Sources */,
 				677534ED1CC8B62D00B34C59 /* main.m in Sources */,
+				67D66FB01D38EC5800411342 /* ARTRecorderControl.m in Sources */,
 				67FD12941CE5AC4C00C93DFD /* ARTDaoUtil.m in Sources */,
 				672002511D016B4200B4A329 /* ARTRegisterViewController.m in Sources */,
 				6720026C1D06AA1D00B4A329 /* ARTAssetsViewController.m in Sources */,
+				67D66F761D372EC900411342 /* ARTConversationInput.m in Sources */,
 				678FFB681CD9FDD60071EAF6 /* ARTCommentSendParam.m in Sources */,
 				678B4F871CF6DDD5006CEB17 /* ARTBookDetailViewController.m in Sources */,
 				67FD128E1CE57D5300C93DFD /* ARTUMengUtil.m in Sources */,
@@ -1542,15 +1766,19 @@
 				671A1CD71D225F5800319E7E /* ARTAuthorCell.m in Sources */,
 				677598A41CEC5938002D3947 /* ARTTabBarViewController.m in Sources */,
 				67FD12821CE48AC500C93DFD /* ARTBaseViewController.m in Sources */,
+				67D66FA51D38E77800411342 /* EMCDDeviceManager+Microphone.m in Sources */,
 				67D66F4F1D338CD400411342 /* QHPageContainerHeaderView.m in Sources */,
 				6720026F1D06C63400B4A329 /* ARTPreviewViewController.m in Sources */,
 				678B4F841CF6DC30006CEB17 /* UIBarButtonItem+ART.m in Sources */,
 				677598B81CEC68C6002D3947 /* ARTAuctionViewController.m in Sources */,
 				6787ADDA1CF82A72002E59F5 /* ARTBookInputView.m in Sources */,
+				67D66FB61D3CC0B000411342 /* EMVoiceMessageBody+ART.m in Sources */,
+				67D66F681D34F29B00411342 /* ARTConversationCell.m in Sources */,
 				671A1D091D2DF95C00319E7E /* ARTTalkDetailCell.m in Sources */,
 				67D66F511D338CD400411342 /* QHPageContainerTopBar.m in Sources */,
 				6701C9421CD1F63400E0EA6A /* ARTHttpServers.m in Sources */,
 				6701C9511CD2122100E0EA6A /* ARTBaseParam.m in Sources */,
+				67D66FA21D38E77800411342 /* EMAudioPlayerUtil.m in Sources */,
 				671A1CCB1D2123E800319E7E /* ARTMemberSetupViewController.m in Sources */,
 				677598C31CED691B002D3947 /* ARTGroupData.m in Sources */,
 				678FFB5C1CD9F1800071EAF6 /* ARTBookData.m in Sources */,
@@ -1562,8 +1790,11 @@
 				671A1D0C1D2E455200319E7E /* ARTTalkWallpaper.m in Sources */,
 				672002A11D1408EE00B4A329 /* UIImage+Resize.m in Sources */,
 				6787ADFD1CFC4376002E59F5 /* XPathQuery.m in Sources */,
+				67D66FAA1D38E77800411342 /* wav.mm in Sources */,
+				67D66F7C1D3778B100411342 /* ARTEmojiKeyboard.m in Sources */,
 				67FA3B811D1B873B009AB7BA /* ARTPurchaParam.m in Sources */,
 				67FD12A41CE9D7DA00C93DFD /* ARTBookLocalData.m in Sources */,
+				67D66F5D1D34CF8F00411342 /* ARTAccountDetailCell.m in Sources */,
 				671A1CC51D2104BA00319E7E /* ARTMemberLogCell.m in Sources */,
 				67FD12911CE57DF000C93DFD /* ARTRequestUtil.m in Sources */,
 				6787ADE71CFC1260002E59F5 /* ARTBookDetailHead.m in Sources */,
@@ -1586,12 +1817,15 @@
 				6787ADED1CFC40B9002E59F5 /* ARTHtmlView.m in Sources */,
 				6720027D1D08246600B4A329 /* ARTLocalPageViewController.m in Sources */,
 				671A1CDD1D22684E00319E7E /* ARTNewsViewController.m in Sources */,
+				67D66FA71D38E77800411342 /* EMCDDeviceManager+Remind.m in Sources */,
 				6787AE0C1CFED85A002E59F5 /* ARTShareView.m in Sources */,
 				67F457BA1D2FB16500D75D5A /* ARTAccountFollowCell.m in Sources */,
+				67D66FA31D38E77800411342 /* EMAudioRecorderUtil.m in Sources */,
 				672002AA1D17D79D00B4A329 /* ARTNoticeData.m in Sources */,
 				6775992B1CF5AE70002D3947 /* UIScrollView+ART.m in Sources */,
 				6787AE091CFE7FAA002E59F5 /* ARTAuthorDetailViewController.m in Sources */,
 				6787ADF61CFC4283002E59F5 /* TFHpple.m in Sources */,
+				67D66FA61D38E77800411342 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				6720027A1D08213900B4A329 /* ARTLocalReadViewController.m in Sources */,
 				6720029A1D13FF6000B4A329 /* ARTLocalMinCell.m in Sources */,
 				678FFB3D1CD88E070071EAF6 /* ARTForgetParam.m in Sources */,
@@ -1601,6 +1835,7 @@
 				672002B01D17D92C00B4A329 /* ARTCityData.m in Sources */,
 				672002751D07FB2100B4A329 /* ARTLocalCell.m in Sources */,
 				67D66F4E1D338CD400411342 /* QHPageContainerButton.m in Sources */,
+				67D66FA91D38E77800411342 /* amrFileCodec.mm in Sources */,
 				671A1CC21D20FDA700319E7E /* ARTMemberLogViewController.m in Sources */,
 				671A1D061D2D1E6800319E7E /* ARTTalkDetailSection.m in Sources */,
 				67FD12A11CE9D32800C93DFD /* ARTUserManager.m in Sources */,
@@ -1609,20 +1844,25 @@
 				677598AC1CEC680E002D3947 /* ARTHomeViewController.m in Sources */,
 				677598AF1CEC6851002D3947 /* ARTBookViewController.m in Sources */,
 				6701C9601CD21DDC00E0EA6A /* ARTUserData.m in Sources */,
+				67D66FA81D38E77800411342 /* EMCDDeviceManagerBase.m in Sources */,
 				678FFB401CD893A90071EAF6 /* ARTUpsetParam.m in Sources */,
 				673AD0151D1A35B40081300E /* ARTPurchasesViewController.m in Sources */,
 				67FA3B8D1D1BF239009AB7BA /* ARTMemberEditCell.m in Sources */,
 				671A1CEE1D2A503900319E7E /* ARTTalkViewController.m in Sources */,
+				67D66FA41D38E77800411342 /* EMCDDeviceManager+Media.m in Sources */,
 				672002A01D1408EE00B4A329 /* ImageLoader.m in Sources */,
 				677598C01CED681B002D3947 /* ARTTalkListParam.m in Sources */,
 				67B92D6C1CDC81000009E5B9 /* ARTZanListParam.m in Sources */,
 				6787ADD71CF7FB7B002E59F5 /* UIView+ART.m in Sources */,
+				674761EB1D40B27800AB2775 /* ARTConversationListViewController.m in Sources */,
+				67D66FB31D38FD7B00411342 /* ARTPlayAnimation.m in Sources */,
 				678FFB6B1CD9FF8F0071EAF6 /* ARTCommentListParam.m in Sources */,
 				678B4F811CF69F68006CEB17 /* ARTFPSLabel.m in Sources */,
 				677598871CEC1344002D3947 /* ARTBookDownObject.m in Sources */,
 				67B92D691CDC6F3A0009E5B9 /* ARTTalkComData.m in Sources */,
 				67D66F5A1D3391E800411342 /* ARTAccountTalkViewController.m in Sources */,
 				6775992E1CF5BBCD002D3947 /* ARTPointView.m in Sources */,
+				67D66FAB1D38E77800411342 /* EMVoiceConverter.mm in Sources */,
 				6787ADE01CF83374002E59F5 /* ARTStarRatingView.m in Sources */,
 				672002721D06CDFD00B4A329 /* UIImage+ART.m in Sources */,
 				671A1CE61D26147A00319E7E /* ARTLaunchScreen.m in Sources */,
@@ -1788,6 +2028,8 @@
 					"$(inherited)",
 					"\"${PODS_ROOT}/ShareSDK2/ShareSDK/Extend/WeChatSDK\"",
 					"$(SDKROOT)/usr/include/libxml2",
+					"$(PROJECT_DIR)/ART/第三方/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/ART/第三方/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1984,6 +2226,8 @@
 					"$(inherited)",
 					"\"${PODS_ROOT}/ShareSDK2/ShareSDK/Extend/WeChatSDK\"",
 					"$(SDKROOT)/usr/include/libxml2",
+					"$(PROJECT_DIR)/ART/第三方/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/ART/第三方/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

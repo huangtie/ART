@@ -13,6 +13,7 @@
 #import "ARTNewsViewController.h"
 #import <UIScrollView+EmptyDataSet.h>
 #import "ARTAccountFollowViewController.h"
+#import "ARTConversationListViewController.h"
 
 @interface ARTSocialViewController ()<UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetDelegate,
 DZNEmptyDataSetSource>
@@ -36,8 +37,8 @@ DZNEmptyDataSetSource>
     
 //    self.icons = @[@"talk_icon_chat",@"talk_icon_friend",@"talk_icon_shuo",@"talk_icon_news"];
 //    self.titles = @[@"我的私信",@"我的关注",@"动态",@"文章中心"];
-    self.icons = @[@"talk_icon_shuo",@"talk_icon_news"];
-    self.titles = @[@"动态",@"文章中心"];
+    self.icons = @[@"talk_icon_chat",@"talk_icon_friend",@"talk_icon_shuo",@"talk_icon_news"];
+    self.titles = @[@"我的私信",@"我的关注",@"动态",@"文章中心"];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVIGATION_HEIGH + 0.5, self.view.width, self.view.height - NAVIGATION_HEIGH)];
     self.tableView.backgroundColor = COLOR_YSYC_GRAY;
@@ -106,27 +107,29 @@ DZNEmptyDataSetSource>
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (indexPath.row == 3)
+
+    if (indexPath.row == 0)
     {
-        ARTLocalPageViewController *vc = [[ARTLocalPageViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
+        WS(weak)
+        [[ARTUserManager sharedInstance] isLogin:self logined:^(ARTUserData *userInfo) {
+            [ARTConversationListViewController launchViewController:weak];
+        }];
     }
     
-//    if (indexPath.row == 0)
-//    {
-//        WS(weak)
-//        [[ARTUserManager sharedInstance] isLogin:self logined:^(ARTUserData *userInfo) {
-//            [ARTAccountFollowViewController launchViewController:weak];
-//        }];
-//    }
+    if (indexPath.row == 1)
+    {
+        WS(weak)
+        [[ARTUserManager sharedInstance] isLogin:self logined:^(ARTUserData *userInfo) {
+            [ARTAccountFollowViewController launchViewController:weak];
+        }];
+    }
     
-    if (indexPath.row == 0)
+    if (indexPath.row == 2)
     {
         [ARTTalkViewController launchViewController:self];
     }
     
-    if (indexPath.row == 1)
+    if (indexPath.row == 3)
     {
         [ARTNewsViewController launchViewController:self];
     }

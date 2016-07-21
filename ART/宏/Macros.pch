@@ -30,5 +30,7 @@
 #import "ARTAlertView.h"
 #import "UIImage+ART.h"
 #import <UIImageView+WebCache.h>
+#import "ARTEasemobServer.h"
+#import "ARTEmojiManager.h"
 
 #endif

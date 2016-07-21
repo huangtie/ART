@@ -7,9 +7,10 @@
 //
 
 #import "ARTBaseViewController.h"
+@class ARTUserInfo;
 
 @interface ARTAccountViewController : ARTBaseViewController
 
-+ (ARTAccountViewController *)launchViewController:(UIViewController *)viewController userID:(NSString *)userID;
++ (ARTAccountViewController *)launchViewController:(UIViewController *)viewController userID:(NSString *)userID  info:(ARTUserInfo *)info;
 
 @end

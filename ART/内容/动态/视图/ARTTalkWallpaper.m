@@ -21,7 +21,7 @@
 @property (nonatomic , assign) CGFloat offsetY;
 @end
 
-#define IMAGE_HEIGHT 450
+#define IMAGE_HEIGHT 400
 #define BEGIN_POINT CGPointMake(30, 20)
 #define LOADING_POINT CGPointMake(30, NAVIGATION_HEIGH + 60)
 @implementation ARTTalkWallpaper
@@ -31,7 +31,7 @@
     self = [super init];
     if (self)
     {
-        self.size = CGSizeMake(SCREEN_WIDTH, 550);
+        self.size = CGSizeMake(SCREEN_WIDTH, 480);
         self.backgroundColor = [UIColor whiteColor];
         
         self.paperImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.width, IMAGE_HEIGHT)];
@@ -47,7 +47,7 @@
         self.faceImageView.centerY = self.paperImageView.bottom - 20;
         self.faceImageView.clipsToBounds = YES;
         self.faceImageView.contentMode = UIViewContentModeScaleAspectFill;
-        self.faceImageView.image = IMAGE_PLACEHOLDER_MEMBER;
+        self.faceImageView.image = IMAGE_PLACEHOLDER_MEMBERTWO;
         [self addSubview:self.faceImageView];
         
         self.nickLabel = [[UILabel alloc] init];
@@ -72,12 +72,12 @@
 {
     if (!userInfo)
     {
-        self.faceImageView.image = IMAGE_PLACEHOLDER_MEMBER;
+        self.faceImageView.image = IMAGE_PLACEHOLDER_MEMBERTWO;
         self.nickLabel.text = @"未登录";
     }
     else
     {
-        [self.faceImageView sd_setImageWithURL:[NSURL URLWithString:userInfo.userImage] placeholderImage:IMAGE_PLACEHOLDER_MEMBER];
+        [self.faceImageView sd_setImageWithURL:[NSURL URLWithString:userInfo.userImage] placeholderImage:IMAGE_PLACEHOLDER_MEMBER(userInfo.userID.integerValue)];
         self.nickLabel.text = userInfo.userNick;
     }
 }

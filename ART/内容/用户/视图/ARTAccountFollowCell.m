@@ -18,7 +18,7 @@
 
 @property (nonatomic , strong) UIButton *button;
 
-@property (nonatomic , copy) NSString *userID;
+@property (nonatomic , strong) ARTUserInfo *info;
 @end
 
 @implementation ARTAccountFollowCell
@@ -36,6 +36,7 @@
         self.faceView.centerY = self.height / 2;
         self.faceView.clipsToBounds = YES;
         self.faceView.contentMode = UIViewContentModeScaleAspectFill;
+        [self.faceView circleBorderWidth:0 borderColor:nil];
         [self.contentView addSubview:self.faceView];
         
         self.nickLabel = [[UILabel alloc] init];
@@ -72,9 +73,9 @@
 
 - (void)bindingWithData:(ARTUserInfo *)data type:(ACCOUNT_CELL_TYPE)type
 {
-    self.userID = data.userID;
+    self.info = data;
     
-    [self.faceView sd_setImageWithURL:[NSURL URLWithString:data.userImage] placeholderImage:IMAGE_PLACEHOLDER_MEMBER];
+    [self.faceView sd_setImageWithURL:[NSURL URLWithString:data.userImage] placeholderImage:IMAGE_PLACEHOLDER_MEMBER(data.userID.integerValue)];
     
     self.nickLabel.text = data.userNick;
     
@@ -84,7 +85,7 @@
 
 - (void)buttonAction
 {
-    [self.delegate accountDidTouchButton:self.userID];
+    [self.delegate accountDidTouchButton:self.info];
 }
 
 @end

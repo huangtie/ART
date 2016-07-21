@@ -23,6 +23,8 @@
 
 - (void)displayTost:(NSString *)message;
 
+- (void)displayTost:(NSString *)message offsetY:(CGFloat)offsetY;
+
 - (void)rock;
 
 -(void)parabola:(CGPoint)point;

@@ -8,8 +8,11 @@
 
 #import "ARTBaseViewController.h"
 
+
 @interface ARTAccountDetailViewController : ARTBaseViewController
 
 - (instancetype)initWithUserID:(NSString *)userID;
+
+- (void)requestWithInfo:(void (^)(ARTUserInfo *info))completion;
 
 @end

@@ -71,7 +71,7 @@
         [ARTGuideView launchIn:self.window];
         
     }
-    [ARTLaunchScreen launchIn:self.window completion:^{
+//    [ARTLaunchScreen launchIn:self.window completion:^{
         if (!FIRST_OUT_APP)
         {
             [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
@@ -79,7 +79,9 @@
         FIRST_IN_APP(YES);
         //初始化个推
         [ARTGTPushUtil sharedInstance];
-    }];
+//    }];
+    
+    NSLog(@"%@",[[ARTEmojiManager sharedInstance] text:@"[色][色]ldjsfljsdlfsf[色]sadf[闭嘴]sdfadfa[发怒][调皮][调皮][惊讶]"]);
     
     return YES;
 }

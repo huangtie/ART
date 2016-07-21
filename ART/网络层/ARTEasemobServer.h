@@ -22,4 +22,6 @@
 /*** 登出环信 ***/
 - (void)logoutEasemob:(void (^)(EMError *error))completion;
 
+//根据用户ID获取会话对象
+- (EMConversation *)conversationForChatter:(NSString *)chatter;
 @end

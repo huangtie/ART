@@ -68,7 +68,7 @@
 //是否会员（0 否 1是）
 @property (nonatomic , copy) NSString *userVIP;
 
-//资料是否好友才可见(0 所有人可见 1 只有关注的人可见)
+//资料是否好友才可见(0 公开 1 未公开)
 @property (nonatomic , copy) NSString *userLook;
 
 //是否已关注

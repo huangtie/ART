@@ -19,7 +19,7 @@ typedef enum
 
 @protocol ARTAccountFollowCellDelegate <NSObject>
 
-- (void)accountDidTouchButton:(NSString *)userID;
+- (void)accountDidTouchButton:(ARTUserInfo *)info;
 
 @end
 @interface ARTAccountFollowCell : UITableViewCell

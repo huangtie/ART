@@ -115,12 +115,12 @@ typedef NS_ENUM(NSUInteger, UIViewAppearState) {
     [self addSubview:_frontHeaderView];
     
     _topBar = [[QHPageContainerTopBar alloc] initWithFrame:CGRectMake(15, CGRectGetHeight(_backView.frame), size.width - 30, TOPBAR_HEIGHT)];
-    [_topBar setBackgroundColor:[UIColor whiteColor]];
+    [_topBar setBackgroundColor:[UIColor clearColor]];
     _topBar.target = self;
     [_frontHeaderView addSubview:_topBar];
     
     _bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_topBar.frame)-.5, size.width, .5)];
-    _bottomLineView.backgroundColor = UICOLOR_ARGB(0xff999999);
+    _bottomLineView.backgroundColor = [UIColor whiteColor];
     [_frontHeaderView addSubview:_bottomLineView];
     
     [_frontHeaderView addSubview:_frontView];
